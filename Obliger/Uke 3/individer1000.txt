@@ -1,0 +1,1000 @@
+7151,54,kvinne,gift,76667,betalt,betalt,betalt,grunnskole,vil betale
+11,34,kvinne,singel,66667,betalt,betalt,ikke betalt,grunnskole,vil betale
+6894,29,kvinne,singel,123333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+20411,25,mann,singel,43333,betalt,betalt,betalt,universitet,vil betale
+27569,53,mann,gift,70000,ikke betalt,betalt,ikke betalt,universitet,vil betale
+5439,34,mann,singel,26667,betalt,betalt,betalt,grunnskole,vil betale
+1570,23,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil ikke betale
+23545,44,kvinne,singel,76667,betalt,betalt,betalt,hoeyskole,vil betale
+26752,27,mann,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+3075,31,mann,singel,60000,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+18879,30,kvinne,singel,26667,betalt,betalt,betalt,universitet,vil betale
+27522,56,mann,singel,6667,betalt,betalt,ikke betalt,universitet,vil betale
+22454,44,kvinne,gift,60000,betalt,betalt,betalt,hoeyskole,vil betale
+19945,34,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+15365,48,kvinne,gift,120000,betalt,betalt,betalt,hoeyskole,vil betale
+2582,43,kvinne,singel,46667,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+6587,42,mann,gift,120000,betalt,betalt,betalt,grunnskole,vil betale
+25702,43,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+21267,52,mann,gift,6667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+24847,30,mann,singel,40000,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+27678,24,kvinne,singel,10000,betalt,betalt,betalt,hoeyskole,vil betale
+2273,35,mann,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+27857,22,kvinne,singel,23333,betalt,betalt,betalt,universitet,vil betale
+9246,33,kvinne,singel,43333,betalt,betalt,betalt,universitet,vil betale
+17284,41,kvinne,gift,26667,betalt,betalt,betalt,hoeyskole,vil betale
+5652,27,kvinne,singel,6667,betalt,ikke betalt,betalt,universitet,vil betale
+15460,28,mann,singel,66667,betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+6986,40,mann,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+5852,29,mann,singel,43333,betalt,betalt,betalt,universitet,vil betale
+27321,41,mann,gift,60000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+2148,26,mann,singel,16667,betalt,betalt,ikke betalt,universitet,vil betale
+16046,26,kvinne,singel,53333,betalt,betalt,betalt,hoeyskole,vil betale
+1235,30,kvinne,singel,93333,betalt,betalt,betalt,hoeyskole,vil betale
+16910,46,mann,gift,30000,betalt,betalt,betalt,grunnskole,vil betale
+27606,26,kvinne,gift,50000,betalt,betalt,betalt,universitet,vil betale
+19302,39,kvinne,singel,166667,betalt,betalt,betalt,universitet,vil betale
+21412,49,kvinne,gift,20000,betalt,betalt,betalt,grunnskole,vil betale
+29326,27,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+28929,33,kvinne,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+8200,29,mann,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+2446,25,mann,singel,66667,ikke betalt,betalt,betalt,universitet,vil ikke betale
+8815,51,kvinne,gift,26667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+17421,46,kvinne,gift,66667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+23329,35,kvinne,singel,53333,betalt,betalt,betalt,hoeyskole,vil betale
+12675,30,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+7348,23,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil betale
+4488,24,mann,singel,6667,betalt,betalt,betalt,hoeyskole,vil betale
+23209,40,kvinne,gift,63333,betalt,betalt,betalt,ukjent,vil betale
+14825,26,mann,singel,6667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+24419,43,mann,gift,26667,ikke betalt,betalt,betalt,grunnskole,vil betale
+7920,24,kvinne,singel,20000,betalt,betalt,betalt,universitet,vil betale
+25566,26,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+6994,28,kvinne,singel,60000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+5175,29,kvinne,singel,26667,betalt,betalt,betalt,grunnskole,vil betale
+22215,27,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+5212,23,mann,singel,16667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+19467,38,kvinne,gift,70000,betalt,betalt,betalt,grunnskole,vil betale
+13625,41,kvinne,gift,93333,betalt,betalt,betalt,hoeyskole,vil betale
+29057,53,kvinne,gift,10000,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+2496,47,mann,gift,100000,betalt,betalt,betalt,hoeyskole,vil betale
+21186,30,mann,gift,23333,betalt,betalt,betalt,grunnskole,vil betale
+17982,44,mann,singel,56667,betalt,betalt,betalt,grunnskole,vil betale
+1401,25,kvinne,gift,33333,betalt,betalt,betalt,universitet,vil betale
+10198,32,mann,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+14457,27,mann,singel,70000,betalt,betalt,betalt,universitet,vil betale
+25738,29,kvinne,gift,20000,betalt,betalt,betalt,universitet,vil betale
+966,36,mann,gift,166667,betalt,betalt,betalt,hoeyskole,vil betale
+10827,34,kvinne,singel,40000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+8783,29,kvinne,singel,70000,betalt,betalt,betalt,universitet,vil betale
+24281,26,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+17974,33,mann,singel,10000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+2119,39,kvinne,singel,6667,betalt,betalt,ikke betalt,grunnskole,vil betale
+20363,37,mann,gift,33333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+8286,25,mann,gift,10000,betalt,betalt,betalt,universitet,vil betale
+10060,26,mann,singel,26667,betalt,betalt,betalt,universitet,vil betale
+3463,37,mann,gift,66667,betalt,betalt,betalt,universitet,vil betale
+25861,44,kvinne,gift,90000,betalt,betalt,betalt,hoeyskole,vil betale
+6254,37,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+19950,33,kvinne,singel,56667,ikke betalt,betalt,betalt,universitet,vil betale
+14281,38,mann,gift,46667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+17271,30,kvinne,singel,76667,betalt,betalt,betalt,universitet,vil betale
+14517,43,mann,gift,26667,betalt,betalt,betalt,universitet,vil betale
+5745,36,kvinne,gift,133333,betalt,betalt,betalt,hoeyskole,vil betale
+15170,23,kvinne,singel,13333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+16370,31,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+19238,36,kvinne,singel,73333,betalt,betalt,betalt,hoeyskole,vil betale
+15520,42,mann,gift,56667,betalt,betalt,betalt,grunnskole,vil betale
+28451,37,kvinne,singel,106667,betalt,betalt,betalt,universitet,vil betale
+20698,42,mann,gift,16667,betalt,betalt,betalt,grunnskole,vil betale
+17094,24,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+10135,22,kvinne,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+18155,32,mann,singel,10000,betalt,betalt,betalt,grunnskole,vil betale
+28225,33,kvinne,gift,150000,betalt,betalt,betalt,hoeyskole,vil betale
+9351,34,kvinne,gift,133333,betalt,betalt,betalt,universitet,vil betale
+21620,23,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+13378,30,kvinne,gift,26667,ikke betalt,betalt,ikke betalt,grunnskole,vil betale
+19387,30,kvinne,singel,10000,betalt,betalt,ikke betalt,grunnskole,vil betale
+26252,45,kvinne,gift,93333,betalt,betalt,betalt,hoeyskole,vil betale
+26723,26,mann,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+13267,29,mann,singel,36667,betalt,betalt,betalt,grunnskole,vil ikke betale
+2138,36,kvinne,gift,100000,betalt,betalt,betalt,universitet,vil betale
+20050,46,kvinne,gift,53333,betalt,betalt,betalt,grunnskole,vil betale
+10185,52,mann,gift,126667,ikke betalt,betalt,betalt,grunnskole,vil betale
+7801,39,kvinne,singel,156667,betalt,betalt,betalt,hoeyskole,vil betale
+13919,29,mann,singel,43333,betalt,betalt,betalt,hoeyskole,vil betale
+13728,36,kvinne,gift,13333,betalt,betalt,betalt,universitet,vil betale
+11770,44,mann,gift,43333,betalt,betalt,betalt,ukjent,vil ikke betale
+6797,47,mann,gift,10000,betalt,betalt,ikke betalt,grunnskole,vil betale
+15238,30,kvinne,gift,96667,betalt,betalt,betalt,hoeyskole,vil betale
+29349,27,mann,singel,3333,betalt,betalt,betalt,hoeyskole,vil betale
+3218,52,mann,singel,106667,betalt,betalt,betalt,grunnskole,vil betale
+14670,50,kvinne,singel,26667,betalt,betalt,betalt,grunnskole,vil betale
+10674,28,kvinne,singel,70000,betalt,betalt,betalt,grunnskole,vil betale
+28848,46,kvinne,singel,16667,betalt,betalt,betalt,grunnskole,vil betale
+6194,45,kvinne,gift,23333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+15197,26,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil betale
+10534,52,kvinne,gift,3333,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+5900,43,kvinne,gift,86667,ikke betalt,betalt,betalt,universitet,vil betale
+2071,29,kvinne,singel,40000,betalt,betalt,betalt,universitet,vil betale
+3707,30,mann,gift,36667,betalt,betalt,betalt,universitet,vil betale
+2788,27,kvinne,singel,26667,betalt,betalt,betalt,grunnskole,vil ikke betale
+8603,47,mann,singel,10000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+18993,31,kvinne,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+1429,37,kvinne,gift,70000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+24123,29,mann,singel,46667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+24493,39,mann,singel,60000,betalt,betalt,betalt,grunnskole,vil betale
+3520,34,kvinne,gift,183333,betalt,betalt,betalt,universitet,vil betale
+23768,53,kvinne,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+23147,47,kvinne,singel,96667,betalt,betalt,betalt,grunnskole,vil betale
+8037,28,kvinne,singel,46667,betalt,betalt,betalt,universitet,vil betale
+27688,24,kvinne,gift,20000,betalt,betalt,betalt,universitet,vil ikke betale
+28770,42,kvinne,gift,76667,betalt,betalt,betalt,universitet,vil betale
+3809,35,mann,singel,73333,betalt,betalt,betalt,hoeyskole,vil betale
+16846,40,mann,gift,16667,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+27585,51,mann,singel,36667,betalt,betalt,betalt,universitet,vil ikke betale
+1757,34,mann,singel,43333,betalt,betalt,betalt,hoeyskole,vil betale
+18541,24,kvinne,singel,20000,betalt,betalt,betalt,universitet,vil betale
+1693,27,kvinne,singel,50000,betalt,betalt,betalt,hoeyskole,vil betale
+111,31,kvinne,gift,110000,betalt,betalt,ikke betalt,hoeyskole,vil betale
+1621,26,kvinne,singel,10000,betalt,betalt,betalt,hoeyskole,vil betale
+15252,28,kvinne,singel,60000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+8403,32,mann,gift,73333,betalt,betalt,betalt,universitet,vil betale
+17164,27,kvinne,singel,6667,betalt,betalt,betalt,grunnskole,vil betale
+4467,54,mann,gift,36667,betalt,betalt,betalt,grunnskole,vil betale
+22755,45,kvinne,gift,73333,betalt,betalt,ikke betalt,grunnskole,vil betale
+13092,39,mann,gift,120000,betalt,ikke betalt,betalt,hoeyskole,vil betale
+252,28,mann,singel,10000,betalt,betalt,betalt,universitet,vil betale
+1055,53,mann,gift,76667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+16103,33,kvinne,gift,66667,betalt,betalt,betalt,ukjent,vil betale
+21139,41,mann,gift,6667,betalt,betalt,betalt,universitet,vil betale
+17410,47,kvinne,gift,16667,betalt,betalt,betalt,grunnskole,vil betale
+4608,42,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+1977,31,mann,singel,60000,betalt,betalt,betalt,universitet,vil betale
+16548,29,mann,singel,43333,betalt,betalt,betalt,hoeyskole,vil betale
+11773,30,mann,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+238,31,kvinne,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+20550,31,mann,singel,16667,betalt,betalt,ikke betalt,universitet,vil betale
+14323,62,mann,gift,146667,betalt,betalt,betalt,hoeyskole,vil betale
+5098,31,kvinne,gift,93333,betalt,betalt,betalt,universitet,vil betale
+25614,29,kvinne,singel,96667,betalt,betalt,betalt,hoeyskole,vil betale
+27097,33,mann,singel,53333,betalt,betalt,betalt,universitet,vil betale
+7482,23,kvinne,singel,6667,betalt,betalt,ikke betalt,hoeyskole,vil betale
+7661,44,mann,singel,26667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+9388,35,kvinne,gift,50000,betalt,betalt,betalt,universitet,vil betale
+12639,31,mann,singel,93333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+18299,31,kvinne,singel,66667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+20728,36,mann,gift,10000,betalt,betalt,ikke betalt,universitet,vil betale
+17639,30,kvinne,singel,86667,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+8370,55,kvinne,gift,116667,betalt,betalt,betalt,hoeyskole,vil betale
+1359,41,mann,gift,130000,betalt,betalt,betalt,hoeyskole,vil betale
+7000,57,kvinne,gift,16667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+4388,35,mann,gift,30000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+26445,49,kvinne,gift,150000,betalt,betalt,betalt,hoeyskole,vil betale
+25262,23,kvinne,singel,16667,ikke betalt,betalt,ikke betalt,hoeyskole,vil ikke betale
+28575,30,kvinne,singel,60000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+25006,40,mann,gift,73333,betalt,ikke betalt,betalt,hoeyskole,vil betale
+17820,25,mann,singel,6667,betalt,betalt,betalt,universitet,vil betale
+22366,32,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil ikke betale
+29333,41,mann,singel,130000,betalt,betalt,betalt,universitet,vil betale
+2261,37,kvinne,singel,26667,betalt,betalt,betalt,universitet,vil betale
+2782,24,kvinne,singel,10000,betalt,betalt,betalt,hoeyskole,vil betale
+8661,23,kvinne,singel,36667,betalt,betalt,betalt,hoeyskole,vil betale
+18856,23,kvinne,singel,6667,betalt,betalt,betalt,hoeyskole,vil betale
+19942,38,kvinne,gift,106667,betalt,betalt,betalt,universitet,vil betale
+29490,47,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+29938,44,mann,gift,106667,betalt,betalt,betalt,hoeyskole,vil betale
+25737,35,kvinne,singel,10000,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+292,22,kvinne,singel,16667,ikke betalt,betalt,betalt,universitet,vil ikke betale
+28334,34,kvinne,singel,76667,betalt,betalt,betalt,ukjent,vil betale
+8104,52,kvinne,singel,183333,betalt,betalt,betalt,ukjent,vil betale
+3091,33,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+14945,43,mann,gift,60000,betalt,betalt,betalt,grunnskole,vil betale
+9497,30,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+557,33,kvinne,gift,53333,betalt,betalt,betalt,hoeyskole,vil betale
+14492,39,kvinne,singel,36667,betalt,betalt,betalt,universitet,vil betale
+10590,28,mann,singel,16667,betalt,betalt,betalt,universitet,vil ikke betale
+11317,24,mann,singel,36667,betalt,betalt,betalt,grunnskole,vil betale
+14690,26,kvinne,singel,23333,betalt,betalt,betalt,universitet,vil betale
+3137,28,mann,singel,6667,betalt,betalt,betalt,hoeyskole,vil betale
+7339,39,mann,gift,6667,ikke betalt,betalt,betalt,universitet,vil ikke betale
+3850,28,kvinne,singel,43333,betalt,betalt,betalt,universitet,vil betale
+21133,35,mann,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+12393,47,kvinne,gift,10000,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+21502,29,kvinne,singel,16667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+21553,23,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+7124,42,kvinne,singel,113333,betalt,betalt,betalt,hoeyskole,vil betale
+6782,34,kvinne,singel,213333,betalt,betalt,betalt,grunnskole,vil betale
+20737,22,mann,singel,6667,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+25552,42,kvinne,gift,136667,betalt,betalt,betalt,universitet,vil betale
+5567,36,kvinne,singel,36667,betalt,betalt,betalt,universitet,vil betale
+18200,42,mann,gift,76667,betalt,betalt,betalt,universitet,vil betale
+17307,40,kvinne,singel,6667,betalt,betalt,betalt,universitet,vil betale
+7487,36,kvinne,gift,33333,betalt,betalt,betalt,hoeyskole,vil betale
+10150,41,kvinne,gift,66667,betalt,betalt,betalt,universitet,vil ikke betale
+7084,29,kvinne,gift,136667,betalt,betalt,betalt,universitet,vil betale
+1594,35,mann,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+22151,29,kvinne,singel,166667,betalt,betalt,betalt,universitet,vil betale
+21180,32,mann,singel,76667,betalt,betalt,betalt,grunnskole,vil betale
+24576,31,mann,gift,50000,betalt,betalt,betalt,hoeyskole,vil betale
+18329,23,kvinne,singel,16667,ikke betalt,betalt,betalt,universitet,vil betale
+582,33,mann,singel,30000,betalt,betalt,betalt,universitet,vil betale
+11179,39,mann,singel,66667,betalt,betalt,betalt,universitet,vil betale
+23926,25,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+16222,47,kvinne,gift,53333,betalt,betalt,betalt,hoeyskole,vil betale
+16857,45,mann,gift,50000,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+23560,34,kvinne,singel,70000,betalt,betalt,betalt,universitet,vil betale
+5025,40,kvinne,gift,60000,betalt,betalt,betalt,hoeyskole,vil betale
+26191,31,kvinne,singel,103333,betalt,betalt,betalt,hoeyskole,vil betale
+7064,37,mann,singel,6667,betalt,betalt,betalt,grunnskole,vil betale
+22125,26,kvinne,singel,26667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+37,40,mann,gift,93333,betalt,betalt,betalt,universitet,vil betale
+13281,22,kvinne,singel,10000,betalt,betalt,ikke betalt,universitet,vil betale
+19798,47,kvinne,gift,73333,betalt,betalt,betalt,hoeyskole,vil betale
+17015,23,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil betale
+8335,43,kvinne,gift,80000,betalt,betalt,betalt,universitet,vil betale
+13313,34,mann,singel,16667,betalt,betalt,betalt,grunnskole,vil betale
+17922,29,mann,gift,33333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+9714,29,kvinne,gift,120000,ikke betalt,betalt,ikke betalt,universitet,vil betale
+21446,26,kvinne,singel,96667,betalt,betalt,betalt,universitet,vil betale
+23066,41,kvinne,gift,50000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+24896,43,mann,gift,53333,betalt,betalt,betalt,universitet,vil betale
+14218,38,kvinne,gift,53333,betalt,betalt,betalt,universitet,vil betale
+22803,38,kvinne,singel,206667,betalt,betalt,betalt,hoeyskole,vil betale
+23014,41,kvinne,gift,146667,betalt,betalt,betalt,hoeyskole,vil betale
+12117,46,mann,gift,40000,betalt,betalt,betalt,grunnskole,vil betale
+8857,52,kvinne,gift,26667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+15412,69,kvinne,gift,120000,betalt,betalt,betalt,universitet,vil betale
+10545,47,mann,singel,36667,betalt,betalt,betalt,universitet,vil betale
+8142,28,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil betale
+25658,32,kvinne,singel,96667,betalt,betalt,betalt,hoeyskole,vil betale
+14366,26,kvinne,singel,30000,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+1720,40,kvinne,gift,16667,ikke betalt,ikke betalt,betalt,grunnskole,vil ikke betale
+13905,26,kvinne,singel,16667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+16541,27,mann,singel,10000,ikke betalt,ikke betalt,betalt,universitet,vil betale
+18927,26,kvinne,gift,66667,betalt,betalt,betalt,universitet,vil betale
+17050,25,kvinne,gift,20000,ikke betalt,betalt,betalt,universitet,vil ikke betale
+28167,32,kvinne,gift,10000,betalt,betalt,betalt,hoeyskole,vil ikke betale
+7815,27,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil betale
+21893,27,kvinne,gift,60000,betalt,betalt,betalt,universitet,vil betale
+28993,43,kvinne,singel,26667,betalt,betalt,betalt,grunnskole,vil betale
+1913,42,mann,gift,33333,betalt,betalt,betalt,universitet,vil betale
+27562,56,mann,gift,76667,betalt,betalt,betalt,hoeyskole,vil betale
+6310,44,kvinne,gift,50000,betalt,betalt,betalt,universitet,vil betale
+23585,37,kvinne,gift,76667,betalt,betalt,betalt,universitet,vil ikke betale
+14172,35,mann,singel,16667,betalt,betalt,betalt,universitet,vil ikke betale
+17728,51,kvinne,singel,146667,betalt,betalt,betalt,hoeyskole,vil betale
+18158,35,mann,gift,6667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+27640,23,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+16701,39,mann,gift,40000,betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+9582,21,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+23656,36,kvinne,gift,120000,betalt,betalt,betalt,hoeyskole,vil ikke betale
+16016,45,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+4853,23,kvinne,singel,20000,ikke betalt,ikke betalt,betalt,grunnskole,vil ikke betale
+21752,22,kvinne,singel,26667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+19918,45,kvinne,gift,53333,betalt,betalt,betalt,universitet,vil betale
+29228,24,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+4036,36,kvinne,singel,120000,betalt,betalt,betalt,universitet,vil betale
+29643,29,mann,singel,36667,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+17124,26,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+4798,32,kvinne,singel,103333,betalt,betalt,betalt,universitet,vil betale
+17313,48,kvinne,gift,20000,betalt,betalt,betalt,grunnskole,vil ikke betale
+17617,31,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+28612,48,kvinne,singel,20000,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+20351,29,mann,singel,120000,betalt,betalt,betalt,universitet,vil betale
+28406,28,kvinne,singel,166667,betalt,betalt,ikke betalt,hoeyskole,vil betale
+18448,25,kvinne,gift,66667,betalt,betalt,betalt,ukjent,vil ikke betale
+15914,29,kvinne,gift,6667,betalt,betalt,betalt,universitet,vil ikke betale
+27026,38,mann,gift,80000,betalt,betalt,betalt,hoeyskole,vil betale
+5459,38,mann,singel,60000,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+20719,44,mann,gift,16667,betalt,betalt,ikke betalt,grunnskole,vil betale
+26616,22,mann,singel,16667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+25324,28,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil betale
+4068,24,mann,singel,16667,betalt,betalt,betalt,grunnskole,vil ikke betale
+13200,27,kvinne,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+9168,56,kvinne,singel,6667,betalt,ikke betalt,betalt,grunnskole,vil ikke betale
+18619,26,kvinne,singel,10000,ikke betalt,betalt,betalt,universitet,vil ikke betale
+10013,35,kvinne,singel,13333,betalt,betalt,betalt,hoeyskole,vil betale
+927,46,mann,gift,6667,betalt,betalt,betalt,universitet,vil betale
+24111,27,mann,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+2128,31,kvinne,gift,33333,ikke betalt,ikke betalt,betalt,universitet,vil betale
+26868,37,mann,gift,86667,betalt,betalt,betalt,hoeyskole,vil betale
+3732,36,mann,gift,136667,betalt,betalt,betalt,universitet,vil betale
+18851,28,kvinne,singel,90000,betalt,betalt,betalt,hoeyskole,vil betale
+13578,46,kvinne,gift,120000,betalt,betalt,ikke betalt,hoeyskole,vil ikke betale
+29822,44,mann,gift,166667,betalt,betalt,betalt,hoeyskole,vil betale
+28288,32,kvinne,singel,23333,ikke betalt,betalt,betalt,universitet,vil ikke betale
+21972,24,kvinne,singel,26667,betalt,betalt,ikke betalt,universitet,vil betale
+19186,24,kvinne,gift,23333,betalt,betalt,betalt,universitet,vil betale
+18340,22,kvinne,singel,6667,betalt,betalt,betalt,ukjent,vil ikke betale
+2751,32,kvinne,gift,86667,betalt,betalt,ikke betalt,hoeyskole,vil betale
+7380,51,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+21310,60,mann,gift,23333,betalt,betalt,betalt,hoeyskole,vil betale
+19675,38,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+20422,26,mann,singel,40000,betalt,betalt,betalt,universitet,vil betale
+14546,23,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+26443,50,kvinne,gift,50000,betalt,betalt,betalt,universitet,vil ikke betale
+9927,29,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+11382,46,kvinne,gift,120000,betalt,betalt,betalt,universitet,vil ikke betale
+4859,55,kvinne,gift,46667,betalt,betalt,betalt,universitet,vil betale
+1104,28,kvinne,singel,50000,betalt,betalt,betalt,grunnskole,vil betale
+27572,52,mann,gift,6667,betalt,betalt,betalt,universitet,vil betale
+9660,29,kvinne,singel,46667,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+1031,40,kvinne,gift,133333,betalt,betalt,betalt,hoeyskole,vil betale
+18713,26,kvinne,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+27123,31,mann,singel,50000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+25981,44,kvinne,gift,106667,betalt,betalt,betalt,universitet,vil betale
+19790,41,kvinne,gift,30000,betalt,betalt,betalt,universitet,vil betale
+22033,28,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+19398,33,kvinne,gift,80000,betalt,betalt,betalt,hoeyskole,vil betale
+6131,47,mann,gift,160000,betalt,betalt,betalt,hoeyskole,vil betale
+6699,29,mann,gift,63333,betalt,betalt,betalt,grunnskole,vil betale
+9383,30,mann,singel,43333,betalt,betalt,betalt,hoeyskole,vil betale
+4593,46,mann,gift,33333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+21827,26,kvinne,singel,86667,betalt,betalt,betalt,hoeyskole,vil betale
+17493,34,kvinne,singel,33333,betalt,betalt,betalt,universitet,vil betale
+14413,31,kvinne,gift,76667,ikke betalt,betalt,betalt,universitet,vil betale
+11014,50,kvinne,gift,56667,betalt,betalt,betalt,universitet,vil betale
+17561,44,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil ikke betale
+28893,36,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil ikke betale
+27376,35,mann,gift,120000,betalt,betalt,betalt,universitet,vil ikke betale
+29958,31,mann,singel,166667,betalt,betalt,betalt,universitet,vil betale
+3057,36,mann,singel,66667,betalt,betalt,betalt,grunnskole,vil betale
+22734,47,kvinne,gift,63333,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+18718,26,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+1820,41,kvinne,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+19820,43,kvinne,singel,56667,ikke betalt,betalt,betalt,universitet,vil betale
+729,29,kvinne,singel,110000,betalt,betalt,betalt,universitet,vil betale
+19116,36,kvinne,gift,10000,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+11208,36,mann,gift,56667,betalt,betalt,betalt,hoeyskole,vil betale
+24865,34,mann,gift,43333,betalt,betalt,betalt,universitet,vil betale
+887,30,mann,singel,103333,betalt,betalt,betalt,hoeyskole,vil betale
+12346,29,kvinne,gift,16667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+27703,25,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil betale
+5790,29,mann,singel,100000,betalt,betalt,betalt,hoeyskole,vil betale
+15812,28,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+17958,39,mann,gift,100000,betalt,betalt,betalt,universitet,vil betale
+25752,30,kvinne,singel,123333,betalt,betalt,betalt,hoeyskole,vil betale
+18274,47,mann,singel,23333,betalt,betalt,betalt,universitet,vil ikke betale
+26913,38,mann,gift,26667,betalt,betalt,betalt,grunnskole,vil betale
+26139,29,kvinne,singel,33333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+9784,34,mann,singel,40000,betalt,betalt,betalt,universitet,vil betale
+26310,31,kvinne,gift,76667,betalt,betalt,betalt,hoeyskole,vil betale
+19894,42,kvinne,gift,40000,betalt,betalt,betalt,universitet,vil betale
+3512,29,mann,singel,146667,betalt,betalt,betalt,hoeyskole,vil betale
+3185,22,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+20010,37,kvinne,singel,76667,betalt,betalt,betalt,hoeyskole,vil betale
+686,47,mann,gift,120000,betalt,betalt,betalt,hoeyskole,vil betale
+24285,33,mann,gift,116667,betalt,betalt,betalt,universitet,vil betale
+14710,39,kvinne,gift,166667,betalt,betalt,betalt,hoeyskole,vil betale
+11678,46,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+5058,43,mann,singel,6667,betalt,betalt,betalt,universitet,vil betale
+5021,42,kvinne,gift,96667,betalt,betalt,betalt,universitet,vil betale
+29258,25,mann,singel,16667,betalt,betalt,betalt,universitet,vil ikke betale
+7060,30,kvinne,singel,16667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+9053,50,kvinne,gift,93333,betalt,betalt,betalt,universitet,vil betale
+9245,32,kvinne,gift,30000,ikke betalt,betalt,betalt,universitet,vil betale
+9583,23,kvinne,gift,10000,ikke betalt,ikke betalt,betalt,grunnskole,vil ikke betale
+20527,30,mann,singel,53333,betalt,betalt,betalt,universitet,vil betale
+6448,47,kvinne,gift,96667,betalt,betalt,betalt,hoeyskole,vil betale
+14496,42,kvinne,gift,120000,betalt,betalt,betalt,grunnskole,vil betale
+8190,25,kvinne,singel,43333,betalt,betalt,betalt,universitet,vil ikke betale
+10782,40,kvinne,singel,16667,betalt,betalt,betalt,grunnskole,vil betale
+17317,39,kvinne,singel,16667,ikke betalt,ikke betalt,betalt,grunnskole,vil ikke betale
+16994,27,kvinne,singel,6667,betalt,betalt,betalt,universitet,vil betale
+23188,45,kvinne,gift,83333,betalt,betalt,betalt,universitet,vil betale
+29128,52,kvinne,gift,26667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+6368,37,kvinne,gift,60000,ikke betalt,betalt,betalt,universitet,vil betale
+27594,29,kvinne,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+2842,47,mann,singel,110000,betalt,betalt,betalt,hoeyskole,vil betale
+8201,24,kvinne,singel,16667,betalt,betalt,ikke betalt,universitet,vil betale
+26666,26,mann,singel,10000,betalt,betalt,ikke betalt,grunnskole,vil betale
+21833,27,kvinne,singel,23333,betalt,betalt,betalt,hoeyskole,vil betale
+20423,26,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+288,46,kvinne,gift,146667,betalt,betalt,betalt,universitet,vil betale
+14624,23,kvinne,singel,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+6800,24,mann,singel,26667,betalt,betalt,betalt,universitet,vil ikke betale
+19046,30,kvinne,gift,30000,betalt,betalt,betalt,universitet,vil betale
+1786,60,mann,gift,73333,betalt,betalt,betalt,universitet,vil ikke betale
+3829,35,mann,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+8530,35,mann,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+18397,24,kvinne,singel,6667,betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+2531,24,mann,singel,10000,betalt,betalt,betalt,universitet,vil ikke betale
+26491,52,kvinne,gift,20000,ikke betalt,ikke betalt,betalt,universitet,vil betale
+12268,36,mann,gift,66667,betalt,betalt,betalt,grunnskole,vil betale
+16741,41,mann,singel,6667,betalt,betalt,betalt,universitet,vil ikke betale
+9585,44,mann,gift,33333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+28554,37,kvinne,singel,166667,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+6085,23,mann,singel,3333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+15510,43,mann,singel,26667,betalt,betalt,betalt,universitet,vil betale
+18034,32,mann,gift,93333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+20551,28,mann,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+4699,35,kvinne,gift,53333,betalt,betalt,betalt,hoeyskole,vil betale
+8499,34,mann,singel,3333,betalt,betalt,betalt,universitet,vil betale
+1473,36,mann,gift,120000,betalt,betalt,betalt,hoeyskole,vil betale
+21583,22,kvinne,singel,6667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+29609,40,mann,gift,13333,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+22192,31,kvinne,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+27791,24,kvinne,singel,20000,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+6265,53,kvinne,gift,86667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+6841,52,mann,gift,73333,ikke betalt,betalt,betalt,grunnskole,vil betale
+9941,51,mann,gift,53333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+17111,27,kvinne,singel,6667,betalt,betalt,betalt,universitet,vil betale
+23128,29,kvinne,gift,56667,betalt,betalt,betalt,universitet,vil betale
+20450,26,mann,singel,40000,betalt,betalt,betalt,grunnskole,vil betale
+15850,28,kvinne,gift,36667,betalt,betalt,betalt,hoeyskole,vil betale
+1493,48,kvinne,singel,20000,ikke betalt,betalt,betalt,grunnskole,vil betale
+25244,24,kvinne,singel,46667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+2775,30,kvinne,gift,133333,betalt,betalt,betalt,universitet,vil betale
+12336,26,mann,singel,70000,betalt,betalt,betalt,universitet,vil betale
+9691,43,kvinne,singel,93333,betalt,betalt,betalt,grunnskole,vil betale
+19241,44,kvinne,gift,126667,betalt,betalt,betalt,grunnskole,vil betale
+6687,29,mann,singel,73333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+25522,34,kvinne,gift,133333,betalt,betalt,betalt,hoeyskole,vil betale
+9637,28,kvinne,singel,30000,betalt,betalt,betalt,universitet,vil betale
+22270,29,kvinne,singel,50000,betalt,betalt,betalt,hoeyskole,vil betale
+11711,38,kvinne,singel,46667,betalt,betalt,ikke betalt,universitet,vil betale
+10905,47,kvinne,gift,6667,betalt,betalt,betalt,grunnskole,vil betale
+22745,30,kvinne,gift,113333,betalt,betalt,betalt,universitet,vil ikke betale
+11271,34,mann,singel,6667,ikke betalt,betalt,betalt,universitet,vil ikke betale
+7721,23,kvinne,singel,6667,betalt,betalt,betalt,hoeyskole,vil betale
+16624,31,mann,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+11835,53,kvinne,gift,10000,ikke betalt,betalt,betalt,grunnskole,vil betale
+24877,46,mann,gift,136667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+16279,32,kvinne,singel,36667,ikke betalt,betalt,betalt,universitet,vil betale
+7263,32,kvinne,singel,46667,betalt,betalt,betalt,hoeyskole,vil betale
+27944,28,kvinne,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+28729,30,kvinne,singel,6667,betalt,betalt,betalt,universitet,vil betale
+22082,28,kvinne,gift,56667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+1517,25,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+2216,38,kvinne,gift,66667,betalt,ikke betalt,betalt,hoeyskole,vil betale
+22078,29,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+4682,36,kvinne,gift,66667,betalt,betalt,betalt,universitet,vil betale
+1355,27,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+17863,26,mann,gift,3333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+7255,43,mann,singel,20000,betalt,betalt,betalt,grunnskole,vil betale
+28877,33,kvinne,singel,46667,betalt,betalt,betalt,hoeyskole,vil betale
+5342,48,kvinne,gift,13333,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+25228,24,kvinne,singel,30000,betalt,betalt,betalt,hoeyskole,vil betale
+2722,33,kvinne,singel,33333,betalt,betalt,betalt,hoeyskole,vil betale
+16404,44,kvinne,gift,6667,betalt,betalt,betalt,universitet,vil betale
+10864,24,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil betale
+3452,26,kvinne,singel,16667,betalt,betalt,ikke betalt,hoeyskole,vil betale
+26079,36,kvinne,singel,70000,ikke betalt,betalt,betalt,universitet,vil betale
+12883,34,kvinne,gift,90000,betalt,betalt,betalt,universitet,vil betale
+1151,36,kvinne,gift,70000,betalt,betalt,betalt,universitet,vil betale
+12888,33,mann,singel,73333,betalt,betalt,betalt,hoeyskole,vil betale
+12033,43,mann,gift,120000,betalt,betalt,betalt,universitet,vil betale
+23866,28,mann,singel,30000,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+28958,29,kvinne,singel,13333,betalt,betalt,betalt,hoeyskole,vil betale
+5802,29,kvinne,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+20971,42,mann,singel,70000,betalt,betalt,betalt,universitet,vil betale
+23661,33,kvinne,singel,66667,betalt,betalt,betalt,universitet,vil betale
+15003,28,kvinne,gift,30000,betalt,betalt,betalt,universitet,vil betale
+4097,30,mann,gift,66667,ikke betalt,betalt,betalt,universitet,vil betale
+6262,28,kvinne,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+20273,48,kvinne,gift,63333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+1597,37,kvinne,gift,50000,betalt,ikke betalt,ikke betalt,universitet,vil betale
+24717,43,mann,gift,6667,ikke betalt,betalt,betalt,universitet,vil ikke betale
+23403,48,kvinne,gift,26667,betalt,betalt,betalt,grunnskole,vil betale
+25944,41,kvinne,gift,103333,betalt,betalt,betalt,hoeyskole,vil betale
+12455,41,mann,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+21860,26,kvinne,gift,120000,betalt,betalt,betalt,hoeyskole,vil betale
+10169,39,kvinne,gift,40000,betalt,betalt,betalt,hoeyskole,vil betale
+242,39,mann,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+15500,33,mann,singel,16667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+3803,48,mann,gift,20000,betalt,betalt,ikke betalt,hoeyskole,vil betale
+22943,31,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+25311,25,kvinne,singel,76667,betalt,betalt,betalt,hoeyskole,vil betale
+25665,25,kvinne,singel,56667,betalt,betalt,ikke betalt,universitet,vil betale
+15754,22,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+16233,46,kvinne,gift,86667,betalt,betalt,betalt,universitet,vil betale
+25505,28,kvinne,singel,73333,betalt,betalt,betalt,universitet,vil ikke betale
+3974,29,mann,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+22246,22,kvinne,singel,10000,ikke betalt,betalt,betalt,grunnskole,vil betale
+14160,36,kvinne,singel,73333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+28133,38,kvinne,singel,180000,ikke betalt,betalt,betalt,grunnskole,vil betale
+24074,28,mann,gift,33333,betalt,betalt,betalt,universitet,vil betale
+24222,31,mann,gift,43333,betalt,betalt,betalt,universitet,vil betale
+23114,31,kvinne,gift,60000,betalt,betalt,betalt,universitet,vil betale
+20863,45,mann,gift,80000,betalt,betalt,betalt,universitet,vil betale
+24785,35,mann,singel,26667,ikke betalt,betalt,ikke betalt,hoeyskole,vil ikke betale
+13088,29,kvinne,singel,140000,betalt,betalt,betalt,hoeyskole,vil betale
+21467,28,kvinne,singel,40000,ikke betalt,betalt,betalt,universitet,vil ikke betale
+11433,31,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil ikke betale
+20316,53,kvinne,gift,50000,betalt,betalt,betalt,universitet,vil betale
+24841,46,mann,singel,53333,betalt,betalt,betalt,hoeyskole,vil betale
+1327,48,mann,gift,56667,betalt,betalt,betalt,universitet,vil betale
+29668,38,mann,singel,36667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+19096,45,kvinne,singel,20000,betalt,betalt,betalt,universitet,vil betale
+8019,25,kvinne,singel,30000,betalt,betalt,betalt,universitet,vil betale
+24802,26,mann,singel,33333,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+9707,46,kvinne,gift,33333,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+26229,30,kvinne,singel,40000,betalt,betalt,betalt,universitet,vil betale
+13736,36,kvinne,gift,23333,betalt,betalt,betalt,grunnskole,vil ikke betale
+28524,38,kvinne,gift,53333,betalt,betalt,betalt,hoeyskole,vil betale
+8061,28,mann,gift,66667,betalt,betalt,betalt,grunnskole,vil betale
+6067,41,kvinne,gift,93333,ikke betalt,betalt,betalt,hoeyskole,vil betale
+17988,36,mann,singel,80000,betalt,betalt,betalt,grunnskole,vil betale
+28802,38,kvinne,gift,66667,betalt,betalt,betalt,hoeyskole,vil betale
+1997,24,kvinne,singel,20000,betalt,betalt,betalt,hoeyskole,vil betale
+7134,22,kvinne,singel,16667,betalt,betalt,betalt,grunnskole,vil betale
+11975,61,mann,gift,110000,betalt,betalt,betalt,hoeyskole,vil betale
+19630,45,kvinne,gift,43333,betalt,ikke betalt,betalt,universitet,vil betale
+3294,23,mann,singel,10000,betalt,betalt,betalt,hoeyskole,vil betale
+1433,32,mann,singel,76667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+9647,34,kvinne,singel,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+12890,44,mann,singel,86667,betalt,betalt,betalt,universitet,vil betale
+8396,29,kvinne,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+13834,43,kvinne,singel,6667,betalt,betalt,betalt,universitet,vil betale
+28828,30,kvinne,gift,106667,betalt,betalt,betalt,universitet,vil betale
+9370,25,kvinne,singel,120000,betalt,betalt,betalt,universitet,vil betale
+11243,26,mann,singel,50000,betalt,betalt,ikke betalt,hoeyskole,vil betale
+7713,34,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+6036,45,mann,gift,93333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+25402,24,kvinne,singel,30000,betalt,betalt,betalt,hoeyskole,vil betale
+27395,40,mann,gift,100000,betalt,betalt,betalt,universitet,vil betale
+28809,44,kvinne,singel,113333,betalt,betalt,betalt,hoeyskole,vil betale
+11454,52,kvinne,singel,46667,betalt,betalt,betalt,hoeyskole,vil betale
+234,34,mann,singel,63333,ikke betalt,betalt,betalt,universitet,vil ikke betale
+1690,46,mann,gift,16667,betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+22330,27,kvinne,singel,36667,betalt,betalt,betalt,hoeyskole,vil betale
+26827,27,mann,singel,6667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+20156,38,kvinne,singel,66667,betalt,betalt,betalt,universitet,vil betale
+15961,30,kvinne,singel,100000,betalt,betalt,betalt,hoeyskole,vil betale
+22444,36,kvinne,gift,30000,betalt,betalt,ikke betalt,universitet,vil betale
+27492,53,mann,gift,33333,betalt,betalt,betalt,ukjent,vil betale
+23818,50,kvinne,singel,166667,betalt,betalt,betalt,universitet,vil ikke betale
+20987,45,mann,gift,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+19307,33,kvinne,gift,50000,betalt,betalt,betalt,universitet,vil betale
+20335,64,kvinne,gift,146667,betalt,betalt,betalt,ukjent,vil betale
+21535,23,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+18675,28,kvinne,singel,76667,betalt,betalt,betalt,universitet,vil betale
+6770,25,kvinne,gift,20000,betalt,betalt,betalt,hoeyskole,vil betale
+1212,26,kvinne,singel,53333,betalt,betalt,betalt,grunnskole,vil betale
+17470,32,kvinne,gift,30000,betalt,betalt,betalt,universitet,vil betale
+26516,59,kvinne,gift,36667,betalt,betalt,betalt,universitet,vil betale
+22100,28,kvinne,singel,66667,betalt,betalt,betalt,universitet,vil betale
+28638,44,kvinne,singel,116667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+6930,39,mann,singel,6667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+6384,29,mann,singel,30000,betalt,betalt,betalt,universitet,vil betale
+10016,30,mann,singel,50000,betalt,betalt,betalt,universitet,vil betale
+22166,27,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+2917,26,mann,singel,6667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+23399,32,kvinne,gift,60000,betalt,ikke betalt,betalt,universitet,vil betale
+3898,36,kvinne,gift,106667,betalt,betalt,betalt,universitet,vil betale
+2888,36,kvinne,gift,166667,betalt,betalt,betalt,hoeyskole,vil betale
+26045,33,kvinne,singel,60000,betalt,betalt,betalt,universitet,vil betale
+18171,47,mann,gift,83333,betalt,betalt,betalt,hoeyskole,vil betale
+23696,51,kvinne,gift,40000,betalt,betalt,betalt,hoeyskole,vil betale
+6153,47,mann,gift,56667,betalt,betalt,betalt,grunnskole,vil betale
+8101,30,mann,singel,33333,betalt,betalt,betalt,universitet,vil betale
+25490,27,kvinne,singel,36667,betalt,betalt,betalt,hoeyskole,vil betale
+18377,23,kvinne,singel,33333,betalt,betalt,betalt,universitet,vil betale
+18817,29,kvinne,singel,140000,betalt,betalt,betalt,universitet,vil betale
+21095,36,mann,gift,66667,betalt,betalt,betalt,universitet,vil betale
+12309,35,mann,singel,30000,betalt,betalt,betalt,universitet,vil betale
+16286,34,kvinne,gift,86667,betalt,betalt,ikke betalt,hoeyskole,vil betale
+4418,42,kvinne,gift,153333,betalt,betalt,betalt,grunnskole,vil betale
+6430,21,mann,singel,3333,betalt,betalt,betalt,universitet,vil ikke betale
+1741,54,mann,gift,46667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+902,36,kvinne,gift,46667,betalt,betalt,betalt,hoeyskole,vil betale
+10145,54,kvinne,singel,53333,ikke betalt,betalt,betalt,grunnskole,vil betale
+20173,42,kvinne,gift,120000,betalt,betalt,ikke betalt,hoeyskole,vil betale
+26871,48,mann,gift,30000,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+23427,29,kvinne,gift,6667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+3386,32,kvinne,gift,66667,betalt,betalt,betalt,hoeyskole,vil betale
+8135,35,kvinne,gift,16667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+23949,22,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+12465,25,kvinne,singel,30000,betalt,betalt,betalt,hoeyskole,vil betale
+19608,34,kvinne,singel,63333,betalt,betalt,betalt,universitet,vil betale
+24595,47,mann,gift,126667,ikke betalt,betalt,betalt,universitet,vil ikke betale
+12064,31,mann,singel,33333,betalt,betalt,betalt,universitet,vil betale
+26480,54,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil ikke betale
+8494,30,kvinne,gift,100000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+10326,23,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil ikke betale
+9112,39,mann,gift,160000,betalt,betalt,betalt,universitet,vil betale
+12256,28,kvinne,singel,40000,betalt,ikke betalt,betalt,universitet,vil ikke betale
+711,49,mann,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+2644,39,mann,gift,120000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+19794,42,kvinne,gift,20000,betalt,betalt,ikke betalt,grunnskole,vil betale
+4654,27,kvinne,gift,3333,ikke betalt,betalt,betalt,hoeyskole,vil betale
+29073,52,kvinne,singel,53333,betalt,betalt,betalt,ukjent,vil betale
+26420,48,kvinne,gift,20000,betalt,betalt,betalt,universitet,vil betale
+27112,46,mann,gift,23333,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+587,43,mann,gift,73333,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+18533,27,kvinne,gift,16667,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+12407,33,kvinne,singel,53333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+14010,38,kvinne,gift,53333,betalt,betalt,betalt,hoeyskole,vil betale
+13614,25,mann,singel,113333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+25449,27,kvinne,singel,70000,betalt,betalt,betalt,universitet,vil betale
+1765,26,kvinne,singel,43333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+6515,48,kvinne,gift,96667,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+1613,38,kvinne,gift,63333,betalt,betalt,betalt,grunnskole,vil betale
+5090,53,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+2426,22,mann,singel,6667,betalt,betalt,ikke betalt,universitet,vil betale
+15603,24,kvinne,singel,20000,ikke betalt,betalt,ikke betalt,universitet,vil ikke betale
+5195,31,kvinne,singel,166667,betalt,betalt,betalt,universitet,vil betale
+28564,35,kvinne,singel,10000,betalt,betalt,betalt,grunnskole,vil betale
+27996,30,kvinne,singel,26667,betalt,betalt,betalt,universitet,vil betale
+12778,50,kvinne,singel,30000,betalt,betalt,betalt,grunnskole,vil betale
+23307,40,kvinne,singel,6667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+5367,29,mann,singel,6667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+4241,34,mann,gift,66667,betalt,betalt,betalt,hoeyskole,vil betale
+25835,47,kvinne,singel,16667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+9324,39,mann,gift,166667,betalt,betalt,betalt,universitet,vil ikke betale
+1831,38,mann,gift,6667,betalt,betalt,betalt,grunnskole,vil ikke betale
+14734,25,kvinne,singel,10000,ikke betalt,betalt,betalt,universitet,vil ikke betale
+21899,27,kvinne,singel,13333,betalt,betalt,betalt,hoeyskole,vil betale
+22552,34,kvinne,gift,40000,betalt,betalt,betalt,hoeyskole,vil ikke betale
+25392,26,kvinne,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+9085,27,kvinne,singel,16667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+23046,36,kvinne,gift,30000,ikke betalt,betalt,betalt,universitet,vil betale
+7404,43,mann,gift,23333,betalt,betalt,betalt,universitet,vil betale
+2604,30,mann,singel,113333,betalt,betalt,betalt,hoeyskole,vil betale
+1684,44,mann,gift,66667,betalt,betalt,betalt,hoeyskole,vil betale
+57,34,kvinne,gift,60000,betalt,betalt,betalt,grunnskole,vil betale
+3051,26,mann,singel,53333,betalt,betalt,betalt,universitet,vil betale
+29588,33,mann,singel,6667,betalt,betalt,betalt,universitet,vil betale
+15180,28,kvinne,singel,30000,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+9882,29,mann,singel,156667,betalt,betalt,betalt,universitet,vil betale
+20983,39,mann,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+6512,61,kvinne,gift,66667,betalt,betalt,betalt,universitet,vil betale
+27500,59,mann,gift,6667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+3151,52,kvinne,singel,166667,betalt,betalt,betalt,grunnskole,vil ikke betale
+9684,29,mann,singel,146667,betalt,betalt,betalt,universitet,vil betale
+20999,32,mann,gift,66667,betalt,betalt,betalt,universitet,vil betale
+15948,30,kvinne,gift,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+4066,46,kvinne,singel,33333,ikke betalt,betalt,ikke betalt,grunnskole,vil betale
+8151,30,kvinne,singel,83333,betalt,betalt,betalt,hoeyskole,vil betale
+11529,42,mann,gift,70000,betalt,betalt,betalt,hoeyskole,vil betale
+29710,33,mann,singel,83333,betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+22651,37,kvinne,singel,83333,betalt,betalt,betalt,hoeyskole,vil betale
+19551,41,kvinne,singel,153333,betalt,betalt,betalt,hoeyskole,vil betale
+3804,59,mann,gift,26667,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+11111,42,mann,gift,13333,betalt,betalt,betalt,universitet,vil betale
+3015,35,mann,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+2615,42,kvinne,singel,66667,betalt,betalt,betalt,universitet,vil betale
+4613,24,kvinne,singel,6667,betalt,betalt,betalt,hoeyskole,vil betale
+26032,29,kvinne,singel,96667,betalt,betalt,betalt,universitet,vil betale
+24472,44,mann,gift,43333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+10272,29,kvinne,gift,20000,betalt,betalt,betalt,grunnskole,vil betale
+7077,42,kvinne,gift,20000,betalt,betalt,betalt,universitet,vil betale
+12943,38,mann,gift,80000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+23115,45,kvinne,gift,36667,betalt,betalt,betalt,universitet,vil betale
+25489,31,kvinne,singel,60000,betalt,betalt,betalt,universitet,vil betale
+19373,42,kvinne,gift,166667,betalt,betalt,betalt,universitet,vil betale
+6914,39,mann,gift,20000,betalt,betalt,betalt,universitet,vil betale
+10584,38,mann,singel,16667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+22310,27,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+10042,39,kvinne,gift,33333,betalt,betalt,betalt,grunnskole,vil betale
+10347,53,mann,gift,86667,betalt,betalt,betalt,grunnskole,vil betale
+17645,44,kvinne,gift,76667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+18104,38,mann,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+1077,27,mann,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+12332,36,kvinne,singel,103333,ikke betalt,betalt,betalt,hoeyskole,vil betale
+5321,30,mann,singel,166667,betalt,betalt,betalt,universitet,vil betale
+8534,27,kvinne,singel,26667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+14473,33,mann,gift,96667,betalt,betalt,betalt,universitet,vil betale
+6589,47,mann,gift,120000,betalt,betalt,betalt,hoeyskole,vil betale
+27767,25,kvinne,singel,16667,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+10734,32,kvinne,gift,103333,betalt,betalt,betalt,hoeyskole,vil betale
+21508,22,kvinne,singel,6667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+26170,39,kvinne,gift,16667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+25019,49,mann,gift,33333,betalt,betalt,betalt,grunnskole,vil betale
+10005,45,kvinne,singel,66667,ikke betalt,betalt,betalt,grunnskole,vil betale
+920,23,kvinne,singel,30000,betalt,betalt,betalt,hoeyskole,vil betale
+3191,26,kvinne,singel,50000,betalt,betalt,ikke betalt,ukjent,vil betale
+9127,32,kvinne,gift,60000,betalt,betalt,betalt,universitet,vil betale
+3598,37,kvinne,gift,16667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+14996,24,mann,singel,6667,betalt,betalt,betalt,universitet,vil betale
+592,34,mann,singel,53333,betalt,betalt,betalt,hoeyskole,vil betale
+17012,23,kvinne,singel,23333,ikke betalt,ikke betalt,betalt,universitet,vil betale
+24232,31,mann,singel,36667,betalt,betalt,betalt,hoeyskole,vil betale
+2339,27,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil betale
+24422,34,mann,gift,80000,betalt,betalt,betalt,universitet,vil betale
+8379,39,mann,gift,20000,betalt,betalt,betalt,universitet,vil betale
+417,31,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+18813,27,kvinne,singel,86667,betalt,betalt,betalt,universitet,vil ikke betale
+3106,33,kvinne,gift,116667,betalt,betalt,betalt,universitet,vil betale
+27195,32,mann,gift,156667,betalt,betalt,betalt,universitet,vil betale
+27110,36,mann,singel,23333,betalt,betalt,betalt,universitet,vil betale
+14380,35,mann,singel,53333,betalt,betalt,betalt,grunnskole,vil betale
+25353,27,kvinne,singel,43333,betalt,betalt,betalt,hoeyskole,vil betale
+5553,27,mann,singel,3333,ikke betalt,betalt,betalt,universitet,vil betale
+11961,42,kvinne,singel,50000,betalt,betalt,betalt,universitet,vil betale
+26275,36,kvinne,gift,70000,betalt,betalt,betalt,hoeyskole,vil betale
+16955,50,mann,singel,6667,betalt,betalt,betalt,universitet,vil betale
+628,39,mann,gift,76667,betalt,betalt,betalt,hoeyskole,vil betale
+28263,34,kvinne,gift,53333,betalt,betalt,betalt,universitet,vil betale
+13385,34,mann,singel,10000,betalt,betalt,betalt,universitet,vil betale
+11500,33,mann,gift,73333,betalt,betalt,betalt,hoeyskole,vil betale
+21072,35,mann,singel,113333,betalt,betalt,betalt,hoeyskole,vil betale
+23855,40,mann,gift,23333,betalt,betalt,betalt,universitet,vil betale
+16411,36,kvinne,singel,50000,betalt,betalt,ikke betalt,hoeyskole,vil betale
+28776,42,kvinne,gift,40000,betalt,betalt,betalt,hoeyskole,vil ikke betale
+9878,35,mann,singel,106667,betalt,betalt,betalt,hoeyskole,vil betale
+21313,57,mann,gift,53333,betalt,betalt,betalt,grunnskole,vil ikke betale
+13577,64,mann,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+25335,28,kvinne,gift,40000,betalt,betalt,betalt,grunnskole,vil betale
+27164,42,mann,gift,3333,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+29053,52,kvinne,singel,3333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+1078,35,mann,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+3076,29,kvinne,singel,66667,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+13339,31,kvinne,singel,130000,ikke betalt,ikke betalt,betalt,universitet,vil betale
+29810,48,mann,gift,6667,betalt,betalt,ikke betalt,grunnskole,vil ikke betale
+11059,26,mann,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+10039,31,kvinne,singel,30000,betalt,betalt,ikke betalt,hoeyskole,vil betale
+11989,32,kvinne,singel,120000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+17821,25,mann,singel,33333,betalt,betalt,betalt,universitet,vil betale
+713,30,kvinne,gift,120000,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+15195,25,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+308,27,kvinne,gift,100000,ikke betalt,betalt,betalt,universitet,vil betale
+25992,36,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+9599,33,mann,singel,113333,betalt,betalt,betalt,hoeyskole,vil betale
+11763,28,mann,singel,166667,betalt,betalt,betalt,universitet,vil betale
+29395,28,mann,gift,166667,betalt,betalt,betalt,universitet,vil betale
+26038,30,kvinne,gift,163333,betalt,betalt,betalt,universitet,vil betale
+19913,32,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil ikke betale
+5611,27,kvinne,singel,53333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+18433,27,kvinne,gift,83333,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+22322,28,kvinne,gift,80000,betalt,betalt,betalt,universitet,vil betale
+28285,41,kvinne,singel,60000,betalt,betalt,betalt,grunnskole,vil betale
+14491,28,mann,singel,60000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+25191,22,kvinne,singel,6667,betalt,betalt,ikke betalt,universitet,vil ikke betale
+1413,38,mann,gift,10000,betalt,betalt,betalt,universitet,vil betale
+3702,29,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+6385,22,kvinne,singel,6667,betalt,betalt,betalt,universitet,vil betale
+17996,32,mann,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+28514,31,kvinne,singel,106667,betalt,betalt,betalt,hoeyskole,vil betale
+23704,51,kvinne,gift,80000,betalt,betalt,betalt,grunnskole,vil betale
+6686,29,kvinne,singel,93333,betalt,betalt,betalt,universitet,vil betale
+1198,44,mann,gift,43333,betalt,ikke betalt,betalt,universitet,vil betale
+4317,24,mann,singel,3333,betalt,betalt,betalt,grunnskole,vil betale
+4087,37,mann,singel,103333,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+8268,25,mann,singel,10000,betalt,betalt,betalt,grunnskole,vil betale
+13268,37,mann,gift,40000,betalt,betalt,betalt,hoeyskole,vil betale
+13824,30,mann,gift,20000,betalt,betalt,betalt,universitet,vil betale
+13522,44,mann,gift,153333,betalt,betalt,betalt,hoeyskole,vil betale
+15294,47,kvinne,gift,60000,betalt,betalt,betalt,universitet,vil betale
+3758,27,kvinne,singel,60000,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+2659,46,kvinne,gift,60000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+3219,39,mann,gift,120000,betalt,betalt,betalt,hoeyskole,vil betale
+18838,26,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+15486,29,mann,gift,76667,betalt,betalt,betalt,universitet,vil betale
+26926,34,mann,singel,43333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+16261,49,kvinne,gift,13333,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+7587,34,kvinne,singel,86667,betalt,betalt,betalt,hoeyskole,vil betale
+12805,34,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+13148,29,kvinne,singel,120000,betalt,betalt,betalt,hoeyskole,vil betale
+23137,33,kvinne,gift,83333,betalt,betalt,betalt,ukjent,vil betale
+4310,34,mann,singel,86667,betalt,betalt,betalt,hoeyskole,vil betale
+8114,39,kvinne,gift,53333,ikke betalt,betalt,ikke betalt,hoeyskole,vil ikke betale
+2108,38,kvinne,gift,40000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+11394,38,mann,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+8504,28,kvinne,singel,93333,betalt,betalt,betalt,hoeyskole,vil betale
+11350,33,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil betale
+18816,30,kvinne,gift,33333,betalt,betalt,betalt,universitet,vil ikke betale
+4559,27,mann,singel,13333,betalt,betalt,ikke betalt,universitet,vil ikke betale
+19694,49,kvinne,gift,23333,betalt,betalt,betalt,universitet,vil ikke betale
+21813,24,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+29366,24,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+3001,34,kvinne,singel,110000,betalt,betalt,betalt,hoeyskole,vil betale
+19301,39,kvinne,gift,56667,betalt,betalt,betalt,universitet,vil betale
+1263,44,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+1247,39,mann,gift,56667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+13442,36,mann,singel,53333,betalt,betalt,betalt,universitet,vil betale
+4024,48,mann,singel,83333,betalt,betalt,betalt,hoeyskole,vil betale
+18916,28,kvinne,gift,26667,ikke betalt,betalt,betalt,universitet,vil betale
+21770,25,kvinne,singel,30000,betalt,betalt,betalt,ukjent,vil ikke betale
+9149,46,kvinne,singel,3333,betalt,betalt,ikke betalt,universitet,vil ikke betale
+11378,41,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+18603,24,kvinne,gift,133333,betalt,betalt,betalt,universitet,vil betale
+1660,22,kvinne,singel,6667,betalt,betalt,betalt,grunnskole,vil betale
+16156,43,kvinne,gift,100000,betalt,betalt,betalt,universitet,vil ikke betale
+6756,45,mann,gift,100000,betalt,betalt,betalt,hoeyskole,vil ikke betale
+28884,40,kvinne,gift,100000,ikke betalt,betalt,betalt,universitet,vil betale
+7403,24,kvinne,singel,83333,betalt,betalt,betalt,universitet,vil ikke betale
+5142,30,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+28100,31,kvinne,singel,73333,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+2320,60,kvinne,singel,10000,betalt,betalt,betalt,grunnskole,vil betale
+6238,30,mann,gift,70000,betalt,betalt,betalt,universitet,vil ikke betale
+21859,26,kvinne,singel,50000,betalt,betalt,betalt,grunnskole,vil betale
+25477,24,kvinne,gift,23333,betalt,betalt,betalt,ukjent,vil betale
+20470,26,mann,singel,46667,betalt,betalt,betalt,ukjent,vil betale
+7943,38,kvinne,gift,80000,betalt,betalt,betalt,hoeyskole,vil betale
+8965,34,mann,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+28249,33,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+27423,31,mann,singel,56667,betalt,betalt,betalt,universitet,vil betale
+8152,41,kvinne,gift,86667,betalt,betalt,betalt,universitet,vil betale
+13760,27,kvinne,singel,50000,ikke betalt,ikke betalt,betalt,universitet,vil betale
+9066,24,kvinne,singel,36667,betalt,betalt,betalt,universitet,vil betale
+13667,38,mann,singel,26667,betalt,betalt,betalt,universitet,vil betale
+15868,30,kvinne,singel,36667,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+14253,45,mann,gift,100000,betalt,betalt,betalt,hoeyskole,vil betale
+9253,34,kvinne,singel,56667,betalt,betalt,betalt,universitet,vil ikke betale
+22482,36,kvinne,gift,50000,betalt,betalt,betalt,ukjent,vil betale
+29317,27,mann,singel,26667,ikke betalt,betalt,betalt,grunnskole,vil betale
+17329,39,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil betale
+2157,25,kvinne,singel,96667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+25870,40,kvinne,singel,170000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+13808,26,kvinne,singel,16667,betalt,betalt,ikke betalt,universitet,vil betale
+22237,32,kvinne,gift,16667,betalt,betalt,betalt,universitet,vil betale
+3851,50,mann,gift,16667,ikke betalt,ikke betalt,betalt,hoeyskole,vil ikke betale
+22307,27,kvinne,gift,33333,betalt,ikke betalt,betalt,universitet,vil ikke betale
+742,30,kvinne,singel,36667,betalt,betalt,betalt,hoeyskole,vil betale
+24146,28,mann,singel,93333,betalt,betalt,betalt,hoeyskole,vil betale
+12959,23,mann,singel,16667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+13674,22,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil ikke betale
+29147,52,kvinne,singel,13333,betalt,betalt,betalt,grunnskole,vil betale
+2220,41,kvinne,gift,113333,betalt,ikke betalt,betalt,hoeyskole,vil ikke betale
+19227,45,kvinne,singel,6667,betalt,betalt,betalt,grunnskole,vil betale
+15096,38,mann,singel,166667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+2507,41,kvinne,singel,36667,betalt,betalt,betalt,grunnskole,vil ikke betale
+9802,27,kvinne,singel,63333,betalt,betalt,betalt,hoeyskole,vil ikke betale
+28777,32,kvinne,gift,16667,betalt,betalt,betalt,hoeyskole,vil betale
+8060,27,mann,singel,33333,betalt,betalt,betalt,universitet,vil betale
+3155,25,mann,singel,120000,ikke betalt,betalt,ikke betalt,universitet,vil betale
+13519,31,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+4342,32,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+664,22,mann,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+12053,37,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+22615,37,kvinne,singel,23333,betalt,betalt,betalt,hoeyskole,vil betale
+3589,40,kvinne,gift,70000,betalt,betalt,betalt,hoeyskole,vil betale
+2983,30,kvinne,singel,56667,betalt,betalt,betalt,hoeyskole,vil betale
+10643,48,mann,gift,76667,betalt,betalt,betalt,hoeyskole,vil betale
+7504,23,kvinne,singel,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+29927,46,mann,gift,16667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+1960,57,kvinne,gift,23333,betalt,betalt,betalt,grunnskole,vil betale
+15874,29,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+9086,44,kvinne,gift,10000,betalt,betalt,betalt,universitet,vil betale
+11618,32,mann,singel,36667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+2230,38,kvinne,gift,56667,betalt,betalt,betalt,universitet,vil betale
+23139,34,kvinne,singel,40000,betalt,betalt,betalt,hoeyskole,vil betale
+14451,29,mann,singel,43333,betalt,betalt,betalt,universitet,vil betale
+22203,27,kvinne,singel,106667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+15122,53,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+1253,22,kvinne,singel,6667,betalt,betalt,betalt,hoeyskole,vil betale
+6169,32,kvinne,singel,40000,betalt,betalt,betalt,grunnskole,vil betale
+7031,43,kvinne,gift,23333,betalt,betalt,betalt,universitet,vil betale
+6402,29,mann,gift,23333,betalt,betalt,betalt,universitet,vil betale
+14419,40,kvinne,gift,6667,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+28691,32,kvinne,gift,23333,betalt,betalt,betalt,universitet,vil betale
+26751,28,mann,singel,70000,betalt,betalt,betalt,hoeyskole,vil betale
+16553,25,mann,singel,43333,betalt,betalt,betalt,universitet,vil ikke betale
+7469,39,mann,singel,6667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil ikke betale
+29091,52,kvinne,gift,53333,betalt,betalt,ikke betalt,universitet,vil betale
+22177,28,kvinne,singel,50000,ikke betalt,betalt,betalt,universitet,vil ikke betale
+4492,25,mann,singel,33333,betalt,betalt,betalt,universitet,vil betale
+561,34,mann,singel,90000,betalt,betalt,betalt,hoeyskole,vil betale
+952,32,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil betale
+1407,26,kvinne,singel,66667,betalt,betalt,betalt,hoeyskole,vil betale
+16470,53,kvinne,gift,10000,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+2720,49,mann,gift,50000,betalt,betalt,betalt,hoeyskole,vil betale
+4454,45,mann,gift,16667,betalt,betalt,betalt,grunnskole,vil betale
+20366,23,mann,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+27307,44,mann,singel,6667,betalt,betalt,betalt,universitet,vil betale
+7569,30,mann,singel,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+12920,39,kvinne,gift,43333,betalt,betalt,betalt,universitet,vil betale
+9514,31,mann,singel,116667,betalt,betalt,betalt,hoeyskole,vil betale
+2542,35,kvinne,gift,33333,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+28155,42,kvinne,singel,33333,betalt,betalt,ikke betalt,hoeyskole,vil betale
+14735,40,mann,gift,66667,betalt,betalt,betalt,hoeyskole,vil betale
+26947,38,mann,gift,20000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+10994,30,kvinne,singel,73333,betalt,betalt,betalt,hoeyskole,vil betale
+14712,22,kvinne,singel,16667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+27778,25,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+15546,37,mann,gift,90000,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+817,51,mann,gift,23333,ikke betalt,ikke betalt,betalt,grunnskole,vil ikke betale
+29791,44,mann,gift,83333,betalt,betalt,betalt,hoeyskole,vil betale
+4595,32,mann,gift,10000,betalt,betalt,ikke betalt,hoeyskole,vil ikke betale
+3056,40,kvinne,singel,76667,betalt,betalt,betalt,hoeyskole,vil betale
+7657,46,mann,gift,60000,betalt,betalt,betalt,universitet,vil betale
+26097,46,kvinne,gift,70000,betalt,betalt,betalt,hoeyskole,vil betale
+24282,30,mann,gift,66667,betalt,betalt,betalt,grunnskole,vil betale
+20930,35,mann,singel,66667,betalt,betalt,betalt,universitet,vil betale
+4891,33,kvinne,gift,120000,betalt,betalt,betalt,universitet,vil betale
+24450,44,mann,gift,63333,betalt,betalt,ikke betalt,hoeyskole,vil betale
+16975,29,kvinne,singel,20000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+27271,35,mann,gift,83333,betalt,betalt,betalt,ukjent,vil betale
+18450,26,kvinne,gift,6667,ikke betalt,ikke betalt,betalt,universitet,vil betale
+29660,37,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+3933,27,kvinne,gift,76667,betalt,betalt,betalt,hoeyskole,vil betale
+7605,46,kvinne,gift,66667,betalt,betalt,betalt,universitet,vil betale
+15464,35,mann,singel,163333,betalt,betalt,betalt,hoeyskole,vil betale
+18865,28,kvinne,gift,43333,ikke betalt,betalt,betalt,universitet,vil betale
+13881,32,kvinne,singel,166667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+8593,49,kvinne,singel,16667,ikke betalt,betalt,betalt,universitet,vil betale
+27559,63,mann,gift,60000,betalt,betalt,betalt,hoeyskole,vil betale
+9908,42,kvinne,gift,66667,betalt,betalt,betalt,universitet,vil betale
+29096,56,kvinne,gift,46667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+21992,29,kvinne,singel,50000,betalt,ikke betalt,betalt,hoeyskole,vil betale
+21568,25,kvinne,singel,10000,betalt,betalt,betalt,hoeyskole,vil betale
+20573,28,mann,singel,10000,betalt,betalt,betalt,grunnskole,vil ikke betale
+7141,24,kvinne,singel,33333,betalt,betalt,betalt,universitet,vil betale
+8697,43,mann,gift,16667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+23814,55,kvinne,singel,23333,betalt,betalt,betalt,universitet,vil betale
+19316,41,kvinne,gift,36667,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+16948,56,mann,gift,10000,betalt,betalt,betalt,ukjent,vil betale
+26198,29,kvinne,singel,93333,betalt,betalt,betalt,ukjent,vil betale
+2328,41,kvinne,singel,16667,betalt,betalt,betalt,universitet,vil betale
+3180,27,kvinne,gift,166667,betalt,betalt,betalt,universitet,vil betale
+3981,26,kvinne,singel,60000,betalt,betalt,betalt,grunnskole,vil ikke betale
+7452,26,kvinne,singel,120000,ikke betalt,betalt,betalt,universitet,vil betale
+10377,33,kvinne,singel,153333,betalt,betalt,betalt,universitet,vil betale
+17265,46,kvinne,gift,80000,betalt,betalt,betalt,universitet,vil ikke betale
+24816,32,mann,singel,116667,betalt,betalt,betalt,universitet,vil betale
+29308,26,mann,singel,103333,betalt,betalt,betalt,hoeyskole,vil betale
+23671,34,kvinne,singel,26667,betalt,betalt,betalt,universitet,vil betale
+3402,28,mann,singel,43333,betalt,betalt,betalt,universitet,vil betale
+9741,33,mann,singel,16667,betalt,betalt,betalt,universitet,vil betale
+8779,24,kvinne,singel,23333,betalt,betalt,betalt,universitet,vil betale
+24117,28,mann,singel,153333,betalt,betalt,betalt,ukjent,vil betale
+20424,27,mann,singel,90000,betalt,betalt,betalt,hoeyskole,vil betale
+13732,23,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil betale
+434,36,kvinne,gift,193333,betalt,betalt,betalt,hoeyskole,vil betale
+7594,68,mann,singel,66667,betalt,betalt,betalt,universitet,vil betale
+228,37,mann,gift,6667,betalt,betalt,betalt,universitet,vil betale
+13775,25,kvinne,singel,100000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+15528,39,mann,singel,63333,betalt,betalt,betalt,universitet,vil betale
+5358,27,kvinne,singel,90000,betalt,betalt,betalt,hoeyskole,vil betale
+17539,32,kvinne,singel,43333,betalt,betalt,betalt,universitet,vil betale
+16267,46,kvinne,singel,63333,betalt,betalt,betalt,grunnskole,vil betale
+4728,45,kvinne,singel,20000,betalt,betalt,betalt,grunnskole,vil ikke betale
+21165,36,mann,singel,76667,betalt,betalt,betalt,universitet,vil betale
+3870,26,kvinne,singel,30000,ikke betalt,ikke betalt,ikke betalt,hoeyskole,vil betale
+25888,37,kvinne,gift,56667,betalt,betalt,betalt,grunnskole,vil betale
+16137,37,kvinne,gift,73333,ikke betalt,ikke betalt,ikke betalt,universitet,vil betale
+10765,24,kvinne,singel,16667,betalt,betalt,ikke betalt,hoeyskole,vil betale
+20409,24,mann,singel,6667,ikke betalt,betalt,betalt,grunnskole,vil ikke betale
+24961,35,mann,singel,13333,betalt,betalt,betalt,hoeyskole,vil betale
+112,47,mann,gift,16667,betalt,betalt,ikke betalt,grunnskole,vil betale
+717,27,kvinne,singel,53333,betalt,betalt,betalt,universitet,vil betale
+7620,23,mann,singel,16667,betalt,betalt,betalt,grunnskole,vil betale
+20348,55,kvinne,gift,46667,betalt,betalt,betalt,universitet,vil betale
+7810,40,kvinne,gift,23333,betalt,betalt,betalt,grunnskole,vil betale
+27804,26,kvinne,singel,60000,betalt,betalt,betalt,hoeyskole,vil betale
+6618,26,mann,singel,36667,ikke betalt,betalt,betalt,universitet,vil betale
+1848,26,mann,singel,10000,ikke betalt,ikke betalt,ikke betalt,universitet,vil ikke betale
+20408,21,mann,singel,3333,betalt,betalt,betalt,universitet,vil betale
+2314,28,kvinne,singel,80000,betalt,betalt,betalt,hoeyskole,vil betale
+27740,25,kvinne,singel,20000,betalt,betalt,betalt,universitet,vil ikke betale
+6210,30,kvinne,singel,50000,betalt,betalt,betalt,hoeyskole,vil betale
+22543,40,kvinne,singel,43333,ikke betalt,betalt,betalt,universitet,vil ikke betale
+3920,26,mann,singel,120000,ikke betalt,betalt,betalt,hoeyskole,vil betale
+25674,43,kvinne,gift,90000,betalt,betalt,betalt,grunnskole,vil betale
+19605,31,kvinne,singel,36667,ikke betalt,betalt,betalt,hoeyskole,vil betale
+3532,41,kvinne,singel,53333,betalt,ikke betalt,ikke betalt,grunnskole,vil betale
+7025,25,kvinne,singel,66667,betalt,betalt,betalt,universitet,vil betale
+20474,27,mann,singel,6667,betalt,betalt,betalt,grunnskole,vil betale
+14152,43,kvinne,singel,6667,ikke betalt,ikke betalt,betalt,grunnskole,vil betale
+11933,40,kvinne,gift,96667,betalt,betalt,betalt,hoeyskole,vil betale
+857,29,kvinne,singel,13333,betalt,betalt,ikke betalt,hoeyskole,vil ikke betale
+3173,35,mann,gift,76667,betalt,betalt,betalt,universitet,vil betale
+27940,27,kvinne,gift,30000,ikke betalt,betalt,betalt,universitet,vil betale
+5908,39,mann,singel,26667,ikke betalt,betalt,betalt,universitet,vil betale
+15083,32,mann,singel,36667,betalt,betalt,betalt,universitet,vil betale
+4339,50,kvinne,gift,50000,ikke betalt,ikke betalt,betalt,universitet,vil betale
+1062,49,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+9845,36,kvinne,singel,16667,betalt,betalt,betalt,hoeyskole,vil betale
+2416,24,kvinne,singel,10000,betalt,betalt,betalt,universitet,vil betale
+20854,28,mann,singel,26667,betalt,betalt,betalt,universitet,vil betale
+2560,28,kvinne,singel,26667,betalt,betalt,betalt,hoeyskole,vil betale
+13636,36,mann,gift,6667,ikke betalt,ikke betalt,ikke betalt,grunnskole,vil ikke betale
+20100,42,kvinne,gift,26667,betalt,betalt,betalt,universitet,vil ikke betale
+5356,37,kvinne,gift,20000,betalt,betalt,betalt,universitet,vil betale
+6020,43,mann,gift,66667,ikke betalt,betalt,betalt,hoeyskole,vil ikke betale
+6869,25,kvinne,singel,26667,betalt,betalt,betalt,ukjent,vil betale
+4239,29,kvinne,gift,23333,betalt,betalt,betalt,universitet,vil betale
+19127,26,kvinne,singel,23333,ikke betalt,betalt,betalt,universitet,vil ikke betale
+27672,23,kvinne,singel,6667,betalt,betalt,ikke betalt,universitet,vil betale
+16007,34,kvinne,gift,70000,betalt,betalt,betalt,universitet,vil betale
+24069,25,mann,gift,16667,betalt,betalt,betalt,universitet,vil betale
+13306,37,mann,gift,90000,betalt,betalt,betalt,hoeyskole,vil ikke betale
+6663,39,mann,gift,126667,betalt,betalt,betalt,hoeyskole,vil ikke betale
+18281,54,mann,gift,66667,ikke betalt,ikke betalt,betalt,hoeyskole,vil betale
+27005,31,mann,singel,20000,betalt,betalt,betalt,hoeyskole,vil betale
+29913,31,mann,singel,150000,betalt,betalt,betalt,hoeyskole,vil betale
+23953,25,mann,singel,6667,ikke betalt,ikke betalt,betalt,universitet,vil ikke betale
+26594,32,mann,singel,126667,betalt,betalt,betalt,hoeyskole,vil betale
+28279,45,kvinne,gift,93333,betalt,betalt,betalt,grunnskole,vil betale
