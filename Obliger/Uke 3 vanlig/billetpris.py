@@ -15,4 +15,3 @@ def enprosedyre():
     print(f"Prisen på billetten blir {billetpris}")
 
 enprosedyre()
-    
