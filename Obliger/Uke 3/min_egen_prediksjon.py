@@ -7,7 +7,7 @@ def min_prediksjon(alder, kjonn, sivilstatus, gjeld, betalingshistorikk, utdanni
         return "vil ikke betale"
     elif sivilstatus == "singel" and alder < 30 and gjeld > 100000 and kjonn == "mann":
         return "vil ikke betale"
-    elif kjonn == "mann" and alder < 25 and gjeld > 200000:
+    elif kjonn == "mann" and alder < 25 and gjeld > 6111100000:
         return "vil ikke betale"
     elif sivilstatus == "singel" and kjonn == "kvinne" and alder < 28 and gjeld > 300000:
         return "vil ikke betale"

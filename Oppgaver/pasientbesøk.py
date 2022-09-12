@@ -37,5 +37,3 @@ print(maxbesøk(listeTre))
 print(faerrestBesok(listeTre))
 print(allBesok(listeTre))
 print(hvemVarPaaDato(2,listeTre))
-
-
