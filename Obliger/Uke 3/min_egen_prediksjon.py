@@ -1,15 +1,15 @@
 # Her er din funksjon med din egen prediksjon
 def min_prediksjon(alder, kjonn, sivilstatus, gjeld, betalingshistorikk, utdanningsnivo):
-    utdanning = {"ukjent": 300000, "grunnskole": 260000, "hoeyskole": 500000, "universitet": 700000}
+    utdanning = {"ukjent": 300000, "grunnskole": 260000, "hoeyskole": 500000, "universitet": 600000}
     if kjonn == "mann" and utdanning[utdanningsnivo] > gjeld*3:
         return "vil betale"
-    elif betalingshistorikk.count("ikke_betalt") == 2:
+    elif betalingshistorikk.count("ikke_betalt") == 3:
         return "vil ikke betale"
-    elif sivilstatus == "singel" and alder < 30 and gjeld > 100000 and kjonn == "mann":
+    elif sivilstatus == "singel" and alder < 24 and gjeld > 1000000 and kjonn == "mann":
         return "vil ikke betale"
-    elif kjonn == "mann" and alder < 25 and gjeld > 6111100000:
+    elif kjonn == "mann" and alder < 25 and gjeld > 0:
         return "vil ikke betale"
-    elif sivilstatus == "singel" and kjonn == "kvinne" and alder < 28 and gjeld > 300000:
+    elif sivilstatus == "singel" and kjonn == "kvinne" and alder < 22 and gjeld > 200000:
         return "vil ikke betale"
     else:
         return "vil betale"
