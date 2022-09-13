@@ -1,6 +1,6 @@
 # Her er din funksjon med din egen prediksjon
 def min_prediksjon(alder, kjonn, sivilstatus, gjeld, betalingshistorikk, utdanningsnivo):
-    utdanning = {"ukjent": 300000, "grunnskole": 260000, "hoeyskole": 500000, "universitet": 600000}
+    utdanning = {"ukjent": 300000, "grunnskole": 260000, "hoeyskole": 500000, "universitet": 700000}
     if kjonn == "mann" and utdanning[utdanningsnivo] > gjeld*3:
         return "vil betale"
     elif betalingshistorikk.count("ikke_betalt") == 3:
