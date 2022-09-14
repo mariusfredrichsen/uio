@@ -1,17 +1,18 @@
 # Her er din funksjon med din egen prediksjon
 def min_prediksjon(alder, kjonn, sivilstatus, gjeld, betalingshistorikk, utdanningsnivo):
-    if kjonn == "mann" and utdanningsnivo > gjeld*3:
-        print("Vil betale gjeld.")
-    elif betalingshistorikk.count("ikke_betalt") == 2:
-        print("Vil ikke betale gjeld.")
-    elif sivilstatus == "singel" and alder < 30 and gjeld > 100000 and kjonn == "mann":
-        print("Vil ikke betale gjeld.")
-    elif kjonn == "mann" and alder < 25 and gjeld > 200000:
-        print("Vil ikke betale gjeld")
-    elif sivilstatus == "singel" and kjonn == "kvinne" and alder < 28 and gjeld > 300000:
-        print("Vil ikke betale gjeld.")
+    utdanning = {"ukjent": 300000, "grunnskole": 260000, "hoeyskole": 500000, "universitet": 700000}
+    if kjonn == "mann" and utdanning[utdanningsnivo] > gjeld*3:
+        return "vil betale"
+    elif betalingshistorikk.count("ikke_betalt") == 3:
+        return "vil ikke betale"
+    elif sivilstatus == "singel" and alder < 24 and gjeld > 1000000 and kjonn == "mann":
+        return "vil ikke betale"
+    elif kjonn == "mann" and alder < 25 and gjeld > 0:
+        return "vil ikke betale"
+    elif sivilstatus == "singel" and kjonn == "kvinne" and alder < 22 and gjeld > 200000:
+        return "vil ikke betale"
     else:
-        print("Vil betale gjeld.")
+        return "vil betale"
 
 # Dette limer du inn under
 def test_min_prediksjon():

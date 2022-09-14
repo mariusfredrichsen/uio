@@ -1,15 +1,16 @@
 def prediksjon_med_betalingshistorikk():
-    utdanning = {"ukjent": 300000, "grunnskole": 260000, "høoeyskole": 500000, "universitet": 700000}
+    utdanning = {"ukjent": 300000, "grunnskole": 260000, "høoeyskole": 500000, "universitet": 700000}#Lager en ordbok som sier hvor mye man tjener ved hvert studienivå
     ald = int(input("Hvor gammel er du? "))
     kjø = str(input("Hva slags kjønn er du (mann/kvinne)? ")).lower()
     sta = str(input("Hva er din sivil status (singel/gift)? ")).lower()
     gje = int(input("Hvor mye gjeld har du? "))
     utd = str(input("Hva er utdanningsnivået ditt (ukjent/grunnskole/hoeyskole/universitet)? "))
-
+    
     his = []
     for i in range(3):
         his.append(input(f"Har du betalt for {i} måneder siden (betalt/ikke_betalt)?"))
     print(his, utdanning[utd])
+    #En for loop som spør brukeren om han har betalt for de 3 siste månedene
 
     if kjø == "mann" and utdanning[utd] > gje*3:
         print("Vil betale gjeld.")
@@ -23,5 +24,5 @@ def prediksjon_med_betalingshistorikk():
         print("Vil ikke betale gjeld.")
     else:
         print("Vil betale gjeld.")
-
+#If setning for å skille mellom de som betaler og de som ikke betaler
 prediksjon_med_betalingshistorikk()
