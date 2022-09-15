@@ -57,9 +57,9 @@ def utfor_spill_uendelig():
     fortsett = "y"
     while fortsett == "y":
         for i in range(runder):
-            trekk1.append(spill_slemt(trekk2))
+            trekk1.append(spill_snilt(trekk2))
             trekk2.append(spill_snilt(trekk1))
-            score = beregn_score(spill_slemt(trekk2), min_strategi_ASDASD(trekk1,trekk2))
+            score = beregn_score(spill_snilt(trekk2), min_strategi_ASDASD(trekk1,trekk2))
             score1 += score[0]
             score2 += score[1]
         print(f"spiller1 sin score: {score1}\nspiller2 sin score: {score2}")

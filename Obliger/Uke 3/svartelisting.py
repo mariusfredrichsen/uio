@@ -7,3 +7,6 @@ def bestem_laan():
         print("Kan få lån.")
 
 bestem_laan()
+
+#Det spiller ingen rolle om det er flere av samme ID'en der fordi alle av samme id vil bli sperret ut. 
+#Dermed vil det være poengtløs å ha flere av samme id, men kan funke helt fint med en liste. 
