@@ -7,7 +7,7 @@ def sorter_etter_karakter(filnavn):
         liste.append(l.strip().split(","))
     for i in liste:
         if i in ordbok:
-            pass            
+            pass          #ENDRE  
         else:    
             ordbok[i[1]] = [i[0]]
     print(ordbok)
