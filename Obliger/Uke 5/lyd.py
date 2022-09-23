@@ -2,12 +2,13 @@ import wave
 import numpy as np
 
 noter = {
+    "B": 494,
+    "A#": 466,
     "A": 440,
     "G": 392,
     "F": 349,
     "E": 330,
     "D": 294,
-    "B": 247,
     "C": 261,
     "-": 0
 }
@@ -49,4 +50,4 @@ def lag_sang_fra_noter(note_liste):
     return data
 
 
-skriv_lyd_til_fil(lag_sang_fra_noter(les_sang_fra_fil("sang.txt")),44100,"sang.wav")
+skriv_lyd_til_fil(lag_sang_fra_noter(les_sang_fra_fil("sang1.txt")),44100,"sang1.wav")
