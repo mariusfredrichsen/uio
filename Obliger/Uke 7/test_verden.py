@@ -11,7 +11,7 @@ verden1.opprett_dyr("sau", "Noah", r.randint(1,10))
 verden1.opprett_dyr("sau", "Erlend", r.randint(1,10))
 #Lager en håndfull sauer
 
-verden1.opprett_dyr("ulv", "Albert", r.randint(1,10))
+verden1.opprett_dyr("ulv", "Sofie", r.randint(1,10))
 verden1.opprett_dyr("ulv", "Linn", r.randint(1,10))
 verden1.opprett_dyr("ulv", "Anna", r.randint(1,10))
 #Lager noen ulver også
