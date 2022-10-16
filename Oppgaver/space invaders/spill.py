@@ -36,6 +36,7 @@ class Spill:
         
         if r.randint(1,20) == 1:
             monster = Monster(r.choice(liste_monster), 0, 0, r.randint(1,5))
+            self._monstre.append(monster)
 
         self._oppdatering += 1
 
@@ -50,3 +51,17 @@ class Spill:
             kule.tegn(skjerm)
         for monster in self._monstre:
             monster.tegn(skjerm)
+
+    def sjekk_kollisjoner(self):
+        for monster in self._monstre:
+            if not monster.lever():
+                continue
+
+            for kule in self._kuler:
+                if not kule.lever():
+                    continue
+                if kule.hent_posisjon_venstre() >= monster.hent_posisjon_venstre() and kule.hent_posisjon_venstre() < monster.hent_posisjon_venstre() + 64 - 24:
+                    if kule.hent_posisjon_topp() > monster.hent_posisjon_topp() and kule.hent_posisjon_topp() < monster.hent_posisjon_topp() + 64:
+                        print("Monster blir truffet!")
+                        monster.blir_truffet_av_kule(kule)
+                        self._score += 1
