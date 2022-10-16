@@ -44,7 +44,9 @@ class Sau:
         self._fart_fra_topp *= -1
 
     def er_spist(self):
-        return self._er_spist
+        if self._er_spist == False:
+            return False
+        return True
 
     def blir_spist(self):
         self._er_spist = True

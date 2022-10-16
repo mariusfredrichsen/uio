@@ -19,7 +19,7 @@ class Ulv:
     def finn_naermeste_sau(self, sauer):
         levende_sauer = []
         for sau in sauer:
-            if not sau.er_spist():
+            if sau.er_spist() == False:
                 levende_sauer.append(sau)
         
         distanser = []

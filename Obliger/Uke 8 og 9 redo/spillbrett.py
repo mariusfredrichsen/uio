@@ -1,3 +1,4 @@
+from asyncio.format_helpers import _format_callback_source
 from sau import Sau
 from gress import Gress
 from stein import Stein
@@ -37,12 +38,12 @@ class Spillbrett:
 
         for ulv in self._ulver:
             for sau in self._sauer:
-                if sau.er_spist() == False and har_kollidert(ulv, sau):
+                if sau.er_spist() == False and har_kollidert(ulv, sau) == True:
                     sau.blir_spist()
         
         for sau in self._sauer:
             for gress in self._gress:
-                if sau.er_spist() == False and har_kollidert(gress, sau):
+                if sau.er_spist() == False and har_kollidert(gress, sau) == True:
                     gress.blir_spist()
         
         for sau in self._sauer:
@@ -50,24 +51,20 @@ class Spillbrett:
                 if har_kollidert(sau, stein):
                     sau.snu()
 
-
-    
     def tegn(self, skjerm):
         for sau in self._sauer:
             if sau.er_spist() == False:
                 sau.tegn(skjerm)
         for gress in self._gress:
-            gress.tegn(skjerm)
+            if gress.er_spist() == False:
+                gress.tegn(skjerm)
         for ulv in self._ulver:
             ulv.tegn(skjerm)
         for stein in self._steiner:
             stein.tegn(skjerm)
 
 def har_kollidert(objekt1, objekt2):
-    if objekt1.hent_posisjon_venstre() > objekt2.hent_posisjon_venstre()-50:
-        if objekt1.hent_posisjon_venstre() < objekt2.hent_posisjon_venstre()+50:
-            return True
-    if objekt1.hent_posisjon_topp() > objekt2.hent_posisjon_topp()-50:
-        if objekt1.hent_posisjon_topp() < objekt2.hent_posisjon_topp()+50:
-            return True
-    return False
+    if abs(objekt1.hent_posisjon_venstre() - objekt2.hent_posisjon_venstre()) <= 50 and abs(objekt1.hent_posisjon_topp() - objekt2.hent_posisjon_topp()) <= 50:
+        return True
+    else:
+        return False
