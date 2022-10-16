@@ -1,5 +1,8 @@
 
 
+from types import NoneType
+
+
 class Ulv:
     def __init__(self, bilde, posisjon_venstre, posisjon_topp, brett):
         self._bilde = bilde

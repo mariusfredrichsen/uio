@@ -20,5 +20,4 @@ def draw():
 def update():
     spill.oppdater(keyboard)
 
-
 pgzrun.go()
