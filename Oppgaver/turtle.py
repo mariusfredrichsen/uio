@@ -1,5 +1,6 @@
-import turtle as t
+import turtle
 
-t.setup(width=500, height=500, startx=-1, starty=0)
+skilpadde = turtle.Turtle()
+skilpadde.setup(width=500, height=500, startx=-1, starty=0)
 
-t.forward(100)
+skilpadde.forward(100)

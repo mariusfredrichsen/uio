@@ -1,8 +1,3 @@
-
-
-from types import NoneType
-
-
 class Ulv:
     def __init__(self, bilde, posisjon_venstre, posisjon_topp, brett):
         self._bilde = bilde
@@ -29,7 +24,9 @@ class Ulv:
         for sau in levende_sauer:
             distanser.append(((sau.hent_posisjon_venstre()-self._posisjon_venstre)**2 + (sau.hent_posisjon_topp()-self._posisjon_topp)**2)**0.5)
         
-        naermeste = distanser[0]
+        naermeste = 100000
+        if distanser == []:
+            return "Ingen sauer"
         for i in distanser:
             if i < naermeste:
                 naermeste = i
@@ -40,6 +37,8 @@ class Ulv:
         if self._posisjon_venstre > 900-50 or self._posisjon_venstre < 0 or self._posisjon_topp < 0 or self._posisjon_topp > 700-50:
             self.snu()
         naermeste_sau = self.finn_naermeste_sau(self._brett.hent_sauer())
+        if naermeste_sau == "Ingen sauer":
+            return
         if naermeste_sau.hent_posisjon_venstre() < self._posisjon_venstre:
             self._fart_fra_venstre = -1
         elif naermeste_sau.hent_posisjon_venstre() > self._posisjon_venstre:

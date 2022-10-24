@@ -1,3 +1,3 @@
 x=10
-for i in range(0,x):
+for i in range(1,x):
     print(i)

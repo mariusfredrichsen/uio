@@ -1,9 +1,9 @@
 class Romskip:
-    def __init__(self):
+    def __init__(self, bilde):
         self._posisjon_venstre = int(900/2)-64
         self._posisjon_topp = 620
         self._level = 1
-        self._bilde = "romskip1"
+        self._bilde = bilde
         
     def beveg_hoyre(self):
         if self._posisjon_venstre < 900-64:

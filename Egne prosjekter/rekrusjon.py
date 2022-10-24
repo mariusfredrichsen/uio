@@ -1,11 +1,12 @@
-global sum = 0
-x = 2
-def en_metode(n, x):
-    if n-x >= 0:
-        return sum
-    else:
-        x *= 2
-        sum += n
-        return n + en_metode(n, x)
+liste = [1,2,[3,4,[5,6,[7,8],9],10]]
 
-print(en_metode(10, x))
+def åpne(liste):
+    ny_liste = []
+    for elem in liste:
+        if type(elem) == type([]):
+            return åpne(elem)
+        else:
+            ny_liste.append(elem)
+    return ny_liste
+
+print(åpne(liste))

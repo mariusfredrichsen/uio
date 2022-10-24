@@ -9,6 +9,11 @@ class Monster:
 
     def lever(self):
         return self._lever
+    
+    def blir_truffet_av_kule(self):
+        self._antall_liv -= 1
+        if self._antall_liv == 0:
+            self._lever = False
 
     def beveg(self):
         if self._retning == 1:
