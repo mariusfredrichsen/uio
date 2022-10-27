@@ -47,33 +47,6 @@ def main():
     start = [int(i) for i in start]
     slutt = [int(i) for i in slutt]
 
-    steg_celler = [[start]]
-
-    besøkte_celler.append(start)
-
-    while True:
-
-        nabo_celler = []
-        
-        for celle in steg_celler[-1]:
-
-            if celle in besøkte_celler:
-                continue
-
-            nabo_celler.append(celle)
-
-            besøkte_celler.append(celle)
-
-        steg_celler.append(nabo_celler)
-
-
-
-        if slutt in nabo_celler:
-            antall = len(steg_celler)
-            print(antall)
-            break
-        
-    steg_celler.append(sjekk_rundt(verden, start))
     while slutt not in neste_celle:
         print(neste_celle)
         for elem in neste_celle:

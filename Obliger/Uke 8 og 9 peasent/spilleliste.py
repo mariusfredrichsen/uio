@@ -8,7 +8,7 @@ class Spilleliste:
     def les_fil(self, filnavn):
         f = open(filnavn)
         for linje in f:
-            sang = Sang(linje.strip().split(";")[0], linje.strip().split(";")[1])
+            sang = Sang(linje.strip().split(";")[1], linje.strip().split(";")[0])
             self._sanger.append(sang)
     
     def legg_til_sang(self, ny_sang):

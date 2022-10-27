@@ -1,0 +1,16 @@
+sau 800 50
+gress 700 100
+gress 600 100
+gress 500 200
+gress 400 200
+gress 300 300
+gress 200 200
+gress 100 100
+gress 350 650
+stein 400 0
+stein 400 50
+stein 400 100
+stein 400 150
+stein 400 650
+stein 400 600
+ulv 50 50
