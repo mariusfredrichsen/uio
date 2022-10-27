@@ -28,7 +28,7 @@ class Spilleliste:
         for sang in self._sanger:
             if sang.sjekk_tittel(tittel):
                 return sang
-        return None
+        return
     
     def hent_artist_utvalg(self, artistnavn):
         sang_liste = []

@@ -52,6 +52,7 @@ def duppeditt(brett, x, y):
                     x = 0
                     y += 1
             elif not lovlig(brett,[x,y]) and i == 9:
+                pass
 
 
 
@@ -61,6 +62,6 @@ def duppeditt(brett, x, y):
 
 
 def main():
-
+    pass
 
 main()
