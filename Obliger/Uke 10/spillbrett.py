@@ -25,6 +25,7 @@ class Spillbrett:
         self._steiner = []
         self._oppdatering = 0
 
+    # Gjoer hver linje i filen til en liste og ut ifra elementene i listene så vil den lage objekter på de og de koordinatene
     def legg_til_objekter_fra_fil(self, filnavn):
         f = open(filnavn)
         for linje in f:

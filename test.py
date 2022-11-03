@@ -1,19 +1,10 @@
-C = int(input())
+def funksjon(liste):
+	if liste.count(liste[0]) == len(liste):
+		return liste[0]
+	return -1
 
-for i in range(C):
-    N = input().split(" ")
-    for x in range(len(N)):
-        N[x] = int(N[x])
-    teller1 = 0
-    for l in range(1,len(N)):
-        teller1 += N[l]
-    teller1 /= N[0]
-    teller2 = 0
-    for l in range(1,len(N)):
-        if N[l] > teller1:
-            teller2 += 1
+tall_liste1 = [1]
+tall_liste2 = [2,1,2]
 
-    
-    teller2 /= N[0]
-    print("{0:0.3f}".format(teller2*100))
-            
+print(funksjon(tall_liste1))
+print(funksjon(tall_liste2))
