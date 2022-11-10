@@ -1,5 +1,6 @@
 from verden import Verden
 import matplotlib.pyplot as plt
+import pgzero
 
 def hovedprogram():
     bruker_input = input("Skriv inn dimensjonene på brettet, 'x,y': ").strip().split(",")

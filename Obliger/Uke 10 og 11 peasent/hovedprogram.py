@@ -1,20 +1,23 @@
+from tkinter import Y
 from verden import Verden
-from celle import Celle
+import pgzrun
 
-def hovedprogram():
-    verden = Verden(5, 5)
-    
-    verden._rutenett._rutenett = [[Celle(), Celle(), Celle(), Celle(), Celle()],
-                [Celle(), Celle(), Celle(), Celle(), Celle()],
-                [Celle(), Celle(), Celle(), Celle(), Celle()],
-                [Celle(), Celle(), Celle(), Celle(), Celle()],
-                [Celle(), Celle(), Celle(), Celle(), Celle()]]
-    verden._rutenett._rutenett[2][1].sett_levende()
-    verden._rutenett._rutenett[2][2].sett_levende()
-    verden._rutenett._rutenett[2][3].sett_levende()
-    verden.tegn()
+
+x, y = 200, 110
+verden = Verden(x, y)
+
+WIDTH = x*8
+HEIGHT = y*8
+
+def draw():
+    screen.fill((0, 0, 0))
+    for x in range(WIDTH//8):
+        for y in range(HEIGHT//8):
+            if verden._rutenett._rutenett[x][y].hent_status_tegn() == "O":
+                screen.blit("hvit", (x*8, y*8))
+
+def update():
     verden.oppdatering()
-    verden.tegn()
 
-# starte hovedprogrammet
-hovedprogram()
+
+pgzrun.go()
