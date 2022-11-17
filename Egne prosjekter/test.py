@@ -1,4 +1,3 @@
-liste = [1,2,5,1,5,4,1,2,4,1,12,4,1,2,3,4,2,1,25,5,1]
-print(liste)
-liste = set(liste)
-print(liste)
+asd = "151,546,345,2,235,223"
+asd = int(asd.replace(",", ""))
+print(type(asd))
