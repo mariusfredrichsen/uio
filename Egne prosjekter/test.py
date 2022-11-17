@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 def baba():
     return
 
@@ -24,3 +25,8 @@ print(liste)
 liste = set(liste)
 print(liste)
 >>>>>>> 3da9d68a235d3608506a18f665ca837936944c75
+=======
+asd = "151,546,345,2,235,223"
+asd = int(asd.replace(",", ""))
+print(type(asd))
+>>>>>>> a08e988719d51a039021f5d666cc2d16968f0acf
