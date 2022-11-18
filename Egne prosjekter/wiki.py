@@ -12,8 +12,8 @@ class Url_Link:
     def hent_url(self):
         return self._url
 
-url = "https://no.wikipedia.org/wiki/Markus"
-ende_url = "https://no.wikipedia.org/wiki/Red_Dead_Redemption_2"
+url = "https://no.wikipedia.org/wiki/Tobias"
+ende_url = "https://no.wikipedia.org/wiki/Odin"
 start_url = "https://no.wikipedia.org"
 
 def hent_nyttige_linker(url):
