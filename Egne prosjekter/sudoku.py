@@ -49,10 +49,57 @@ def lovlig(y, x, n):
     
     return True
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+def duppeditt(brett, x, y):
+    if brett[x][y] == 0:
+        for i in range(1,10):
+            brett[x][y] = i
+            if lovlig(brett,[x,y]):
+                x += 1
+                if x == 9:
+                    x = 0
+                    y += 1
+            elif not lovlig(brett,[x,y]) and i == 9:
+                pass
+=======
+skriv_ut(board)
+>>>>>>> 3da9d68a235d3608506a18f665ca837936944c75
+=======
 skriv_ut(brett)
+>>>>>>> a08e988719d51a039021f5d666cc2d16968f0acf
 
 sjekket_liste = []
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+
+
+def main():
+    pass
+
+main()
+=======
+def loos():
+    global board
+    for y in range(9):
+        for x in range(9):
+            if board[y][x] == 0:
+                for i in range(1,10):
+                    if lovlig(y,x,i):
+                        board[y][x] = i
+                        loos()
+                
+                        board[y][x] = 0
+                return
+loos()
+skriv_ut(board)
+>>>>>>> 3da9d68a235d3608506a18f665ca837936944c75
+=======
 index = 0
 y = 0
 x = 0
@@ -88,3 +135,4 @@ while True:
             x += 1
             index += 1
     skriv_ut(brett)
+>>>>>>> a08e988719d51a039021f5d666cc2d16968f0acf

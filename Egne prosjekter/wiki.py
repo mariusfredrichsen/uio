@@ -1,7 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 
+<<<<<<< HEAD
 """class Url_Link:
+=======
+<<<<<<< HEAD
+url = "https://no.wikipedia.org/wiki/Tobias"
+ende_url = "https://no.wikipedia.org/wiki/Odin"
+=======
+class Url_Link:
+>>>>>>> 554e7d2b3e98fa24fc292e3da9aeb415fe90f276
     def __init__(self, url, parent):
         self._url = url
         self._parent = parent
@@ -14,6 +22,7 @@ from bs4 import BeautifulSoup
 
 url = "https://no.wikipedia.org/wiki/Markus"
 ende_url = "https://no.wikipedia.org/wiki/Red_Dead_Redemption_2"
+>>>>>>> a08e988719d51a039021f5d666cc2d16968f0acf
 start_url = "https://no.wikipedia.org"
 
 def hent_nyttige_linker(url):
