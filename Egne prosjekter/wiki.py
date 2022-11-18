@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-class Url_Link:
+"""class Url_Link:
     def __init__(self, url, parent):
         self._url = url
         self._parent = parent
@@ -10,7 +10,7 @@ class Url_Link:
         return self._parent
     
     def hent_url(self):
-        return self._url
+        return self._url"""
 
 url = "https://no.wikipedia.org/wiki/Markus"
 ende_url = "https://no.wikipedia.org/wiki/Red_Dead_Redemption_2"
