@@ -127,6 +127,7 @@ while True:
             if kol == "ugyldig":
                 break
             brett = sett_brikke_paa_plass(brett, kol, index%2+1)
+            skriv_ut_brett(brett)
             index += 1
         
     for y in range(len(brett)):

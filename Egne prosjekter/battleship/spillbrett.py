@@ -4,7 +4,7 @@ import time
 
 size = width, height = 900, 700
 speed = [1, 1]
-white = 255, 255, 255
+white = 255, 0, 0
 
 screen = pygame.display.set_mode(size)
 # regler:
