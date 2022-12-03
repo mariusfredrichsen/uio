@@ -12,9 +12,9 @@ class Url_Link:
     def hent_url(self):
         return self._url
 
-url = "https://no.wikipedia.org/wiki/Tobias"
-ende_url = "https://no.wikipedia.org/wiki/Odin"
-start_url = "https://no.wikipedia.org"
+url = "https://en.wikipedia.org/wiki/Watermelon"
+ende_url = "https://en.wikipedia.org/wiki/Samoan_language"
+start_url = "https://en.wikipedia.org"
 
 def hent_nyttige_linker(url):
     parsed = BeautifulSoup(requests.get(url).content, "html.parser")
@@ -60,5 +60,3 @@ for elem in slutt_liste:
     slutt_slutt_liste.append(elem.hent_url())
 
 print(slutt_slutt_liste)
-
-# kanskje prøve denne biten med klasser
