@@ -47,4 +47,4 @@ def hovedprogram(antall_aar):
     
     print(len(bondegaard.hent_meloner()))
 
-hovedprogram(7)
+hovedprogram(10)
