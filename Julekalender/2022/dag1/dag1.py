@@ -18,10 +18,8 @@ def kal(list):
             mest=list[i]
     return mest
 
-<<<<<<< HEAD:Julekalender/dag1/dag1.py
-list=les('alveliste.txt')
+liste=les('alveliste.txt')
 print(kal(list))
-=======
 for linje in f:
     linje = linje.strip()
     if linje == "":
@@ -36,4 +34,3 @@ for i in range(len(liste)):
 
 print(liste[-1])
 print(liste[-1] + liste[-2] + liste[-3])
->>>>>>> 6f626e951d35d08f2071c48a64ba7ed3935396e4:Julekalender/2022/dag1/dag1.py

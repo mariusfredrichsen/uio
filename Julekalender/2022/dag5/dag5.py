@@ -1,32 +1,41 @@
-with open("input.txt", "r") as file:
-    index = -1
+"""with open("input.txt", "r") as file:
     crates = {}
+    index = 0
     for line in file:
-        line = list(line)
-        for i in range(1,(len(line)+4)//4):
-            crates[i] = []
-        break
-    print(crates)
-    for line in file:
-        index += 1
-        if index < 7:
+        if index == 0:
+            line = list(line)
+            for i in range(len(line)):
+                crates[i//4+1] = []
+        if index < 8:
             line = list(line)
             for i in range(1,len(line),4):
-                if line[i] not in ["", " ", "[", "]", "\n"]:
+                if i//4+1 in crates and line[i] not in [",", "", " "]:
                     crates[i//4+1].append(line[i])
-        elif index == 8:
-            print(crates)
-        elif index > 8:
+        if index > 9:
             line = line.strip().split()
-            index_pop = 0
-            for i in range(int(line[1]),0,-1):
-                try:
-                    crates[int(line[5])].append(crates[int(line[3])][i])
-                    index_pop += 1
-                except:
-                    pass
-            for i in range(index_pop):
+            for i in range(int(line[1])):
                 if crates[int(line[3])] != []:
-                    crates[int(line[3])].pop(0)
-                    
-    print(crates)
+                    crates[int(line[5])].insert(0,crates[int(line[3])].pop(0))
+        index += 1
+    
+    for k in crates:
+        print(crates[k][0], end = "")"""
+
+
+
+with open("input.txt", "r") as file:
+    crates = {}
+    index = 0
+    for line in file:
+        if index == 0:
+            line = list(line)
+            for i in range(len(line)):
+                crates[i//4+1] = []
+        if index < 8:
+            line = list(line)
+            for i in range(1,len(line),4):
+                if i//4+1 in crates and line[i] not in [",", "", " "]:
+                    crates[i//4+1].append(line[i])
+        if index > 9:
+            line = line.strip().split()
+            
