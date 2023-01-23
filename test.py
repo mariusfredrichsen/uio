@@ -1,2 +1,4 @@
-for i in range(2,12):
-	print(i)
+a = 4
+b = 5
+
+print("asdasd", a+b)
