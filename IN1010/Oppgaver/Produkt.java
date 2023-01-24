@@ -1,7 +1,7 @@
 package IN1010.Oppgaver;
 import java.util.Scanner;
 
-public class Differanse {
+public class Produkt {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -14,6 +14,6 @@ public class Differanse {
         int i1 = Integer.parseInt(input1);
         int i2 = Integer.parseInt(input2);
 
-        System.out.println("Differansen mellom x og y er " + (i1-i2));
+        System.out.println("Produktet av x og y er " + (i1*i2));
     }
 }

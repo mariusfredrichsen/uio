@@ -1,14 +1,14 @@
 class Person {
-    Object bil;
-    String Bilnummer;
+    Bil3 bil;
+    String bilnummer;
 
-    public Person(Object Personbil) {
+    public Person(Bil3 Personbil) {
         bil = Personbil;
     }
 
     public void skriv_ut() {
-        Bilnummer = bil.hent_bilnummer();
-        System.out.println("Bilnummeret på denne personens bil er: " + Bilnummer);
+        bilnummer = bil.hent_bilnummer();
+        System.out.println("Bilnummeret på denne personens bil er: " + bilnummer);
     }
 
 

@@ -1,0 +1,15 @@
+package IN1010.Oppgaver.Bil;
+
+public class Bil {
+    String merke;
+    String eier;
+
+    public Bil(String mrk, String e) {
+        merke = mrk;
+        eier = e;
+    }
+
+    public void skrivUt() {
+        System.out.println("Eier: " + eier + ", Merke: "+ merke);
+    }
+}
