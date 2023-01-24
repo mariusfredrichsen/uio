@@ -1,16 +1,16 @@
 public class Bil3 {
-    static String Bilnummer;
+    String bilnummer;
 
-    public Bil3(String BilNum) {
-        Bilnummer = BilNum;
+    public Bil3(String bilnum) {
+        bilnummer = bilnum;
     }
 
     public void skriv_ut() {
         System.out.println("Jeg er en bil");
-        System.out.println("Bilnummeret mitt er: " + Bilnummer);
+        System.out.println("Bilnummeret mitt er: " + bilnummer);
     }    
 
-    public static String hent_bilnummer() {
-        return Bilnummer;
+    public String hent_bilnummer() {
+        return bilnummer;
     }
 }
