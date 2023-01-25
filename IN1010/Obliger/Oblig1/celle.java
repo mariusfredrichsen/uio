@@ -1,5 +1,5 @@
 package IN1010.Obliger.Oblig1;
 
-public class Dataklynge {
+public class celle {
     
 }
