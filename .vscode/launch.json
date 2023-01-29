@@ -1,0 +1,252 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch GameOfLife",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig1.GameOfLife",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestVerden",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig1.TestVerden",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch BilBruk1",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig0.BilBruk1",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch BilBruk2",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig0.BilBruk2",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch BilBruk3",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig0.BilBruk3",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestCelle",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig1.TestCelle",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestRutenett",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig1.TestRutenett",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Areal",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Areal",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestBaathus",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Baathus.TestBaathus",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch BilTest",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Bil.BilTest",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch BoolskeVerdier",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.BoolskeVerdier",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Brev.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Differanse",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Differanse",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch EnkelTelefonbok",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.EnkelTelefonbok",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch KoProgram",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.EnkeltKoesystem.KoProgram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram(1)",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Espressomaskin.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Handletur",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Handletur",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heltallsarray",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Heltallsarray",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch LikeStrenger",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.LikeStrenger",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Linjenummer",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Linjenummer.Linjenummer",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lokker",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Lokker",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch MindreStorre",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.MindreStorre",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Personinfo",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Personinfo",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Produkt",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Produkt",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram(2)",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Quiz.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch RektangelHovedprogram",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.RektangelHovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Telefonbok",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.SamlingerAvObjekter.Telefonbok",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sammenlign",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Sammenlign",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch SkattIRuritania",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.SkattIRuritania",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sorter",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.SorterFilInfo.Sorter",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch SumHeltall",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.SumHeltall",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TemperaturLeser",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.TemperaturLeser.TemperaturLeser",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Test",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram(3)",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Utskrift.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        }
+    ]
+}
