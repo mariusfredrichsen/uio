@@ -1,4 +1,3 @@
-package IN1010.Oppgaver.Linjenummer;
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
