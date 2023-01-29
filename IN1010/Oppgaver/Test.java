@@ -1,12 +1,14 @@
 package IN1010.Oppgaver;
-import java.util.Random;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileWriter;
 
 public class Test {
-    public static void main(String[] args) {
-        Random random = new Random();
-        for (int i = 0; i < 10; i++) {
-            System.out.println(random.nextInt(0, 3));
-        }
-        
+    public static void main(String[] args) throws IOException {
+        FileWriter fil = new FileWriter("fil.txt");
+        fil.write("Linje 1\n");
+        fil.write("Linje 3\n");
+        fil.write("\n");
+        fil.close();
     }
 }
