@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Studentsystem.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Studentsystem",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Studentsystem.Studentsystem",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
             "name": "Launch GameOfLife",
             "request": "launch",
             "mainClass": "IN1010.Obliger.Oblig1.GameOfLife",
