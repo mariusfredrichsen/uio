@@ -6,13 +6,13 @@ public class Rutenett {
     int antKolonner;
     Celle[][] rutene;
 
-    public Rutenett(int antRader, int antKolonner) {
+    public Rutenett(int antRader, int antKolonner) { //konstruktøren
         this.antRader = antRader;
         this.antKolonner = antKolonner;
         rutene = new Celle[antRader][antKolonner];
     }
 
-    public void lagCelle(int rad, int kol) {
+    public void lagCelle(int rad, int kol) { //danner en ny celle avhengig om den treffe 1/3 sjansen på det
         Celle celle = new Celle();
         Random random = new Random();
         if (random.nextInt(0, 3) == 0) {
@@ -21,7 +21,7 @@ public class Rutenett {
         rutene[rad][kol] = celle;
     }
 
-    public void fyllMedTilfeldigeCeller() {
+    public void fyllMedTilfeldigeCeller() { //kjører "lagCelle" metoden på alle rutene i rutenettet
         for (int x = 0; x < antRader; x++) {
             for (int y = 0; y < antKolonner; y++) {
                 this.lagCelle(x, y);
@@ -29,7 +29,7 @@ public class Rutenett {
         }
     }
 
-    public Celle hentCelle(int rad, int kol) {
+    public Celle hentCelle(int rad, int kol) { //returner en celle så lenge den er innafor rutenettet
         if (rad > antRader - 1 || kol > antKolonner - 1 || rad < 0 || kol < 0) {
             return null;
         } else {
@@ -37,7 +37,7 @@ public class Rutenett {
         }
     }
 
-    public void tegnRutenett() {
+    public void tegnRutenett() { //kul skriv ut metode baster på det som var i oppgaveteksten
         for (int x = 0; x < antRader; x++) {
             System.out.println();
             for (int i = 0; i < antKolonner; i++) {
@@ -55,7 +55,7 @@ public class Rutenett {
         } System.out.print("+");
     }
 
-    public void settNaboer(int rad, int kol) {
+    public void settNaboer(int rad, int kol) { //går igjennom alle rutene ved siden av en celle og kjører metoden "leggTilNabo"
         for (int x = -1; x < 2; x++) {
             for (int y = -1; y < 2; y++) {
                 if (Math.abs(x) + Math.abs(y) != 0) {
@@ -65,7 +65,7 @@ public class Rutenett {
         }
     }
 
-    public void kobleAlleCeller() {
+    public void kobleAlleCeller() { //kjører "settNaboer" metoden på alle rutene
         for (int x = 0; x < antRader; x++) {
             for (int y = 0; y < antKolonner; y++) {
                 this.settNaboer(x, y);
@@ -73,7 +73,7 @@ public class Rutenett {
         }
     }
 
-    public int antallLevende() {
+    public int antallLevende() { //teller antall levende celler det er i totalt i rutenettet
         int teller = 0;
         for (int x = 0; x < antRader; x++) {
             for (int y = 0; y < antKolonner; y++) {
@@ -83,13 +83,5 @@ public class Rutenett {
             }
         }
         return teller;
-    }
-
-    public void hjelp() {
-        for (int x = 0; x < antRader; x++) {
-            for (int y = 0; y < antKolonner; y++) {
-                rutene[x][y].tellLevendeNaboer();
-            }
-        }
     }
 }

@@ -4,7 +4,7 @@ public class Verden {
     int genNr = 0;
     Rutenett rutenett;
 
-    public Verden(int antRader, int antKolonner) {
+    public Verden(int antRader, int antKolonner) { //konstruktøren
         this.antRader = antRader;
         this.antKolonner = antKolonner;
 
@@ -13,7 +13,7 @@ public class Verden {
         rutenett.kobleAlleCeller();
     }
 
-    public void tegn() {
+    public void tegn() { //bruker den kjempe kule "tegnRutenett" metoden i rutenett i tillegg til jeg oppgir gen nr og antall levende
         for (int i = 0; i < 10; i++) {
             System.out.println();
         }
@@ -22,7 +22,7 @@ public class Verden {
         System.out.println("\nDet er " + rutenett.antallLevende() + " levende celler.");
     }
 
-    public void oppdatering() {
+    public void oppdatering() { //kjører først "telleLevendeNaboer" så "oppdaterStatus" metodene på alle rutene
         for (int x = 0; x < rutenett.antRader; x++) {
             for (int y = 0; y < rutenett.antKolonner; y++) {
                 rutenett.hentCelle(x, y).tellLevendeNaboer();
