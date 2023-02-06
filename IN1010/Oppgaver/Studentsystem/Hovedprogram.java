@@ -10,5 +10,3 @@ class Hovedprogram {
         system.leggTilStudent("Ida","INF1000");
         system.fjernStudent("Ida", "INF1000");
         system.leggTilFag("IN1030");
-    }
-}
