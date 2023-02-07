@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Launch Hovedprogram",
             "request": "launch",
+            "mainClass": "IN1010.Oppgaver.GeometriskeFigurer.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.ArvAvEgenskaper.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
             "mainClass": "IN1010.Oppgaver.Studentsystem.Hovedprogram",
             "projectName": "uio_b1361d03"
         },
