@@ -22,7 +22,7 @@ public class Verden {
         System.out.println("\nDet er " + rutenett.antallLevende() + " levende celler.");
     }
 
-    public void oppdatering() { //kjører først "telleLevendeNaboer" så "oppdaterStatus" metodene på alle rutene
+    public void oppdatering() { //kjører først "telleLevendeNaboer" så "oppdaterStatus" metodene på alle rutene 
         for (int x = 0; x < rutenett.antRader; x++) {
             for (int y = 0; y < rutenett.antKolonner; y++) {
                 rutenett.hentCelle(x, y).tellLevendeNaboer();
