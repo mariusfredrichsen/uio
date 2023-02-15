@@ -9,7 +9,8 @@ public class Areal {
         System.out.println("Hoyde:" + hoyde);
 
         int areal = bredde*hoyde;
-        
-        System.out.println("Areal:" + areal);
+        while (true) {
+            System.out.println("Areal:" + areal);
+        }
     }
 }

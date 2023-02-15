@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.BilerOgBusser.Main",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Areal",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Areal",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
             "name": "Launch TestOrdbeholder",
             "request": "launch",
             "mainClass": "IN1010.Oppgaver.Ordbeholder.TestOrdbeholder",
