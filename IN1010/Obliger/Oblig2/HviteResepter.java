@@ -2,8 +2,8 @@ package IN1010.Obliger.Oblig2;
 
 public class HviteResepter extends Resept {
     
-    public HviteResepter(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {
-        super(id,legemiddel,utskrivendeLege,pasientId,reit);
+    public HviteResepter(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {
+        super(legemiddel,utskrivendeLege,pasientId,reit);
     }
 
     public String farge() {

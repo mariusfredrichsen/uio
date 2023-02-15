@@ -2,8 +2,8 @@ package IN1010.Obliger.Oblig2;
 
 public class BlaaResepter extends Resept {
     Legemiddel legemiddel;
-    public BlaaResepter(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {
-        super(id,legemiddel,utskrivendeLege,pasientId,reit);
+    public BlaaResepter(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {
+        super(legemiddel,utskrivendeLege,pasientId,reit);
         this.legemiddel = legemiddel;
     }
 

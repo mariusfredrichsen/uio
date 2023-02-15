@@ -5,12 +5,14 @@ abstract public class Legemiddel {
     private int pris;
     public final double virkestoff;
     public final int id;
+    public static int teller;
 
-    public Legemiddel(String navn, int pris, double virkestoff, int id) {
+    public Legemiddel(String navn, int pris, double virkestoff) {
         this.navn = navn;
         this.pris = pris;
         this.virkestoff = virkestoff;
-        this.id = id;
+        id = teller;
+        teller++;
     }
 
     public int hentPris() {

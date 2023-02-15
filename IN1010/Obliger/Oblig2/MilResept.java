@@ -2,8 +2,8 @@ package IN1010.Obliger.Oblig2;
 
 public class MilResept extends HviteResepter {
     Legemiddel legemiddel;
-    public MilResept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) {
-        super(id,legemiddel,utskrivendeLege,pasientId, 3);
+    public MilResept(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) {
+        super(legemiddel,utskrivendeLege,pasientId, 3);
         this.legemiddel = legemiddel;
     }
 

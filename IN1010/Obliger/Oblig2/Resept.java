@@ -6,13 +6,15 @@ abstract public class Resept {
     Lege utskrivendeLege;
     int pasientId;
     int reit;
+    public static int teller;
 
-    public Resept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {
-        this.id = id;
+    public Resept(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {
+        id = teller;
         this.legemiddel = legemiddel;
         this.utskrivendeLege = utskrivendeLege;
         this.pasientId = pasientId;
         this.reit = reit;
+        teller++;
     }
 
     public int hentId() {
@@ -41,7 +43,7 @@ abstract public class Resept {
         if (reit == 0) {
             return false;
         } else {
-            reit -= 1;
+            reit--;
             return true;
         }
     }
