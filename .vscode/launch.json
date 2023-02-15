@@ -43,6 +43,27 @@
             "type": "java",
             "name": "Launch Hovedprogram",
             "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.Hovedprogram",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestResepter",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.TestResepter",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestLegemiddel",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.TestLegemiddel",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
             "mainClass": "IN1010.Oppgaver.GeometriskeFigurer.Hovedprogram",
             "projectName": "uio_b1361d03"
         },
