@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Reise",
+            "request": "launch",
+            "mainClass": "Reise",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
+            "name": "Launch Reise",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Reise",
+            "projectName": "uio_b1361d03"
+        },
+        {
+            "type": "java",
             "name": "Launch TestResepter",
             "request": "launch",
             "mainClass": "IN1010.Obliger.Oblig2.TestResepter",
