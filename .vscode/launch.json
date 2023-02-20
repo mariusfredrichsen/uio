@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DyreTest",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Grensesnitt.DyreTest",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestBokhylle",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.EgneExceptions.TestBokhylle",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch FeilTest",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.FeilTest",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.Hovedprogram",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
             "name": "Launch TestResepter",
             "request": "launch",
             "mainClass": "IN1010.Obliger.Oblig2.TestResepter",
