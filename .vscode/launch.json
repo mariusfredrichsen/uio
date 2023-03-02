@@ -6,6 +6,33 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
+            "name": "Launch DyreTest",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.Grensesnitt.DyreTest",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestBokhylle",
+            "request": "launch",
+            "mainClass": "IN1010.Oppgaver.EgneExceptions.TestBokhylle",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch FeilTest",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.FeilTest",
+            "projectName": "IN1000_687b7e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hovedprogram",
+            "request": "launch",
+            "mainClass": "IN1010.Obliger.Oblig2.Hovedprogram",
+            "projectName": "IN1000_687b7e2a"
+=======
             "name": "Launch Reise",
             "request": "launch",
             "mainClass": "Reise",
@@ -17,6 +44,7 @@
             "request": "launch",
             "mainClass": "IN1010.Oppgaver.Reise",
             "projectName": "uio_b1361d03"
+>>>>>>> 69f18283265eb0da4b23d33db1fb99be9a2198da
         },
         {
             "type": "java",
