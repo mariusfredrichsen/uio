@@ -1,5 +1,5 @@
 public class Prioritetskoe <E extends Comparable <E>> extends Lenkeliste <E>{
-    @Override
+    /*@Override
     public void leggTil(E x) {
         super.leggTil(x);
         
@@ -22,5 +22,32 @@ public class Prioritetskoe <E extends Comparable <E>> extends Lenkeliste <E>{
                 }
             }
         }
+    } */
+
+    @Override
+    public void leggTil(E x) {
+        if (hode == null) {
+            hode = new Node(x);
+        } else {
+            Node nesteLenke = hode;
+
+            while (nesteLenke != null) {
+                if (nesteLenke.data.compareTo(x) <= 0) { //må settes etter
+                    if (nesteLenke.neste == null) {
+                        super.leggTil(x);
+                        break;
+                    } else {
+                        Node nesteLenkeHolder = nesteLenke.neste; 
+                        Node nyNode = new Node(x);
+                        nyNode.neste = nesteLenkeHolder;
+                        nesteLenke.neste = nyNode;
+                        break;
+                    }
+                }
+                nesteLenke = nesteLenke.neste;
+            }
+        }
+
+
     }
 }
