@@ -1,14 +1,8 @@
-import time
-start_time = time.time()
+liste = [4,1,6,7,4,8,9,2,1,4,6]
 
-def en_funksjon(multi_mengde):
-    tuppel_liste = []
-    for i in multi_mengde:
-        tuppel_liste.append((i,multi_mengde.count(i)))
-    return set(tuppel_liste)
+for i in range(0, len(liste)):
+  for l in range(0, len(liste)-1):
+    if liste[l] > liste[l+1]:
+      liste[l+1], liste[l] = liste[l], liste[l+1]
 
-print(en_funksjon([1,1,2,3,4,6,7,6,5,7,8,5,4,3,2,5,3,2,1]))
-end_time = time.time()
-elapsed_time = end_time - start_time
-
-print(f"Elapsed time: {elapsed_time:.10f} seconds")
+print(liste)
