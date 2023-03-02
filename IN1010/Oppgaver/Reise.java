@@ -1,3 +1,5 @@
+package IN1010.Oppgaver;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,11 +12,11 @@ public class Reise {
             int nextInt = scan.nextInt();
             for (int j = 0; j < nextInt+1; j++) { //antall destinasjoner
                 String linje = scan.nextLine();
-                if (!liste.contains(linje)) {
+                if (!liste.contains(linje) && !linje.equals("")) {
                     liste.add(linje);
                 }
             }
-            System.out.println(liste.size()-1);
+            System.out.println(liste.size());
         }
     }
 }
