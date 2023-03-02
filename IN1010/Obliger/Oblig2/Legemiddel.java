@@ -1,5 +1,3 @@
-package IN1010.Obliger.Oblig2;
-
 abstract public class Legemiddel {
     public final String navn;
     public int pris;

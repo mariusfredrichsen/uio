@@ -1,5 +1,3 @@
-package IN1010.Obliger.Oblig2;
-
 public class Hovedprogram {
     public static void main(String[] args) {
         //Legemidler her:

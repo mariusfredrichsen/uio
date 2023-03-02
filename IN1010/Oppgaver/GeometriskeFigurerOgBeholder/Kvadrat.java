@@ -1,4 +1,4 @@
-package IN1010.Oppgaver.GeometriskeFigurer;
+package IN1010.Oppgaver.GeometriskeFigurerOgBeholder;
 
 public class Kvadrat extends Figurer {
     double sideLengde;

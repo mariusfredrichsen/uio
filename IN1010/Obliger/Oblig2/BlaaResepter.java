@@ -1,5 +1,3 @@
-package IN1010.Obliger.Oblig2;
-
 public class BlaaResepter extends Resept {
     Legemiddel legemiddel;
     public BlaaResepter(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) {

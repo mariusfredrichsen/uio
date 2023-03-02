@@ -1,4 +1,4 @@
-package IN1010.Oppgaver.GeometriskeFigurer;
+package IN1010.Oppgaver.GeometriskeFigurerOgBeholder;
 
 abstract class Figurer {
     public abstract double areal();

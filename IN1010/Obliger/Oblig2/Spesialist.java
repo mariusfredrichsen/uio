@@ -1,5 +1,3 @@
-package IN1010.Obliger.Oblig2;
-
 public class Spesialist extends Lege implements Godkjenningsfritak{
     String kontrollKode;
     String navn;

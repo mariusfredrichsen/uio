@@ -1,4 +1,4 @@
-package IN1010.Oppgaver.GeometriskeFigurer;
+package IN1010.Oppgaver.GeometriskeFigurerOgBeholder;
 
 public class Hovedprogram {
     public static void main(String[] args) {

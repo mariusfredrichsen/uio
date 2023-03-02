@@ -1,5 +1,3 @@
-package IN1010.Obliger.Oblig2;
-
 public class TestLegemiddel {
     public static void sjekk(String testNavn, boolean testVerdi) {
         if (!testVerdi) {

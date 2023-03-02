@@ -1,5 +1,3 @@
-package IN1010.Obliger.Oblig2;
-
 public class Lege {
     String navn;
 
