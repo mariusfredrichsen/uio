@@ -14,7 +14,6 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
                 for (int i = 0; i < pos - 1; i++) {
                     nesteLenke = nesteLenke.neste;
                 }
-                
                 Node nesteLenkeHolder = nesteLenke.neste; 
                 Node nyNode = new Node(x);
                 nyNode.neste = nesteLenkeHolder;
