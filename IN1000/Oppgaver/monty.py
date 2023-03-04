@@ -20,7 +20,7 @@ for i in range(1000):
                 altdør1 = 6-i-valg-1
                 break
         print(f"Du har valgt dør {valg}. Bak dør {altdør} er det en geit. Har du lyst til å bytte til dør {altdør1}?")
-        svar = "ja"
+        svar = "nei"
         if svar == "ja":
             print(f"Bak dør {altdør1} så er det en {dører[altdør1-1]}.")
             if dører[altdør1-1] == "geit":
