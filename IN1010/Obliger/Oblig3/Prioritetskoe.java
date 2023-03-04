@@ -47,7 +47,5 @@ public class Prioritetskoe <E extends Comparable <E>> extends Lenkeliste <E>{
                 nesteLenke = nesteLenke.neste;
             }
         }
-
-
     }
 }
