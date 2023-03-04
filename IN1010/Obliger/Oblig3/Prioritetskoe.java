@@ -28,23 +28,28 @@ public class Prioritetskoe <E extends Comparable <E>> extends Lenkeliste <E>{
     public void leggTil(E x) {
         if (hode == null) {
             hode = new Node(x);
+        } else if (hode.data.compareTo(x) > 0) {
+            Node tempHolder = hode;
+            hode = new Node(x);
+            hode.neste = tempHolder;
         } else {
             Node nesteLenke = hode;
-
+            
             while (nesteLenke != null) {
-                if (nesteLenke.data.compareTo(x) <= 0) { //må settes etter
-                    if (nesteLenke.neste == null) {
-                        super.leggTil(x);
-                        break;
-                    } else {
+                if (nesteLenke.neste == null) {
+                    super.leggTil(x);
+                    break;
+                } else {
+                    if (nesteLenke.neste.data.compareTo(x) >= 0) {
                         Node nesteLenkeHolder = nesteLenke.neste; 
                         Node nyNode = new Node(x);
                         nyNode.neste = nesteLenkeHolder;
                         nesteLenke.neste = nyNode;
                         break;
+                    } else {
+                        nesteLenke = nesteLenke.neste;
                     }
                 }
-                nesteLenke = nesteLenke.neste;
             }
         }
     }

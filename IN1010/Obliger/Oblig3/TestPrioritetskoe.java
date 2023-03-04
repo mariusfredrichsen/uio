@@ -54,7 +54,6 @@ class TestPrioritetskoe {
 	k = new Prioritetskoe<>();
 	k.leggTil("Anne");  k.leggTil("Berit");  k.leggTil("Chris");
 	f = new String[] {"Anne", "Berit", "Chris"};
-	System.out.println(k);
 	if (test(2, "Prioritetskoe med 3 elementer", k, f)) {
 	    p("OK");  ++antOK;
 	} else {
@@ -66,7 +65,6 @@ class TestPrioritetskoe {
 	k.leggTil("B");  k.leggTil("D");  k.leggTil("C");  k.leggTil("A");
 	k.leggTil("Z");  k.leggTil("X");
 	k.fjern();
-	System.out.println(k);
 	String h1 = k.hent();
 	info(3, "Bruk av hent()");
 	if (h1.equals("B")) {
@@ -82,7 +80,6 @@ class TestPrioritetskoe {
 	k.leggTil("Z");  k.leggTil("Y");
 	k.fjern();  k.fjern();
 	k.leggTil("W");  k.leggTil("V");  k.leggTil("X");  k.leggTil("U");
-	System.out.println(k);
 	if (test(4, "Innsetting og fjerning", k, new String[] {"U", "V", "W", "X"})) {
 	    p("OK");  ++antOK;
 	} else {
