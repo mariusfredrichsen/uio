@@ -6,7 +6,7 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
             Node tempHolder = hode;
             hode = new Node(x);
             hode.neste = tempHolder;
-        } else if (pos >= super.stoerrelse()) {
+        } else if (pos == super.stoerrelse()) {
             super.leggTil(x);
         } else {
             Node nesteLenke = hode;
@@ -28,9 +28,9 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
         Node nesteLenke = hode;
         try {
             for (int i = 0; i < pos - 1; i++) {
-                nesteLenke = nesteLenke.neste; //har fortsatt nullste element
+                nesteLenke = nesteLenke.neste;
             }
-            final Node tempNesteLenke = nesteLenke.neste; //har første element
+            final Node tempNesteLenke = nesteLenke.neste;
             nesteLenke.neste = new Node(x);
             nesteLenke = nesteLenke.neste;
             nesteLenke.neste = tempNesteLenke.neste;
@@ -59,7 +59,7 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
             for (int i = 0; i < pos - 1; i++) {
                 nesteLenke = nesteLenke.neste;
             }
-            final Node tempNesteLenke = nesteLenke.neste; //har første element
+            Node tempNesteLenke = nesteLenke.neste;
             nesteLenke.neste = tempNesteLenke.neste;
             return tempNesteLenke.data;
         } catch (NullPointerException e) {

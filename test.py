@@ -1,4 +1,9 @@
-a = 4
-b = 5
+liste = [3]
 
-print("asdasd", a+b)
+def funksjon(liste):
+    for i in range(len(liste)):
+        liste.append(liste[i]*3)
+        liste.append(liste[i]*3+1)
+for i in range(10):
+    funksjon(liste)
+print(set(liste))

@@ -11,6 +11,7 @@ abstract class Lenkeliste <E> implements Liste <E> {
         }
     }
 
+    @Override
     public int stoerrelse() {
         int teller = 0;
         Node nesteLenke = hode;
@@ -23,6 +24,7 @@ abstract class Lenkeliste <E> implements Liste <E> {
         return teller;
     }
 
+    @Override
     public void leggTil(E x) {
         if (hode == null) {
             hode = new Node(x);
@@ -36,6 +38,7 @@ abstract class Lenkeliste <E> implements Liste <E> {
         nesteLenke.neste = new Node(x);
     }
 
+    @Override
     public E hent() {
         if (hode != null) {
             return hode.data;
@@ -43,6 +46,7 @@ abstract class Lenkeliste <E> implements Liste <E> {
         return null;
     }
 
+    @Override
     public E fjern() {
         try {
             final E tempHolder = hode.data;
@@ -53,6 +57,7 @@ abstract class Lenkeliste <E> implements Liste <E> {
         }
     }
 
+    @Override
     public String toString() {
         String enStreng = "";
         Node nesteLenke = hode;

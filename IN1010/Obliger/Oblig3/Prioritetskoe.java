@@ -23,7 +23,8 @@ public class Prioritetskoe <E extends Comparable <E>> extends Lenkeliste <E>{
             }
         }
     } */
-
+    //Koden over legger den til vanlig også bare shuffler den verdiene på riktig plass
+    
     @Override
     public void leggTil(E x) {
         if (hode == null) {

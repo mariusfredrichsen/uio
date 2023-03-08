@@ -6,7 +6,6 @@ public class MilResept extends HviteResepter {
     }
 
     public int prisAaBetale() {
-        legemiddel.settNyPris(0);
-        return legemiddel.hentPris();
+        return 0;
     }
 }

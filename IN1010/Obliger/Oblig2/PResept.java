@@ -7,10 +7,9 @@ public class PResept extends HviteResepter {
 
     public int prisAaBetale() {
         if (legemiddel.hentPris() > 108) {
-            legemiddel.settNyPris(legemiddel.hentPris() - 108);
+            return legemiddel.hentPris() - 108;
         } else {
-            legemiddel.settNyPris(0);
+            return 0;
         }
-        return legemiddel.hentPris();
     }
 }
