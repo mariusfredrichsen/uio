@@ -7,6 +7,7 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
             hode = new Node(x);
             hode.neste = tempHolder;
         } else if (pos == super.stoerrelse()) {
+        } else if (pos == super.stoerrelse()) {
             super.leggTil(x);
         } else {
             Node nesteLenke = hode;
