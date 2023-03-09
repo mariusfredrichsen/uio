@@ -1,6 +1,6 @@
-PWD c:/Users/mariu/OneDrive/Dokumenter/uio greier/IN1000/IN1150/Obliger
+PWD c:/Users/mariu/OneDrive/Dokumenter/github/uio/uio/IN1150/Obliger
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/mariu/OneDrive/Dokumenter/uio greier/IN1000/IN1150/Obliger/Innlevering0.tex
+INPUT c:/Users/mariu/OneDrive/Dokumenter/github/uio/uio/IN1150/Obliger/Innlevering0.tex
 OUTPUT Innlevering0.log
