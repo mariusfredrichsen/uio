@@ -1,6 +1,9 @@
-input_string = input().strip().split()
+liste = [3]
 
-for i in range(len(input_string)):
-    input_string[i] = int(input_string[i])
-
-print(abs(input_string[0]-input_string[1]))
+def funksjon(liste):
+    for i in range(len(liste)):
+        liste.append(liste[i]*3)
+        liste.append(liste[i]*3+1)
+for i in range(10):
+    funksjon(liste)
+print(set(liste))

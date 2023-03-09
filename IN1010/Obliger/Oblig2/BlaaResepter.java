@@ -10,7 +10,6 @@ public class BlaaResepter extends Resept {
     }
 
     public int prisAaBetale() {
-        legemiddel.settNyPris((int)Math.round(legemiddel.hentPris() / 4));
-        return legemiddel.hentPris();
+        return (int)Math.round(legemiddel.hentPris() / 4);
     }
 }

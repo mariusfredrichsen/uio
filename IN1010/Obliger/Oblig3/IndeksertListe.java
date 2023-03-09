@@ -7,6 +7,7 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
             hode = new Node(x);
             hode.neste = tempHolder;
         } else if (pos == super.stoerrelse()) {
+        } else if (pos == super.stoerrelse()) {
             super.leggTil(x);
         } else {
             Node nesteLenke = hode;
@@ -27,10 +28,13 @@ public class IndeksertListe <E> extends Lenkeliste <E>{
     public void sett(int pos, E x) {
         Node nesteLenke = hode;
         try {
-            for (int i = 0; i < pos; i++) {
+            for (int i = 0; i < pos - 1; i++) {
                 nesteLenke = nesteLenke.neste;
             }
-            nesteLenke.data = x;
+            final Node tempNesteLenke = nesteLenke.neste;
+            nesteLenke.neste = new Node(x);
+            nesteLenke = nesteLenke.neste;
+            nesteLenke.neste = tempNesteLenke.neste;
         } catch (NullPointerException e) {
             throw new UgyldigListeindeks(pos);
         }

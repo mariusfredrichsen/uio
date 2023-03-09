@@ -31,6 +31,7 @@ class TestKoe {
 	if (kLen != 0) {
 	    p("stoerrelse() etter fjerning gir " + kLen + " og ikke 0");
 	    return false;
+
 	}
 	return true;
     }
