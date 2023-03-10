@@ -10,10 +10,22 @@ class EnkelListe {
     }
 
     public void skrivUt() {
-        skrivUtBaklengs(start);
+        skrivUtBaklengs(start.neste);
     }
 
     private void skrivUtBaklengs(Node n) {
+        Node nesteLenke = start;
+        while (nesteLenke.neste != null) {
+            if (nesteLenke.neste == n) {
+                break;
+            }
+            nesteLenke = nesteLenke.neste;
+        }
+        System.out.println(nesteLenke.innhold);
+        if (nesteLenke == start) {
+            return;
+        }
+        skrivUtBaklengs(nesteLenke);
     }
 
     private class Node {
