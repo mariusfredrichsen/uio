@@ -9,21 +9,21 @@ public class Sorter {
     Scanner scan = new Scanner(fil);
 
     ArrayList<Hund> hunder = new ArrayList<>();
-    ArrayList<Person> personer = new ArrayList<>();
+    ArrayList<Butikk> personer = new ArrayList<>();
 
     while (scan.hasNextLine()) {
       String linje_deler[] = scan.nextLine().split(" ");
       if (linje_deler[0].equals("H")) {
         hunder.add(new Hund(linje_deler[1]));
       } else if (linje_deler[0].equals("P")) {
-        personer.add(new Person(linje_deler[1]));
+        personer.add(new Butikk(linje_deler[1]));
       }
     }
 
     for (Hund hund : hunder) {
       System.out.println("Hunde navn " + hund.hent_navn());
     }
-    for (Person person : personer) {
+    for (Butikk person : personer) {
       System.out.println("Person navn: " + person.hent_navn());
     }
   }
