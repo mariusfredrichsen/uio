@@ -11,42 +11,42 @@ public class TestResepter {
     public static void testHentId() {
         Narkotisk nark = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark, lege, 1, 1);
         sjekk("testHentId == 0", blaaResept.hentId() == 0);
     }
 
     public static void testHentLegemiddel() {
         Narkotisk nark = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark, lege, 1, 1);
         sjekk("testHentLegemiddel == nark", blaaResept.hentLegemiddel() == nark);
     }
 
     public static void testHentLege() {
         Narkotisk nark = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark, lege, 1, 1);
         sjekk("testHentLege == lege", blaaResept.hentLege() == lege);
     }
 
     public static void testHentPasientId() {
         Narkotisk nark = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark, lege, 1, 1);
         sjekk("testHentPasientId == 1", blaaResept.hentPasientId() == 1);
     }
 
     public static void testHentReit() {
         Narkotisk nark = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark, lege, 1, 1);
         sjekk("testHentReit == 1", blaaResept.hentReit() == 1);
     }
 
     public static void testBruk() {
         Narkotisk nark1 = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark1, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark1, lege, 1, 1);
         sjekk("testBruk gir true", blaaResept.bruk() == true);
         sjekk("testBruk gir false", blaaResept.bruk() == false);
 
@@ -61,7 +61,7 @@ public class TestResepter {
     public static void testFarge() {
         Narkotisk nark = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark, lege, 1, 1);
         sjekk("testFarge gir Blaa", blaaResept.farge().equals("Blaa"));
 
         MilResept milResept = new MilResept(nark, lege, 1);
@@ -71,7 +71,7 @@ public class TestResepter {
     public static void testPrisAaBetale() {
         Narkotisk nark1 = new Narkotisk("test", 100, 2.5, 7);
         Lege lege = new Lege("test");
-        BlaaResepter blaaResept = new BlaaResepter(nark1, lege, 1, 1);
+        BlaaResept blaaResept = new BlaaResept(nark1, lege, 1, 1);
         sjekk("testPrisAaBetale, blaa resept gir 25", blaaResept.prisAaBetale() == 25);
 
         Narkotisk nark2 = new Narkotisk("test", 100, 2.5, 7);

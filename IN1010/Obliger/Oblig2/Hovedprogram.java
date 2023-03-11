@@ -11,8 +11,8 @@ public class Hovedprogram {
         Spesialist spesialist = new Spesialist("Enda en lege", "mammaLikerBamserMedLitenM");
 
         //Resepter her:
-        BlaaResepter blaaResept = new BlaaResepter(narkotisk1, lege, 1, 30);
-        HviteResepter hvitResept = new HviteResepter(vanedannende, lege, 2, 4);
+        BlaaResept blaaResept = new BlaaResept(narkotisk1, lege, 1, 30);
+        HvitResept hvitResept = new HvitResept(vanedannende, lege, 2, 4);
         MilResept milResept = new MilResept(vanlig, spesialist, 3);
         PResept pResept = new PResept(narkotisk2, spesialist, 4, 9);
 
