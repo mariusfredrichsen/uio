@@ -81,6 +81,61 @@ public class Legesystem {
         }
     }
 
+    public void skrivUt() {
+        System.out.println("Pasienter:\n");
+        for (Pasient pasient : pasienter) {
+            System.out.println(pasient);
+        }
+
+        System.out.println("Leger:\n");
+        for (Lege lege : leger) {
+            System.out.println(lege);
+        }
+
+        System.out.println("Legemidler:\n");
+        for (Legemiddel legemiddel : legemidler) {
+            System.out.println(legemiddel);
+        }
+
+        System.out.println("Resepter:\n");
+        for (Resept resept : resepter) {
+            System.out.println(resept);
+        }
+    }
+
+    public void leggTilLege(String navn) {
+        leger.leggTil(new Lege(navn));
+    }
+
+    public void leggTilLege(String navn, String kode) {
+        leger.leggTil(new Spesialist(navn, kode));
+    }
+
+    public void leggTilPasient(String navn, String fodselsnummer) {
+        pasienter.leggTil(new Pasient(navn, fodselsnummer));
+    }
+
+    public void leggTilLegemiddel(String type, String navn, int pris, double virkestoff, int styrke) {
+        if (type.equals("1")) {
+            legemidler.leggTil(new Vanlig(navn, pris, virkestoff));
+        } else if (type.equals("2")) {
+            legemidler.leggTil(new Vanedannende(navn, pris, virkestoff, styrke));
+        } else if (type.equals("3")) {
+            legemidler.leggTil(new Narkotisk(navn, pris, virkestoff, styrke));
+        } else {
+            System.out.println("Noe gikk galt.");
+        }
+    }
+
+    public void leggTilResept(String legeNavn, int legemiddelID, int pasientID, int reit) {
+        for (Lege lege : leger) {
+            if (lege.navn.equals(legeNavn)) {
+                
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
 
     }

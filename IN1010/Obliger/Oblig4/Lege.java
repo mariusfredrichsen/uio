@@ -53,7 +53,7 @@ public class Lege implements Comparable<Lege> {
 
 
     public String toString() {
-        return "Navn paa lege: " + navn;
+        return navn;
     }
 
     public int compareTo(Lege lege) {

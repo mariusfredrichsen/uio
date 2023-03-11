@@ -26,6 +26,6 @@ abstract public class Legemiddel {
     }
 
     public String toString() {
-        return "Navn: " + navn + "\nPris: " + pris + "\nVirkestoff: " + virkestoff + "\nId: " + id;
+        return navn + ", " + pris + ", " + virkestoff + ", " + id;
     }
 }

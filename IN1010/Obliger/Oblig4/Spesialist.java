@@ -11,7 +11,7 @@ public class Spesialist extends Lege implements Godkjenningsfritak{
     }
 
     public String toString() {
-        return "Navn paa spesialist: " + navn + "\nKontrollkode: " + kontrollKode;
+        return navn + "," + kontrollKode;
     }
     
 }

@@ -15,4 +15,8 @@ public class Pasient {
     public void leggTilResept(Resept r) {
         resepter.leggTil(r);
     }
+
+    public String toString() {
+        return navn + ", " + fodselsnummer;
+    }
 }
