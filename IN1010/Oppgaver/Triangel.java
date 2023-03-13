@@ -11,13 +11,13 @@ public class Triangel {
         } else {
             triangel(m+1, n);
         }
-        for (int i = 0; i+1 == m; i++) {
+        for (int i = 0; i < m; i++) {
             System.out.print("*");
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
-        triangel(20, 1);
+        triangel(1, 20);
     }
 }
