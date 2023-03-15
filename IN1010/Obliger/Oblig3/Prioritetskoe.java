@@ -34,7 +34,7 @@ public class Prioritetskoe <E extends Comparable <E>> extends Lenkeliste <E>{
                     super.leggTil(x);
                     break;
                 }
-                if (nesteLenke.neste.data.compareTo(x) > 0) {
+                if (nesteLenke.neste.data.compareTo(x) > -0) {
                     Node nyNode = new Node(x);
                     nyNode.neste = nesteLenke.neste;
                     nesteLenke.neste = nyNode;
