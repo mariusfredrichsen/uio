@@ -1,11 +1,10 @@
 package IN1010.Oppgaver.Uke8;
 
 public class Rekrusjon {
-
     public static void rekrusivUtrisk(int i) {
         if (i <= 10) {
-            System.out.println(i++);
-            rekrusivUtrisk(i);
+            System.out.println(i);
+            rekrusivUtrisk(i++);
         } else {
             return;
         }

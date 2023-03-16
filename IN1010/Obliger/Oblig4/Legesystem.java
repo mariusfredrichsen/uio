@@ -115,25 +115,47 @@ public class Legesystem {
         pasienter.leggTil(new Pasient(navn, fodselsnummer));
     }
 
-    public void leggTilLegemiddel(String type, String navn, int pris, double virkestoff, int styrke) {
+    public void leggTilLegemiddel(String type, String legeNavn, int pris, double virkestoff, int styrke) {
         if (type.equals("1")) {
-            legemidler.leggTil(new Vanlig(navn, pris, virkestoff));
+            legemidler.leggTil(new Vanlig(legeNavn, pris, virkestoff));
         } else if (type.equals("2")) {
-            legemidler.leggTil(new Vanedannende(navn, pris, virkestoff, styrke));
+            legemidler.leggTil(new Vanedannende(legeNavn, pris, virkestoff, styrke));
         } else if (type.equals("3")) {
-            legemidler.leggTil(new Narkotisk(navn, pris, virkestoff, styrke));
+            legemidler.leggTil(new Narkotisk(legeNavn, pris, virkestoff, styrke));
         } else {
             System.out.println("Noe gikk galt.");
         }
     }
 
-    public void leggTilResept(String legeNavn, int legemiddelID, int pasientID, int reit) {
+    public void leggTilResept(String legeNavn, String type, int legemiddelID, int pasientID, int reit) throws UlovligUtskrift {
         for (Lege lege : leger) {
             if (lege.navn.equals(legeNavn)) {
-                
+                for (Legemiddel legemiddel : legemidler) {
+                    if (legemiddel.id == legemiddelID) {
+                        for (Pasient pasient : pasienter) {
+                            if (pasient.id == pasientID) {
+                                if (type.equals("1")) {
+                                    lege.skrivBlaaResept(legemiddel, pasient, reit);
+                                    return;
+                                } else if (type.equals("2")) {
+                                    lege.skrivHvitResept(legemiddel, pasient, reit);
+                                    return;
+                                } else if (type.equals("3")) {
+                                    lege.skrivMilResept(legemiddel, pasient);
+                                    return;
+                                } else if (type.equals("4")) {
+                                    lege.skrivPResept(legemiddel, pasient, reit);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+
+
 
 
     public static void main(String[] args) {

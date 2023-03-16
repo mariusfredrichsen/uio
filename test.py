@@ -1,9 +1,5 @@
-liste = [3]
+liste = [1,2,3,4,5,6,7,8,9]
 
-def funksjon(liste):
-    for i in range(len(liste)):
-        liste.append(liste[i]*3)
-        liste.append(liste[i]*3+1)
-for i in range(10):
-    funksjon(liste)
-print(set(liste))
+ny_liste = [i for i in liste if i%2==0]
+
+print(ny_liste)
