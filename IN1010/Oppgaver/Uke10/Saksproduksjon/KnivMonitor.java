@@ -20,17 +20,12 @@ public class KnivMonitor {
     }
 
     public ArrayList<Kniv> taUtTo() throws InterruptedException {
-        laas.lock();
-        try {
-            while (knivBeholder.size() < 2) merEnnEn.await();
-            ArrayList<Kniv> toKniver = new ArrayList<>();
-            for (int i = 0; i < 2; i++) {
-                toKniver.add(knivBeholder.remove(0));
-            }
-            return toKniver;
-        } finally {
-            laas.unlock();
+        while (knivBeholder.size() < 2) merEnnEn.await();
+        ArrayList<Kniv> toKniver = new ArrayList<>();
+        for (int i = 0; i < 2; i++) {
+            toKniver.add(knivBeholder.remove(0));
         }
+        return toKniver;
     }
 
     public int hentAntKniver() {
