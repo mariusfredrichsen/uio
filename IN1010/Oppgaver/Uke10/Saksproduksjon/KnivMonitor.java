@@ -12,7 +12,7 @@ public class KnivMonitor {
         try {
             knivBeholder.add(kniv);
             if (knivBeholder.size() > 1) {
-                merEnnEn.signal();
+                merEnnEn.signalAll();
             }
         } finally {
             laas.unlock();
@@ -20,12 +20,19 @@ public class KnivMonitor {
     }
 
     public ArrayList<Kniv> taUtTo() throws InterruptedException {
-        while (knivBeholder.size() < 2) merEnnEn.await();
-        ArrayList<Kniv> toKniver = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
-            toKniver.add(knivBeholder.remove(0));
+        laas.lock();
+        try {
+            while (knivBeholder.size() < 2 && knivBeholder.size() != 0) merEnnEn.await();
+            ArrayList<Kniv> toKniver = new ArrayList<>();
+            for (int i = 0; i < 2; i++) {
+                toKniver.add(knivBeholder.remove(0));
+            }
+            return toKniver;
+        } catch (IndexOutOfBoundsException e) {
+            throw e;
+        } finally {
+            laas.unlock();
         }
-        return toKniver;
     }
 
     public int hentAntKniver() {

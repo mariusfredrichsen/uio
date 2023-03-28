@@ -14,18 +14,18 @@ public class SaksProdusent implements Runnable {
     }
 
     public void run() {
-        laas.lock();
         try {
-            while (knivM.hentAntKniver() != 1) {
+            while (knivM.hentAntKniver() != 0) {
                 System.out.println(knivM.hentAntKniver() + " kniver i saks monitor");
                 saksM.skrivUtAntSakser();
                 ArrayList<Kniv> toKniver = new ArrayList<>();
-                toKniver = knivM.taUtTo();
+                try {
+                    toKniver = knivM.taUtTo();
+                } catch (IndexOutOfBoundsException e) {
+                    continue;
+                }
                 saksM.settInn(new Saks(toKniver));
             }
-        } catch (InterruptedException e) {
-        } finally {
-            laas.unlock();
-        }
+        } catch (InterruptedException e) {}
     }
 }

@@ -7,7 +7,12 @@ public class SaksMonitor {
     Lock laas = new ReentrantLock();
 
     public void settInn(Saks saks) {
-        sakser.add(saks);
+        laas.lock();
+        try {
+            sakser.add(saks);
+        } finally {
+            laas.unlock();
+        }
     }
 
     public void skrivUtAntSakser() {
