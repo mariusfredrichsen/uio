@@ -5,10 +5,11 @@ public class Nedover implements Runnable {
     Tallmonitor tallmonitor;
 
     public Nedover(Tallmonitor tallmonitor) {
-        storstVerdi = Integer.MAX_VALUE;
+        storstVerdi = 10000;
         this.tallmonitor = tallmonitor;
     }
 
+    @Override
     public void run() {
         while(tallmonitor.settStorste(storstVerdi)) {
             storstVerdi--;

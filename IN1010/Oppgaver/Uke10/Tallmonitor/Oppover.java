@@ -5,10 +5,11 @@ public class Oppover implements Runnable {
     Tallmonitor tallmonitor;
 
     public Oppover(Tallmonitor tallmonitor) {
-        minstVerdi = Integer.MIN_VALUE;
+        minstVerdi = -10000;
         this.tallmonitor = tallmonitor;
     }
 
+    @Override
     public void run() {
         while(tallmonitor.settStorste(minstVerdi)) {
             minstVerdi++;
