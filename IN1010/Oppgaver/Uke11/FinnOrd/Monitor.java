@@ -1,25 +1,23 @@
-package IN1010.Oppgaver.Uke11.FinnOrd;
-
 import java.util.concurrent.locks.*;
 
 public class Monitor {
-    String[] ordListe;
     Lock laas;
-    String onsketOrd;
+    int teller = 0;
 
-    public Monitor(String[] ordListe, String onsketOrd) {
-        this.ordListe = ordListe;
+    public Monitor() {
         laas = new ReentrantLock();
-        this.onsketOrd = onsketOrd;
     }
 
-    public boolean lesLinje(String ord) {
+    public void tellOpp() {
         laas.lock();
         try {
-            if (ord.equals(onsketOrd)) return true;
-            return false;
+            teller++;
         } finally {
             laas.unlock();
         }
+    }
+
+    public int oppgiAnkomster() {
+        return teller;
     }
 }
