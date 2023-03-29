@@ -1,4 +1,5 @@
 package IN1010.Oppgaver.Uke11.Postkontor;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.*;
 
 public class Postkontor {
@@ -7,12 +8,14 @@ public class Postkontor {
     Condition fullHaug;
     Condition ikkeFullHaug;
     public int teller = 0;
+    CountDownLatch barriere;
 
-    public Postkontor() {
+    public Postkontor(CountDownLatch barriere) {
         postHaug = new Post[10];
         laas = new ReentrantLock();
         fullHaug = laas.newCondition();
         ikkeFullHaug = laas.newCondition();
+        this.barriere = barriere;
     }
 
     public boolean erFull(Post p) {
@@ -67,7 +70,7 @@ public class Postkontor {
     public Post hentPost(String navnMottaker) {
         laas.lock();
         try {
-            while (finnesHaug(navnMottaker)) fullHaug.await();
+            while (finnesHaug(navnMottaker) && barriere.getCount() != 0) fullHaug.await();
             for (int i = 0; i < postHaug.length; i++) {
                 if (postHaug[i] != null) {
                     if (postHaug[i].mottaker.equals(navnMottaker)) {

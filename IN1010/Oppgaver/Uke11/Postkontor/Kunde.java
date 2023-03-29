@@ -1,5 +1,7 @@
 package IN1010.Oppgaver.Uke11.Postkontor;
 
+import java.util.concurrent.CountDownLatch;
+
 public class Kunde implements Runnable {
     String mottakerNavn;
     Postkontor postkontor;
