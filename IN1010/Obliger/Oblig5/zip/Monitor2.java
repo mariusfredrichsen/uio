@@ -21,16 +21,21 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
+            if (s.hentAnt() > 1) merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
+    }
+
+    public HashMap<String, Subsekvens> taUt() {
+        return s.taUt();
     }
 
     public void settInnFlettet(HashMap<String,Subsekvens> hash) {
         laas.lock();
         try {
             s.settInn(hash);
-            merEnnEn.signalAll();
+            if (s.hentAnt() > 1) merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
@@ -39,13 +44,12 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            while (s.hentAnt() > 1 && barriere.getCount() == 0) merEnnEn.await();
+            if (s.hentAnt() < 2) merEnnEn.await();
             ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
             for (int i = 0; i < 2; i++) {
                 toHash.add(s.taUt());
             }
             return toHash;
-        
         } catch (InterruptedException e) {
             System.out.println("Noe skjedde.");
         } finally {
@@ -59,21 +63,11 @@ public class Monitor2 {
     }
 
     public HashMap<String,Subsekvens> lesFil(File fil) {
-        laas.lock();
-        try {
-            return SubsekvensRegister.lesFil(fil);
-        } finally {
-            laas.unlock();
-        }
+        return SubsekvensRegister.lesFil(fil);
     }
 
     public HashMap<String,Subsekvens> slaaSammen(HashMap<String,Subsekvens> hash1, HashMap<String,Subsekvens> hash2) {
-        laas.lock();
-        try {
-            return SubsekvensRegister.slaaSammen(hash1, hash2);
-        } finally {
-            laas.unlock();
-        }
+        return SubsekvensRegister.slaaSammen(hash1, hash2);
     }
 
 }
