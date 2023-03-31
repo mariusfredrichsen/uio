@@ -15,6 +15,10 @@ public class Subsekvens {
         return antall;
     }
 
+    public void senkAntall(int antall) {
+        this.antall -= antall;
+    }
+
     public String toString() {
         return String.format("%s,%s",subsekvens, antall);
     }
