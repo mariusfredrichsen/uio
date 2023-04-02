@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Oblig5Del2 {
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
+        double startTime = System.currentTimeMillis();
         Scanner scan = null;
         try {
             scan = new Scanner(new File(args[0] + "/metadata.csv"));
@@ -55,7 +55,7 @@ public class Oblig5Del2 {
         ArrayList<Thread> traadListeS = new ArrayList<>();
         ArrayList<Thread> traadListeF = new ArrayList<>();
         int antallFlettere = 8;
-        for (int i = 0; i < 8 * 2; i++) {
+        for (int i = 0; i < antallFlettere * 2; i++) {
             if (i % 2 == 0) {
                 Thread tS = new Thread(new FletteTrad(sykM, barrierFletteS));
                 traadListeS.add(tS);
@@ -103,8 +103,8 @@ public class Oblig5Del2 {
         }
 
         System.out.println(peker);
-        long endTime   = System.nanoTime();
-        long totalTime = (endTime - startTime)/100000;
+        double endTime   = System.currentTimeMillis();
+        double totalTime = (endTime - startTime)/1000;
         System.out.println("Tid: " + totalTime);
     }
 }
