@@ -73,9 +73,11 @@ public class Oblig5Del2B {
             System.out.println("Noe skjedde.");
         }
 
+        HashMap<String,Subsekvens> enHash = m.taUt();
+
         int maxTeller = 0;
         Subsekvens peker = null;
-        for (Subsekvens sub : s.taUt().values()) {
+        for (Subsekvens sub : enHash.values()) {
             if (sub.hentAntall() > maxTeller) {
                 maxTeller = sub.hentAntall();
                 peker = sub;

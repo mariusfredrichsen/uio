@@ -102,10 +102,12 @@ public class Oblig5Hele {
                 samHash.get(subsekvens).endreAntall(-friskHash.get(subsekvens).hentAntall());
             }
         }
+
         Subsekvens peker = null;
         int flestForekomst = 0;
         for (Subsekvens sub : samHash.values()) {
             if (sub.hentAntall() > flestForekomst) {
+                System.out.println(sub);
                 peker = sub;
                 flestForekomst = sub.hentAntall();
             }
