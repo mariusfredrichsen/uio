@@ -77,8 +77,8 @@ public class Oblig5Del2 {
 
         try {
             System.out.println("Venter paa flette traader for syke");
-            barrierFletteS.await();
             System.out.println("Venter paa flette traader for friske");
+            barrierFletteS.await();
             barrierFletteF.await();
         } catch (InterruptedException e) {}
 

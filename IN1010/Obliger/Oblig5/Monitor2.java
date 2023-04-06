@@ -18,13 +18,7 @@ public class Monitor2 {
     }
 
     public void settInn(HashMap<String,Subsekvens> hash) {
-        laas.lock();
-        try {
-            s.settInn(hash);
-            if (s.hentAnt() > 1) merEnnEn.signalAll();
-        } finally {
-            laas.unlock();
-        }
+        s.settInn(hash);
     }
 
     public HashMap<String, Subsekvens> taUt() {
