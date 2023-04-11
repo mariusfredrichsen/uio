@@ -68,26 +68,22 @@ public class Oblig5Hele {
         }
         System.out.println("Ferdig med aa lese");
 
-        ArrayList<Thread> traadListeS = new ArrayList<>();
-        ArrayList<Thread> traadListeF = new ArrayList<>();
+        ArrayList<Thread> traadListe = new ArrayList<>();
         int antallFlettere = 8;
         for (int i = 0; i < antallFlettere * 2; i++) {
             if (i % 2 == 0) {
                 Thread tS = new Thread(new FletteTrad(sykM, barrierFletteS));
-                traadListeS.add(tS);
+                traadListe.add(tS);
                 tS.start();
             } else {
                 Thread tF = new Thread(new FletteTrad(friskM, barrierFletteF));
-                traadListeS.add(tF);
+                traadListe.add(tF);
                 tF.start();
             }
         }
 
         try {
-            for (Thread t : traadListeS) {
-                t.join();
-            }
-            for (Thread t : traadListeF) {
+            for (Thread t : traadListe) {
                 t.join();
             }
         } catch (InterruptedException e) {}
@@ -107,7 +103,6 @@ public class Oblig5Hele {
         int flestForekomst = 0;
         for (Subsekvens sub : samHash.values()) {
             if (sub.hentAntall() > flestForekomst) {
-                System.out.println(sub);
                 peker = sub;
                 flestForekomst = sub.hentAntall();
             }

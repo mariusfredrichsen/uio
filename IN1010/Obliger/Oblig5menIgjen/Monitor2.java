@@ -24,6 +24,8 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
+            System.out.println("Stop lese");
+            merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
@@ -33,7 +35,8 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
-            if (s.antHash() >= 2) merEnnEn.signalAll();
+            System.out.println("Stop flette");
+            merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
@@ -46,13 +49,15 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            if (antHash() >= 2 && barriere.getCount() != 0) {
-                ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
-                for (int i = 0; i < 2; i++) {
-                    toHash.add(s.taUt());
+            while (true) {
+                while (s.antHash() != 1) {
+                    ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
+                    for (int i = 0; i < 2; i++) {
+                        toHash.add(s.taUt());
+                    }
+                    return toHash;
                 }
-                return toHash;
-            } else {
+                System.out.println("Vent");
                 merEnnEn.await();
             }
         } catch (InterruptedException e) {
