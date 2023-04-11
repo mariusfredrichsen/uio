@@ -24,7 +24,6 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
-            System.out.println("Stop lese");
             merEnnEn.signalAll();
         } finally {
             laas.unlock();
@@ -35,7 +34,6 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
-            System.out.println("Stop flette");
             merEnnEn.signalAll();
         } finally {
             laas.unlock();
@@ -49,15 +47,13 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            while (true) {
-                while (s.antHash() != 1) {
-                    ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
-                    for (int i = 0; i < 2; i++) {
-                        toHash.add(s.taUt());
-                    }
-                    return toHash;
+            if (s.antHash() != 1) {
+                ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
+                for (int i = 0; i < 2; i++) {
+                    toHash.add(s.taUt());
                 }
-                System.out.println("Vent");
+                return toHash;
+            } else {
                 merEnnEn.await();
             }
         } catch (InterruptedException e) {
