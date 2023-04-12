@@ -2,48 +2,58 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.*;
-import java.io.File;
 
 public class Monitor2 {
     SubsekvensRegister s;
     Lock laas;
     Condition merEnnEn;
-    CountDownLatch barriere;
 
-    public Monitor2(SubsekvensRegister s, CountDownLatch barriere) {
+    public Monitor2(SubsekvensRegister s) {
         this.s = s;
         laas = new ReentrantLock();
         merEnnEn = laas.newCondition();
-        this.barriere = barriere;
+    }
+
+    public ArrayList<HashMap<String,Subsekvens>> hentBeholder() {
+        return s.hentBeholder();
     }
 
     public void settInn(HashMap<String,Subsekvens> hash) {
-        s.settInn(hash);
-    }
-
-    public HashMap<String, Subsekvens> taUt() {
-        return s.taUt();
-    }
-
-    public void settInnFlettet(HashMap<String,Subsekvens> hash) {
         laas.lock();
         try {
             s.settInn(hash);
-            if (s.hentAnt() > 1) merEnnEn.signalAll();
+            merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
     }
 
+    public void settInnFlettet(HashMap<String,Subsekvens> flettetHash) {
+        laas.lock();
+        try {
+            s.settInn(flettetHash);
+            merEnnEn.signalAll();
+        } finally {
+            laas.unlock();
+        }
+    }
+
+    public HashMap<String,Subsekvens> taUt() {
+            return s.taUt();
+    }
+
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            if (s.hentAnt() < 2) merEnnEn.await();
-            ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
-            for (int i = 0; i < 2; i++) {
-                toHash.add(s.taUt());
+            if (antHash() >= 2) {
+                ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
+                for (int i = 0; i < 2; i++) {
+                    toHash.add(s.taUt());
+                }
+                return toHash;
+            } else {
+                merEnnEn.await();
             }
-            return toHash;
         } catch (InterruptedException e) {
             System.out.println("Noe skjedde.");
         } finally {
@@ -52,16 +62,15 @@ public class Monitor2 {
         return null;
     }
 
-    public int hentAnt() {
-        return s.hentAnt();
+    public int antHash() {
+        return s.antHash();
     }
 
-    public HashMap<String,Subsekvens> lesFil(File fil) {
-        return SubsekvensRegister.lesFil(fil);
+    public static HashMap<String,Subsekvens> lesFil(String filNavn) {
+        return SubsekvensRegister.lesFil(filNavn);
     }
 
-    public HashMap<String,Subsekvens> slaaSammen(HashMap<String,Subsekvens> hash1, HashMap<String,Subsekvens> hash2) {
+    public static HashMap<String,Subsekvens> slaaSammen(HashMap<String,Subsekvens> hash1, HashMap<String,Subsekvens> hash2) {
         return SubsekvensRegister.slaaSammen(hash1, hash2);
     }
-
 }

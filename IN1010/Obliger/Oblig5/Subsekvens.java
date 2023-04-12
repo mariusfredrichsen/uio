@@ -1,25 +1,21 @@
 public class Subsekvens {
-    public final String subsekvens;
+    final String subsekvens;
     private int antall;
 
-    public Subsekvens(String subsekvens, int antall) {
+    public Subsekvens(String subsekvens) {
         this.subsekvens = subsekvens;
-        this.antall = antall;
-    }
-
-    public void oekAntall(int antall) {
-        this.antall += antall;
+        antall = 1;
     }
 
     public int hentAntall() {
         return antall;
     }
 
-    public void senkAntall(int antall) {
-        this.antall -= antall;
+    public void endreAntall(int antall) {
+        this.antall += antall;
     }
 
     public String toString() {
-        return String.format("%s,%s",subsekvens, antall);
+        return String.format("(%s,%s)",subsekvens,antall);
     }
 }

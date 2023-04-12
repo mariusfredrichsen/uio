@@ -1,19 +1,13 @@
-import java.io.File;
-import java.util.concurrent.CountDownLatch;
-
 public class LeseTrad implements Runnable {
-    String filnavn;
-    Monitor2 m2;
-    CountDownLatch barriere;
+    String filNavn;
+    Monitor2 m;
 
-    public LeseTrad(String filnavn, Monitor2 m2, CountDownLatch barriere) {
-        this.filnavn = filnavn;
-        this.m2 = m2;
-        this.barriere = barriere;
+    public LeseTrad(String filNavn, Monitor2 m) {
+        this.filNavn = filNavn;
+        this.m = m;
     }
 
     public void run() {
-        m2.settInn(m2.lesFil(new File(filnavn)));
-        barriere.countDown();
+        m.settInn(SubsekvensRegister.lesFil(filNavn));
     }
 }

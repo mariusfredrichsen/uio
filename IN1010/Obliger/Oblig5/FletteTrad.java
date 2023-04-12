@@ -3,24 +3,17 @@ import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 
 public class FletteTrad implements Runnable {
-    Monitor2 m2;
-    CountDownLatch barriere;
-    int tel = 0;
-    
+    Monitor2 m;
 
-    public FletteTrad(Monitor2 m2, CountDownLatch barriere) {
-        this.m2 = m2;
-        this.barriere = barriere;
+    public FletteTrad(Monitor2 m) {
+        this.m = m;
     }
 
     public void run() {
-        while (barriere.getCount() > 0 && !(m2.hentAnt() < 2)) {
+        while (!(m.antHash() < 2)) {
             try {
-                ArrayList<HashMap<String,Subsekvens>> toHash = m2.taUtTo();
-                HashMap<String,Subsekvens> hash1 = toHash.remove(0);
-                HashMap<String,Subsekvens> hash2 = toHash.remove(0);  
-                m2.settInnFlettet(m2.slaaSammen(hash1,hash2));
-                barriere.countDown();
+                ArrayList<HashMap<String,Subsekvens>> toHash = m.taUtTo();
+                m.settInnFlettet(SubsekvensRegister.slaaSammen(toHash.remove(0),toHash.remove(0)));
             } catch (NullPointerException e) {
                 return;
             }

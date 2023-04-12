@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.lang.InterruptedException;
 import java.util.Scanner;
-import java.util.concurrent.CountDownLatch;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -104,10 +103,7 @@ public class Oblig5Hele {
         }
         
         System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
-        
-        System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
         for (Subsekvens sub : samHash.values()) {
-            System.out.println(sub);
             System.out.println(sub);
         }
     }

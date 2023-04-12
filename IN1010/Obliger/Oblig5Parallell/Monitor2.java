@@ -45,7 +45,7 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            if (antHash() >= 2 && barriere.getCount() != 0) {
+            if (antHash() >= 2) {
                 ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
                 for (int i = 0; i < 2; i++) {
                     toHash.add(s.taUt());
