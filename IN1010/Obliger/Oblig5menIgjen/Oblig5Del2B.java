@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.lang.InterruptedException;
 import java.util.Scanner;
-import java.util.concurrent.CountDownLatch;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,22 +8,9 @@ import java.util.HashMap;
 public class Oblig5Del2B {
     public static void main(String[] args) {
         SubsekvensRegister s = new SubsekvensRegister();
+        Monitor2 m = new Monitor2(s);
         
         Scanner scan = null;
-        try {
-            scan = new Scanner(new File(args[0] + "/metadata.csv"));
-        } catch (FileNotFoundException e) {
-            System.out.println("Fant ikke fil.");
-        }
-
-        int teller = 0;
-        while (scan.hasNextLine()) {
-            scan.nextLine();
-            teller++;
-        }
-        CountDownLatch barriere = new CountDownLatch(teller-1);
-        Monitor2 m = new Monitor2(s, barriere);
-
         try {
             scan = new Scanner(new File(args[0] + "/metadata.csv"));
         } catch (FileNotFoundException e) {
@@ -52,7 +38,7 @@ public class Oblig5Del2B {
         int antallFlettere = 8;
         ArrayList<Thread> fletteTraader = new ArrayList<>();
         for (int i = 0; i < antallFlettere; i++) {
-            FletteTrad fletteTrad = new FletteTrad(m, barriere);
+            FletteTrad fletteTrad = new FletteTrad(m);
             Thread trad = new Thread(fletteTrad);
             fletteTraader.add(trad);
             trad.start();
@@ -64,13 +50,6 @@ public class Oblig5Del2B {
             } catch (InterruptedException e) {
                 System.out.println("Noe skjedde");
             }
-        }
-
-        try {
-            System.out.println("Venter paa fletterene");
-            barriere.await();
-        } catch (InterruptedException e) {
-            System.out.println("Noe skjedde.");
         }
 
         HashMap<String,Subsekvens> enHash = m.taUt();

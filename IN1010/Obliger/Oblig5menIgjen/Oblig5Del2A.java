@@ -1,6 +1,5 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.concurrent.CountDownLatch;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,8 +7,7 @@ import java.util.HashMap;
 public class Oblig5Del2A {
     public static void main(String[] args) {
         SubsekvensRegister s = new SubsekvensRegister();
-        CountDownLatch barriere = new CountDownLatch(0); //Filler
-        Monitor2 m = new Monitor2(s, barriere);
+        Monitor2 m = new Monitor2(s);
         
         Scanner scan = null;
         try {

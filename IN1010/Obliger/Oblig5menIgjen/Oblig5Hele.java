@@ -7,16 +7,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Oblig5Hele {
-    public static void main(String[] args) {
-        for(int i = 0; i < 100; i++) {
-            yeet(args[0]);
-        }
-    }
-
-    public static void yeet(String args) {        
+    public static void main(String[] args) {    
         Scanner scan = null;
         try {
-            scan = new Scanner(new File(args + "/metadata.csv"));
+            scan = new Scanner(new File(args[0] + "/metadata.csv"));
         } catch (FileNotFoundException e) {
             System.out.println("Fant ikke fil.");
         }
@@ -29,20 +23,14 @@ public class Oblig5Hele {
             else if (!Boolean.parseBoolean(linje[1])) antFrisk++;
         }
 
-        System.out.println(antSyke + " syke");
-        System.out.println(antFrisk + " friske");
-        
-        CountDownLatch barrierFletteS = new CountDownLatch(antSyke-1);
-        CountDownLatch barrierFletteF = new CountDownLatch(antFrisk-1);
-
         SubsekvensRegister sykS = new SubsekvensRegister();
-        Monitor2 sykM = new Monitor2(sykS, barrierFletteS);
+        Monitor2 sykM = new Monitor2(sykS);
 
         SubsekvensRegister friskS = new SubsekvensRegister();
-        Monitor2 friskM = new Monitor2(friskS, barrierFletteF);
+        Monitor2 friskM = new Monitor2(friskS);
 
         try {
-            scan = new Scanner(new File(args + "/metadata.csv"));
+            scan = new Scanner(new File(args[0] + "/metadata.csv"));
         } catch (FileNotFoundException e) {
             System.out.println("Fant ikke fil.");
         }
@@ -53,12 +41,12 @@ public class Oblig5Hele {
         while (scan.hasNextLine()) {
             String[] linje = scan.nextLine().split(",");
             if (Boolean.parseBoolean(linje[1])) { //har viruset
-                LeseTrad leseTrad = new LeseTrad(args + "/" + linje[0], sykM);
+                LeseTrad leseTrad = new LeseTrad(args[0] + "/" + linje[0], sykM);
                 Thread t = new Thread(leseTrad);
                 leseTraader.add(t);
                 t.start();
-            } else if (!Boolean.parseBoolean(linje[1])) {
-                LeseTrad leseTrad = new LeseTrad(args + "/" + linje[0], friskM);
+            } else if (!Boolean.parseBoolean(linje[1])) { //har ikke viruset
+                LeseTrad leseTrad = new LeseTrad(args[0] + "/" + linje[0], friskM);
                 Thread t = new Thread(leseTrad);
                 leseTraader.add(t);
                 t.start();
@@ -76,13 +64,13 @@ public class Oblig5Hele {
 
         ArrayList<Thread> traadListe = new ArrayList<>();
         int antallFlettere = 8;
-        for (int i = 0; i < antallFlettere * 2; i++) {
+        for (int i = 0; i < antallFlettere * 2; i++) { //lager tråder for hver monitor avhengig om det er partall eller oddetall
             if (i % 2 == 0) {
-                Thread tS = new Thread(new FletteTrad(sykM, barrierFletteS));
+                Thread tS = new Thread(new FletteTrad(sykM));
                 traadListe.add(tS);
                 tS.start();
             } else {
-                Thread tF = new Thread(new FletteTrad(friskM, barrierFletteF));
+                Thread tF = new Thread(new FletteTrad(friskM));
                 traadListe.add(tF);
                 tF.start();
             }
@@ -90,17 +78,21 @@ public class Oblig5Hele {
 
         try {
             for (Thread t : traadListe) {
-                System.out.println();
                 t.join();
             }
         } catch (InterruptedException e) {}
 
         HashMap<String,Subsekvens> sykHash = sykM.taUt();
         HashMap<String,Subsekvens> friskHash = friskM.taUt();
+
         HashMap<String,Subsekvens> samHash = new HashMap<>();
 
-        for (String subsekvens : sykHash.keySet()) {
-            if (friskHash.containsKey(subsekvens) && sykHash.get(subsekvens).hentAntall() > friskHash.get(subsekvens).hentAntall() + 7) {
+        for (String subsekvens : sykHash.keySet()) { //Setter inn alle subsekvenser i sykHash som har 7 flere forekomster enn de friske sinn inn i samHash
+            if (friskHash.containsKey(subsekvens)) {
+                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 7) {
+                    samHash.put(subsekvens, sykHash.get(subsekvens));
+                }
+            } else if (sykHash.get(subsekvens).hentAntall() >= 7) {
                 samHash.put(subsekvens, sykHash.get(subsekvens));
             }
         }

@@ -7,13 +7,11 @@ public class Monitor2 {
     SubsekvensRegister s;
     Lock laas;
     Condition merEnnEn;
-    CountDownLatch barriere;
 
-    public Monitor2(SubsekvensRegister s, CountDownLatch barriere) {
+    public Monitor2(SubsekvensRegister s) {
         this.s = s;
         laas = new ReentrantLock();
         merEnnEn = laas.newCondition();
-        this.barriere = barriere;
     }
 
     public ArrayList<HashMap<String,Subsekvens>> hentBeholder() {
@@ -41,13 +39,13 @@ public class Monitor2 {
     }
 
     public HashMap<String,Subsekvens> taUt() {
-        return s.taUt();
+            return s.taUt();
     }
 
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            if (s.antHash() != 1) {
+            if (s.antHash() > 1) {
                 ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
                 for (int i = 0; i < 2; i++) {
                     toHash.add(s.taUt());
