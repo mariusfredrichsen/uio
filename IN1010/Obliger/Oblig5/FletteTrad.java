@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.concurrent.CountDownLatch;
 
 public class FletteTrad implements Runnable {
     Monitor2 m;

@@ -4,19 +4,24 @@ import java.util.concurrent.CountDownLatch;
 
 public class FletteTrad implements Runnable {
     Monitor2 m;
+    CountDownLatch barriere;
 
-    public FletteTrad(Monitor2 m) {
+    public FletteTrad(Monitor2 m, CountDownLatch barriere) {
         this.m = m;
+        this.barriere = barriere;
     }
 
     public void run() {
-        while (!(m.antHash() < 2)) {
+        while (barriere.getCount() != 0) {
             try {
+                System.out.println("Flettet " + barriere.getCount());
                 ArrayList<HashMap<String,Subsekvens>> toHash = m.taUtTo();
                 m.settInnFlettet(SubsekvensRegister.slaaSammen(toHash.remove(0),toHash.remove(0)));
+                barriere.countDown();
             } catch (NullPointerException e) {
                 return;
             }
         }
+        System.out.println("asdasdasd");
     }
 }

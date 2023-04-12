@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.*;
 
 public class Monitor2 {
     SubsekvensRegister s;
     Lock laas;
     Condition merEnnEn;
+    int teller = 0;
 
     public Monitor2(SubsekvensRegister s) {
         this.s = s;
@@ -22,6 +22,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
+            System.out.println("Skrevet fil " + teller++);
             merEnnEn.signalAll();
         } finally {
             laas.unlock();
@@ -32,6 +33,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
+            System.out.println("asdasdasd");
             merEnnEn.signalAll();
         } finally {
             laas.unlock();

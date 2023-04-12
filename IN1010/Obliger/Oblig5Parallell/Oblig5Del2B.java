@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.lang.InterruptedException;
 import java.util.Scanner;
+import java.util.concurrent.CountDownLatch;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,7 +39,7 @@ public class Oblig5Del2B {
         int antallFlettere = 8;
         ArrayList<Thread> fletteTraader = new ArrayList<>();
         for (int i = 0; i < antallFlettere; i++) {
-            FletteTrad fletteTrad = new FletteTrad(m);
+            FletteTrad fletteTrad = new FletteTrad(m, new CountDownLatch(i));
             Thread trad = new Thread(fletteTrad);
             fletteTraader.add(trad);
             trad.start();
