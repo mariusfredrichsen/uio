@@ -7,10 +7,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Oblig5Hele {
-    public static void main(String[] args) {    
+    public static void main(String[] args) {
+        for(int i = 0; i < 100; i++) {
+            yeet(args[0]);
+        }
+    }
+
+    public static void yeet(String args) {        
         Scanner scan = null;
         try {
-            scan = new Scanner(new File(args[0] + "/metadata.csv"));
+            scan = new Scanner(new File(args + "/metadata.csv"));
         } catch (FileNotFoundException e) {
             System.out.println("Fant ikke fil.");
         }
@@ -30,7 +36,7 @@ public class Oblig5Hele {
         Monitor2 friskM = new Monitor2(friskS);
 
         try {
-            scan = new Scanner(new File(args[0] + "/metadata.csv"));
+            scan = new Scanner(new File(args + "/metadata.csv"));
         } catch (FileNotFoundException e) {
             System.out.println("Fant ikke fil.");
         }
@@ -41,12 +47,12 @@ public class Oblig5Hele {
         while (scan.hasNextLine()) {
             String[] linje = scan.nextLine().split(",");
             if (Boolean.parseBoolean(linje[1])) { //har viruset
-                LeseTrad leseTrad = new LeseTrad(args[0] + "/" + linje[0], sykM);
+                LeseTrad leseTrad = new LeseTrad(args + "/" + linje[0], sykM);
                 Thread t = new Thread(leseTrad);
                 leseTraader.add(t);
                 t.start();
             } else if (!Boolean.parseBoolean(linje[1])) { //har ikke viruset
-                LeseTrad leseTrad = new LeseTrad(args[0] + "/" + linje[0], friskM);
+                LeseTrad leseTrad = new LeseTrad(args + "/" + linje[0], friskM);
                 Thread t = new Thread(leseTrad);
                 leseTraader.add(t);
                 t.start();
@@ -98,7 +104,10 @@ public class Oblig5Hele {
         }
         
         System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
+        
+        System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
         for (Subsekvens sub : samHash.values()) {
+            System.out.println(sub);
             System.out.println(sub);
         }
     }
