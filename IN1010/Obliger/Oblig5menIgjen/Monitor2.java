@@ -24,6 +24,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
+            merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
@@ -33,7 +34,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
-            if (s.antHash() >= 2) merEnnEn.signalAll();
+            merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
@@ -46,7 +47,7 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            if (antHash() >= 2 && barriere.getCount() != 0) {
+            if (s.antHash() != 1) {
                 ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
                 for (int i = 0; i < 2; i++) {
                     toHash.add(s.taUt());
