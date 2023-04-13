@@ -17,7 +17,7 @@ public class EnkeltRutenett {
         for (int i = 0; i < 9; i++) {
             JLabel nummer = new JLabel("" + i);
             nummer.setPreferredSize(new Dimension(9*20,9*20));
-            nummer.setHorizontalAlignment(JLabel.LEFT);
+            nummer.setHorizontalAlignment(JLabel.CENTER);
             nummer.setVerticalAlignment(JLabel.CENTER);
             nummer.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             rutenett.add(nummer);
@@ -26,5 +26,6 @@ public class EnkeltRutenett {
 
         vindu.pack();
         vindu.setVisible(true);
+        vindu.setLocationRelativeTo(null);
     }
 }
