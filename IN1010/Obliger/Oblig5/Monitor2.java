@@ -21,7 +21,6 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
-            merEnnEn.signalAll();
         } finally {
             laas.unlock();
         }
