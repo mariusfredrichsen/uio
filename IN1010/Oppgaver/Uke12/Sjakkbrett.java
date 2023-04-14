@@ -11,15 +11,24 @@ public class Sjakkbrett {
         JPanel rutenett = new JPanel();
         rutenett.setLayout(new GridLayout(8,8));
 
-        for (int i = 0; i < 8*8; i++) {
-            JLabel rute = new JLabel("");
-            rute.setPreferredSize(new Dimension(30,30));
-            if (i % 2 == 0) {
-                rute.setBackground(Color.BLACK);
-            } else {
-                rute.setBackground(Color.WHITE);
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                JLabel rute = new JLabel("");
+                rute.setPreferredSize(new Dimension(60,60));
+                if ((i+j) % 2 == 0) {
+                    rute.setBackground(Color.BLACK);
+                } else {
+                    rute.setBackground(Color.WHITE);
+                }
+                rute.setOpaque(true);
+                rutenett.add(rute);
             }
-            rute.setOpaque(true);
         }
+
+        vindu.add(rutenett);
+        
+        vindu.pack();
+        vindu.setLocationRelativeTo(null);
+        vindu.setVisible(true);
     }
 }

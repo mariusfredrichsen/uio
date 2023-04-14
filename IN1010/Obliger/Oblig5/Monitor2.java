@@ -49,6 +49,8 @@ public class Monitor2 {
                     toHash.add(s.taUt());
                 }
                 return toHash;
+            } else {
+                merEnnEn.await();
             }
         } finally {
             laas.unlock();

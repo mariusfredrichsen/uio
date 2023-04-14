@@ -9,7 +9,7 @@ public class FletteTrad implements Runnable {
     }
 
     public void run() {
-        while (!(m.antHash() < 2)) {
+        while (true) {
             try {
                 ArrayList<HashMap<String,Subsekvens>> toHash = m.taUtTo();
                 m.settInnFlettet(SubsekvensRegister.slaaSammen(toHash.remove(0),toHash.remove(0)));
