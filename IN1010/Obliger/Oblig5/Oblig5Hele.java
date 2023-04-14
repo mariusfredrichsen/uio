@@ -7,25 +7,22 @@ import java.util.HashMap;
 
 public class Oblig5Hele {
     public static void main(String[] args) {
-        for(int i = 0; i < 1000; i++) {
-            yeet(args);
+        for(int i = 0; i < 10000; i++) {
+            if (yeet(args)) System.out.println(i);
+            else {
+                System.out.println("FEIL");
+                System.exit(1);
+            }
         }
     }
 
-    public static void yeet(String[] args) {        
+    public static boolean yeet(String[] args) {        
         Scanner scan = null;
+
         try {
             scan = new Scanner(new File(args[0] + "/metadata.csv"));
         } catch (FileNotFoundException e) {
             System.out.println("Fant ikke fil.");
-        }
-
-        int antSyke = 0;
-        int antFrisk = 0;
-        while(scan.hasNextLine()) {
-            String[] linje = scan.nextLine().split(",");
-            if (Boolean.parseBoolean(linje[1])) antSyke++;
-            else if (!Boolean.parseBoolean(linje[1])) antFrisk++;
         }
 
         SubsekvensRegister sykS = new SubsekvensRegister();
@@ -33,12 +30,6 @@ public class Oblig5Hele {
 
         SubsekvensRegister friskS = new SubsekvensRegister();
         Monitor2 friskM = new Monitor2(friskS);
-
-        try {
-            scan = new Scanner(new File(args[0] + "/metadata.csv"));
-        } catch (FileNotFoundException e) {
-            System.out.println("Fant ikke fil.");
-        }
 
         System.out.println("Leser filer");
 
@@ -72,12 +63,12 @@ public class Oblig5Hele {
         for (int i = 0; i < antallFlettere * 2; i++) { //lager tråder for hver monitor avhengig om det er partall eller oddetall
             if (i % 2 == 0) {
                 Thread tS = new Thread(new FletteTrad(sykM));
-                traadListe.add(tS);
                 tS.start();
+                traadListe.add(tS);
             } else {
                 Thread tF = new Thread(new FletteTrad(friskM));
-                traadListe.add(tF);
                 tF.start();
+                traadListe.add(tF);
             }
         }
 
@@ -94,17 +85,18 @@ public class Oblig5Hele {
 
         for (String subsekvens : sykHash.keySet()) { //Setter inn alle subsekvenser i sykHash som har 7 flere forekomster enn de friske sinn inn i samHash
             if (friskHash.containsKey(subsekvens)) {
-                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 7) {
+                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 5) {
                     samHash.put(subsekvens, sykHash.get(subsekvens));
                 }
-            } else if (sykHash.get(subsekvens).hentAntall() >= 7) {
+            } else if (sykHash.get(subsekvens).hentAntall() >= 5) {
                 samHash.put(subsekvens, sykHash.get(subsekvens));
             }
         }
         
         System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
         for (Subsekvens sub : samHash.values()) {
-            System.out.println(sub);
+            if (sub.hentAntall() == 5 && sub.subsekvens.equals("GAE")) return true;
         }
+        return false;
     }
 }

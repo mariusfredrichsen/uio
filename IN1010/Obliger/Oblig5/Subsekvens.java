@@ -1,5 +1,5 @@
 public class Subsekvens {
-    final String subsekvens;
+    public final String subsekvens;
     private int antall;
 
     public Subsekvens(String subsekvens) {

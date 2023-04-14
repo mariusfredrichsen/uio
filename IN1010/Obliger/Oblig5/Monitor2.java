@@ -49,11 +49,7 @@ public class Monitor2 {
                     toHash.add(s.taUt());
                 }
                 return toHash;
-            } else {
-                merEnnEn.await();
             }
-        } catch (InterruptedException e) {
-            System.out.println("Noe skjedde.");
         } finally {
             laas.unlock();
         }
