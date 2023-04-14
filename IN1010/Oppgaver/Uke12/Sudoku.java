@@ -36,7 +36,9 @@ public class Sudoku {
         }
         return true;
     }
-    
+    public static boolean gyldigPlassering(int nummer, int rad,int kol, int[][] brett) {
+        return gyldigRad(nummer, rad, kol, brett) && gyldigKol(nummer, rad, kol, brett) && gyldigRute(nummer, rad, kol, brett);
+    }
     public static void skrivUt(int[][] brett) {
         for (int rad = 0; rad < brett.length; rad++) {
             if (rad % 3 == 0) {
@@ -57,12 +59,31 @@ public class Sudoku {
         System.out.print("-");
     }
 
-    public static void loes(int[][] brett) {
-        
+    public static boolean loes(int rad, int kol, int[][] brett, JLabel[][] ruter) throws InterruptedException {
+        if (kol == 9) {
+            kol = 0;
+            rad++;
+        }
+        if (brett[rad][kol] == 0) {
+            Thread.sleep(1);
+            for (int i = 1; i < 10; i++) {
+                ruter[rad][kol].setText(i + "");
+                if (gyldigPlassering(i, rad, kol, brett)) {
+                    brett[rad][kol] = i;
+                    if (rad == 8 && kol == 8) return true;
+                    if (loes(rad, kol+1, brett, ruter)) return true;
+                }
+            }
+            brett[rad][kol] = 0;
+            ruter[rad][kol].setText(0 + "");
+        } else {
+            return loes(rad, kol+1, brett, ruter);
+        }
+        return false;
+
     }
     
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int[][] brett = new int[9][9]; // lager et 9x9 brett
         
         //legger inn tilfeldige nummerere i tilfeldige ruter
@@ -79,6 +100,8 @@ public class Sudoku {
             }
         }
 
+        skrivUt(brett);
+
         JFrame vindu = new JFrame("Sudoku");
         vindu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -90,20 +113,29 @@ public class Sudoku {
         for (int rad = 0; rad < brett.length; rad++) {
             for (int kol = 0; kol < brett[rad].length; kol++) {
                 JLabel rute = new JLabel(brett[rad][kol] + "");
-                rute.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-                rute.setPreferredSize(new Dimension(50,50));
+                rute.setFont(new Font("Comic Sans MS" , Font.BOLD, 32));
+                rute.setBorder(BorderFactory.createLineBorder(new Color(128, 128, 128)));
+                rute.setPreferredSize(new Dimension(75,75));
                 rute.setVerticalAlignment(JLabel.CENTER);
                 rute.setHorizontalAlignment(JLabel.CENTER);
+                rute.setOpaque(true);
+                if ((Math.floorDiv(rad, 3) + Math.floorDiv(kol, 3)) % 2 == 1) rute.setBackground(new Color(153, 204, 255));
                 ruter[rad][kol] = rute;
                 rutenett.add(rute);
             }
         }
         vindu.add(rutenett);
-
+        
+        
         vindu.pack();
         vindu.setLocationRelativeTo(null);
         vindu.setVisible(true);
-
-        skrivUt(brett);
+        
+        if (loes(0,0,brett,ruter)) System.out.println("Løselig");
+        else {
+            System.out.println("Uløselig");
+            Thread.sleep(5000);
+            vindu.dispatchEvent(new WindowEvent(vindu, WindowEvent.WINDOW_CLOSING));
+        }
     }
 }
