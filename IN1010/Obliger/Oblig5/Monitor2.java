@@ -52,6 +52,7 @@ public class Monitor2 {
             } else {
                 merEnnEn.await();
             }
+        } catch (InterruptedException e) {
         } finally {
             laas.unlock();
         }
