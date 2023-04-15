@@ -7,13 +7,15 @@ import java.util.HashMap;
 
 public class Oblig5Hele {
     public static void main(String[] args) {
-        for(int i = 0; i < 10000; i++) {
+        int i = 0;
+        for(i = 0; i < 10000; i++) {
             if (yeet(args)) System.out.println(i);
             else {
                 System.out.println("FEIL");
                 System.exit(1);
             }
         }
+        if (i == 10000) System.out.println("Nice");
     }
 
     public static boolean yeet(String[] args) {        
@@ -31,7 +33,7 @@ public class Oblig5Hele {
         SubsekvensRegister friskS = new SubsekvensRegister();
         Monitor2 friskM = new Monitor2(friskS);
 
-        System.out.println("Leser filer");
+        // System.out.println("Leser filer");
 
         ArrayList<Thread> leseTraader = new ArrayList<>();
         while (scan.hasNextLine()) {
@@ -56,7 +58,7 @@ public class Oblig5Hele {
                 System.out.println("Noe skjedde.");
             }
         }
-        System.out.println("Ferdig med aa lese");
+        // System.out.println("Ferdig med aa lese");
 
         ArrayList<Thread> traadListe = new ArrayList<>();
         int antallFlettere = 8;
@@ -93,7 +95,7 @@ public class Oblig5Hele {
             }
         }
         
-        System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
+        // System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
         for (Subsekvens sub : samHash.values()) {
             if (sub.hentAntall() == 5 && sub.subsekvens.equals("GAE")) return true;
         }

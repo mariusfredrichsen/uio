@@ -6,6 +6,7 @@ public class Monitor2 {
     SubsekvensRegister s;
     Lock laas;
     Condition merEnnEn;
+    int fletteTeller = -1;
 
     public Monitor2(SubsekvensRegister s) {
         this.s = s;
@@ -21,6 +22,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(hash);
+            fletteTeller++;
         } finally {
             laas.unlock();
         }
@@ -30,6 +32,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
+            fletteTeller--;
             merEnnEn.signalAll();
         } finally {
             laas.unlock();
@@ -43,6 +46,9 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
+            if (fletteTeller == 0) {
+                return null;
+            }
             if (antHash() >= 2) {
                 ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
                 for (int i = 0; i < 2; i++) {
