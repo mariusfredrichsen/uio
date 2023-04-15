@@ -65,7 +65,7 @@ public class Sudoku {
             rad++;
         }
         if (brett[rad][kol] == 0) {
-            Thread.sleep(1);
+            Thread.sleep(1, 5);
             for (int i = 1; i < 10; i++) {
                 ruter[rad][kol].setText(i + "");
                 if (gyldigPlassering(i, rad, kol, brett)) {
@@ -113,9 +113,9 @@ public class Sudoku {
         for (int rad = 0; rad < brett.length; rad++) {
             for (int kol = 0; kol < brett[rad].length; kol++) {
                 JLabel rute = new JLabel(brett[rad][kol] + "");
-                rute.setFont(new Font("Comic Sans MS" , Font.BOLD, 32));
+                rute.setFont(new Font("Comic Sans MS" , Font.BOLD, 64));
                 rute.setBorder(BorderFactory.createLineBorder(new Color(128, 128, 128)));
-                rute.setPreferredSize(new Dimension(75,75));
+                rute.setPreferredSize(new Dimension(100,100));
                 rute.setVerticalAlignment(JLabel.CENTER);
                 rute.setHorizontalAlignment(JLabel.CENTER);
                 rute.setOpaque(true);
