@@ -6,7 +6,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Oblig5Hele {
-    public static void main(String[] args) {      
+    public static void main(String[] args) {
+        for (int i = 0; i < 100000; i++) {
+            yeet(args);
+        }
+    }
+    public static void yeet(String[] args) {      
         Scanner scan = null;
 
         try {
@@ -75,10 +80,10 @@ public class Oblig5Hele {
 
         for (String subsekvens : sykHash.keySet()) { //Setter inn alle subsekvenser i sykHash som har 7 flere forekomster enn de friske sinn inn i samHash
             if (friskHash.containsKey(subsekvens)) {
-                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 5) {
+                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 7) {
                     samHash.put(subsekvens, sykHash.get(subsekvens));
                 }
-            } else if (sykHash.get(subsekvens).hentAntall() >= 5) {
+            } else if (sykHash.get(subsekvens).hentAntall() >= 7) {
                 samHash.put(subsekvens, sykHash.get(subsekvens));
             }
         }

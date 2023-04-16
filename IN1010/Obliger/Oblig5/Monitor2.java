@@ -32,6 +32,7 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
+            System.out.println(antHash());
             fletteTeller--;
             merEnnEn.signalAll();
         } finally {
@@ -56,6 +57,7 @@ public class Monitor2 {
                 }
                 return toHash;
             } else {
+                System.out.println("Venter");
                 merEnnEn.await();
             }
         } catch (InterruptedException e) {
