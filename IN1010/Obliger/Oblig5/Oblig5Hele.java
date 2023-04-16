@@ -6,19 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Oblig5Hele {
-    public static void main(String[] args) {
-        int i = 0;
-        for(i = 0; i < 10000; i++) {
-            if (yeet(args)) System.out.println(i);
-            else {
-                System.out.println("FEIL");
-                System.exit(1);
-            }
-        }
-        if (i == 10000) System.out.println("Nice");
-    }
-
-    public static boolean yeet(String[] args) {        
+    public static void main(String[] args) {      
         Scanner scan = null;
 
         try {
@@ -95,10 +83,9 @@ public class Oblig5Hele {
             }
         }
         
-        // System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
+        System.out.println("Subsekvenser i de syke sitt som dukker opp 7ganger mer enn i de friskes sine:");
         for (Subsekvens sub : samHash.values()) {
-            if (sub.hentAntall() == 5 && sub.subsekvens.equals("GAE")) return true;
+            System.out.println(sub);
         }
-        return false;
     }
 }
