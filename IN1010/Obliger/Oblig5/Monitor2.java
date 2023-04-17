@@ -32,7 +32,6 @@ public class Monitor2 {
         laas.lock();
         try {
             s.settInn(flettetHash);
-            System.out.println(antHash());
             fletteTeller--;
             merEnnEn.signalAll();
         } finally {
@@ -47,17 +46,16 @@ public class Monitor2 {
     public ArrayList<HashMap<String,Subsekvens>> taUtTo() {
         laas.lock();
         try {
-            if (fletteTeller == 0) {
-                return null;
-            }
-            if (antHash() >= 2) {
-                ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
-                for (int i = 0; i < 2; i++) {
-                    toHash.add(s.taUt());
+            while (fletteTeller != 0) {
+                if (antHash() < 2 && fletteTeller != 0) {
+                    merEnnEn.await(); 
+                } else if (fletteTeller != 0) {
+                    ArrayList<HashMap<String,Subsekvens>> toHash = new ArrayList<>();
+                    for (int i = 0; i < 2; i++) {
+                        toHash.add(s.taUt());
+                    }
+                    return toHash;
                 }
-                return toHash;
-            } else {
-                merEnnEn.await();
             }
         } catch (InterruptedException e) {
         } finally {

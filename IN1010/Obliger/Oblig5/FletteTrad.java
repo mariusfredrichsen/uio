@@ -10,12 +10,12 @@ public class FletteTrad implements Runnable {
 
     public void run() {
         while (true) {
-            try {
-                ArrayList<HashMap<String,Subsekvens>> toHash = m.taUtTo();
-                m.settInnFlettet(SubsekvensRegister.slaaSammen(toHash.remove(0),toHash.remove(0)));
-            } catch (NullPointerException e) {
-                return;
+            ArrayList<HashMap<String,Subsekvens>> toHash = m.taUtTo();
+            if (toHash == null) {
+                System.out.println("ASDadsa");
+                break; 
             }
+            m.settInnFlettet(SubsekvensRegister.slaaSammen(toHash.remove(0),toHash.remove(0)));
         }
     }
 }
