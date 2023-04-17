@@ -57,7 +57,6 @@ public class Monitor2 {
                 }
                 return toHash;
             } else {
-                System.out.println("Venter");
                 merEnnEn.await();
             }
         } catch (InterruptedException e) {
