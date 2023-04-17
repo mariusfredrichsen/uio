@@ -80,10 +80,10 @@ public class Oblig5Hele {
 
         for (String subsekvens : sykHash.keySet()) { //Setter inn alle subsekvenser i sykHash som har 7 flere forekomster enn de friske sinn inn i samHash
             if (friskHash.containsKey(subsekvens)) {
-                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 7) {
+                if (sykHash.get(subsekvens).hentAntall() >= friskHash.get(subsekvens).hentAntall() + 5) {
                     samHash.put(subsekvens, sykHash.get(subsekvens));
                 }
-            } else if (sykHash.get(subsekvens).hentAntall() >= 7) {
+            } else if (sykHash.get(subsekvens).hentAntall() >= 5) {
                 samHash.put(subsekvens, sykHash.get(subsekvens));
             }
         }
