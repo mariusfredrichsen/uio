@@ -94,7 +94,15 @@ public class TreParad {
         vindu.setLocationRelativeTo(null);
         vindu.setVisible(true);
 
-        while (!vinner(ruter)) {
+        while (!vinner(ruter) && teller[0] != 10) {
+            if (teller[0] == 9) {
+                for (int rad = 0; rad < 3; rad++) {
+                    for (int kol = 0; kol < 3; kol++) {
+                        ruter[rad][kol].setBackground(new Color(128, 128, 128));
+                    }
+                }
+                teller[0]++;
+            }
         }
         try {
             Thread.sleep(3000);
