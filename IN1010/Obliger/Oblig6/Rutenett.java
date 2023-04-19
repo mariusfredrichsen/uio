@@ -16,7 +16,7 @@ public class Rutenett {
         return rutene;
     }
 
-    public void lagCelle(int rad, int kol) { //danner en ny celle avhengig om den treffe 1/3 sjansen på det
+    public void lagCelle(int rad, int kol) {
         Celle celle = new Celle();
         celle.settDoed();
         rutene[rad][kol] = celle;

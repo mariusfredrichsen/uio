@@ -224,12 +224,12 @@ public class GameOfLife {
                             celle.addActionListener(new trykket(pos));
                             celle.setOpaque(true);
                             celle.setBackground(Color.WHITE);
-                            celle.setPreferredSize(new Dimension(50,50));
+                            celle.setMinimumSize(new Dimension(30,30));
                             celleKnapper[0][rad][kol] = celle;
                             rutenett.add(celle);
                         }
                     }
-                    oppsett.fill = GridBagConstraints.HORIZONTAL;
+                    oppsett.fill = GridBagConstraints.VERTICAL;
                     oppsett.gridx = 0;
                     oppsett.gridwidth = 3;
                     oppsett.gridy = 1;
