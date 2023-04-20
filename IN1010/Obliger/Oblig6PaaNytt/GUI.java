@@ -13,7 +13,8 @@ public class GUI {
     JLabel antLevende;
 	int rad;
 	int kol;
-	Thread traad;
+	EnFuckaTraad enFuckaTraad = null;
+	boolean startet = false;
 
 	class ByttStatus implements ActionListener {
 		boolean trykket = false;
@@ -32,18 +33,30 @@ public class GUI {
     class Start implements ActionListener {
 	    @Override
 	    public void actionPerformed (ActionEvent e) {
-			traad = new Thread(new EnFuckaTraad(kontroll, kontroll.gui));
-			traad.start();
+			if (!startet) {
+				enFuckaTraad = new EnFuckaTraad(kontroll, kontroll.gui);
+				Thread traad = new Thread(enFuckaTraad);
+				traad.start();
+			}
+			startet = true;
 	    }
 	}
 
 	class Pause implements ActionListener {
 		boolean trykket = false;
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			trykket = !trykket;
-			if (trykket) pause.setText("Gjenoppta");
-			else pause.setText("Pause");
+			if (enFuckaTraad != null) {
+				trykket = !trykket;
+				if (trykket) {
+					pause.setText("Gjenoppta");
+					enFuckaTraad.pause();
+				} else {
+					pause.setText("Pause");
+					enFuckaTraad.pause();
+				}
+			}
 		}
 	}
 	
@@ -97,7 +110,7 @@ public class GUI {
 		for (int r = 0; r < rad; r++) {
 			for (int k = 0; k < kol; k++) {
 				JButton celleKnapp = new JButton("");
-				celleKnapp.setPreferredSize(new Dimension(50,50));
+				celleKnapp.setPreferredSize(new Dimension(30,30));
 				celleKnapp.setOpaque(true);
 				celleKnapp.setBackground(Color.WHITE);
 				celleKnapp.addActionListener(new ByttStatus(r, k));
@@ -111,7 +124,6 @@ public class GUI {
 		vindu.pack();
 		vindu.setLocationRelativeTo(null);
 		vindu.setVisible(true);
-		System.out.println("asdasd");
 	}
 
 	public void byttStatus(int rad, int kol, boolean status) {

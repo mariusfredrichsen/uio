@@ -1,5 +1,5 @@
-liste = [1,2,3,4,5,6,7,8,9]
 
-ny_liste = [i for i in liste if i%2==0]
+sum = 0
 
-print(ny_liste)
+for i in range(1,5):
+    sum += ()
