@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.lang.Math;
 
 public class Rutenett {

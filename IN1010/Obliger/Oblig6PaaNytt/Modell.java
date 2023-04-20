@@ -1,47 +1,32 @@
 public class Modell {
-    // Brettet innholder 
-    // - blank der det er ledig (initialverdier)
-    // X der maskinen har satt
-    // O der brukeren har satt
-    char[][] brett = new char[3][3];
-    int antTrekk = 0;
-    boolean spilletErFerdig = false;
-    Modell () {
-	    for (int rx = 0;  rx < 3;  ++rx)
-	        for (int kx = 0;  kx < 3;  ++kx)
-	        	brett[rx][kx] = ' ';
+    
+    Verden verden;
+    Celle[][] celler;
+
+    Modell(int rad, int kol) {
+        verden = new Verden(rad, kol);
+        celler = verden.hentCeller();
     }
-    boolean lovligTrekk (int r, int k) {
-		return brett[r][k] == ' ';
+
+    public boolean byttStatus(int rad, int kol) {
+        Celle celle = celler[rad][kol];
+        if (celle.erLevende()) celle.settDoed();
+        else celle.settLevende();
+        return celle.erLevende();
     }
-    void noterTrekk (int r, int k, char spiller) {
-		brett[r][k] = spiller;
-		++antTrekk;
+
+    public void oppdater() {
+        verden.oppdatering();
     }
-    void noterVinner (String vinner) {
-		spilletErFerdig = true;
+
+    public Celle[][] hentCeller() {
+        return celler;
     }
-    void noterUavgjort () {
-		spilletErFerdig = true;
+
+    public int hentAntLevende() {
+        return verden.hentRutenett().antallLevende();
     }
-    boolean erSpilletFerdig () {
-		return spilletErFerdig;
-    }
-    boolean erBrettetFullt () {
-		return antTrekk == 9;
-    }
-    boolean harVunnet (char s) {
-		return
-	    // Sjekk radene
-	    brett[0][0]==s && brett[0][1]==s && brett[0][2]==s ||
-	    brett[1][0]==s && brett[1][1]==s && brett[1][2]==s ||
-	    brett[2][0]==s && brett[2][1]==s && brett[2][2]==s ||
-	    // Sjekk kolonnene
-	    brett[0][0]==s && brett[1][0]==s && brett[2][0]==s ||
-	    brett[0][1]==s && brett[1][1]==s && brett[2][1]==s ||
-	    brett[0][2]==s && brett[1][2]==s && brett[2][2]==s ||
-	    // Sjekk diagonalene
-	    brett[0][0]==s && brett[1][1]==s && brett[2][2]==s ||
-	    brett[0][2]==s && brett[1][1]==s && brett[2][0]==s;
-    }
+
+
+
 }

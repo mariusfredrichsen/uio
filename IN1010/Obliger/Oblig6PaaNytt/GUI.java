@@ -5,78 +5,127 @@ import javax.swing.*;
 public class GUI {
     Kontroll kontroll;
     JFrame vindu;
-    JPanel panel, konsoll, rutenett;
-    JButton[][] ruter = new JButton[3][3];
-    JLabel status;
-    JButton stoppknapp;
-    
-    class Stoppbehandler implements ActionListener {
-	    @Override
-	    public void actionPerformed (ActionEvent e) {
-		     kontroll.avsluttSpillet();
-	    }
-	}
-	
-	class Spillvelger implements ActionListener {
-	    int rad, kol;
-	    Spillvelger (int r, int k) {
-			rad = r;  kol = k;
-	    }
-		@Override
-		public void actionPerformed (ActionEvent e) {
-			kontroll.brukervalg(rad, kol);
+    JPanel valgPanel, hovedPanel, rutenett, topPanel;
+    JButton[][] celleKnapper;
+    JButton start;
+	JButton pause;
+	JButton avslutt;
+    JLabel antLevende;
+	int rad;
+	int kol;
+	Thread traad;
+
+	class ByttStatus implements ActionListener {
+		boolean trykket = false;
+		int rad, kol;
+
+		ByttStatus(int rad, int kol) {
+			this.rad = rad;
+			this.kol = kol;
+		}
+
+		public void actionPerformed(ActionEvent e) {
+			kontroll.byttStatus(rad, kol);
 		}
 	}
     
-    GUI (Kontroll k) {
-	    kontroll = k;	
-	    try {
-	        UIManager.setLookAndFeel(
-	         UIManager.getCrossPlatformLookAndFeelClassName());
-	    } catch (Exception e) { System.exit(9); }
-
-        vindu = new JFrame("Tripp trapp tresko");
-        vindu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-	    panel = new JPanel();
-	    panel.setLayout(new BorderLayout());
-	    vindu.add(panel);
-
-	    konsoll = new JPanel();
-	    konsoll.setLayout(new BorderLayout());
-	    panel.add(konsoll, BorderLayout.NORTH);
-
-	    status = new JLabel("Velg en rute");
-	    konsoll.add(status, BorderLayout.NORTH);
-
-	    stoppknapp = new JButton("Exit");
-	    stoppknapp.addActionListener(new Stoppbehandler());
-	    konsoll.add(stoppknapp, BorderLayout.SOUTH);
-
-	    rutenett = new JPanel();
-	    rutenett.setLayout(new GridLayout(3,3));
-	    for (int rx = 0;  rx < 3;  ++rx) {
-	        for (int kx = 0;  kx < 3;  ++kx) {
-		        JButton b = new JButton(" ");
-		        ruter[rx][kx] = b;
-		        b.setFont(new Font(Font.MONOSPACED, Font.BOLD, 30));
-		        b.addActionListener(new Spillvelger(rx,kx));
-		        rutenett.add(b);
-	        }
+    class Start implements ActionListener {
+	    @Override
+	    public void actionPerformed (ActionEvent e) {
+			traad = new Thread(new EnFuckaTraad(kontroll, kontroll.gui));
+			traad.start();
 	    }
-	    panel.add(rutenett, BorderLayout.CENTER);
+	}
 
-	    vindu.pack();
-	    vindu.setSize(400,400);
-	    vindu.setLocationRelativeTo(null);
-	    vindu.setVisible(true);
-    }
- 
-    void markerTrekk (int r, int k, char c) {
-	    ruter[r][k].setText(Character.toString(c));
-    }
+	class Pause implements ActionListener {
+		boolean trykket = false;
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			trykket = !trykket;
+			if (trykket) pause.setText("Gjenoppta");
+			else pause.setText("Pause");
+		}
+	}
+	
+	class Avslutt implements ActionListener {
+		@Override
+		public void actionPerformed (ActionEvent e) {
+			kontroll.avslutt();
+		}
+	}
 
-    void visStatus (String tekst) {
-	    status.setText(tekst);
-    }
+	GUI(Kontroll kontroll) {
+		this.kontroll = kontroll;
+		rad = kontroll.hentRad();
+		kol = kontroll.hentKol();
+		celleKnapper = new JButton[rad][kol];
+
+		try {
+			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+		} catch (Exception e) {
+			System.exit(1);
+		}
+
+		vindu = new JFrame("Game of life");
+		vindu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		hovedPanel = new JPanel(new GridBagLayout());
+		GridBagConstraints oppsett = new GridBagConstraints();
+
+		topPanel = new JPanel(new FlowLayout());
+		antLevende = new JLabel("Antall levende: 0");
+		topPanel.add(antLevende);
+
+		start = new JButton("Start");
+		start.addActionListener(new Start());
+		topPanel.add(start);
+
+		pause = new JButton("Gjenoppta");
+		pause.setPreferredSize(pause.getPreferredSize());
+		pause.setText("Pause");
+		pause.addActionListener(new Pause());
+		topPanel.add(pause);
+
+		avslutt = new JButton("Avslutt");
+		avslutt.addActionListener(new Avslutt());
+		topPanel.add(avslutt);
+		oppsett.gridy = 0;
+		hovedPanel.add(topPanel, oppsett);
+
+		oppsett.gridy = 1;
+		rutenett = new JPanel(new GridLayout(rad, kol));
+		for (int r = 0; r < rad; r++) {
+			for (int k = 0; k < kol; k++) {
+				JButton celleKnapp = new JButton("");
+				celleKnapp.setPreferredSize(new Dimension(50,50));
+				celleKnapp.setOpaque(true);
+				celleKnapp.setBackground(Color.WHITE);
+				celleKnapp.addActionListener(new ByttStatus(r, k));
+				celleKnapper[r][k] = celleKnapp;
+				rutenett.add(celleKnapp);
+			}
+		}
+		hovedPanel.add(rutenett, oppsett);
+		vindu.add(hovedPanel);
+
+		vindu.pack();
+		vindu.setLocationRelativeTo(null);
+		vindu.setVisible(true);
+		System.out.println("asdasd");
+	}
+
+	public void byttStatus(int rad, int kol, boolean status) {
+		if (status) celleKnapper[rad][kol].setBackground(Color.BLACK);
+		else celleKnapper[rad][kol].setBackground(Color.WHITE);
+	}
+
+	public void oppdater(Celle[][] celler) {
+		antLevende.setText("Antall levende: " + kontroll.hentAntLevende());
+		for (int r = 0; r < rad; r++) {
+			for (int k = 0; k < kol; k++) {
+				if (celler[r][k].erLevende()) celleKnapper[r][k].setBackground(Color.BLACK);
+				else celleKnapper[r][k].setBackground(Color.WHITE);
+			}
+		}
+	}
 }

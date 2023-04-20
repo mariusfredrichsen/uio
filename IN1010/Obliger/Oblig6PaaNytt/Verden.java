@@ -17,6 +17,10 @@ public class Verden {
         return rutenett.hentRutene();
     }
 
+    public Rutenett hentRutenett() {
+        return rutenett;
+    }
+
     public void tegn() { //bruker den kjempe kule "tegnRutenett" metoden i rutenett i tillegg til jeg oppgir gen nr og antall levende
         for (int i = 0; i < 10; i++) {
             System.out.println();

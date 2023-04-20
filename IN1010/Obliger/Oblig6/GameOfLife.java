@@ -17,7 +17,7 @@ public class GameOfLife {
         JButton ferdigKnapp = null;
         int knappTeller = 0;
 
-        JPanel valgPanel = new JPanel(new GridLayout(4,3,10,5));
+        JPanel valgPanel = new JPanel(new GridLayout(4,3));
         for (int rad = 0; rad < 4; rad++) {
             for (int kol = 0; kol < 3; kol++) {
                 if (kol == 1) {
@@ -224,12 +224,11 @@ public class GameOfLife {
                             celle.addActionListener(new trykket(pos));
                             celle.setOpaque(true);
                             celle.setBackground(Color.WHITE);
-                            celle.setMinimumSize(new Dimension(30,30));
+                            celle.setSize(new Dimension(50,50));
                             celleKnapper[0][rad][kol] = celle;
                             rutenett.add(celle);
                         }
                     }
-                    oppsett.fill = GridBagConstraints.VERTICAL;
                     oppsett.gridx = 0;
                     oppsett.gridwidth = 3;
                     oppsett.gridy = 1;
@@ -268,13 +267,13 @@ public class GameOfLife {
                 }
                 antLevende.setText("Antall levende: " + verden[0].rutenett.antallLevende());
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(100);
                 } catch (InterruptedException a) {}
             }
         }
         if (avEllerPaa[0] == 2) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {}
             vindu.dispatchEvent(new WindowEvent(vindu, WindowEvent.WINDOW_CLOSING));
         }
