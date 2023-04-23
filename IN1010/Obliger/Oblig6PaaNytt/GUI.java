@@ -7,9 +7,7 @@ public class GUI {
     JFrame vindu;
     JPanel valgPanel, hovedPanel, rutenett, topPanel;
     JButton[][] celleKnapper;
-    JButton start;
-	JButton pause;
-	JButton avslutt;
+    JButton start, pause, avslutt, oek, mink;
     JLabel antLevende;
 	int rad;
 	int kol;
@@ -67,6 +65,20 @@ public class GUI {
 		}
 	}
 
+	class OekTimer implements ActionListener {
+		@Override
+		public void actionPerformed (ActionEvent e) {
+			enFuckaTraad.oekTimer();
+		}
+	}
+
+	class MinkTimer implements ActionListener {
+		@Override
+		public void actionPerformed (ActionEvent e) {
+			enFuckaTraad.minkTimer();
+		}
+	}
+
 	GUI(Kontroll kontroll) {
 		this.kontroll = kontroll;
 		rad = kontroll.hentRad();
@@ -98,10 +110,19 @@ public class GUI {
 		pause.setText("Pause");
 		pause.addActionListener(new Pause());
 		topPanel.add(pause);
+		
+		oek = new JButton("Oek timer");
+		oek.addActionListener(new OekTimer());
+		topPanel.add(oek);
+
+		mink = new JButton("Mink timer");
+		mink.addActionListener(new MinkTimer());
+		topPanel.add(mink);
 
 		avslutt = new JButton("Avslutt");
 		avslutt.addActionListener(new Avslutt());
 		topPanel.add(avslutt);
+
 		oppsett.gridy = 0;
 		hovedPanel.add(topPanel, oppsett);
 

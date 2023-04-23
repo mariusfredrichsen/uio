@@ -2,6 +2,7 @@ public class EnFuckaTraad implements Runnable {
     Kontroll kontroll;
     GUI gui;
     boolean pauset = false;
+    int timer = 2000;
 
     EnFuckaTraad(Kontroll kontroll, GUI gui) {
         this.kontroll = kontroll;
@@ -12,13 +13,21 @@ public class EnFuckaTraad implements Runnable {
         pauset = !pauset;
     }
 
+    public void oekTimer() {
+        timer += 100;
+    }
+
+    public void minkTimer() {
+        if (timer != 100) timer -= 100;
+    }
+
     public void run() {
         while (true) {
             if (!pauset) {
                 kontroll.oppdater();
                 gui.oppdater(kontroll.hentCeller());
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(timer);
                 } catch (InterruptedException e) {}
             } else {
                 try {

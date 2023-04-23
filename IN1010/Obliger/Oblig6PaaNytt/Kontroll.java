@@ -32,10 +32,6 @@ public class Kontroll {
 		modell.oppdater();
     }
 
-	public void pause() {
-		//TODO
-	}
-
 	public void byttStatus(int rad, int kol) {
 		if (modell.byttStatus(rad, kol)) gui.byttStatus(rad, kol, true);
 		else gui.byttStatus(rad, kol, false);
@@ -44,6 +40,4 @@ public class Kontroll {
     public void avslutt() {
 	    System.exit(0);
     }
-
-    //LOOP SPILLET TIL BRUKER PAUSER ELLER HVA NÅ EN
 }
