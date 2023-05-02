@@ -24,6 +24,7 @@ public class GUI {
 
 		public void actionPerformed(ActionEvent e) {
 			kontroll.byttStatus(rad, kol);
+			oppdater(kontroll.hentCeller());
 		}
 	}
     
@@ -140,6 +141,9 @@ public class GUI {
 		vindu.add(hovedPanel);
 
 		vindu.pack();
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension screenSize = tk.getScreenSize();
+		vindu.setSize(screenSize.width, screenSize.height);
 		vindu.setLocationRelativeTo(null);
 		vindu.setVisible(true);
 	}
