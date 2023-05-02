@@ -15,7 +15,6 @@ public class GUI {
 	boolean startet = false;
 
 	class ByttStatus implements ActionListener {
-		boolean trykket = false;
 		int rad, kol;
 
 		ByttStatus(int rad, int kol) {
@@ -41,8 +40,6 @@ public class GUI {
 	}
 
 	class Pause implements ActionListener {
-		boolean trykket = false;
-
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (enFuckaTraad != null) {
