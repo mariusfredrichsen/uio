@@ -12,6 +12,7 @@ public class Oblig7 {
             System.out.println("\nSkriv inn koorinater <rad> <kolonne> ('-1' for aa avslutte)");
             input = scan.nextLine();
             if (input.equals("-1")) break;
+            else if (input.equals("")) continue;
             System.out.println("Aapninger:");
             
             String[] radKol = input.strip().split(" ");
