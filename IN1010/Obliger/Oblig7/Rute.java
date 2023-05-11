@@ -2,11 +2,13 @@ public abstract class Rute {
     private int rad, kol;
     Labyrint lab;
     Rute nord, vest, syd, oest;
+    boolean besoekt;
 
     Rute(int rad, int kol, Labyrint lab) {
         this.rad = rad;
         this.kol = kol;
         this.lab = lab;
+        besoekt = false;
     }
 
     public void settNord(Rute nord) {
@@ -26,4 +28,12 @@ public abstract class Rute {
     }
 
     public abstract void finn(Rute fra);
+
+    public void besoekt() {
+        besoekt = true;
+    }
+
+    public void ikkeBesoekt() {
+        besoekt = false;
+    }
 }

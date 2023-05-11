@@ -13,7 +13,11 @@ public class SortRute extends Rute {
         //gjoer ingenting
     }
 
+    public void besoekt() {
+        //gjoer ingenting
+    }
+
     public String toString() {
-        return "#";
+        return "# ";
     }
 }

@@ -61,6 +61,14 @@ public class Labyrint {
     }
 
     public void finnUtveiFra(int rad, int kol) {
+        //gjoer alle booleans i rutene om til false
+        for (int r = 0; r < ruter.length; r++) {
+            for (int k = 0; k < ruter[r].length; k++) {
+                ruter[r][k].ikkeBesoekt();;
+            }
+        }
+        
+        //bruker finn paa en rute med fra som null
         ruter[rad][kol].finn(null);
     }
 
@@ -76,7 +84,7 @@ public class Labyrint {
                     labyrinten += ruter[rad][kol];
                 }
             }
-            labyrinten += "\n";
+            labyrinten += "\n\n";
         }
         return labyrinten;
     }
