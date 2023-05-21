@@ -1,0 +1,3 @@
+interface Elektrisk {
+    int batteriStorrelse();
+}
