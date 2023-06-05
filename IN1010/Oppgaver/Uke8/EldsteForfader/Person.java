@@ -19,21 +19,24 @@ class Person implements Comparable<Person>{
         return fodselsar - p.fodselsar;
     }
 
-    public Person finnEldsteKjenteForfader() {
-        if (mor == null && far == null) {
+    public Person finnEldsteKjenteForfader(){
+        if(mor == null){
+          if(far == null)
             return this;
-        } else if (mor != null) {
-            return mor.finnEldsteKjenteForfader();
-        } else if (far != null) {
+          else
             return far.finnEldsteKjenteForfader();
         } 
-
-        Person mamma = mor.finnEldsteKjenteForfader();
-        Person pappa = far.finnEldsteKjenteForfader();
-        
-        if (mamma.compareTo(pappa) > 0) {
-            return far;
+    
+        if(far == null){
+          return mor.finnEldsteKjenteForfader();
         }
-        return mor;
-    }
+    
+        Person morside = mor.finnEldsteKjenteForfader();
+        Person farside = far.finnEldsteKjenteForfader();
+    
+        if(morside.compareTo(farside) < 0)
+          return morside;
+        else
+          return farside;
+      }
 }
