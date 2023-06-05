@@ -1,9 +1,20 @@
-class Hotell {
+import java.util.Iterator;
+
+class Hotell implements Iterable<Rom> {
     final int MAX_ANT_SENGEPLASSER = 8;
+    final int ANTALL_ETASJER;
+
+    Rom[] forsteRomEtasje;
+
     Rom forsteRom = null;
 
     Reservasjon forsteR = null;
     Reservasjon sisteR = null;
+
+    Hotell (int ANTALL_ETASAJER) {
+        this.ANTALL_ETASJER = ANTALL_ETASAJER;
+        forsteRomEtasje = new Rom[ANTALL_ETASJER + 1];
+    }
 
     void tildelRom(String navn) {
         Reservasjon peker = forsteR;
@@ -18,12 +29,7 @@ class Hotell {
         }
 
         //ta ut reservasjon
-        if (peker == sisteR) {
-            forsteR = null;
-            sisteR = null;
-        } else {
-            peker.nesteR = peker.nesteR.nesteR;
-        }
+        taUtReservasjon(peker);
 
         for (int i = peker.onsketSengeplass; i < MAX_ANT_SENGEPLASSER; i++) {
             Rom rom = finnRom(i, peker.kjokken);
@@ -52,5 +58,46 @@ class Hotell {
             peker = peker.neste;
         }
         return null;
+    }
+
+    void taUtReservasjon(Reservasjon r) {
+        Reservasjon peker = forsteR;
+        while (peker.nesteR != null) {
+            if (peker == r) {
+                if (peker == forsteR) {
+                    peker = peker.nesteR;
+                    if (peker == null) return;
+                    peker.forrigeR = null;
+                    return;         
+                } else if (peker == sisteR) {
+                    peker.forrigeR.nesteR = null;
+                    sisteR = peker.forrigeR;
+                    return;
+                } else {
+                    peker.nesteR.forrigeR = peker.forrigeR;
+                    peker.forrigeR.nesteR = peker.nesteR;
+                    return;
+                }
+            }
+            peker = peker.nesteR;
+        }
+    }
+
+    public class HotellIterator implements Iterator<Rom> {
+        for (Rom rom : forsteRomEtasje) {
+
+        }
+    }
+
+    @Override
+    public Iterator<Rom> iterator() {
+        return new HotellIterator();
+    }
+
+
+    int[] ledigeRom() {
+        for (Rom forsteRom : forsteRomEtasje) {
+            for (Rom rom : )
+        }
     }
 }
