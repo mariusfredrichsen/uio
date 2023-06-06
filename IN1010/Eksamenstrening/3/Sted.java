@@ -27,8 +27,8 @@ public class Sted {
         }
     }
 
-    int hoyestStoy() {
-        int hoyest = 0;
+    double hoyestStoy() {
+        double hoyest = 0;
         for (Maaling m : mestStoy.maalinger) {
             if (m.stoyNivaa > hoyest) {
                 hoyest = m.stoyNivaa;
@@ -38,7 +38,7 @@ public class Sted {
     }
 
     void slaaSammen() {
-        Maalinger peker = forste;
+        Maaling peker = forste;
 
         while (peker.neste != null) {
             if (peker.tidspunkt == peker.neste.tidspunkt) {

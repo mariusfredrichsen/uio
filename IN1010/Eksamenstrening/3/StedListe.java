@@ -16,11 +16,11 @@ public class StedListe implements Iterable<Sted> {
 
         double maksListeR() {
             if (neste == null) {
-                return sted.stoyNivaa;
+                return sted.hoyestStoy();
             }
             double nesteTing = neste.maksListeR();
-            if (nesteTing < sted.stoyNivaa) {
-                return sted.stoyNivaa;
+            if (nesteTing < sted.hoyestStoy()) {
+                return sted.hoyestStoy();
             }
             return nesteTing;
         }

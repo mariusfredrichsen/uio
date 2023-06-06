@@ -8,10 +8,10 @@ public class Gate {
     }
 
     Maaling[] finnMestStoyANT() {
-        int hoyest = 0;
+        double hoyest = 0;
         Sted peker = null;
         for (Sted sted : stedListe) {
-            int sum = 0;
+            double sum = 0;
             for (Maaling maaling : sted.mestStoy.hentMaaling()) {
                 if (maaling != null) {
                     sum += maaling.stoyNivaa;
@@ -22,11 +22,11 @@ public class Gate {
                 peker = sted;
             }
         }
-        return sted.mestStoy.hentMaaling();
+        return peker.mestStoy.hentMaaling();
     }
 
     double maksStoyR() {
-        return stedListe.maksStoyR();
+        return stedListe.maksListeR();
     }
 
 

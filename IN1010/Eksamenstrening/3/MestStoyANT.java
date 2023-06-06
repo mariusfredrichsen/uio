@@ -15,7 +15,7 @@ public class MestStoyANT {
             }
         }
 
-        int lavestStoyNivaa = maalinger[0].stoyNivaa;
+        double lavestStoyNivaa = maalinger[0].stoyNivaa;
         int indexBeholder = 0;
         for (int i = 0; i < maalinger.length; i++) {
             if (maalinger[i].stoyNivaa < lavestStoyNivaa) {
