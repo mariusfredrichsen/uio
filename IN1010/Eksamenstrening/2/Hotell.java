@@ -84,8 +84,35 @@ class Hotell implements Iterable<Rom> {
     }
 
     public class HotellIterator implements Iterator<Rom> {
-        for (Rom rom : forsteRomEtasje) {
+        Rom denne;
+        int etasjeTeller;
 
+        HotellIterator() {
+            etasjeTeller = 0;
+            denne = forsteRomEtasje[etasjeTeller];
+        }
+        
+        @Override
+        public boolean hasNext() {
+            if (denne != null) {
+                if (++etasjeTeller < ANTALL_ETASJER) {
+                    denne = forsteRomEtasje[etasjeTeller];
+                    if (denne == null) {
+                        return false;
+                    } else {
+                        return false;
+                    }
+                }
+                return false;
+            }
+            return true;
+        }
+
+        @Override
+        public Rom next() {
+            Rom peker = denne;
+            peker = peker.neste;
+            return peker;
         }
     }
 
@@ -96,8 +123,14 @@ class Hotell implements Iterable<Rom> {
 
 
     int[] ledigeRom() {
-        for (Rom forsteRom : forsteRomEtasje) {
-            for (Rom rom : )
+        int[] antLedigRom = new int[MAX_ANT_SENGEPLASSER];
+        for (int i = 1; i <= MAX_ANT_SENGEPLASSER; i++) {
+            for (Rom rom : this) {
+                if (rom.antSengeplass == i) {
+                    antLedigRom[i - 1]++;
+                }
+            }
         }
+        return antLedigRom;
     }
 }
