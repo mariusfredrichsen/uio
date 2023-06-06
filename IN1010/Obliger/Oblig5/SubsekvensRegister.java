@@ -49,9 +49,11 @@ public class SubsekvensRegister {
     }
 
     public static HashMap<String,Subsekvens> slaaSammen(HashMap<String,Subsekvens> hash1, HashMap<String,Subsekvens> hash2) {
-        for (String subsekvens : hash2.keySet()) { //gaar igjennom en av hashene og sjekker alle subsekvensene
+        //gaar igjennom en av hashene og sjekker alle subsekvensene
+        for (String subsekvens : hash2.keySet()) { 
             if (hash1.containsKey(subsekvens)) {
-                hash1.get(subsekvens).endreAntall(hash2.get(subsekvens).hentAntall()); //hvis den andre inneholder subsekvensen tar den ut Subsekvens objektet og oeker med den andres antall forekomster
+                //hvis den andre inneholder subsekvensen tar den ut Subsekvens objektet og oeker med den andres antall forekomster
+                hash1.get(subsekvens).endreAntall(hash2.get(subsekvens).hentAntall()); 
             } else {
                 hash1.put(subsekvens, hash2.get(subsekvens));
             }
