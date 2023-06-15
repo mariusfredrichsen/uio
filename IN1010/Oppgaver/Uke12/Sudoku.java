@@ -65,7 +65,6 @@ public class Sudoku {
             rad++;
         }
         if (brett[rad][kol] == 0) {
-            Thread.sleep(1, 5);
             for (int i = 1; i < 10; i++) {
                 ruter[rad][kol].setText(i + "");
                 if (gyldigPlassering(i, rad, kol, brett)) {
