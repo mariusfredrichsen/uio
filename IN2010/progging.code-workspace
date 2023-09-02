@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "uio",
+			"path": ".."
+		},
+		{
+			"name": "egen",
+			"path": "../../egen"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "egen"
+	}
+}
