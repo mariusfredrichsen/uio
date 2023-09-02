@@ -1,6 +1,6 @@
 def mergeSort(A):
     if len(A) <= 1:
-        print(A, "TEEEHEE")
+        print(A, "Jeg er i mergeSort")
         return A
     i = len(A)//2
     A1 = mergeSort(A[:i])
@@ -12,7 +12,7 @@ def mergeSort(A):
 #A i alle tilfeller er en form for halverte lister (A1 og A2) utenom helt til slutt der hvor man har de to siste listene
 
 def merge(A1, A2, A):
-    print(A)
+    print(A, "Jeg er i starten av merge")
     i = 0
     l = 0
     while i < len(A1) and l < len(A2):
@@ -31,9 +31,10 @@ def merge(A1, A2, A):
         A[i + l] = A2[l]
         l += 1
     
-    print(A)
+    print(A, "Jeg er i slutten av merge")
     return A
 
 a = [0,6,2,1,4]
+print(a)
 print(mergeSort(a))
 
