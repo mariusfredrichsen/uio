@@ -33,8 +33,3 @@ def merge(A1, A2, A):
     
     print(A, "Jeg er i slutten av merge")
     return A
-
-a = [0,6,2,1,4]
-print(a)
-print(mergeSort(a))
-
