@@ -77,6 +77,13 @@ def findMin(v):
         return v
     return findMin(v.left)
 
+def findMax(v):
+    if v == None:
+        return None
+    if v.right == None:
+        return v
+    return findMax(v.right)
+
 def remove(v, x):
     if v == None:
         return None
@@ -114,23 +121,40 @@ def findClosest(v, x):
         return closest
     if v.data < x:
         closest = findClosest(v.right, x)
-        print("asd")
     if v.data > x:
         closest = findClosest(v.left, x)
-        print("asdsg")
     if v.data == x:
         closest = x
     if abs(v.data-x) < abs(closest-x):
         closest = v.data
     return closest
-    
-    
+
+def check_sort(liste):
+    for i in range(len(liste)-1):
+        if liste[i] > liste[i+1]:
+            return False
+    return True
+
+def checkBST(v, liste):
+    if v.left != None and v.right != None:
+        checkBST(v.left, liste)
+        liste.append(v.data)
+        checkBST(v.right, liste)
+    else:
+        if v.left != None:
+            checkBST(v.left, liste)
+        liste.append(v.data)
+        if v.right != None:
+            checkBST(v.right, liste)
+    return check_sort(liste)
+
 """rot = None
 for i in [10,5,2,7,15,12,17]:
     rot = insert(rot,i)"""
+import random
 rot = None
-for i in [10,5,15,2,7,12,17]:
+for i in random.sample(range(1,100), 25):
     rot = insert(rot, i)
 
-print(findClosest(rot, 13))
-
+test = []
+print(checkBST(rot, test))

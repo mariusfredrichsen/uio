@@ -1,3 +1,5 @@
+asd = [1]
+
 def mergeSort(A):
     if len(A) <= 1:
         return A
