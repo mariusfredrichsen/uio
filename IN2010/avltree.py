@@ -114,10 +114,8 @@ def findClosest(v, x):
         return closest
     if v.data < x:
         closest = findClosest(v.right, x)
-        print("asd")
     if v.data > x:
         closest = findClosest(v.left, x)
-        print("asdsg")
     if v.data == x:
         closest = x
     if abs(v.data-x) < abs(closest-x):
