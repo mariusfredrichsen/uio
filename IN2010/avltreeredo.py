@@ -1,24 +1,24 @@
+from random import randint
+
 class Node:
-    def __init__(self, data: int):
-        self.data = data
+    def __init__(self, x):
+        self.x = x
         self.left = None
         self.right = None
         self.height = 0
 
-    def write(self):
-        print(self)
-        if self.left != None:
-            self.left.write()
-        if self.right != None:
-            self.right.write()
-    
     def __str__(self):
-        return f"{self.height}, {self.data}"
+        return str(self.x)
     
-def height(v):
+def height(v) -> int:
     if v == None:
         return -1
     return v.height
+
+def balanceFactor(v):
+    if v == None:
+        return None
+    return height(v.left) - height(v.right)
 
 def leftRotate(v):
     u = v.right
@@ -29,7 +29,6 @@ def leftRotate(v):
 
     v.height = 1 + max(height(v.left), height(v.right))
     u.height = 1 + max(height(u.left), height(u.right))
-
     return u
 
 def rightRotate(v):
@@ -41,13 +40,7 @@ def rightRotate(v):
 
     v.height = 1 + max(height(v.left), height(v.right))
     u.height = 1 + max(height(u.left), height(u.right))
-
     return u
-
-def balanceFactor(v):
-    if v == None:
-        return 0
-    return height(v.left) - height(v.right)
 
 def balance(v):
     if balanceFactor(v) < -1:
@@ -63,10 +56,11 @@ def balance(v):
 def insert(v, x):
     if v == None:
         v = Node(x)
-    elif x < v.data:
-        v.left = insert(v.left, x)
-    elif x > v.data:
+    elif v.x <= x:
         v.right = insert(v.right, x)
+    elif v.x > x:
+        v.left = insert(v.left, x)
+    
     v.height = 1 + max(height(v.left), height(v.right))
     return balance(v)
 
@@ -80,11 +74,11 @@ def findMin(v):
 def remove(v, x):
     if v == None:
         return None
-    if x < v.data:
-        v.left = remove(v.left, x)
-        return v
-    if x > v.data:
+    if v.x < x:
         v.right = remove(v.right, x)
+        return v
+    if v.x > x:
+        v.left = remove(v.left, x)
         return v
     if v.left == None:
         return v.right
@@ -92,47 +86,36 @@ def remove(v, x):
         return v.left
     
     u = findMin(v.right)
-    v.data = u.data
-    v.right = remove(v.right, u.data)
+    v.x = u.x
+    v.right = remove(v.right, u.x)
     v.height = 1 + max(height(v.left), height(v.right))
     return balance(v)
 
-def inRange(v, a, b):
-    if v.left != None:
-        if v.left.data >= a and v.left.data <= b:
-            inRange(v.left, a, b)
-    if v.right != None:
-        if v.right.data >= a and v.right.data <= b:
-            inRange(v.right, a, b)
-    if v.data >= a and v.data <= b:
-        pass
-        print(v)
-
-def findClosest(v, x):
-    closest = float('inf')
-    if v == None:
-        return closest
-    if v.data < x:
-        closest = findClosest(v.right, x)
-    if v.data > x:
-        closest = findClosest(v.left, x)
-    if v.data == x:
-        closest = x
-    if abs(v.data-x) < abs(closest-x):
-        closest = v.data
-    return closest
-    
-    
-"""rot = None
-for i in [10,5,2,7,15,12,17]:
-    rot = insert(rot,i)"""
 rot = None
-for i in [10,5,15,2,7,12,17]:
-    rot = insert(rot, i)
+rot = insert(rot, 50)
 
-rot.write()
+for i in range(20):
+    rot = insert(rot, randint(1,100))
 
-rot = remove(rot, 10)
 
-rot.write()
+print(rot)
+print(rot.left)
+print(rot.right)
+print(rot.left.left)
+print(rot.left.right)
+print(rot.right.left)
+print(rot.right.right)
 
+for i in range(3):
+    print()
+rot = remove(rot, 50)
+print(rot)
+print(rot.left)
+print(rot.right)
+print(rot.left.left)
+print(rot.left.right)
+print(rot.right.left)
+print(rot.right.right)
+
+
+    
