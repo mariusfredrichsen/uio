@@ -21,9 +21,12 @@ def sort(A):
     while i < len(A1):
         A[i + l] = A1[i]
         i += 1
+        A.swap_merge()
     
     while l < len(A2):
         A[i + l] = A2[l]
         l += 1
-    
+        A.swap_merge()
+    A.swap_merge_final(A1.get())
+    A.swap_merge_final(A2.get())
     return A

@@ -97,12 +97,12 @@ def remove(v, x):
         return v.right
     if v.right == None:
         return v.left
+    
     u = findMin(v.right)
     v.data = u.data
     v.right = remove(v.right, u.data)
-    v.height = max(height(v.left), height(v.right))
+    v.height = 1 + max(height(v.left), height(v.right))
     return balance(v)
-
 
 def inRange(v, a, b):
     if v.left != None:
@@ -156,5 +156,9 @@ rot = None
 for i in random.sample(range(1,100), 25):
     rot = insert(rot, i)
 
-test = []
-print(checkBST(rot, test))
+rot.write()
+
+rot = remove(rot, 10)
+
+rot.write()
+
