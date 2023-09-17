@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 from countswaps import CountSwaps
 def sort(A):
+=======
+asd = [1]
+
+def mergeSort(A):
+>>>>>>> fda41c4812f72be126a16aabfb2a721aa04384bb
     if len(A) <= 1:
         return A
     i = len(A)//2
