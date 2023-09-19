@@ -13,29 +13,39 @@ while True:
     branches[stdin[0]] = stdin[1:]
 
 class Node:
-    def __init__(self, b):
-        self.branch = b
+    def __init__(self, data):
+        self.data = data
         self.branches = []
     
     def __str__(self):
-        return self.branch
+        return self.data
 
-rot = Node(root)
-
-def make_branch(v, x):
-    if x in branches:
-        v.branches.append(Node(x))
-
-def find_branch(v, x):
-    for i in v.branches:
-        asd = find_branch(i, x)
-
-def ting(v):
+def insert(v, x):
     if v == None:
-        return None
-    for i in branches[v.branch]:
-        make_branch(v, i)
-    for b in v.branches:
-        ting(b)
+        v = Node(x)
+    elif v.branches != [] and v.data in branches:
+        for b in v.branches:
+            insert(b, 0)
+    elif v.data in branches:
+        for b in branches[v.data]:
+            v.branches.append(Node(b))
+    return v
 
-ting(rot)
+def print_branches(branches):
+    for b in branches:
+        print(str(b))
+    print()
+
+def find_path(v, kitten, path):
+    if v.data == kitten:
+        print(path + str(rot))
+    for b in v.branches:
+        find_path(b, kitten, str(b) + " " + path)
+            
+
+rot = None
+rot = insert(rot, root)
+for i in range(1, len(branches)):
+    rot = insert(rot, 0)
+
+find_path(rot, kitten, "")

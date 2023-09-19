@@ -153,12 +153,11 @@ for i in [10,5,2,7,15,12,17]:
     rot = insert(rot,i)"""
 import random
 rot = None
-for i in random.sample(range(1,100), 25):
-    rot = insert(rot, i)
+rot = insert(rot, 10)
+rot = insert(rot, 20)
+rot = insert(rot, 15)
+rot = insert(rot, 25)
+rot = insert(rot, 35)
+rot = insert(rot, 30)
 
 rot.write()
-
-rot = remove(rot, 10)
-
-rot.write()
-
