@@ -123,27 +123,46 @@ def removeRec(v, x):
     return balance(v)
 
 def remove(set, x):
-    set.size -= 1
-    set.root = removeRec(set.root, x)
+    if contains(set, x):
+        set.size -= 1
+        set.root = removeRec(set.root, x)
 
 def size(set):
     return set.size
-    
-    
-        
-    
 
-mengde = Set()
-insert(mengde, 1)
-insert(mengde, 2)
-insert(mengde, 3)
-insert(mengde, 1)
-print(contains(mengde, 1))
-print(contains(mengde, 0))
-remove(mengde, 1)
-print(contains(mengde, 1))
-print(size(mengde))
-mengde.root.write()
+def main():
+    set1 = Set()
 
-    
+    antall = int(input())
+
+    teller = 0
+
+    getteller = 0
+
+    sizeteller = 0
+
+    for i in range(antall):
+        linje = input().strip().split(" ")
+        command = linje[0]
+
+        if len(linje) == 2:
+            nmb = int(linje[1])
+
+        if command == "insert":
+            insert(set1, nmb)
+
+        elif command == "remove":
+            remove(set1, nmb)
+
+        elif command == "contains":
+            teller +=1
+            getteller += 1
+            print(contains(set1, nmb))
+
+        else:
+            teller += 1
+            sizeteller += 1
+            print(size(set1))
+
+main()
     

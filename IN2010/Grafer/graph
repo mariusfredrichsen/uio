@@ -1,0 +1,36 @@
+graph {
+	J
+	J -- K [label=16]
+	J -- E [label=18]
+	J -- H [label=17]
+	J -- G [label=19]
+	J -- L [label=4]
+	D
+	D -- E [label=9]
+	D -- F [label=3]
+	D -- C [label=14]
+	D -- B [label=1]
+	A
+	A -- C [label=6]
+	A -- B [label=13]
+	K
+	K -- L [label=12]
+	K -- G [label=10]
+	K -- I [label=11]
+	F
+	F -- E [label=2]
+	M
+	M -- M [label=2]
+	B
+	B -- C [label=7]
+	E
+	E -- C [label=8]
+	H
+	H -- G [label=15]
+	H -- C [label=20]
+	G
+	G -- I [label=5]
+	L
+	I
+	C
+}

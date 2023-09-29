@@ -77,18 +77,9 @@ def utfor_spill_uendelig():
 
 #Oppgave 6
 def min_strategi_ASDASD(dinevalg,minevalg):
-    if dinevalg == [] or minevalg == []:
-        return "samarbeid" #Starter alltid med samarbeid
-    temp = []
-    if len(dinevalg) >= 1: #Sjekker noe etter første runde
-        for i in range(len(dinevalg)-2,len(dinevalg)):
-            temp.append(dinevalg[i])
-        if temp.count("samarbeid") >= 1:
-            return "svik" #Sviker med engang motstanderen samarbeider
-    if dinevalg[len(dinevalg)-2] == "svik": #Hvis de sviker for mye så sviker jeg tilbake
-        return "svik"
-    else:
+    if dinevalg[-1] == "svik":
         return "samarbeid"
+    return "svik"
 
 
 

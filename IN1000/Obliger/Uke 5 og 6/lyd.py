@@ -1,6 +1,5 @@
 import wave
 import numpy as np
-import matplotlib.pyplot as plt
 
 noter = {
     "A": 440,
@@ -51,7 +50,7 @@ def lag_sang_fra_noter(note_liste):
     for i in note_liste:
         for l in lag_tone(i[1],i[0]):
             data.append(l)
-
+    print(data)
     return data
 #en prosedyre som går igjennom den nøstede listen og lager en liste med bølgeverdier
 
@@ -76,4 +75,4 @@ def forenkle_lyd(data):
 #går igjennom listen med bølgeverdiene og gjør dem lik 0 hvis de er under 16000 og 32000 hvis de er over 16000
 
 
-skriv_lyd_til_fil(fade_out(lag_sang_fra_noter(les_sang_fra_fil("sang.txt"))),44100,"sang.wav")
+skriv_lyd_til_fil(fade_out(lag_sang_fra_noter(les_sang_fra_fil("sang.txt"))),44100,"sang1.wav")

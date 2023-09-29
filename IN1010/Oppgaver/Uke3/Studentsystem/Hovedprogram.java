@@ -1,4 +1,3 @@
-package IN1010.Oppgaver.Uke3.Studentsystem;
 import java.io.FileNotFoundException;
 
 
