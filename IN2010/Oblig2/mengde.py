@@ -84,6 +84,3 @@ print(contains(mengde, 0))
 remove(mengde, 1)
 print(contains(mengde, 1))
 print(size(mengde))
-
-    
-    
