@@ -169,10 +169,85 @@ def draw_parents(parents):
         if u: 
             dot.edge(u,v)
     dot.render('parenting_tree', format='svg')
+    
+from collections import defaultdict
 
-print(breath_first_search_rec(G, 'A', set(), [], []))
-print(braeth_first_search(G, 'A'))
-print(bfs_shortest_path_between(G, 'A', 'G'))
-print(bfs_shortest_path_all(G, 'A'))
+def dijkstra(G, s):
+    V, E, w = G
+    queue = [(0, s)]
+    dist = defaultdict(lambda: float('inf'))
+    dist[s] = 0
+    
+    while queue:
+        cost, v = queue.pop(0)
+        if cost != dist[v]:
+            continue
+        for u in E[v]:
+            tmp_cost = cost + w[(v, u)]
+            if tmp_cost < dist[u]:
+                dist[u] = tmp_cost
+                queue.append((tmp_cost, u))
+                
+    return dist
+
+def weighted_shortest_path_from(G, s):
+    V, E, w = G
+    queue = [(0, s)]
+    dist = defaultdict(lambda: float('inf'))
+    dist[s] = 0
+    parents = {s: None}
+    
+    while queue:
+        cost, v = queue.pop(0)
+        if cost != dist[v]:
+            continue
+        for u in E[v]:
+            tmp_cost = cost + w[(v, u)]
+            if tmp_cost < dist[u]:
+                dist[u] = tmp_cost
+                queue.append((tmp_cost, u))
+                parents[u] = v
+                
+    return parents
+
+def draw_parents_graph(G, parents, name):
+    V, E, w = G
+    dot = graphviz.Graph()
+    for v in parents:
+        u = parents[v]
+        if u:
+            dot.edge(u, v, label=str(w[(v,u)]))
+    dot.render(name, format='svg')
+
+import random    
+
+def prim(G):
+    V, E, w = G
+    s = random.choice(list(V))
+    queue = [(0, s, None)]
+    parents = {}    
+    
+    while queue:
+        c, v, p = queue.pop(0)
+        if v in parents:
+            continue
+        parents[v] = p
+        for u in E[v]:
+            queue.append((w[(v,u)], u, v))
+    
+    return parents
+    
+draw_parents_graph(G, prim(G), "Spenntree")
+ 
+
+# print(sorted(dijkstra(G, 'A').items()))
+# print(weighted_shortest_path_from(G, 'A'))
+# draw_parents_graph(G, weighted_shortest_path_from(G, 'A'))
+
+# print(breath_first_search_rec(G, 'A', set(), [], []))
+# print(braeth_first_search(G, 'A'))
+# print(bfs_shortest_path_between(G, 'A', 'G'))
+# print(bfs_shortest_path_all(G, 'A'))
+
 # print(depth_first_search(G, 'A'))
 # print(depth_first_search_rec(G, 'A', set(), []))
