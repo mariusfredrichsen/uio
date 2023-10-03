@@ -64,23 +64,31 @@ def removeRec(v, x):
     return v
 
 def remove(set, x):
-    set.size -= 1
-    set.root = removeRec(set.root, x)
+    if contains(set, x):
+        set.size -= 1
+        set.root = removeRec(set.root, x)
 
 def size(set):
     return set.size
-    
-    
-        
-    
 
-mengde = Set()
-insert(mengde, 1)
-insert(mengde, 2)
-insert(mengde, 3)
-insert(mengde, 1)
-print(contains(mengde, 1))
-print(contains(mengde, 0))
-remove(mengde, 1)
-print(contains(mengde, 1))
-print(size(mengde))
+def main():
+    set1 = Set()
+    antall = int(input())
+
+    for _ in range(antall):
+        linje = input().strip().split(" ")
+        command = linje[0]
+
+        if command == "insert":
+            insert(set1, int(linje[1]))
+        elif command == "remove":
+            remove(set1, int(linje[1]))
+        elif command == "contains":
+            if contains(set1, int(linje[1])):
+                print("true")
+            else:
+                print("false")
+        else:
+            print(size(set1))
+
+main()

@@ -50,14 +50,14 @@ def balanceFactor(v):
     return height(v.left) - height(v.right)
 
 def balance(v):
-    if balanceFactor(v) < -1:
-        if balanceFactor(v.right) > 0:
-            v.right = rightRotate(v.right)
-        return leftRotate(v)
     if balanceFactor(v) > 1:
         if balanceFactor(v.left) < 0:
             v.left = leftRotate(v.left)
         return rightRotate(v)
+    if balanceFactor(v) < -1:
+        if balanceFactor(v.right) > 0:
+            v.right = rightRotate(v.right)
+        return leftRotate(v)
     return v
 
 def insert(v, x):

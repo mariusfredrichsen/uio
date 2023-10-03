@@ -57,11 +57,11 @@ def rightRotation(v):
 
 def balance(v):
     if balanceFactor(v) > 1:
-        if balanceFactor(v) < 0:
+        if balanceFactor(v.left) < 0:
             v.left = leftRotation(v.left)
         return rightRotation(v)
     if balanceFactor(v) < -1:
-        if balanceFactor(v) > 0:
+        if balanceFactor(v.right) > 0:
             v.right = rightRotation(v.right)
         return leftRotation(v)
     return v   
@@ -132,36 +132,22 @@ def size(set):
 
 def main():
     set1 = Set()
-
     antall = int(input())
 
-    teller = 0
-
-    getteller = 0
-
-    sizeteller = 0
-
-    for i in range(antall):
+    for _ in range(antall):
         linje = input().strip().split(" ")
         command = linje[0]
 
-        if len(linje) == 2:
-            nmb = int(linje[1])
-
         if command == "insert":
-            insert(set1, nmb)
-
+            insert(set1, int(linje[1]))
         elif command == "remove":
-            remove(set1, nmb)
-
+            remove(set1, int(linje[1]))
         elif command == "contains":
-            teller +=1
-            getteller += 1
-            print(contains(set1, nmb))
-
+            if contains(set1, int(linje[1])):
+                print("true")
+            else:
+                print("false")
         else:
-            teller += 1
-            sizeteller += 1
             print(size(set1))
 
 main()

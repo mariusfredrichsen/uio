@@ -1,20 +1,36 @@
-sorted_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+from heapq import heappop, heappush
 
-
-def create_balanced_tree(sorted_array, output_array):
+def create_balanced_tree(sorted_array):
     if len(sorted_array) <= 1:
         if len(sorted_array) == 1:
-            output_array.append(sorted_array[0])
+            print(sorted_array[0])
         return
-
-    sublist1 = sorted_array[: len(sorted_array) // 2]
-    sublist2 = sorted_array[len(sorted_array) // 2 + 1 :]
-    sublist3 = [sorted_array[len(sorted_array)//2]]
-    create_balanced_tree(sublist3, output_array)
-    create_balanced_tree(sublist2, output_array)
-    create_balanced_tree(sublist1, output_array)
-    return output_array
     
+    create_balanced_tree([sorted_array[len(sorted_array)//2]])
+    create_balanced_tree(sorted_array[len(sorted_array) // 2 + 1:])
+    create_balanced_tree(sorted_array[:len(sorted_array) // 2])
 
+def create_balanced_tree_heap(heap):
+    if len(heap) <= 1:
+        if len(heap) == 1:
+            print(heappop(heap))
+        return
+    heap_split = []
+    for _ in range(len(heap)//2):
+        heappush(heap_split, heappop(heap))
+    print(heappop(heap))
+    create_balanced_tree_heap(heap)
+    create_balanced_tree_heap(heap_split)
+        
+def main():
+    inp = input()
+    sorted_array = []
+    while inp != "":
+        sorted_array.append(int(inp))
+        inp = input().strip()
+    print("<<========  EGEN GREIE ========>>")
+    create_balanced_tree(sorted_array.copy())
+    print("\n\n\n<<========  MED HEAP ========>>")
+    create_balanced_tree_heap(sorted_array.copy())
 
-print(create_balanced_tree(sorted_array, []))
+main()
