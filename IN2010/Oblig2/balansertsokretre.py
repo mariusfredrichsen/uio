@@ -24,7 +24,7 @@ def create_balanced_tree_heap(heap):
         
 def main():
     inp = input()
-    sorted_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    sorted_array = []
     while inp != "":
         sorted_array.append(int(inp))
         inp = input().strip()
