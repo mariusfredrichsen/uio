@@ -1,5 +1,13 @@
 import numpy as np
 import wave
+import matplotlib.pyplot as plt
+
+def lag_tone(antall_sekunder, antall_svingninger_i_sekundet):
+    lyd = []
+    for i in range(int(44100 * antall_sekunder)):
+        lyd.append(16000 * (1 + np.sin(antall_svingninger_i_sekundet * i/44100 * 2 * np.pi)))
+
+    return lyd
 
 def skriv_lyd_til_fil(data, sample_rate, filnavn):
     # tatt fra https://stackoverflow.com/a/64376061
@@ -12,12 +20,7 @@ def skriv_lyd_til_fil(data, sample_rate, filnavn):
         f.setframerate(sample_rate)
         f.writeframes(audio.tobytes())
 
-def lag_tone(antall_sekunder, antall_svingninger_i_sekundet):
-    lyd = []
-    for i in range(int(44100 * antall_sekunder)):
-        lyd.append(16000 * (1 + np.sin(antall_svingninger_i_sekundet * i/44100 * 2 * np.pi)))
-    return lyd
-
+#oppg 1
 noter = {
     "A": 440,
     "G": 392,
@@ -30,18 +33,28 @@ noter = {
 }
 
 def les_sang_fra_fil(filnavn):
-    out_list = []
-    with open(filnavn) as f:
-        for linje in f:
-            linje = linje.strip().split(" ")
-            out_list.append([noter[linje[0]], float(linje[1])])
-    return out_list
+    liste =[]
+    fil = open(filnavn)
+    for linje in fil:
+        kolonner = linje.split()
+        if kolonner[0] in noter:
+            liste1 =[]
+            liste1.append(noter[kolonner[0]])
+            liste1.append(float(kolonner[1]))
+            liste.append(liste1)
 
-def lag_sang_fra_noter(noested_liste):
-    out_data = []
-    for liste in noested_liste:
-        for x in lag_tone(liste[1], liste[0]):
-            out_data.append(x)
-    return out_data
+    liste.append(liste1)
+    return liste
+frekvenser = []
+liste = les_sang_fra_fil("sang.txt")
+for i in liste:
+    frekvenser += lag_tone(i[1], i[0])
+x = []
+y = []
+for i in range(len(frekvenser)):
+    x.append(i)
+    y.append(frekvenser[i])
+    
+plt.plot(x,y)
+plt.show()
 
-skriv_lyd_til_fil(lag_sang_fra_noter(les_sang_fra_fil("test.txt")), 44100, "test.wav")

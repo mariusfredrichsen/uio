@@ -20,7 +20,7 @@ def create_balanced_tree_heap(heap):
         heappush(heap_split, heappop(heap))
     print(heappop(heap))
     create_balanced_tree_heap(heap)
-    create_balanced_tree_heap(sorted(heap_split))
+    create_balanced_tree_heap(heap_split)
         
 def main():
     inp = input()
