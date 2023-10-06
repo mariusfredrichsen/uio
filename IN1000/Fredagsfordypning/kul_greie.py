@@ -1,10 +1,6 @@
-import random
-
-def min_strategi_ASDASD(din, egen):
-    if random.random() >  0.49:
-        return "svik"
-    return "samarbeid"
-
-
-for i in range(10):
-    print(min_strategi_ASDASD([],[]))
+liste = [0,1,2,3,4,5,6,7,8,9,10]
+print(liste)
+for i in range(len(liste)):
+    liste[i] += 1
+    
+print(liste)
