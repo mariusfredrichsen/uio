@@ -2,6 +2,7 @@ import os
 os.environ["PATH"] += os.pathsep + 'C:/Users/mariu/Downloads/Graphviz/bin'
 import graphviz
 from collections import defaultdict
+import random  
 
 def get_input():
     lines = []
@@ -217,9 +218,7 @@ def draw_parents_graph(G, parents, name):
         u = parents[v]
         if u:
             dot.edge(u, v, label=str(w[(v,u)]))
-    dot.render(name, format='svg')
-
-import random    
+    dot.render(name, format='svg')  
 
 def prim(G):
     V, E, w = G
