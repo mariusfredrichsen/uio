@@ -1,3 +1,5 @@
+import graphviz
+
 class Set:
     def __init__(self):
         self.root = None
@@ -130,25 +132,55 @@ def remove(set, x):
 def size(set):
     return set.size
 
-def main():
+def draw_graph(v, dot):
+    if v.left:
+        dot.node(name=str(v.left) ,label=str(v.left.data))
+        dot.edge(str(v), str(v.left))
+        dot = draw_graph(v.left, dot=dot)
+        
+    if v.right:
+        dot.node(name=str(v.right) ,label=str(v.right.data))
+        dot.edge(str(v), str(v.right))
+        dot = draw_graph(v.right, dot=dot)
+
+    return dot
+
+def main(filnavn):
     set1 = Set()
-    antall = int(input())
+    with open(filnavn) as f:
+        teller = 0
+        for linje in f:
+            if teller == 0:
+                teller += 1
+                continue
 
-    for _ in range(antall):
-        linje = input().strip().split(" ")
-        command = linje[0]
+            #f = open("inputs/input_10000", "r")
+            #antall = int(f.readline())
 
-        if command == "insert":
-            insert(set1, int(linje[1]))
-        elif command == "remove":
-            remove(set1, int(linje[1]))
-        elif command == "contains":
-            if contains(set1, int(linje[1])):
-                print("true")
+            linje = linje.strip().split(" ")
+            #linje = f.readline().strip().split(" ")
+            command = linje[0]
+
+            if len(linje) == 2:
+                nmb = int(linje[1])
+
+            if command == "insert":
+                insert(set1, nmb)            
+
+            elif command == "remove":
+                remove(set1, nmb)
+
+            elif command == "contains":
+                if contains(set1, nmb):
+                    print("true")
+                else:
+                    print("false")
+
+            elif command == "size":
+                print(size(set1))
             else:
-                print("false")
-        else:
-            print(size(set1))
+                print("something wrong")
 
-main()
+    draw_graph(set1.root, graphviz.Graph()).render("test", format="svg")
     
+main("inputs/input_100")
