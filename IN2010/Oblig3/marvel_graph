@@ -1,0 +1,124 @@
+graph {
+	"Jeff Bridges"
+	"Harry Dean Stanton"
+	"Robert Redford"
+	"Michael Douglas"
+	"Anthony Hopkins"
+	"Robert Downey Jr."
+	"Lloyd Kaufman"
+	"Jeff Goldblum"
+	"Stellan Skarsgård"
+	"Sam Neill"
+	"William Hurt"
+	"Samuel L. Jackson"
+	"Forest Whitaker"
+	"Josh Brolin"
+	"Michael Rooker"
+	"Matt Damon"
+	"John C. Reilly"
+	"Toby Jones"
+	"Thomas Kretschmann"
+	"Terrence Howard"
+	"Tadanobu Asano"
+	"Scarlett Johansson"
+	"Michael Peña"
+	"Mark Ruffalo"
+	"Cate Blanchett"
+	"Paul Rudd"
+	"Judy Greer"
+	"Anthony Mackie"
+	"Jeff Bridges" -- "Robert Downey Jr." [label="Iron Man 7.9"]
+	"Jeff Bridges" -- "Samuel L. Jackson" [label="Iron Man 7.9"]
+	"Jeff Bridges" -- "Terrence Howard" [label="Iron Man 7.9"]
+	"Harry Dean Stanton" -- "Robert Downey Jr." [label="The Avengers 8.0"]
+	"Harry Dean Stanton" -- "Stellan Skarsgård" [label="The Avengers 8.0"]
+	"Harry Dean Stanton" -- "Samuel L. Jackson" [label="The Avengers 8.0"]
+	"Harry Dean Stanton" -- "Scarlett Johansson" [label="The Avengers 8.0"]
+	"Harry Dean Stanton" -- "Mark Ruffalo" [label="The Avengers 8.0"]
+	"Robert Redford" -- "Samuel L. Jackson" [label="Captain America: The Winter Soldier 7.8"]
+	"Robert Redford" -- "Toby Jones" [label="Captain America: The Winter Soldier 7.8"]
+	"Robert Redford" -- "Thomas Kretschmann" [label="Captain America: The Winter Soldier 7.8"]
+	"Robert Redford" -- "Scarlett Johansson" [label="Captain America: The Winter Soldier 7.8"]
+	"Robert Redford" -- "Anthony Mackie" [label="Captain America: The Winter Soldier 7.8"]
+	"Michael Douglas" -- "Michael Peña" [label="Ant-Man 7.3"]
+	"Michael Douglas" -- "Paul Rudd" [label="Ant-Man 7.3"]
+	"Michael Douglas" -- "Judy Greer" [label="Ant-Man 7.3"]
+	"Michael Douglas" -- "Anthony Mackie" [label="Ant-Man 7.3"]
+	"Anthony Hopkins" -- "Jeff Goldblum" [label="Thor: Ragnarok 7.9"]
+	"Anthony Hopkins" -- "Sam Neill" [label="Thor: Ragnarok 7.9"]
+	"Anthony Hopkins" -- "Matt Damon" [label="Thor: Ragnarok 7.9"]
+	"Anthony Hopkins" -- "Tadanobu Asano" [label="Thor: Ragnarok 7.9"]
+	"Anthony Hopkins" -- "Mark Ruffalo" [label="Thor: Ragnarok 7.9"]
+	"Anthony Hopkins" -- "Cate Blanchett" [label="Thor: Ragnarok 7.9"]
+	"Robert Downey Jr." -- "William Hurt" [label="Avengers: Infinity War 8.4"]
+	"Robert Downey Jr." -- "Samuel L. Jackson" [label="Avengers: Infinity War 8.4"]
+	"Robert Downey Jr." -- "Samuel L. Jackson" [label="The Avengers 8.0"]
+	"Robert Downey Jr." -- "Samuel L. Jackson" [label="Iron Man 7.9"]
+	"Robert Downey Jr." -- "Josh Brolin" [label="Avengers: Infinity War 8.4"]
+	"Robert Downey Jr." -- "Scarlett Johansson" [label="Avengers: Infinity War 8.4"]
+	"Robert Downey Jr." -- "Scarlett Johansson" [label="The Avengers 8.0"]
+	"Robert Downey Jr." -- "Mark Ruffalo" [label="Avengers: Infinity War 8.4"]
+	"Robert Downey Jr." -- "Mark Ruffalo" [label="The Avengers 8.0"]
+	"Robert Downey Jr." -- "Anthony Mackie" [label="Avengers: Infinity War 8.4"]
+	"Robert Downey Jr." -- "Stellan Skarsgård" [label="The Avengers 8.0"]
+	"Robert Downey Jr." -- "Terrence Howard" [label="Iron Man 7.9"]
+	"Lloyd Kaufman" -- "Josh Brolin" [label="Guardians of the Galaxy 8.0"]
+	"Lloyd Kaufman" -- "Michael Rooker" [label="Guardians of the Galaxy 8.0"]
+	"Lloyd Kaufman" -- "John C. Reilly" [label="Guardians of the Galaxy 8.0"]
+	"Jeff Goldblum" -- "Sam Neill" [label="Thor: Ragnarok 7.9"]
+	"Jeff Goldblum" -- "Matt Damon" [label="Thor: Ragnarok 7.9"]
+	"Jeff Goldblum" -- "Tadanobu Asano" [label="Thor: Ragnarok 7.9"]
+	"Jeff Goldblum" -- "Mark Ruffalo" [label="Thor: Ragnarok 7.9"]
+	"Jeff Goldblum" -- "Cate Blanchett" [label="Thor: Ragnarok 7.9"]
+	"Stellan Skarsgård" -- "Samuel L. Jackson" [label="The Avengers 8.0"]
+	"Stellan Skarsgård" -- "Scarlett Johansson" [label="The Avengers 8.0"]
+	"Stellan Skarsgård" -- "Mark Ruffalo" [label="The Avengers 8.0"]
+	"Sam Neill" -- "Matt Damon" [label="Thor: Ragnarok 7.9"]
+	"Sam Neill" -- "Tadanobu Asano" [label="Thor: Ragnarok 7.9"]
+	"Sam Neill" -- "Mark Ruffalo" [label="Thor: Ragnarok 7.9"]
+	"Sam Neill" -- "Cate Blanchett" [label="Thor: Ragnarok 7.9"]
+	"William Hurt" -- "Samuel L. Jackson" [label="Avengers: Infinity War 8.4"]
+	"William Hurt" -- "Josh Brolin" [label="Avengers: Infinity War 8.4"]
+	"William Hurt" -- "Scarlett Johansson" [label="Avengers: Infinity War 8.4"]
+	"William Hurt" -- "Mark Ruffalo" [label="Avengers: Infinity War 8.4"]
+	"William Hurt" -- "Anthony Mackie" [label="Avengers: Infinity War 8.4"]
+	"Samuel L. Jackson" -- "Josh Brolin" [label="Avengers: Infinity War 8.4"]
+	"Samuel L. Jackson" -- "Scarlett Johansson" [label="Avengers: Infinity War 8.4"]
+	"Samuel L. Jackson" -- "Scarlett Johansson" [label="The Avengers 8.0"]
+	"Samuel L. Jackson" -- "Scarlett Johansson" [label="Captain America: The Winter Soldier 7.8"]
+	"Samuel L. Jackson" -- "Mark Ruffalo" [label="Avengers: Infinity War 8.4"]
+	"Samuel L. Jackson" -- "Mark Ruffalo" [label="The Avengers 8.0"]
+	"Samuel L. Jackson" -- "Anthony Mackie" [label="Avengers: Infinity War 8.4"]
+	"Samuel L. Jackson" -- "Anthony Mackie" [label="Captain America: The Winter Soldier 7.8"]
+	"Samuel L. Jackson" -- "Toby Jones" [label="Captain America: The Winter Soldier 7.8"]
+	"Samuel L. Jackson" -- "Thomas Kretschmann" [label="Captain America: The Winter Soldier 7.8"]
+	"Samuel L. Jackson" -- "Terrence Howard" [label="Iron Man 7.9"]
+	"Josh Brolin" -- "Scarlett Johansson" [label="Avengers: Infinity War 8.4"]
+	"Josh Brolin" -- "Mark Ruffalo" [label="Avengers: Infinity War 8.4"]
+	"Josh Brolin" -- "Anthony Mackie" [label="Avengers: Infinity War 8.4"]
+	"Josh Brolin" -- "Michael Rooker" [label="Guardians of the Galaxy 8.0"]
+	"Josh Brolin" -- "John C. Reilly" [label="Guardians of the Galaxy 8.0"]
+	"Michael Rooker" -- "John C. Reilly" [label="Guardians of the Galaxy 8.0"]
+	"Matt Damon" -- "Tadanobu Asano" [label="Thor: Ragnarok 7.9"]
+	"Matt Damon" -- "Mark Ruffalo" [label="Thor: Ragnarok 7.9"]
+	"Matt Damon" -- "Cate Blanchett" [label="Thor: Ragnarok 7.9"]
+	"Toby Jones" -- "Thomas Kretschmann" [label="Captain America: The Winter Soldier 7.8"]
+	"Toby Jones" -- "Scarlett Johansson" [label="Captain America: The Winter Soldier 7.8"]
+	"Toby Jones" -- "Anthony Mackie" [label="Captain America: The Winter Soldier 7.8"]
+	"Thomas Kretschmann" -- "Scarlett Johansson" [label="Captain America: The Winter Soldier 7.8"]
+	"Thomas Kretschmann" -- "Anthony Mackie" [label="Captain America: The Winter Soldier 7.8"]
+	"Tadanobu Asano" -- "Mark Ruffalo" [label="Thor: Ragnarok 7.9"]
+	"Tadanobu Asano" -- "Cate Blanchett" [label="Thor: Ragnarok 7.9"]
+	"Scarlett Johansson" -- "Mark Ruffalo" [label="Avengers: Infinity War 8.4"]
+	"Scarlett Johansson" -- "Mark Ruffalo" [label="The Avengers 8.0"]
+	"Scarlett Johansson" -- "Anthony Mackie" [label="Avengers: Infinity War 8.4"]
+	"Scarlett Johansson" -- "Anthony Mackie" [label="Captain America: The Winter Soldier 7.8"]
+	"Michael Peña" -- "Paul Rudd" [label="Ant-Man 7.3"]
+	"Michael Peña" -- "Judy Greer" [label="Ant-Man 7.3"]
+	"Michael Peña" -- "Anthony Mackie" [label="Ant-Man 7.3"]
+	"Mark Ruffalo" -- "Anthony Mackie" [label="Avengers: Infinity War 8.4"]
+	"Mark Ruffalo" -- "Cate Blanchett" [label="Thor: Ragnarok 7.9"]
+	"Paul Rudd" -- "Judy Greer" [label="Ant-Man 7.3"]
+	"Paul Rudd" -- "Anthony Mackie" [label="Ant-Man 7.3"]
+	"Judy Greer" -- "Anthony Mackie" [label="Ant-Man 7.3"]
+}
