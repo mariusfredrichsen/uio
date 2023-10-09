@@ -48,18 +48,71 @@ def draw_graph(G):
 
     dot.render('marvel_graph', format='svg')
 
+def shortest_paths_from(G, s):
+    A, F, E = G
+    parents = {}
+    parents[s] = None
+    queue = [s]
+    
+    while queue:
+        v = queue.pop(0)
+        for u in E[v]:
+            if u not in parents:
+                parents[u] = (v, E[v][u])
+                queue.append(u)
 
+    return parents
+
+def shortest_path_from_to(G, s, e):
+    A, F, E = G
+    parents = shortest_paths_from(G, s)
+    path = [A[e][0]]
+    v = e
+    
+    draw_parent_tree(G, parents)
+
+    while parents[v]:
+        path.insert(0, (A[parents[v][0]][0], F[parents[v][1][0]]))
+        v = parents[v][0]
+    return path
+
+def draw_parent_tree(G, parents):
+    A, F, E = G
+    dot = graphviz.Graph()
+    
+    for v in parents:
+        if not parents[v]:
+            continue
+        u = parents[v][0]
+        if u:
+            dot.edge(A[v][0], A[u][0], label=F[parents[v][1][0]][0])
+    
+    dot.render('marvel_parent_graph', format='svg')
+    
+def print_shortest_path(shortest_path):
+    # eksempel format [('Anthony Mackie', 'tt4154756'), ('Mark Ruffalo', 'tt3501632'), 'Anthony Hopkins']
+    print(f"=====  Fra {shortest_path[0][0]} til {shortest_path[-1]}  =====\n")
+    for e in range(len(shortest_path)):
+        if e == 0:
+            print(f"{shortest_path[e][0]}")
+        elif e == len(shortest_path)-1:
+            print(f"===[ {shortest_path[e-1][1]} ] ===> {shortest_path[e]}\n\n\n")
+        else:
+            print(f"===[ {shortest_path[e-1][1]} ] ===> {shortest_path[e][0]}")
 
 def main():
     A, F, E = G = build_graph("marvel_movies.tsv", "marvel_actors.tsv")
+    print_shortest_path(shortest_path_from_to(G, 'nm0000375', 'nm0000354'))
+    # print_shortest_path(shortest_path_from_to(G, 'nm0424060', 'nm8076281'))
+    # print_shortest_path(shortest_path_from_to(G, 'nm4689420', 'nm0000365'))
+    # print_shortest_path(shortest_path_from_to(G, 'nm0000288', 'nm2143282'))
+    # print_shortest_path(shortest_path_from_to(G, 'nm0637259', 'nm0931324'))
+    
     n_E = 0
     for v in E:
         for u in E[v]:
             n_E += len(E[v][u])
-    draw_graph(G)
+    # draw_graph(G)
     print("antall noder: ", len(A), "\nantall kanter: ", n_E//2)
-    
-    
-    
     
 main()
