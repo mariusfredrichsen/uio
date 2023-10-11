@@ -1,47 +1,30 @@
 from lag import Lag
-from random import randint
+import random
 
 
 class Kamp:
-    def __init__(self, hjemmelag: Lag, bortelag: Lag):
+    def __init__(self, hjemmelag, bortelag):
         self.hjemmelag = hjemmelag
         self.bortelag = bortelag
-        
-        self.antall_spill = 0
         self.hjemmelag_mål = 0
         self.bortelag_mål = 0
-        
-    def hent_hjemmelag(self):
-        return self.hjemmelag
+        self.spilt = False
     
-    def hent_bortelag(self):
-        return self.bortelag
-    
-    # simulerer greier
     def spill(self):
-        self.antall_spill += 1
-        self.hjemmelag_mål = randint(0,6)
-        self.bortelag_mål = randint(0,6)
-        
-        hjemme_lag = self.hent_hjemmelag()
-        hjemme_lag.øk_antall_kamper()
-        hjemme_lag.angrep += self.hjemmelag_mål
-        hjemme_lag.forsvar += self.bortelag_mål
-        
-        borte_lag = self.hent_bortelag()
-        borte_lag.øk_antall_kamper()
-        borte_lag.angrep += self.bortelag_mål
-        borte_lag.forsvar += self.hjemmelag_mål
-        
-            
-    # henter siste resultater fra siste kamp
+        for _ in range(6):
+            if random.randint(0, 1):
+                if self.hjemmelag.hent_angrep() + random.random() > self.bortelag.hent_forsvar() + random.random()/1.21:
+                    self.hjemmelag_mål += 1
+                if self.bortelag.hent_angrep() + random.random() > self.hjemmelag.hent_forsvar() + random.random():
+                    self.bortelag_mål += 1
+        self.spilt = True
+    
     def mål_hjemme(self):
-        if self.antall_spill == 0:
-            return None
-        return self.hjemmelag_mål
+        if self.spilt:
+            return self.hjemmelag_mål
+        return None 
     
-    def mål_morte(self):
-        if self.antall_spill == 0:
-            return None
-        return self.bortelag_mål
-    
+    def mål_borte(self):
+        if self.spilt:
+            return self.bortelag_mål
+        return None
