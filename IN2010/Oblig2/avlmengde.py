@@ -1,5 +1,3 @@
-import graphviz
-
 class Set:
     def __init__(self):
         self.root = None
@@ -10,18 +8,7 @@ class Node:
         self.height = 0
         self.data = data
         self.left = None
-        self.right = None
-    
-    def __str__(self):
-        return str(self.data) + " , " + str(self.height)
-    
-    def write(self):
-        print(self)
-        if self.left != None:
-            self.left.write()
-        if self.right != None:
-            self.right.write()
-        
+        self.right = None        
 
 def height(v):
     if v == None:
@@ -132,19 +119,6 @@ def remove(set, x):
 def size(set):
     return set.size
 
-def draw_graph(v, dot):
-    if v.left:
-        dot.node(name=str(v.left) ,label=str(v.left.data))
-        dot.edge(str(v), str(v.left))
-        dot = draw_graph(v.left, dot=dot)
-        
-    if v.right:
-        dot.node(name=str(v.right) ,label=str(v.right.data))
-        dot.edge(str(v), str(v.right))
-        dot = draw_graph(v.right, dot=dot)
-
-    return dot
-
 def main(filnavn):
     set1 = Set()
     with open(filnavn) as f:
@@ -178,9 +152,6 @@ def main(filnavn):
 
             elif command == "size":
                 print(size(set1))
-            else:
-                print("something wrong")
 
-    draw_graph(set1.root, graphviz.Graph()).render("test", format="svg")
     
-main("inputs/input_100")
+main()

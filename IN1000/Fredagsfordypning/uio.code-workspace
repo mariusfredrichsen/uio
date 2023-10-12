@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "egen",
+			"path": "../../../egen"
+		}
+	],
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}
