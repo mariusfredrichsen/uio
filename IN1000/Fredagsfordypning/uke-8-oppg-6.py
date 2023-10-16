@@ -1,5 +1,5 @@
 from lag import Lag
-from kamp import Kamp
+from logen import Kamp
 
 # dette er listen over lag som skal spille (representert ved Lag-objekter)
 lagliste = []

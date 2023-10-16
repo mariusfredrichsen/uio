@@ -13,9 +13,9 @@ class Kamp:
     def spill(self):
         for _ in range(6):
             if random.randint(0, 1):
-                if self.hjemmelag.hent_angrep() + random.random() > self.bortelag.hent_forsvar() + random.random()/1.21:
+                if self.hjemmelag.angrep() + random.random() > self.bortelag.forsvar() + random.random()/1.21:
                     self.hjemmelag_mål += 1
-                if self.bortelag.hent_angrep() + random.random() > self.hjemmelag.hent_forsvar() + random.random():
+                if self.bortelag.angrep() + random.random() > self.hjemmelag.forsvar() + random.random():
                     self.bortelag_mål += 1
         self.spilt = True
     

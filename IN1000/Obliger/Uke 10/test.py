@@ -19,7 +19,6 @@ def test_avstand():
     assert sauehjernen.avstand_til_objekt(brett.hent_gress()[2]) == 14
     assert sauehjernen.avstand_til_objekt(brett.hent_gress()[3]) == 0
     print("Great success")
-
 # test_avstand()
 
 
