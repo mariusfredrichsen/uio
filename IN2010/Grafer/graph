@@ -1,34 +1,34 @@
 graph {
-	A
-	A -- C [label=6]
-	A -- B [label=13]
-	B
-	B -- C [label=7]
-	B -- D [label=1]
-	E
-	E -- F [label=2]
-	E -- C [label=8]
-	E -- D [label=9]
-	E -- J [label=18]
 	K
-	K -- J [label=16]
-	K -- L [label=12]
 	K -- I [label=11]
 	K -- G [label=10]
-	H
-	H -- J [label=17]
-	H -- C [label=20]
-	H -- G [label=15]
-	F
-	F -- D [label=3]
+	K -- J [label=16]
+	K -- L [label=12]
+	J
+	J -- E [label=18]
+	J -- L [label=4]
+	J -- H [label=17]
+	J -- G [label=19]
+	E
+	E -- D [label=9]
+	E -- C [label=8]
+	E -- F [label=2]
+	L
+	D
+	D -- B [label=1]
+	D -- C [label=14]
+	D -- F [label=3]
 	C
-	C -- D [label=14]
+	C -- H [label=20]
+	C -- A [label=6]
+	C -- B [label=7]
+	H
+	H -- G [label=15]
 	I
 	I -- G [label=5]
 	G
-	G -- J [label=19]
-	J
-	J -- L [label=4]
-	L
-	D
+	A
+	A -- B [label=13]
+	B
+	F
 }

@@ -283,7 +283,9 @@ def isbiconnected_naive(G):
             return False
     return True
 
-print(isbiconnected_naive(buildgraph(lines)))
+
+G = buildgraph(lines)
+print(isbiconnected_naive(removenode(G, 'C')))
 
 
 

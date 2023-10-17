@@ -7,7 +7,6 @@ def build_graph(lines_actors, lines_movies):
     V, E, w = set(), defaultdict(set), defaultdict(set) # w tar formen (v, u, f) = r der hvor v og u er skuespillere og f er en filmid og r er vurderingen
     for v in lines_actors:
         V.add(v)
-        print(lines_actors[v])
         for u in lines_actors:
             if v != u:
                 for m in lines_actors[v][1]:
@@ -20,7 +19,7 @@ def build_graph(lines_actors, lines_movies):
     
     return V, E, w
 
-def draw_graph(G):
+def draw_graph(G, a, m):
     _, E, w = G
     dot = graphviz.Graph()
     visited_edges = set()
@@ -29,7 +28,7 @@ def draw_graph(G):
         for u in E[v]:
             if (v, u) not in visited_edges:
                 visited_edges.add((u, v))
-                dot.edge(v, u, label=str(len(w[(u, v)])))
+                dot.edge(a[v][0], a[u][0], label=str(len(w[(u, v)])))
             
     dot.render('marvel_graph', format='svg')
         
@@ -116,30 +115,30 @@ def print_least_weighted_path(G, actors, movies, path):
 def main():
     lines_actors = dict()
     lines_movies = dict()
-    with open('actors.tsv', encoding='utf8') as f:
+    with open('marvel_actors.tsv', encoding='utf8') as f:
         for line in f:
             line = line.strip().split("\t")
             line = [line[0], line[1], [e for e in line[2:]]]
             lines_actors[line[0]] = (line[1], line[2])
-    with open('movies.tsv', encoding='utf8') as f:
+    with open('marvel_movies.tsv', encoding='utf8') as f:
         for line in f:
             line = line.strip().split("\t")
             lines_movies[line[0]] = (line[1], line[2])
 
     G = build_graph(lines_actors, lines_movies)
-    # draw_graph(G)
+    draw_graph(G, lines_actors, lines_movies)
     
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm2255973', 'nm0000460'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0424060', 'nm8076281'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm4689420', 'nm0000365'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0000288', 'nm2143282'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0637259', 'nm0931324'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm2255973', 'nm0000460'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0424060', 'nm8076281'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm4689420', 'nm0000365'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0000288', 'nm2143282'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0637259', 'nm0931324'))
     
-    print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm2255973', 'nm0000460'))
-    print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0424060', 'nm8076281'))
-    print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm4689420', 'nm0000365'))
-    print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0000288', 'nm2143282'))
-    print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0637259', 'nm0931324'))
+    # print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm2255973', 'nm0000460'))
+    # print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0424060', 'nm8076281'))
+    # print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm4689420', 'nm0000365'))
+    # print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0000288', 'nm2143282'))
+    # print_least_weighted_path(G, lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0637259', 'nm0931324'))
     
-        
+    
 main()
