@@ -289,6 +289,7 @@ print(isbiconnected_naive(removenode(G, 'C')))
 
 
 
+
 # draw_parents_graph(G, prim(G), "Spenntree")
 
 
