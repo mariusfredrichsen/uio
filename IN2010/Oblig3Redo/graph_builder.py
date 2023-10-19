@@ -2,17 +2,19 @@ import graphviz
 from collections import defaultdict
 
 
-def build_graph(p, m):
+def build_graph(p, a, m):
     V, E, w = set(), defaultdict(set), defaultdict(set)
     for m_a in p:
         for v in p[m_a]:
-            V.add(v)
             for u in p[m_a]:
-                if u != v and m_a in m:
+                if u != v:
                     E[v].add(u)
                     w[(v, u)].add((m_a, float(m[m_a][1])))
                     w[(u, v)].add((m_a, float(m[m_a][1])))
-    
+                    
+    for v in a:
+        V.add(v)
+        
     return V, E, w
 
 def draw_graph(G, a, m):
@@ -79,7 +81,7 @@ def least_effort_paths_from(G, v):
                 dist[u] = tmp_r
                 queue.append((tmp_r, u))
                 parents[u] = (v, m)
-            
+    
     return parents
 
 def least_effort_path_from_to(G, v, u):
@@ -112,12 +114,10 @@ def print_least_weighted_path(actors, movies, path):
 def find_all_components(G):
     V, E, w = G
     components = []
-    nV = list(V.copy())
-    for v in nV:
-        visited = dfs_visit_from(G, v)
-        components.append(visited)
-        for u in visited:
-            nV.remove(u)
+    for v in V:
+        if v not in [i for j in components for i in j]:
+            visited = bfs_visit_from(G, v)
+            components.append(visited)
     return components
 
 def count_components_length(components):
@@ -139,21 +139,20 @@ def print_componenets_length(G):
         print(f"There are {components_n[biggest]} with {biggest} nodes")
     print("\n\n")
 
-def dfs_visit_from(G, s):
+def bfs_visit_from(G, s):
     V, E, w = G
-    stack = [s]
-    visited = set()
-    visited.add(s)
-    result = [s]
+    visited = set([s])
+    queue = [s]
+    result = []
     
-    while stack:
-        v = stack.pop()
+    while queue:
+        v = queue.pop(0)
+        result.append(v)
         for u in E[v]:
             if u not in visited:
                 visited.add(u)
-                stack.append(u)
-                result.append(u)
-    
+                queue.append(u)
+
     return result
 
             
@@ -168,15 +167,16 @@ def main():
     with open('actors.tsv', encoding='utf8') as f:
         for line in f:
             line = line.strip().split("\t")
-            line = [line[0], line[1], [e for e in line[2:]]]
+            line = [line[0], line[1], [e for e in line[2:] if e in lines_movies]]
             lines_actors[line[0]] = (line[1], line[2])
+    
 
     movie_actors = defaultdict(set)
     for v in lines_actors:
         for m in lines_actors[v][1]:
             movie_actors[m].add(v)
     
-    G = build_graph(movie_actors, lines_movies)
+    G = build_graph(movie_actors, lines_actors, lines_movies)
     V, E, w = G
     print(len(V))
     i = 0
@@ -184,19 +184,19 @@ def main():
         i += len(w[v])
     print(i//2)
     # draw_graph(G, lines_actors, lines_movies)
-    print_componenets_length(G)
     
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm2255973', 'nm0000460'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0424060', 'nm8076281'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm4689420', 'nm0000365'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0000288', 'nm2143282'))
-    print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0637259', 'nm0931324'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm2255973', 'nm0000460'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0424060', 'nm8076281'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm4689420', 'nm0000365'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0000288', 'nm2143282'))
+    # print_path(G, lines_actors, lines_movies, shortest_path_from_to(G, 'nm0637259', 'nm0931324'))
     
-    print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm2255973', 'nm0000460'))
-    print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0424060', 'nm8076281'))
-    print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm4689420', 'nm0000365'))
-    print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0000288', 'nm2143282'))
+    # print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm2255973', 'nm0000460'))
+    # print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0424060', 'nm8076281'))
+    # print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm4689420', 'nm0000365'))
+    # print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0000288', 'nm2143282'))
     print_least_weighted_path(lines_actors, lines_movies, least_effort_path_from_to(G, 'nm0637259', 'nm0931324'))
     
+    print_componenets_length(G)
     
 main()

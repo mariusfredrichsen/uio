@@ -25,3 +25,5 @@ for i in ting:
 
 d = sum/len(ting)
 print(d)
+
+{1,1,1,1,1}
