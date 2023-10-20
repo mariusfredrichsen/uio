@@ -11,6 +11,8 @@ class Kamp:
         self.spilt = False
     
     def spill(self):
+        self.hjemmelag._hjemme += 1
+        self.bortelag._borte += 1
         for _ in range(6):
             if random.randint(0, 1):
                 if self.hjemmelag.angrep() + random.random() > self.bortelag.forsvar() + random.random()/1.21:
@@ -28,3 +30,9 @@ class Kamp:
         if self.spilt:
             return self.bortelag_mål
         return None
+    
+    def __str__(self):
+        if self.spilt:
+            return f"{str(self.hjemmelag)} - {str(self.bortelag)} : {self.hjemmelag_mål} - {self.bortelag_mål}"
+        else:
+            return f"{str(self.hjemmelag)} - {str(self.bortelag)}"
