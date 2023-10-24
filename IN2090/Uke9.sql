@@ -191,9 +191,38 @@ FROM (SELECT p.firstname || ' ' || p.lastname AS fullname, min(f.prodyear), max(
     INNER JOIN filmparticipation AS fp ON (p.personid = fp.personid 
                                             AND fp.parttype = 'director') 
     INNER JOIN film AS f ON (f.filmid = fp.filmid)
-    WHERE f.prodyear IS NOT NULL 
+    INNER JOIN filmitem AS fi ON (f.filmid = fi.filmid)
+    WHERE f.prodyear IS NOT NULL
+    AND fi.filmtype = 'C'
     GROUP BY p.firstname || ' ' || p.lastname) AS t
 WHERE t.diff > 49
 ORDER BY t.diff DESC;
+--Får 295 og skal ha 188
 
 --Oppgave 22
+SELECT fp.filmid, f.title, t.count-1 AS co_director 
+FROM (SELECT filmid, count(*)
+    FROM filmparticipation
+    WHERE parttype = 'director' 
+    GROUP BY filmid) AS t
+INNER JOIN filmparticipation AS fp ON (fp.filmid = t.filmid)
+INNER JOIN person AS p ON (fp.personid = p.personid) 
+INNER JOIN film AS f ON (fp.filmid = f.filmid)
+WHERE p.firstname || ' ' || p.lastname = 'Ingmar Bergman' 
+AND fp.parttype = 'director';
+
+--Oppgave 23
+SELECT f.filmid, f.title, t.count AS involved, f.prodyear, fr.rank 
+FROM (SELECT fp.filmid, count(*) 
+    FROM (SELECT fp.filmid
+        FROM filmparticipation AS fp 
+        INNER JOIN person AS p ON (fp.personid = p.personid)
+        WHERE p.firstname || ' ' || p.lastname = 'Ingmar Bergman' 
+        AND fp.parttype = 'director') AS t
+    INNER JOIN filmparticipation AS fp ON (t.filmid = fp.filmid)
+    GROUP BY fp.filmid) AS t
+INNER JOIN film AS f ON (t.filmid = f.filmid) 
+INNER JOIN filmrating AS fr ON (fr.filmid = f.filmid)
+ORDER BY f.prodyear;
+
+--Oppgave 24
