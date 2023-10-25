@@ -145,4 +145,3 @@ def __legg_til_tester_i_TestSang():
 __legg_til_tester_i_TestSang()
 if __name__ == "__main__":
     unittest.main()
-

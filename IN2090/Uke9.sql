@@ -225,4 +225,20 @@ INNER JOIN film AS f ON (t.filmid = f.filmid)
 INNER JOIN filmrating AS fr ON (fr.filmid = f.filmid)
 ORDER BY f.prodyear;
 
---Oppgave 24
+--Oppgave 24 !!!
+
+--Oppgave 25 ???
+SELECT DISTINCT f.title, p.firstname || ' ' || p.lastname AS fullname, fp.parttype 
+FROM (SELECT DISTINCT personid, filmid, count(*)
+    FROM filmparticipation
+    GROUP BY personid, filmid) AS t
+INNER JOIN filmparticipation AS fp ON (fp.filmid = t.filmid)
+INNER JOIN film AS f ON (f.filmid = t.filmid)
+INNER JOIN person AS p ON (p.personid = t.personid) 
+INNER JOIN filmitem AS fi ON (fi.filmid = t.filmid)
+WHERE t.count > 1 
+AND f.prodyear = 2003
+AND fi.filmtype = 'C';
+
+--Oppgave 26
+--Spørring for filmer der hvor folk har deltatt i mer en 15filmer i årene 2008 - 2010 og filtrer ut personene som har spilt filmer i 2005, IS IN eller IN idk

@@ -9,18 +9,16 @@ class Sang:
     def spill(self):
         print(f"Nå spilles {self._tittel} med {self._artist}")
     
-    def sjekk_artist(self, navn) -> bool:
-        for n in navn.split():
-            if n in self._artist:
+    def sjekk_artist(self, navn):
+        for n in navn.lower().split():
+            if n in self._artist.lower().split():
                 return True
         return False
     
-    def sjekk_tittel(self, tittel) -> bool:
-        if tittel.lower() == self._tittel.lower():
-            return True
-        return False
+    def sjekk_tittel(self, tittel):
+        return tittel.lower() == self._tittel.lower()
     
-    def sjekk_artisti_og_tittel(self, artist, tittel):
+    def sjekk_artist_og_tittel(self, artist, tittel):
         return self.sjekk_artist(artist) and self.sjekk_tittel(tittel)
     
     def streng_til_fil(self):
