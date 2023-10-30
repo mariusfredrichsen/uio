@@ -22,7 +22,7 @@ def sort(A):
     while l < len(A2):
         A[i + l] = A2[l]
         l += 1
-    
+    print(A)
     return A
 
 print(sort([4,3,7,6,8,0,1,2,4,6,8,3,5,7,9,9,4,3,2,1]))
