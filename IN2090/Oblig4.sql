@@ -93,13 +93,61 @@ ORDER BY count(*) DESC;
 -- Oppgave 7
 
 SELECT DISTINCT f.title, f.prodyear
-FROM film AS f RIGHT JOIN filmgenre AS fg USING (filmid) 
-RIGHT JOIN filmcountry AS fc USING (filmid)
-WHERE (f.title LIKE '%Dark%' OR f.title LIKE '%Night%') 
+FROM film AS f FULL JOIN filmgenre AS fg USING (filmid) 
+FULL JOIN filmcountry AS fc USING (filmid)
+WHERE (f.title LIKE '%Dark%' OR f.title LIKE '%Night%')
 AND (fg.genre = 'Horror' OR fc.country = 'Romania');
--- (445)
+-- (457)
 
 
 
 -- Oppgave 8
+
+SELECT f.title, f.prodyear, t.count AS participants
+FROM (SELECT f.filmid, count(parttype)
+    FROM film AS f
+    FULL JOIN filmparticipation USING (filmid) 
+    WHERE f.prodyear > 2009
+    GROUP BY f.filmid
+    HAVING count(*) < 3) AS t 
+INNER JOIN film AS f USING (filmid);
+-- (28)
+
+
+
+
+-- Oppgave 9
+
+SELECT count(filmid) 
+FROM (SELECT DISTINCT filmid 
+    FROM filmgenre) AS t 
+    EXCEPT 
+    (SELECT filmid 
+    FROM filmgenre 
+    WHERE genre = 'Horror' 
+    OR genre = 'Sci-Fi');
+-- n(435091)
+
+
+
+-- Oppgave 10
+
+WITH mi AS (SELECT *
+FROM filmrating AS fr
+INNER JOIN filmitem AS fi USING (filmid)
+WHERE fr.rank >= 8
+AND fr.votes >= 1000
+AND fi.filmtype = 'C')
+SELECT DISTINCT * FROM (SELECT filmid FROM (SELECT filmid FROM mi ORDER BY rank DESC LIMIT 10) AS t1 -- Top 10
+UNION
+(SELECT DISTINCT filmid FROM mi
+INNER JOIN filmparticipation AS fp USING (filmid)
+INNER JOIN person AS p USING (personid)
+WHERE p.firstname || ' ' || p.lastname = 'Harrison Ford')) AS t1 -- Harrison Ford
+UNION
+SELECT DISTINCT filmid FROM mi INNER JOIN filmgenre AS fg USING (filmid)
+WHERE fg.genre = 'Romance' OR fg.genre = 'Comedy'; -- Comedy & Romance
+-- (170-172)???
+
+
 
