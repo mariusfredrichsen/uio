@@ -1,6 +1,8 @@
 from collections import Counter
 import svgwrite
 from svgwrite.shapes import Circle
+import hypothesis as hyp
+import hypothesis.strategies as st
 
 class MyMap:
     GYLDNE_SNITT = 0.61
@@ -95,7 +97,6 @@ class LinearProbingMap(MyMap):
         while self.A[i]:
             ki, v = self.A[i]
             if ki == k:
-                print("asd")
                 self.n -= 1
                 self.A[i] = None
                 self.__fillhole(i)
@@ -104,8 +105,7 @@ class LinearProbingMap(MyMap):
     
     def __fillhole(self, i):
         s = 1
-        print("ASdasd")
-        while not self.A[(i + s) % self.N]:
+        while self.A[(i + s) % self.N]:
             k, v = self.A[(i + s) % self.N]
             j = hash(k) % self.N
             if not(0 < (j - i) % self.N <= s):
@@ -176,6 +176,34 @@ def test():
     print(d)
     del d['d']
     print(d)
-
+    
 # main()
-test()
+# test()
+
+@hyp.given(st.lists(st.integers()))
+@hyp.settings(max_examples=1000)
+def test_hashmaps(keys):
+    ds = SeparateChainingMap()
+    dl = LinearProbingMap()
+    reference = dict()
+
+    for key in keys:
+        ds[key] = 1
+        dl[key] = 1
+        reference[key] = 1
+        ds_ks = set(k for k, v in ds)
+        dl_ks = set(k for k, v in dl)
+        reference_ks = set(reference.keys())
+        assert ds_ks == dl_ks == reference_ks
+
+    for key in keys:
+        del ds[key]
+        del dl[key]
+        if key in reference_ks:
+            del reference[key]
+        ds_ks = set(k for k, v in ds)
+        dl_ks = set(k for k, v in dl)
+        reference_ks = set(reference.keys())
+        assert ds_ks == dl_ks == reference_ks
+
+test_hashmaps()

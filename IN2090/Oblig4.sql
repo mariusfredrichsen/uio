@@ -28,7 +28,7 @@ FROM (SELECT country, avg(cast(time AS INTEGER)), count(*)
     WHERE time ~ '^\d+$' 
     AND country IS NOT NULL 
     GROUP by country) AS t 
-WHERE t.count > 200 
+WHERE t.count >= 200 
 ORDER BY t.avg DESC;
 -- (44)
 
@@ -137,17 +137,34 @@ FROM filmrating AS fr
 INNER JOIN filmitem AS fi USING (filmid)
 WHERE fr.rank >= 8
 AND fr.votes >= 1000
-AND fi.filmtype = 'C')
-SELECT DISTINCT * FROM (SELECT filmid FROM (SELECT filmid FROM mi ORDER BY rank DESC LIMIT 10) AS t1 -- Top 10
+AND fi.filmtype = 'C'
+ORDER BY rank DESC, votes DESC)
+
+SELECT DISTINCT f.title
+FROM (SELECT * FROM
+    (SELECT filmid 
+    FROM mi 
+    LIMIT 10) AS t1
+-- (10)
 UNION
-(SELECT DISTINCT filmid FROM mi
+
+SELECT DISTINCT filmid 
+FROM mi
 INNER JOIN filmparticipation AS fp USING (filmid)
 INNER JOIN person AS p USING (personid)
-WHERE p.firstname || ' ' || p.lastname = 'Harrison Ford')) AS t1 -- Harrison Ford
+WHERE p.firstname || ' ' || p.lastname = 'Harrison Ford'
+-- (9)
 UNION
-SELECT DISTINCT filmid FROM mi INNER JOIN filmgenre AS fg USING (filmid)
-WHERE fg.genre = 'Romance' OR fg.genre = 'Comedy'; -- Comedy & Romance
--- (170-172)???
+
+SELECT DISTINCT filmid 
+FROM mi 
+INNER JOIN filmgenre AS fg USING (filmid)
+WHERE fg.genre = 'Romance' 
+OR fg.genre = 'Comedy') AS t1
+-- (157)
+
+INNER JOIN film AS f USING (filmid);
+-- (171)???
 
 
 
