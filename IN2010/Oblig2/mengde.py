@@ -71,7 +71,10 @@ def remove(set, x):
 def size(set):
     return set.size
 
+from time import time
+
 def main():
+    t = time()
     set1 = Set()
     antall = int(input())
 
@@ -90,5 +93,5 @@ def main():
                 print("false")
         else:
             print(size(set1))
-
+    print(time() - t)
 main()
