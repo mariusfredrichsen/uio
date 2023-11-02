@@ -53,28 +53,24 @@ ORDER BY t.count DESC, f.title;
 
 -- Oppgave 5
 
-WITH top_genre AS (SELECT fc.country, fg.genre, count(*)
-FROM filmgenre AS fg
-INNER JOIN filmcountry AS fc USING (filmid)
-GROUP BY fc.country, fg.genre
-ORDER BY fc.country, count(*) DESC)
-
-SELECT t1.country, t1.count AS movies_made, t1.avg AS avg_rating, t2.genre AS most_common_genre 
-FROM (SELECT c.country, c.count, r.avg
-    FROM (SELECT country, count(*)
-        FROM filmcountry
-        GROUP BY country) AS c 
-    LEFT JOIN (SELECT fc.country, avg(fr.rank)
-            FROM filmrating AS fr 
-            INNER JOIN filmcountry AS fc ON (fr.filmid = fc.filmid)
-            GROUP BY fc.country) AS r ON (r.country = c.country)) AS t1
-INNER JOIN (SELECT tg.country, tg.genre
-        FROM (SELECT tg.country, max(tg.count)
-            FROM top_genre AS tg
-            GROUP BY tg.country) AS t
-        INNER JOIN top_genre AS tg ON (t.country = tg.country AND t.max = tg.count)) AS t2 ON (t1.country = t2.country)
-ORDER BY t1.country;
--- (228) Tar med ALLE vanligste spørringene
+SELECT * 
+FROM (SELECT fc.country, avg(fr.rank) AS avg_rating
+    FROM filmrating AS fr
+    INNER JOIN filmcountry AS fc USING (filmid)
+    GROUP BY fc.country) AS t1
+FULL JOIN 
+    (SELECT fc.country, count(*) AS n_movies
+    FROM filmcountry AS fc
+    GROUP BY fc.country) AS t2 
+USING (country)
+FULL JOIN 
+    (SELECT DISTINCT ON(fc.country) fc.country, fg.genre
+    FROM filmgenre AS fg
+    INNER JOIN filmcountry AS fc USING (filmid)
+    GROUP BY fc.country, fg.genre
+    ORDER BY fc.country, count(*) DESC) AS t3
+USING (country);
+-- (190)
 
 
 
