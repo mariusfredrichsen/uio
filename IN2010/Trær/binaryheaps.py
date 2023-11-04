@@ -13,7 +13,7 @@ def insert(A, x):
     i = first_empty(A)
     A[i] = x
     j = (i-1)//2
-    while i > 0 and A[i] < A[j]:
+    while i > 0 and A[i] > A[j]:
         A[i], A[j] = A[j], A[i]
         i = j
         j = (i-1)//2
