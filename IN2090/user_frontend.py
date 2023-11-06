@@ -119,6 +119,15 @@ def search(conn, username):
 
 
 def order_products(conn, username):
+    pid = input("Order (Product ID): ")
+    num = input("How many: ")
+    
+    q = f"""INSERT INTO ws.orders (oid, uid, pid, num, date, payed)
+            VALUES ( , (SELECT uid FROM users WHERE username = '{username}' LIMIT 1), {pid}, {num}, NOW(), 0)"""
+    
+    cur = conn.cursor()
+    cur.exetue(q)
+    
     return
 
 def get_int_from_user(msg, needed):
