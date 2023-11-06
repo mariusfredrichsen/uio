@@ -160,7 +160,28 @@ OR fg.genre = 'Comedy') AS t1
 -- (157)
 
 INNER JOIN film AS f USING (filmid);
--- (171)???
+-- (171) ???
 
+SELECT * FROM
+(select fc.country, count(*) 
+from filmcountry as fc
+group by fc.country           
+having count(distinct filmid) > 0 ) AS t1
 
+FULL JOIN
 
+(select country, avg(rank) 
+from filmrating
+join filmcountry using (filmid)
+group by country) AS t2
+USING (country)
+
+FULL JOIN
+
+(select distinct on (q.country)* 
+from (select country, genre, count(*)
+from filmgenre inner join filmcountry using (filmid)
+group by country, genre) as q
+group by q.country, q.genre, q.count
+order by country, max(q.count) desc) AS t3
+USING (country);
