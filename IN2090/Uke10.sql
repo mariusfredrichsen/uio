@@ -83,3 +83,11 @@ SELECT company_name FROM customers WHERE country = 'Norway' OR country = 'Sweden
 
 -- Oppgave 6
 
+SELECT company_name
+FROM customers AS c
+WHERE EXISTS (SELECT *
+            FROM products AS p
+            INNER JOIN order_details AS od USING (product_id) 
+            INNER JOIN orders AS o USING (order_id)
+            WHERE product_name = 'Pavlova' 
+            AND o.customer_id = c.customer_id);
