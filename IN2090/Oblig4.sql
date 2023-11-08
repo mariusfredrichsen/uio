@@ -132,7 +132,7 @@ WITH mi AS (SELECT *
 FROM filmrating AS fr
 INNER JOIN filmitem AS fi USING (filmid)
 WHERE fr.rank >= 8
-AND fr.votes >= 1000
+AND fr.votes > 1000
 AND fi.filmtype = 'C'
 ORDER BY rank DESC, votes DESC)
 
@@ -185,3 +185,55 @@ group by country, genre) as q
 group by q.country, q.genre, q.count
 order by country, max(q.count) desc) AS t3
 USING (country);
+
+
+
+--Oppgave 10
+
+-- Start med å først finne filmid til alle interessante filmer, og så skriv
+-- delspørringer som gjør uttrekk fra disse i henhold til listen over (altså skriv en
+-- delspørring som finner filmid til de 10 høyest rangerte interessante filmene
+
+
+-- Start med å først finne filmid til alle interessante filmer,
+WITH  interessantefilmer AS(
+SELECT filmitem.filmid, filmrating.rank, filmrating.votes
+FROM filmitem
+JOIN filmrating USING (filmid)
+WHERE filmrating.rank >= 8 AND filmrating.votes > 1000 AND filmtype = 'C'), 
+
+tihoyest AS
+
+-- delspørring som finner filmid til de 10 høyest rangerte interessante filmene
+    (SELECT filmid
+    FROM interessantefilmer
+    ORDER BY rank DESC, votes DESC
+    LIMIT 10), 
+
+    HarrisonFord AS 
+
+    (
+        SELECT filmid
+        FROM tihoyest
+        JOIN filmparticipation USING (filmid)
+        JOIN person ON person.personid = filmparticipation.personid
+        WHERE person.firstname = 'Harrison' AND person.lastname ='Ford'
+    ), 
+
+    ROMCOM AS (
+        SELECT DISTINCT filmid
+        FROM interessantefilmer
+        JOIN filmgenre USING (filmid)
+        WHERE filmgenre.genre IN ('Comedy', 'Romance')
+    ),
+    Utvalgtefilmer AS (
+        SELECT filmid FROM tihoyest
+        UNION
+        SELECT filmid FROM ROMCOM
+        UNION
+        SELECT filmid FROM HarrisonFord
+    )
+    SElECT film.title
+    FROM Utvalgtefilmer
+    JOIN film USING (filmid) 
+    ;
