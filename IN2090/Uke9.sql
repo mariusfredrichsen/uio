@@ -266,7 +266,7 @@ AND (fi.filmtype = 'C' OR fi.filmtype = 'TV');
 
 
 
---Oppgave 21 !!!
+--Oppgave 21
 
 SELECT fp.personid, min(f.prodyear) AS first, max(f.prodyear) AS last, count(f.filmid)
 FROM filmparticipation AS fp
@@ -325,18 +325,18 @@ ORDER BY f.prodyear;
 
 
 
---Oppgave 25 ???
-SELECT DISTINCT f.title, p.firstname || ' ' || p.lastname AS fullname, fp.parttype 
-FROM (SELECT DISTINCT personid, filmid, count(*)
+--Oppgave 25
+
+SELECT f.title, p.firstname || ' ' || p.lastname AS fullname, t1.parttype 
+FROM (SELECT personid, parttype, filmid
     FROM filmparticipation
-    GROUP BY personid, filmid) AS t
-INNER JOIN filmparticipation AS fp ON (fp.filmid = t.filmid)
-INNER JOIN film AS f ON (f.filmid = t.filmid)
-INNER JOIN person AS p ON (p.personid = t.personid) 
-INNER JOIN filmitem AS fi ON (fi.filmid = t.filmid)
-WHERE t.count > 1 
-AND f.prodyear = 2003
-AND fi.filmtype = 'C';
+    GROUP BY personid, parttype, filmid
+    HAVING count(*) = 1) AS t1
+INNER JOIN film AS f USING (filmid)
+INNER JOIN person AS p USING (personid)
+INNER JOIN filmitem AS fi USING (filmid)
+WHERE fi.filmtype = 'C' AND f.prodyear = 2003;
+-- (135066)
 
 
 
