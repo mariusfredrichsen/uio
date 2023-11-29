@@ -22,13 +22,13 @@ ORDER BY count(country) DESC;
 
 -- Oppgave 3
 
-SELECT t.country, t.avg AS average_playtime 
-FROM (SELECT country, avg(cast(time AS INTEGER)), count(*)
+SELECT t.country, t.avg AS average_playtime -- velger ut kun land og gjennomsnittstid fra tabell "t"
+FROM (SELECT country, avg(cast(time AS INTEGER)), count(*) -- spør om både, land, gjennomsnittstid og antall rader for hvert land
     FROM runningtime
-    WHERE time ~ '^\d+$' 
+    WHERE time ~ '^\d+$' -- filtrerer ut alle rader som har noe annet enn kun tall i seg
     AND country IS NOT NULL 
-    GROUP by country) AS t 
-WHERE t.count >= 200 
+    GROUP by country) AS t -- gjør det om til en tabell som heter "t"
+WHERE t.count >= 200 -- velger ut alle land som har mer enn 200 antall rader (kommer fra count(*) i tabell "t")
 ORDER BY t.avg DESC;
 -- (44)
 
@@ -214,7 +214,7 @@ tihoyest AS
 
     (
         SELECT filmid
-        FROM tihoyest
+        FROM interessantefilmer
         JOIN filmparticipation USING (filmid)
         JOIN person ON person.personid = filmparticipation.personid
         WHERE person.firstname = 'Harrison' AND person.lastname ='Ford'

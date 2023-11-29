@@ -27,6 +27,7 @@ def administrator():
             insert_product(conn)
     
 def make_bills(conn):
+    
     return # Oppg 3
 
 def insert_product(conn):
