@@ -1,9 +1,10 @@
 -- Oppgave 1
 
-SELECT p.firstname || ' ' || p.lastname AS fullname, fp.parttype
+SELECT p.firstname || ' ' || p.lastname AS fullname, fc.filmcharacter
 FROM film AS f
 INNER JOIN filmparticipation AS fp ON (f.filmid = fp.filmid)
 INNER JOIN person AS p ON (p.personid = fp.personid)
+INNER JOIN filmcharacter AS fc ON (fc.partid = fp.partid)
 WHERE f.title = 'Star Wars' 
 AND fp.parttype = 'cast';
 -- (108)
@@ -36,7 +37,7 @@ ORDER BY t.avg DESC;
 
 -- Oppgave 4
 
-SELECT f.filmid, f.title, t.count
+SELECT f.title, t.count
 FROM (SELECT fi.filmid, f.title, count(*)
     FROM filmitem AS fi
     INNER JOIN filmgenre AS fg ON (fi.filmid = fg.filmid)
@@ -132,7 +133,7 @@ WITH mi AS (SELECT *
 FROM filmrating AS fr
 INNER JOIN filmitem AS fi USING (filmid)
 WHERE fr.rank >= 8
-AND fr.votes >= 1000
+AND fr.votes > 1000
 AND fi.filmtype = 'C'
 ORDER BY rank DESC, votes DESC)
 
@@ -160,4 +161,4 @@ OR fg.genre = 'Comedy') AS t1
 -- (157)
 
 INNER JOIN film AS f USING (filmid);
--- (171) ???
+-- (170)

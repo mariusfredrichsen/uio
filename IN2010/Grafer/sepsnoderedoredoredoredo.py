@@ -20,14 +20,14 @@ def seperationnodes_rec(E, v, d, depth, low, parents, seps):
         if u in parents and parents[u] == v:
             continue
         if u in depth:
-            low[v] = min(low[v], depth[u])
+            low[v] = min(depth[u], low[v])
             continue
-        
         parents[u] = v
+        
         seperationnodes_rec(E, u, d + 1, depth, low, parents, seps)
-        low[v] = min(low[u], low[v])
-        if d <= low[u]:
-            seps.add(v)
+        low[v] = min(low[v], low[u])
+        if d <= low[v]:
+            seps.add(u)
 
 def seperationnodes(G):
     V, E = G
@@ -41,13 +41,10 @@ def seperationnodes(G):
         if v not in depth:
             seperationnodes_rec(E, v, 1, depth, low, parents, seps)
     
-    if len([u for u in E[s] if depth[u] == 1]) > 1:
+    if len([v for v in E[s] if depth[v] == 1]) > 1:
         seps.add(s)
     
     return seps
-
-def isbiconnective(G):
-    return len(seperationnodes(G)) == 0
 
 def main():
     lines = [
@@ -74,8 +71,6 @@ def main():
     ]
     
     G = build_graph(lines)
-    print(isbiconnective(G))
     print(seperationnodes(G))
-    
-    
+
 main()

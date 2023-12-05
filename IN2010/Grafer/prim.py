@@ -81,6 +81,11 @@ class Primtrip():
 
     def __eq__(self, primtrim):
         return self.value == primtrim.value
+    
+    def __iter__(self):
+        yield self.value
+        yield self.node
+        yield self.parent
 
 def prim(G):
     V, E, w = G
@@ -89,16 +94,13 @@ def prim(G):
     parents = dict()
     
     while queue:
-        c, v, p = queue.pop(0).q
-        
+        c, v, p = queue.pop(0)
         if v not in parents:
             parents[v] = p
             for u in E[v]:
-                queue.append(Primtrip(w[v, u], u, v))
+                queue.append(Primtrip(w[(v,u)], u, v))
                 queue.sort()
-    
     return parents
-            
 
 
 def main():
