@@ -27,6 +27,7 @@ def administrator():
             insert_product(conn)
     
 def make_bills(conn):
+<<<<<<< HEAD
     print(" -- BILLS --")
     username = input("Username: ")
     cur = conn.cursor()
@@ -51,6 +52,8 @@ def make_bills(conn):
     if username:
         conn.commit()
     
+=======
+>>>>>>> ce49fc1fb3e312e0a872335bccfafe20f1df00d6
     
     return # Oppg 3
 

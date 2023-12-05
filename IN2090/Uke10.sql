@@ -91,3 +91,7 @@ WHERE EXISTS (SELECT *
             INNER JOIN orders AS o USING (order_id)
             WHERE product_name = 'Pavlova' 
             AND o.customer_id = c.customer_id);
+-- (31)
+
+-- Oppgave 7
+

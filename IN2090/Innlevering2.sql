@@ -48,7 +48,7 @@ WHERE t.antall > 1 AND p.masse > 10;
 SELECT p.navn
 FROM planet AS p1 INNER JOIN planet AS p2 AS p1.navn != p2.navn
 INNER JOIN stjerne AS s ON p1.stjerne = s.navn AND p2.stjerne = s.navn AND p2.stjerne = s.navn
-WHERE s.avstand < 50 AND p1.masse > 10 AND p2.masse > 10
+WHERE s.avstand < 50 AND p1.masse > 10 AND p2.masse > 10;
 
 --Oppgave 4
 -- Hvis man ser på de to forskjellige tabellene, stjerne og planet, kan man se at de har like navn på 2 
