@@ -22,34 +22,31 @@ def seperationnodes_rec(E, v, d, depth, low, parents, seps):
         if u in depth:
             low[v] = min(depth[u], low[v])
             continue
-        
         parents[u] = v
+        
         seperationnodes_rec(E, u, d + 1, depth, low, parents, seps)
-        low[v] = min(low[v], low[u])
-        if d <= low[u]:
-            seps.add(v)
-            
-
-
+        low[v] = min(low[u], low[v])
+        
+        if low[v] >= d:
+            seps.add(u)
+    
+    
 def seperationnodes(G):
     V, E = G
     s = next(iter(V))
-    depth = {s: 0}
-    low = {s: 0}
-    parents = {s: None}
+    depth = {s : 0}
+    low = {s : 0}
+    parents = {s : None}
     seps = set()
     
     for v in E[s]:
         if v not in depth:
-            parents[v] = s
             seperationnodes_rec(E, v, 1, depth, low, parents, seps)
             
-    if len([u for u in E[s] if depth[u] == 1]) > 1:
+    if len([v for v in E[s] if depth[v] == 1]) > 1:
         seps.add(s)
-
+    
     return seps
-            
-
 
 
 
@@ -62,7 +59,7 @@ def main():
         "B D 1",
         "C D 14",
         "C E 8",
-        "C H 20",
+        # "C H 20",
         "D E 9",
         "D F 3",
         "E F 2",

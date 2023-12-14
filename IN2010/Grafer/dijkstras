@@ -1,9 +1,9 @@
 graph {
 	C -- A [label=6]
 	B -- A [label=13]
+	H -- C [label=20]
 	D -- B [label=1]
 	E -- C [label=8]
-	H -- C [label=20]
 	F -- E [label=2]
 	J -- E [label=18]
 	G -- H [label=15]
