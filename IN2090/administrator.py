@@ -2,7 +2,7 @@ import psycopg2
 
 # MERK: Må kjøres med Python 3
 
-user = 'mafredri_priv' # Sett inn ditt UiO-brukernavn ("_priv" blir lagt til under)
+user = 'mafredri' # Sett inn ditt UiO-brukernavn ("_priv" blir lagt til under)
 pwd = 'vah2Aighe6' # Sett inn passordet for _priv-brukeren du fikk i en mail
 
 connection = \
@@ -27,10 +27,50 @@ def administrator():
             insert_product(conn)
     
 def make_bills(conn):
+<<<<<<< HEAD
+    print(" -- BILLS --")
+    username = input("Username: ")
+    cur = conn.cursor()
+    if username:
+        q = f"""SELECT u.name, u.address, sum(o.num*p.price)
+                FROM users AS u
+                INNER JOIN orders AS o USING (uid) 
+                INNER JOIN products AS p USING (pid)
+                WHERE u.username = '{username}' AND o.payed = 0
+                GROUP BY u.name, u.address;"""
+    else:
+        q = f"""SELECT u.name, u.address, sum(o.num*p.price)
+                FROM users AS u
+                INNER JOIN orders AS o USING (uid) 
+                INNER JOIN products AS p USING (pid)
+                WHERE o.payed = 0
+                GROUP BY u.name, u.address;"""
+    cur.execute(q)
+    rows = cur.fetchall()
+    for row in rows:
+        print(f"---Bill---\nName: {row[0]}\n Address: {row[1]}\n Total due: {row[2]}")
+    if username:
+        conn.commit()
+    
+=======
+>>>>>>> ce49fc1fb3e312e0a872335bccfafe20f1df00d6
     
     return # Oppg 3
 
 def insert_product(conn):
+    print("-- ADMINISTRATOR --")
+    name = input("Product name: ")
+    price = input("Price: ")
+    category = input("Category: ")
+    desc = input("Description: ")
+    
+    q = f"""INSERT INTO ws.products (name, price, cid, description)
+            VALUES ('{name}', {price}, (SELECT cid FROM categories WHERE name = '{category}'), '{desc}');"""
+    
+    cur = conn.cursor()
+    cur.execute(q)
+    conn.commit()
+    print("New product " + name + " inserted.")
     return # Oppg 4
 
 if __name__ == "__main__":
