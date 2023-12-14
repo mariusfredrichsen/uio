@@ -102,7 +102,6 @@ WITH null_vær AS (
     HAVING count(*) >= 3
 )
 
-
 SELECT DISTINCT b.navn
 FROM null_vær 
 INTERSECT kafeer
