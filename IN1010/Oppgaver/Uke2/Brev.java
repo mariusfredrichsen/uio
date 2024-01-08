@@ -1,15 +1,15 @@
-package IN1010.Oppgaver.Uke2.Brev;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+
 public class Brev {
-    String avsender;
-    String mottaker;
-    ArrayList<String> linjer = new ArrayList<String>();
+    private String avsender;
+    private String mottaker;
+    private ArrayList<String> linjer;
 
     public Brev(String avsender, String mottaker) {
         this.avsender = avsender;
         this.mottaker = mottaker;
+        linjer = new ArrayList<String>();
     }
 
     public void skrivLinje(String linje) {
@@ -17,13 +17,10 @@ public class Brev {
     }
 
     public void lesBrev() {
-        System.out.println("Hei, " + mottaker);
-        System.out.println("");
+        System.out.println("Hei, " + mottaker + "\n");
         for (String linje : linjer) {
             System.out.println(linje);
         }
-        System.out.println("");
-        System.out.println("Hilsen fra,");
-        System.out.println(avsender);
+        System.out.println("\nHilsen fra,\n" + mottaker);
     }
 }
