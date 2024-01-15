@@ -1,43 +1,37 @@
-package IN1010.Oppgaver.Uke1;
 
-class Rektangel {
-    double lengde;
-    double bredde;
 
-    public Rektangel (double l, double b) {   // Konstruktør
-        lengde = l;
-        bredde = b;
+
+public class Rektangel {
+
+    double l;
+    double b;
+    
+    public Rektangel (double l, double b) {
+        this.l = l;
+        this.b = b;
     }
   
-    public void oekLengde (int okning) {    // Oek lengden som angitt
-        lengde += okning;
+    public void oekLengde (int okning) {
+        if (l + okning < 1) {
+            System.out.println("Lengden blir for liten");
+        } else {
+            l += okning;
+        }
     }
   
-    public void oekBredde (int okning) {    // Oek bredden som angitt
-        bredde += okning;
+    public void oekBredde (int okning) {
+        if (b + okning < 1) {
+            System.out.println("Bredden blir for liten");
+        } else {
+            b += okning;
+        }
     }
   
-    public double areal () {     // Beregn mitt areal
-        return bredde*lengde;
+    public double areal () {
+        return l*b;
     }
   
-    public double omkrets () {   // Beregn min omkrets
-        return bredde*2+lengde*2;
-    }
-  }
-
-class RektangelHovedprogram {
-    public static void main(String[] args) {
-        Rektangel en = new Rektangel(4, 6);
-        Rektangel to = new Rektangel(7, 6);
-
-        System.out.println(en.areal());
-        System.out.println(to.areal());
-
-        en.oekLengde(4);
-        to.oekBredde(6);
-
-        System.out.println(en.omkrets());
-        System.out.println(to.omkrets());
+    public double omkrets () {
+        return l*2 + b*2;
     }
 }
