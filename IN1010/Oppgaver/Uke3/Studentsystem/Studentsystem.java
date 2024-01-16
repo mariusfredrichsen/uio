@@ -1,153 +1,103 @@
-package IN1010.Oppgaver.Uke3.Studentsystem;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Studentsystem {
-    HashMap<String, ArrayList<String>> emneStudenter = new HashMap<>();
 
-    public void lesFil(String filnavn) throws FileNotFoundException {
-        File fil = new File(filnavn);
-        Scanner scan = new Scanner(fil);
-        String fag = "";
+class Studentsystem {
+    public static void main(String[] args) {
+        HashMap<String, ArrayList<String>> emneStudent = new HashMap<String, ArrayList<String>>();
+        ArrayList<String> studenterListe = new ArrayList<String>();
 
+        Scanner scan = null;
+        File fil = null;
+
+        try {
+            fil = new File("emnestudenter.txt");
+            scan = new Scanner(fil);
+        } catch (FileNotFoundException e) {
+            System.out.println("Fil ikke funnet");
+        }
+
+        String emne = "";
         while (scan.hasNextLine()) {
-            String linje = scan.nextLine();
-            if (linje.substring(0,1).equals("*")) {
-                fag = linje.substring(1);
-                ArrayList<String> studenter = new ArrayList<>();
-                emneStudenter.put(fag, studenter);
+            String line = scan.nextLine().trim();
+            if (line.startsWith("*")) {
+                emne = line.substring(1);
+                emneStudent.put(emne, new ArrayList<String>());
+                continue;
             } else {
-                ArrayList<String> studenter = emneStudenter.get(fag);
-                studenter.add(linje);
-                emneStudenter.put(fag, studenter);
+                emneStudent.get(emne).add(line);
+                if (!studenterListe.contains(line)) studenterListe.add(line);
             }
         }
-    }
+        scan = new Scanner(System.in);
 
-    public void mestStudenter() {
-        String stoerstFag = "";
-        int antStudenter = 0;
+        System.out.println(emneStudent);
+        String input = "";
+        while (!input.equals("q")) {
+            System.out.println("""
+                    1. Fag med flest studenter
+                    2. Student med flest fag
+                    3. Skriv ut alle studentene som tar et fag
+                    4. Skrive ut alle fag en student tar
+                    5. Legge til en student til et fag
+                    q. Avslutt
+                    """);
+            input = scan.nextLine();
+            if (input.equals("1")) {
+                int max = 0;
+                String eOut = "";
+                for (String e : emneStudent.keySet()) {
+                    if (max < emneStudent.get(e).size()) {
+                        max = emneStudent.get(e).size();
+                        eOut = e;
+                    }
+                }
+                System.out.println(eOut);
+            } else if (input.equals("2")) {
+                HashMap<String,Integer> studenter = new HashMap<String,Integer>();
+                for (String e : emneStudent.keySet()) {
+                    for (String student : emneStudent.get(e)) {
+                        if (studenter.containsKey(student)) {
+                            studenter.put(student, studenter.get(student)+1);
+                        }
+                    }
+                }
 
-        for (String fag : emneStudenter.keySet()) {
-            if (emneStudenter.get(fag).size() > antStudenter) {
-                stoerstFag = fag;
-                antStudenter = emneStudenter.get(fag).size();
+                int max = 0;
+                String sOut = "";
+                for (String student : studenter.keySet()) {
+                    if (studenter.get(student) > max) {
+                        sOut = student;
+                    }
+                }
+                System.out.println(sOut);
+
+            } else if (input.equals("3")) {
+                for (String e : emneStudent.keySet()) System.out.println(e);
+                System.out.println("Skriv inn en fagkose");
+                String userInput = scan.nextLine();
+                if (emneStudent.containsKey(userInput)) {
+                    for (String s : emneStudent.get(userInput)) System.out.println(s);
+                }
+            } else if (input.equals("4")) {
+                for (String student : studenterListe) {
+                    System.out.println(student);
+                }
+                System.out.println("Skriv et navn");
+                scan = new Scanner(System.in);
+                input = scan.nextLine();
+                HashMap<String,Integer> studenter = new HashMap<String,Integer>();
+                if (studenterListe.contains(input)) {
+                    for (String e : emneStudent.keySet()) {
+                        if (studenter.containsKey(emneStudent.get(e))) {
+                            
+                        }
+                    }
+                }
             }
         }
-
-        System.out.println("Faget med flest studenter er " + stoerstFag);
-    }
-
-    public void mestFag() {
-        ArrayList<String> alleStudenter = new ArrayList<>();
-        for (String fag : emneStudenter.keySet()) {
-            for (String student : emneStudenter.get(fag)) {
-                alleStudenter.add(student);
-            }
-        }
-
-        HashMap<String,Integer> teller = new HashMap<>();
-        for (String student : alleStudenter) {
-            if (teller.containsKey(student)) {
-                teller.put(student, teller.get(student)+1);
-            } else {
-                teller.put(student, 1);
-            }
-        }
-        
-        int antFag = 0;
-        String studentMestFag = "";
-        for (String student : teller.keySet()) {
-            if (teller.get(student) > antFag) {
-                studentMestFag = student;
-                antFag = teller.get(student);
-            }
-        }
-
-        System.out.println("Studenten med flest fag er " + studentMestFag + " med " + antFag + " antall fag");
-    }
-
-    public void alleSomTarEtFag() {
-        ArrayList<String> alleStudenter = new ArrayList<>();
-        for (String fag : emneStudenter.keySet()) {
-            for (String student : emneStudenter.get(fag)) {
-                alleStudenter.add(student);
-            }
-        }
-
-        HashMap<String,Integer> teller = new HashMap<>();
-        for (String student : alleStudenter) {
-            if (teller.containsKey(student)) {
-                teller.put(student, teller.get(student)+1);
-            } else {
-                teller.put(student, 1);
-            }
-        }
-
-        ArrayList<String> studenterEtFag = new ArrayList<>();
-        for (String student : teller.keySet()) {
-            if (teller.get(student) == 1) {
-                studenterEtFag.add(student);
-            }
-        }
-
-        System.out.println("Studenter med et fag er:");
-        for (String student : studenterEtFag) {
-            System.out.println(student);
-        }
-    }
-
-    public void leggTilStudent(String student, String fag) {
-        ArrayList<String> alleStudenter = new ArrayList<>();
-        for (String fag1 : emneStudenter.keySet()) {
-            for (String student1 : emneStudenter.get(fag1)) {
-                alleStudenter.add(student1);
-            }
-        }
-
-        if (emneStudenter.containsKey(fag) && alleStudenter.contains(student)) {
-            ArrayList<String> studenter = emneStudenter.get(fag);
-            if (!(studenter.contains(student))) {
-                studenter.add(student);
-                emneStudenter.put(fag, studenter);
-            } else {
-                System.out.println("denne studenten tar allerede dette faget.");
-            }
-        } else if (emneStudenter.containsKey(fag)) {
-            System.out.println("studenten eksisterer ikke.");
-        } else {
-            System.out.println("faget eksisterer ikke.");
-        }
-    }
-
-    public void fjernStudent(String student, String fag) {
-        ArrayList<String> alleStudenter = new ArrayList<>();
-        for (String fag1 : emneStudenter.keySet()) {
-            for (String student1 : emneStudenter.get(fag1)) {
-                alleStudenter.add(student1);
-            }
-        }
-
-        if (emneStudenter.containsKey(fag) && alleStudenter.contains(student)) {
-            ArrayList<String> studenter = emneStudenter.get(fag);
-            if ((studenter.contains(student))) {
-                studenter.remove(student);
-                emneStudenter.put(fag, studenter);
-            } else {
-                System.out.println("denne studenten tar allerede dette faget.");
-            }
-        } else if (emneStudenter.containsKey(fag)) {
-            System.out.println("studenten eksisterer ikke.");
-        } else {
-            System.out.println("faget eksisterer ikke.");
-        }
-    }
-
-    public void leggTilFag(String fag) {
-        ArrayList<String> studenter = new ArrayList<>();
-        emneStudenter.put(fag, studenter);
     }
 }
