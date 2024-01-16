@@ -1,12 +1,13 @@
-package IN1010.Oppgaver.Uke1.Baathus;
 
-class Baat {
+
+
+public class Båt {
 
     private static int antProd = 0;
     private int prodnr;
     private String merke;
 
-    public Baat(String mrk) {
+    public Båt(String mrk) {
         prodnr = antProd;
         antProd++;
         merke = mrk;

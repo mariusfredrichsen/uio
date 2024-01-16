@@ -1,15 +1,17 @@
-package IN1010.Oppgaver.Uke1;
+
+
 
 public class Sammenlign {
     public static void main(String[] args) {
         int a = 10;
-        int b = 10;
-        if(a > b) {
-            System.out.println("a er større en b");
-        } else if(a == b) {
-            System.out.println("a og b er like store");
+        int b = 14;
+
+        if (a > b) {
+            System.out.println("A er større enn B");
+        } else if (a < b) {
+            System.out.println("B er større enn A");
         } else {
-            System.out.println("b er større en a");
+            System.out.println("A og B er like store");
         }
     }
 }
