@@ -32,7 +32,7 @@ public class Oblig {
             }
         } catch (FileNotFoundException e) {
             System.out.println("Fant ikke fil");
-        } 
+        } i
         return out;
     }
 
