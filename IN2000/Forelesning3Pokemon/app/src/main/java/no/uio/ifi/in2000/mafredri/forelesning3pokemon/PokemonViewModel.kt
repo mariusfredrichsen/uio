@@ -37,6 +37,12 @@ class PokemonViewModel: ViewModel() {
         }
     }
 
+    fun freePokemon(id: Int) {
+        viewModelScope.launch {
+            pokemonRepository.freePokemon(id)
+        }
+    }
+
 
     init {
         viewModelScope.launch {

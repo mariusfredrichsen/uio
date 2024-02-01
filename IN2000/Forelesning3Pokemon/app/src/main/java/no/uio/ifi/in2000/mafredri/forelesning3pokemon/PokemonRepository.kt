@@ -19,6 +19,12 @@ class PokemonRepository {
         }
     }
 
+    suspend fun freePokemon(id: Int) {
+        _caughtPokemons.update {earlierCaught ->
+            earlierCaught.minus(id)
+        }
+    }
+
     suspend fun loadPokemons() {
         val pokemonFromWeb = mutableListOf(
             Pokemon(

@@ -10,11 +10,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -36,13 +39,19 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                    val vm: PokemonViewModel = viewModel()
+                    val pvm: PokemonViewModel = viewModel()
+                    val pivm: PokemonInfoViewModel = viewModel()
+
+                    val scope = rememberCoroutineScope()
+                    val snackbarHostState = remember { SnackbarHostState() }
+
                     Scaffold(
-                        bottomBar = { NavBar(navController) }
+                        bottomBar = { NavBar(navController) },
+                        snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
                     ) {
                         NavHost(navController = navController, startDestination = NavItem.Home.route) {
-                            composable(NavItem.Home.route) { HomeScreen() }
-                            composable(NavItem.Pokemons.route) { PokemonScreen(vm) }
+                            composable(NavItem.Home.route) { PokemonInfoScreen(pivm) }
+                            composable(NavItem.Pokemons.route) { PokemonScreen(pvm) }
                         }
                     }
                 }
