@@ -4,16 +4,17 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import okio.IOException
 
 class PokemonInfoRepository {
-    private val _pokemonInfo = MutableStateFlow<String>("")
+    private val _pokemonInfo = MutableStateFlow<List<String>>(listOf())
 
-    fun getInfo(): StateFlow<String> = _pokemonInfo.asStateFlow()
+
+
+    fun getInfo(): StateFlow<List<String>> = _pokemonInfo.asStateFlow()
 
     suspend fun loadPokemon() {
         _pokemonInfo.update {
-            PokemonApi.pokedex.getPokemonInfo()
+            it
         }
     }
 }
