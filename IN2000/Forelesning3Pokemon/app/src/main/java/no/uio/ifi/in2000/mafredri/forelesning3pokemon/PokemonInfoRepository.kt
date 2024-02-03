@@ -1,20 +1,23 @@
 package no.uio.ifi.in2000.mafredri.forelesning3pokemon
 
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
+import io.ktor.client.call.body
+import io.ktor.client.request.delete
+import io.ktor.client.request.get
+import io.ktor.client.request.post
+import io.ktor.client.request.put
+import io.ktor.client.request.setBody
+import kotlinx.coroutines.runBlocking
+import no.uio.ifi.in2000.mafredri.forelesning3pokemon.network.PokemonClient.client
+import no.uio.ifi.in2000.mafredri.forelesning3pokemon.network.PokemonRoutes
 
 class PokemonInfoRepository {
-    private val _pokemonInfo = MutableStateFlow<List<String>>(listOf())
 
+    suspend fun getAllInfo(): String {
+        runBlocking {
 
-
-    fun getInfo(): StateFlow<List<String>> = _pokemonInfo.asStateFlow()
-
-    suspend fun loadPokemon() {
-        _pokemonInfo.update {
-            it
         }
+        return client.get(PokemonRoutes.POKEMON_INFO).body()
     }
+
+
 }

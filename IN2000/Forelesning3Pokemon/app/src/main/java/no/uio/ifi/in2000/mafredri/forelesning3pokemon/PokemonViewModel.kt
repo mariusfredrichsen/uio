@@ -17,6 +17,8 @@ data class PokemonUIState(
 class PokemonViewModel: ViewModel() {
     val pokemonRepository = PokemonRepository()
 
+
+
     val pokemonUIState: StateFlow<PokemonUIState> = combine(
         pokemonRepository.observePokemon(),
         pokemonRepository.observecatchedPokemons()
