@@ -42,7 +42,7 @@ fun PokemonScreen(pokemonViewModel: PokemonViewModel = viewModel() ) {
 
     val navController = rememberNavController()
 
-    
+
 
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
