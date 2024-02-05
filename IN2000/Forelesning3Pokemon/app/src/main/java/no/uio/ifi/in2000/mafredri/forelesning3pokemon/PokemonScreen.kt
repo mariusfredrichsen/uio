@@ -44,7 +44,7 @@ import kotlinx.coroutines.launch
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun PokemonScreen(pokemonViewModel: PokemonViewModel = viewModel(), navController: NavController) {
+fun PokemonScreen(pokemonViewModel: PokemonViewModel, navController: NavController) {
     val pokemonUIState by pokemonViewModel.pokemonUIState.collectAsState()
 
     val scope = rememberCoroutineScope()
