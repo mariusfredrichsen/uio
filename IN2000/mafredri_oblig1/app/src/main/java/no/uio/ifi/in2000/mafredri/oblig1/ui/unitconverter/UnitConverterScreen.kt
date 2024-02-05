@@ -153,7 +153,7 @@ fun UnitConverter(textViewModel: UnitConverterViewModel) {
         }
         OutlinedTextField(
             value = value.text,
-            onValueChange = { textViewModel.update(it)},
+            onValueChange = { if (it.length < 9) {textViewModel.update(it) } },
             label = { Text("Skriv inn antall av enheten") },
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done, keyboardType = KeyboardType.NumberPassword),
             keyboardActions = KeyboardActions(onDone = {
