@@ -10,13 +10,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.runBlocking
 import no.uio.ifi.in2000.mafredri.forelesning3pokemon.network.PokemonClient
-import no.uio.ifi.in2000.mafredri.forelesning3pokemon.PokemonInfo
 
 class PokemonRepository {
 
     private val _pokemons = MutableStateFlow<MutableList<Pokemon>>(mutableListOf())
     private val _caughtPokemons = MutableStateFlow<Set<Int>>(setOf())
-    private val _pokemonInfo = MutableStateFlow<PokemonInfo>(PokemonInfo(0, 0, 0, false, "0", "0", 0, 0))
+    private val _pokemonInfo =
+        MutableStateFlow<PokemonInfo>(PokemonInfo(0, 0, 0, false, "0", "0", 0, 0))
 
     fun observePokemon(): StateFlow<List<Pokemon>> = _pokemons.asStateFlow()
 
@@ -31,7 +31,7 @@ class PokemonRepository {
     }
 
     suspend fun freePokemon(id: Int) {
-        _caughtPokemons.update {earlierCaught ->
+        _caughtPokemons.update { earlierCaught ->
             earlierCaught.minus(id)
         }
     }
@@ -98,11 +98,12 @@ class PokemonRepository {
     suspend fun loadPokemonInfo(pokemon: String) {
         _pokemonInfo.update {
             runBlocking {
-                val httpResponse: HttpResponse = PokemonClient.client.get("https://pokeapi.co/api/v2/pokemon/$pokemon") {
-                    onDownload {bytesSentTotal, contentLength ->
-                        println("Received $bytesSentTotal bytes from $contentLength")
+                val httpResponse: HttpResponse =
+                    PokemonClient.client.get("https://pokeapi.co/api/v2/pokemon/$pokemon") {
+                        onDownload { bytesSentTotal, contentLength ->
+                            println("Received $bytesSentTotal bytes from $contentLength")
+                        }
                     }
-                }
                 val pokemonInfo: PokemonInfo = httpResponse.body()
                 pokemonInfo
             }
