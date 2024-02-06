@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.oblig2.data.alpacas
+package no.uio.ifi.in2000.mafredri.oblig2.data
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android

@@ -1,6 +1,7 @@
 package no.uio.ifi.in2000.mafredri.oblig2
 
 import android.content.Context
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,10 +12,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import no.uio.ifi.in2000.mafredri.oblig2.ui.home.HomeScreen
+import no.uio.ifi.in2000.mafredri.oblig2.ui.party.PartyScreen
 import no.uio.ifi.in2000.mafredri.oblig2.ui.theme.Mafredri_oblig2Theme
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +33,13 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "homescreen") {
-                        composable("homescreen") { HomeScreen() }
+                        composable("homescreen") { HomeScreen(navController = navController) }
+                        composable("partyscreen/{partyId}",
+                            arguments = listOf(navArgument("partyId") { type = NavType.StringType; nullable = false } )
+                        ) { navBackStackEntry ->
+                            PartyScreen(navController = navController, partyId = navBackStackEntry.arguments?.getString("partyId")
+                                .toString())
+                        }
                     }
                 }
             }

@@ -6,6 +6,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.util.Log
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -39,12 +40,20 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import coil.compose.AsyncImage
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
+import no.uio.ifi.in2000.mafredri.oblig2.ui.party.PartyScreen
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel()) {
+fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navController: NavController) {
+
     val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
 
     val scope = rememberCoroutineScope()
@@ -69,6 +78,9 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel()) {
                             .fillMaxWidth()
                             .align(Alignment.CenterHorizontally)
                             .padding(top = 8.dp)
+                            .clickable {
+                                navController.navigate("partyscreen/${partyInfo.id}")
+                            }
                     ) {
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,

@@ -10,22 +10,18 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 
 class AlpacaPartiesRepository {
     private val _partiesInfo = MutableStateFlow<List<PartyInfo>>(listOf())
+
+
     private val _connected = MutableStateFlow<Boolean>(false)
 
     fun loadPartiesInfo(): StateFlow<List<PartyInfo>> = _partiesInfo.asStateFlow()
 
     fun loadIsConnected(): StateFlow<Boolean> = _connected.asStateFlow()
 
-    suspend fun loadPartyInfo(): List<PartyInfo> = _partiesInfo.value
-
     suspend fun initiateParty() {
         _partiesInfo.update {
             fetchAlpacaData()
         }
-    }
-
-    suspend fun getPartyInfo(id: String) {
-
     }
 
     suspend fun isConnectedRep() {

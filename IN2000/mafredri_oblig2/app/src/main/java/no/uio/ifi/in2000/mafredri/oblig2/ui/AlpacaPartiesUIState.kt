@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.oblig2.ui.home
+package no.uio.ifi.in2000.mafredri.oblig2.ui
 
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 

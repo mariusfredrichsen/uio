@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import no.uio.ifi.in2000.mafredri.oblig2.data.alpacas.AlpacaPartiesRepository
+import no.uio.ifi.in2000.mafredri.oblig2.ui.AlpacaPartiesUIState
 
 class HomeScreenViewModel: ViewModel() {
     private val alpacaPartiesRepository = AlpacaPartiesRepository()
