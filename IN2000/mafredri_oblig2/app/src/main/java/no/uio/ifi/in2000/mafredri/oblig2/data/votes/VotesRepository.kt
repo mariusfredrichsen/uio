@@ -13,23 +13,22 @@ class VotesRepository {
     private val _districtOneVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
     private val _districtTwoVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
     private val _districtThreeVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
-    fun loadDistrictOneVotes(): StateFlow<List<DistrictVotes>> = _districtOneVotes.asStateFlow()
-    fun loadDistrictTwoVotes(): StateFlow<List<DistrictVotes>> = _districtTwoVotes.asStateFlow()
-    fun loadDistrictThreeVotes(): StateFlow<List<DistrictVotes>> = _districtThreeVotes.asStateFlow()
 
     init {
         _districtOneVotes.update {
             fetchIndividualVotesOne()
         }
-        _districtOneVotes.update {
+        _districtTwoVotes.update {
             fetchIndividualVotesTwo()
         }
-        _districtOneVotes.update {
+        _districtThreeVotes.update {
             fetchAggregatedVotesThree()
         }
     }
 
-    suspend fun getPartyVote(district: District, partyId: String) {
-
+    fun getDistrictVotes(district: District): List<DistrictVotes> = when(district) {
+            District.ONE -> _districtOneVotes.value
+            District.TWO -> _districtTwoVotes.value
+            District.THREE -> _districtThreeVotes.value
     }
 }
