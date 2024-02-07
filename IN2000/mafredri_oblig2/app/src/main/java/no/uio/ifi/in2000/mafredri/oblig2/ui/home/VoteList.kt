@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -14,9 +16,10 @@ import androidx.compose.ui.unit.dp
 import java.lang.Math.random
 import kotlin.math.roundToInt
 
-@Preview
 @Composable
-fun VoteList() {
+fun VoteList(homeScreenViewModel: HomeScreenViewModel) {
+    val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -30,14 +33,14 @@ fun VoteList() {
             Spacer(modifier = Modifier.weight(1f))
             Text(text = "Antall stemmer", fontWeight = FontWeight.Bold)
         }
-        listOf("AlpacaNorth", "AlpacaSouth", "AlpacaWest", "AlpacaWest").forEach { district ->
+        alpacaPartiesUIState.partiesVotes.forEach { district ->
             Row(
                 modifier = Modifier
                     .padding(8.dp)
             )  {
-                Text(text = district)
+                Text(text = district.name)
                 Spacer(modifier = Modifier.weight(1f))
-                Text(text = (random()*10000).roundToInt().toString())
+                Text(text = district.votes.toString())
             }
         }
     }

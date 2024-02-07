@@ -10,7 +10,4 @@ data class PartyInfo(
     val img: String,
     val color: String,
     val description: String
-) {
-    override fun toString() = "id: $id\nname: $name\nleader: $leader"
-}
-// eventuelt legge til en to string for å gjøre det lett
+)
