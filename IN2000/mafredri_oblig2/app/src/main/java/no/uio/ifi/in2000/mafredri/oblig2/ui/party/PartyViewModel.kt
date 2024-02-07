@@ -23,6 +23,12 @@ class PartyViewModel: ViewModel() {
             initialValue = AlpacaPartiesUIState()
         )
 
+    fun getPartyInfo(id: String) {
+        viewModelScope.launch {
+            alpacaPartiesRepository.getPartyInfo(id)
+        }
+    }
+
     init {
         viewModelScope.launch {
             alpacaPartiesRepository.initiateParty()

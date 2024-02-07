@@ -45,12 +45,13 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 @Composable
 fun PartyScreen(partyViewModel: PartyViewModel = viewModel(), partyId: String, navController: NavController) {
     val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
+    partyViewModel.getPartyInfo(partyId)
 
-    val partyInfo = alpacaPartiesUIState.parties.firstOrNull { it.id == partyId }
+    val partyInfo: PartyInfo? = alpacaPartiesUIState.parties.firstOrNull()
 
     Column {
+        PartyTopAppBar(navController)
         if (partyInfo != null) {
-            PartyTopAppBar(navController)
             Column {
                 Box(
                     modifier = Modifier

@@ -23,14 +23,3 @@ fun fetchAlpacaData(): List<PartyInfo> {
     }
     return parties.parties
 }
-
-fun isConnected(): Boolean {
-    val connected: Boolean
-    runBlocking {
-        val status: Int = AlpacaClient.client.get("https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/alpacaparties.json").status.value
-        Log.i("TEST", status.toString())
-        connected = status in 200..299
-    }
-    return connected
-}
-
