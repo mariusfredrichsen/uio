@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    /*val navController = rememberNavController()
+                    val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "homescreen") {
                         composable("homescreen") { HomeScreen(navController = navController) }
                         composable("partyscreen/{partyId}",
@@ -48,23 +48,10 @@ class MainActivity : ComponentActivity() {
                             PartyScreen(navController = navController, partyId = navBackStackEntry.arguments?.getString("partyId")
                                 .toString())
                         }
-                    }*/
-                    Text(text = isInternetAvailable(LocalContext.current).toString())
+                    }
+
                 }
             }
         }
-    }
-    private fun isInternetAvailable(context: Context): Boolean {
-        var result = false
-        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networkCapabilities = connectivityManager.activeNetwork ?: return false
-        val actNw = connectivityManager.getNetworkCapabilities(networkCapabilities) ?: return false
-        result = when {
-            actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
-            actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
-            actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
-            else -> false
-        }
-        return result
     }
 }

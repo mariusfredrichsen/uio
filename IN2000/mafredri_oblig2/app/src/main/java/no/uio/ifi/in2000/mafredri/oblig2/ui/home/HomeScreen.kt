@@ -25,6 +25,7 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -47,11 +48,13 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import kotlinx.coroutines.launch
+import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 
 
 @OptIn(ExperimentalMaterial3Api::class)
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "CoroutineCreationDuringComposition")
 @Composable
 fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navController: NavController) {
 
@@ -64,101 +67,106 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     val districts: List<String> = listOf("District One", "District Two", "District Three")
     var selectedDistrict by remember { mutableStateOf("") }
 
-
-
-
-
-
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(8.dp)
-        ) {
-
-
-            Text(text = "Partier", fontSize = 32.sp)
-            ExposedDropdownMenuBox(
-                expanded = isExpanded,
-                onExpandedChange = { isExpanded = it }
-            ) {
-                OutlinedTextField(
-                    value = selectedDistrict,
-                    onValueChange = {},
-                    placeholder = { Text(text = "Choose a district") },
-                    readOnly = true,
-                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpanded) },
-                    colors = ExposedDropdownMenuDefaults.textFieldColors(),
-                    modifier = Modifier
-                        .menuAnchor()
-                        .fillMaxWidth()
-                        .padding(top = 16.dp)
-                )
-                ExposedDropdownMenu(
-                    expanded = isExpanded,
-                    onDismissRequest = { isExpanded = false }
-                ) {
-                    districts.filter { it != selectedDistrict }.forEach { district ->
-                        DropdownMenuItem(
-                            text = { Text(text = district) },
-                            onClick = {
-                                selectedDistrict = district
-                                isExpanded = false
-                                when (districts.indexOf(selectedDistrict)) {
-                                    0 -> homeScreenViewModel.getPartyVotes(District.ONE)
-                                    1 -> homeScreenViewModel.getPartyVotes(District.TWO)
-                                    2 -> homeScreenViewModel.getPartyVotes(District.THREE)
-                                }
-                            }
-                        )
-                    }
-                }
+        if (!AlpacaClient.isInternetAvailable(LocalContext.current)) {
+            scope.launch {
+                snackbarHostState
+                    .showSnackbar(
+                        message = "No internett connection",
+                        duration = SnackbarDuration.Indefinite
+                    )
             }
-            VoteList(homeScreenViewModel)
-            LazyColumn {
-                items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
+        } else {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(8.dp)
+            ) {
 
-                    Card(
-                        colors = CardDefaults.cardColors(
-                            Color(
-                                android.graphics.Color.parseColor(
-                                    partyInfo.color
-                                )
-                            )
-                        ),
+
+                Text(text = "Partier", fontSize = 32.sp)
+                ExposedDropdownMenuBox(
+                    expanded = isExpanded,
+                    onExpandedChange = { isExpanded = it }
+                ) {
+                    OutlinedTextField(
+                        value = selectedDistrict,
+                        onValueChange = {},
+                        placeholder = { Text(text = "Choose a district") },
+                        readOnly = true,
+                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpanded) },
+                        colors = ExposedDropdownMenuDefaults.textFieldColors(),
                         modifier = Modifier
+                            .menuAnchor()
                             .fillMaxWidth()
-                            .align(Alignment.CenterHorizontally)
-                            .padding(top = 8.dp)
-                            .clickable {
-                                navController.navigate("partyscreen/${partyInfo.id}")
-                            }
+                            .padding(top = 16.dp)
+                    )
+                    ExposedDropdownMenu(
+                        expanded = isExpanded,
+                        onDismissRequest = { isExpanded = false }
                     ) {
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.Center,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                        ) {
-                            Text(text = partyInfo.name)
-
-                            AsyncImage(
-                                model = partyInfo.img,
-                                contentDescription = null,
-                                modifier = Modifier
-                                    .clip(shape = RoundedCornerShape(50))
-                                    .size(200.dp),
-                                contentScale = ContentScale.Crop
+                        districts.filter { it != selectedDistrict }.forEach { district ->
+                            DropdownMenuItem(
+                                text = { Text(text = district) },
+                                onClick = {
+                                    selectedDistrict = district
+                                    isExpanded = false
+                                    when (districts.indexOf(selectedDistrict)) {
+                                        0 -> homeScreenViewModel.getPartyVotes(District.ONE)
+                                        1 -> homeScreenViewModel.getPartyVotes(District.TWO)
+                                        2 -> homeScreenViewModel.getPartyVotes(District.THREE)
+                                    }
+                                }
                             )
-
-                            Text(text = "Leder: " + partyInfo.leader)
-
                         }
                     }
                 }
+                VoteList(homeScreenViewModel)
+                LazyColumn {
+                    items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
 
+                        Card(
+                            colors = CardDefaults.cardColors(
+                                Color(
+                                    android.graphics.Color.parseColor(
+                                        partyInfo.color
+                                    )
+                                )
+                            ),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .align(Alignment.CenterHorizontally)
+                                .padding(top = 8.dp)
+                                .clickable {
+                                    navController.navigate("partyscreen/${partyInfo.id}")
+                                }
+                        ) {
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                            ) {
+                                Text(text = partyInfo.name)
+
+                                AsyncImage(
+                                    model = partyInfo.img,
+                                    contentDescription = null,
+                                    modifier = Modifier
+                                        .clip(shape = RoundedCornerShape(50))
+                                        .size(200.dp),
+                                    contentScale = ContentScale.Crop
+                                )
+
+                                Text(text = "Leder: " + partyInfo.leader)
+
+                            }
+                        }
+                    }
+
+                }
             }
         }
     }
