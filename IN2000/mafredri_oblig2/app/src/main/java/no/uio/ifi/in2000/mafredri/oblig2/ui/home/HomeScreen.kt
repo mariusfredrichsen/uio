@@ -28,6 +28,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -42,6 +43,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat.getSystemService
@@ -66,16 +68,26 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     val districts: List<String> = listOf("District One", "District Two", "District Three")
     var selectedDistrict by remember { mutableStateOf("") }
 
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val lifecycleState by lifecycleOwner.lifecycle.currentStateFlow.collectAsState()
+
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
         if (!AlpacaClient.isInternetAvailable(LocalContext.current)) {
             scope.launch {
-                snackbarHostState
+                val result = snackbarHostState
                     .showSnackbar(
-                        message = "No internett connection",
+                        message = "No internet connection",
+                        actionLabel = "Refresh connection",
                         duration = SnackbarDuration.Indefinite
                     )
+                when (result) {
+                    SnackbarResult.ActionPerformed -> {
+                        HomeScreen(navController)
+                    }
+                    SnackbarResult.Dismissed -> {}
+                }
             }
         } else {
             val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
@@ -84,8 +96,6 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                     .fillMaxSize()
                     .padding(8.dp)
             ) {
-
-
                 Text(text = "Partier", fontSize = 32.sp)
                 ExposedDropdownMenuBox(
                     expanded = isExpanded,
