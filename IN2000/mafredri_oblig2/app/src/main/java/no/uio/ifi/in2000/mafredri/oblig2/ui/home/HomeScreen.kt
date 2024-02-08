@@ -58,7 +58,6 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 @Composable
 fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navController: NavController) {
 
-    val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
 
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
@@ -79,6 +78,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                     )
             }
         } else {
+            val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
             Column(
                 modifier = Modifier
                     .fillMaxSize()

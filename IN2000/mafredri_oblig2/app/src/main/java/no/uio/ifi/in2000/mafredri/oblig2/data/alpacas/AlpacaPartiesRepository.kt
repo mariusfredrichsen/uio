@@ -10,7 +10,8 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.PartyVote
 
 class AlpacaPartiesRepository {
-    val votesRepository = VotesRepository()
+    private val votesRepository = VotesRepository()
+    private val alpacaPartiesDataSource = AlpacaPartiesDataSource()
 
     private val _partiesInfo = MutableStateFlow<List<PartyInfo>>(listOf())
     private val _partiesVotes = MutableStateFlow<List<PartyVote>>(listOf())
@@ -30,14 +31,13 @@ class AlpacaPartiesRepository {
                     PartyVote(_partiesInfo.value.first { partyInfo ->
                         partyInfo.id == districtVote.alpacaPartyId
                     }.name, districtVote.numberOfVotesForParty)
-
                 }
         }
     }
 
     init {
         _partiesInfo.update {
-            fetchAlpacaData()
+            alpacaPartiesDataSource.fetchAlpacaData()
         }
     }
 }

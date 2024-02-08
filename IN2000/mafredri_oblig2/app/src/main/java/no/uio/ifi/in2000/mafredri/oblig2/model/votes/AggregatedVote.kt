@@ -6,5 +6,4 @@ import kotlinx.serialization.Serializable
 class AggregatedVote(
     val partyId: String,
     val votes: Int
-) {
-}
+)

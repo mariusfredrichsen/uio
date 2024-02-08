@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -35,45 +37,39 @@ fun PartyScreen(partyViewModel: PartyViewModel = viewModel(), partyId: String, n
     val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
     partyViewModel.getPartyInfo(partyId)
 
-    val partyInfo: PartyInfo? = alpacaPartiesUIState.partiesInfo.firstOrNull()
-
-    Column {
-        PartyTopAppBar(navController)
-        if (partyInfo != null) {
-            Column {
-                Box(
+    LazyColumn {
+        items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
+            PartyTopAppBar(navController)
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(android.graphics.Color.parseColor(partyInfo.color)))
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .align(Alignment.CenterHorizontally)
-                        .background(Color(android.graphics.Color.parseColor(partyInfo.color)))
                 ) {
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center,
+                    Text(text = partyInfo.name)
+
+                    AsyncImage(
+                        model = partyInfo.img,
+                        contentDescription = null,
                         modifier = Modifier
-                            .fillMaxWidth()
-                    ) {
-                        Text(text = partyInfo.name)
+                            .clip(shape = RoundedCornerShape(50))
+                            .size(200.dp),
+                        contentScale = ContentScale.Crop
+                    )
 
-                        AsyncImage(
-                            model = partyInfo.img,
-                            contentDescription = null,
-                            modifier = Modifier
-                                .clip(shape = RoundedCornerShape(50))
-                                .size(200.dp),
-                            contentScale = ContentScale.Crop
-                        )
+                    Text(text = "Leder: " + partyInfo.leader)
 
-                        Text(text = "Leder: " + partyInfo.leader)
-
-                    }
                 }
             }
             Text(
                 text = partyInfo.description,
                 modifier = Modifier
                     .padding(4.dp)
-                    .verticalScroll(rememberScrollState())
             )
         }
     }

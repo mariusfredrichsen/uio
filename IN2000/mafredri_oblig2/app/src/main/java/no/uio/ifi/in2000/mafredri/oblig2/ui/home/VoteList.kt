@@ -29,9 +29,9 @@ fun VoteList(homeScreenViewModel: HomeScreenViewModel) {
             modifier = Modifier
                 .padding(8.dp)
         ) {
-            Text(text = "Parti", fontWeight = FontWeight.Bold)
+            Text(text = "Parties", fontWeight = FontWeight.Bold)
             Spacer(modifier = Modifier.weight(1f))
-            Text(text = "Antall stemmer", fontWeight = FontWeight.Bold)
+            Text(text = "Votes per party", fontWeight = FontWeight.Bold)
         }
         alpacaPartiesUIState.partiesVotes.forEach { district ->
             Row(
