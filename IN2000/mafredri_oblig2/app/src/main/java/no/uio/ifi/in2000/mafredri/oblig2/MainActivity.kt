@@ -8,6 +8,7 @@ import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,6 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import no.uio.ifi.in2000.mafredri.oblig2.ui.home.HomeScreen
+import no.uio.ifi.in2000.mafredri.oblig2.ui.home.NavigationController
 import no.uio.ifi.in2000.mafredri.oblig2.ui.party.PartyScreen
 import no.uio.ifi.in2000.mafredri.oblig2.ui.theme.Mafredri_oblig2Theme
 
@@ -39,17 +41,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "homescreen") {
-                        composable("homescreen") { HomeScreen(navController = navController) }
-                        composable("partyscreen/{partyId}",
-                            arguments = listOf(navArgument("partyId") { type = NavType.StringType; nullable = false } )
-                        ) { navBackStackEntry ->
-                            PartyScreen(navController = navController, partyId = navBackStackEntry.arguments?.getString("partyId")
-                                .toString())
-                        }
-                    }
-
+                    NavigationController()
                 }
             }
         }

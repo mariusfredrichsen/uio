@@ -1,9 +1,12 @@
 package no.uio.ifi.in2000.mafredri.oblig2.data.alpacas
 
+import android.util.Log
+import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.data.votes.VotesRepository
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
@@ -12,6 +15,7 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.votes.PartyVote
 class AlpacaPartiesRepository {
     private val votesRepository = VotesRepository()
     private val alpacaPartiesDataSource = AlpacaPartiesDataSource()
+
 
     private val _partiesInfo = MutableStateFlow<List<PartyInfo>>(listOf())
     private val _partiesVotes = MutableStateFlow<List<PartyVote>>(listOf())
@@ -35,7 +39,8 @@ class AlpacaPartiesRepository {
         }
     }
 
-    init {
+    suspend fun getPartiesInfo() {
+
         _partiesInfo.update {
             alpacaPartiesDataSource.fetchAlpacaData()
         }

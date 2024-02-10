@@ -27,4 +27,10 @@ class PartyViewModel(): ViewModel() {
             alpacaPartiesRepository.getPartyInfo(id)
         }
     }
+
+    init {
+        viewModelScope.launch {
+            alpacaPartiesRepository.getPartiesInfo()
+        }
+    }
 }

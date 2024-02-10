@@ -18,12 +18,25 @@ class AggregatedVotesDataSource {
     fun fetchAggregatedVotesThree(): List<DistrictVotes> {
         val partiesVote: PartiesVote
         runBlocking {
-            val httpResponse: HttpResponse = AlpacaClient.client.get(url3)
-            partiesVote = httpResponse.body()
+            partiesVote = if (isConnected(url3)) {
+                val httpResponse: HttpResponse = AlpacaClient.client.get(url3)
+                httpResponse.body()
+            } else {
+                PartiesVote(listOf())
+            }
         }
-
         return partiesVote.parties.map {
             DistrictVotes(District.THREE, it.partyId, it.votes)
+        }
+    }
+
+    suspend fun isConnected(url: String): Boolean {
+        return try {
+
+            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
+            httpResponse.status.value in 200..299
+        } catch (e: Exception) {
+            false
         }
     }
 }
