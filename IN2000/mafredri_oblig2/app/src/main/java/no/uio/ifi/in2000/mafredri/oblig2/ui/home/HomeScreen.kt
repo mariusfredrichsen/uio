@@ -84,7 +84,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                     )
                 when (result) {
                     SnackbarResult.ActionPerformed -> {
-                        HomeScreen(navController)
+                        HomeScreen(navController = navController)
                     }
                     SnackbarResult.Dismissed -> {}
                 }
