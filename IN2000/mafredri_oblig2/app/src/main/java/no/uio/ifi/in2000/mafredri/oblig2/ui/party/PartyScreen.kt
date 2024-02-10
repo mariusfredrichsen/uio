@@ -36,41 +36,43 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 fun PartyScreen(partyViewModel: PartyViewModel = viewModel(), partyId: String, navController: NavController) {
     val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
     partyViewModel.getPartyInfo(partyId)
+    Column {
+        PartyTopAppBar(navController)
+        LazyColumn {
+            items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
 
-    LazyColumn {
-        items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
-            PartyTopAppBar(navController)
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(android.graphics.Color.parseColor(partyInfo.color)))
-            ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .background(Color(android.graphics.Color.parseColor(partyInfo.color)))
                 ) {
-                    Text(text = partyInfo.name)
-
-                    AsyncImage(
-                        model = partyInfo.img,
-                        contentDescription = null,
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
                         modifier = Modifier
-                            .clip(shape = RoundedCornerShape(50))
-                            .size(200.dp),
-                        contentScale = ContentScale.Crop
-                    )
+                            .fillMaxWidth()
+                    ) {
+                        Text(text = partyInfo.name)
 
-                    Text(text = "Leder: " + partyInfo.leader)
+                        AsyncImage(
+                            model = partyInfo.img,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .clip(shape = RoundedCornerShape(50))
+                                .size(200.dp),
+                            contentScale = ContentScale.Crop
+                        )
 
+                        Text(text = "Leder: " + partyInfo.leader)
+
+                    }
                 }
+                Text(
+                    text = partyInfo.description,
+                    modifier = Modifier
+                        .padding(4.dp)
+                )
             }
-            Text(
-                text = partyInfo.description,
-                modifier = Modifier
-                    .padding(4.dp)
-            )
         }
     }
 }

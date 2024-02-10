@@ -1,5 +1,6 @@
 package no.uio.ifi.in2000.mafredri.oblig2.data.votes
 
+import android.util.Log
 import io.ktor.client.call.body
 import io.ktor.client.plugins.onDownload
 import io.ktor.client.request.get
@@ -17,8 +18,12 @@ class IndividualVotesDataSource {
     fun fetchIndividualVotesOne(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
         runBlocking {
-            val httpResponse: HttpResponse = AlpacaClient.client.get(url1)
-            individualVotes = httpResponse.body()
+            individualVotes = if (isConnected(url1)) {
+                val httpResponse: HttpResponse = AlpacaClient.client.get(url1)
+                httpResponse.body()
+            } else {
+                listOf()
+            }
         }
         return listOf("1", "2", "3", "4").map {id ->
             DistrictVotes(District.ONE, id, individualVotes.count { it.id == id })
@@ -29,12 +34,26 @@ class IndividualVotesDataSource {
     fun fetchIndividualVotesTwo(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
         runBlocking {
-            val httpResponse: HttpResponse = AlpacaClient.client.get(url2)
-            individualVotes = httpResponse.body()
+            individualVotes = if (isConnected(url2)) {
+                val httpResponse: HttpResponse = AlpacaClient.client.get(url2)
+                httpResponse.body()
+            } else {
+                listOf()
+            }
         }
         return listOf("1", "2", "3", "4").map {id ->
             DistrictVotes(District.TWO, id, individualVotes.count { it.id == id })
         }
 
+    }
+
+    suspend fun isConnected(url: String): Boolean {
+        return try {
+
+            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
+            httpResponse.status.value in 200..299
+        } catch (e: Exception) {
+            false
+        }
     }
 }

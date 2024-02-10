@@ -6,6 +6,7 @@ import android.content.ContextParams
 import android.os.Build
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -56,10 +57,13 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 
 
 @OptIn(ExperimentalMaterial3Api::class)
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "CoroutineCreationDuringComposition")
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "CoroutineCreationDuringComposition",
+    "StateFlowValueCalledInComposition"
+)
 @Composable
 fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navController: NavController) {
 
+    val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
 
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
@@ -68,29 +72,25 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     val districts: List<String> = listOf("District One", "District Two", "District Three")
     var selectedDistrict by remember { mutableStateOf("") }
 
-    val lifecycleOwner = LocalLifecycleOwner.current
-    val lifecycleState by lifecycleOwner.lifecycle.currentStateFlow.collectAsState()
-
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
-        if (!AlpacaClient.isInternetAvailable(LocalContext.current)) {
+        if (alpacaPartiesUIState.partiesInfo.isEmpty()) {
             scope.launch {
                 val result = snackbarHostState
                     .showSnackbar(
                         message = "No internet connection",
-                        actionLabel = "Refresh connection",
-                        duration = SnackbarDuration.Indefinite
+                        duration = SnackbarDuration.Indefinite,
+                        actionLabel = "Refresh",
                     )
                 when (result) {
-                    SnackbarResult.ActionPerformed -> {
-                        HomeScreen(navController)
-                    }
+                    SnackbarResult.ActionPerformed -> {navController.navigate("homescreen")}
                     SnackbarResult.Dismissed -> {}
                 }
             }
         } else {
-            val alpacaPartiesUIState by homeScreenViewModel.alpacaPartiesUIState.collectAsState()
+            snackbarHostState.currentSnackbarData?.dismiss()
+        }
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -99,7 +99,8 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                 Text(text = "Partier", fontSize = 32.sp)
                 ExposedDropdownMenuBox(
                     expanded = isExpanded,
-                    onExpandedChange = { isExpanded = it }
+                    onExpandedChange = { isExpanded = it && alpacaPartiesUIState.partiesInfo.isNotEmpty() },
+                    modifier = Modifier.fillMaxWidth()
                 ) {
                     OutlinedTextField(
                         value = selectedDistrict,
@@ -115,11 +116,12 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                     )
                     ExposedDropdownMenu(
                         expanded = isExpanded,
-                        onDismissRequest = { isExpanded = false }
+                        onDismissRequest = { isExpanded = false },
+                        modifier = Modifier.fillMaxWidth()
                     ) {
                         districts.filter { it != selectedDistrict }.forEach { district ->
                             DropdownMenuItem(
-                                text = { Text(text = district) },
+                                text = { Text(text = district, modifier = Modifier.fillMaxWidth()) },
                                 onClick = {
                                     selectedDistrict = district
                                     isExpanded = false
@@ -128,7 +130,8 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                                         1 -> homeScreenViewModel.getPartyVotes(District.TWO)
                                         2 -> homeScreenViewModel.getPartyVotes(District.THREE)
                                     }
-                                }
+                                },
+                                modifier = Modifier.fillMaxWidth()
                             )
                         }
                     }
@@ -179,5 +182,5 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                 }
             }
         }
-    }
+
 }
