@@ -1,8 +1,21 @@
-liste = [4,1,6,7,4,8,9,2,1,4,6]
+class MyClass:
+  def __init__(self):
+    self._protected_var = 10
 
-for i in range(0, len(liste)):
-  for l in range(0, len(liste)-1):
-    if liste[l] > liste[l+1]:
-      liste[l+1], liste[l] = liste[l], liste[l+1]
+    self.__private_var = 20
 
-print(liste)
+  
+        
+  def get_private(self):
+    return self.__private_var
+      
+
+
+obj = MyClass()
+
+print(obj._protected_var)
+
+print(obj.get_private())
+
+print(obj.__private_var)
+
