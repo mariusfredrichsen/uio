@@ -11,7 +11,7 @@ import no.uio.ifi.in2000.mafredri.oblig2.data.alpacas.AlpacaPartiesRepository
 import no.uio.ifi.in2000.mafredri.oblig2.ui.AlpacaPartiesUIState
 
 
-class PartyViewModel: ViewModel() {
+class PartyViewModel(): ViewModel() {
     private val alpacaPartiesRepository = AlpacaPartiesRepository()
 
     val alpacaPartiesUIState: StateFlow<AlpacaPartiesUIState> = alpacaPartiesRepository.loadPartiesInfo()

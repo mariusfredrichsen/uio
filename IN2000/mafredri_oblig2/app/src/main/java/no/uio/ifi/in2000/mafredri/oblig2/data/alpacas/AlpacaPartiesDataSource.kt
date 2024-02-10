@@ -10,16 +10,17 @@ import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.Parties
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 
-fun fetchAlpacaData(): List<PartyInfo> {
-    val parties: Parties
-    runBlocking {
-        val httpResponse: HttpResponse =
-            AlpacaClient.client.get("https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/alpacaparties.json") {
-                onDownload { bytesSentTotal, contentLength ->
-                    println("Received $bytesSentTotal bytes from $contentLength")
-                }
-            }
-        parties = httpResponse.body()
+
+class AlpacaPartiesDataSource {
+    private val url: String =
+        "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/alpacaparties.json"
+
+    fun fetchAlpacaData(): List<PartyInfo> {
+        val parties: Parties
+        runBlocking {
+            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
+            parties = httpResponse.body()
+        }
+        return parties.parties
     }
-    return parties.parties
 }

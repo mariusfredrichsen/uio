@@ -10,19 +10,22 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.votes.DistrictVotes
 
 
 class VotesRepository {
+    private val individualVotesDataSource = IndividualVotesDataSource()
+    private val aggregatedVotesDataSource = AggregatedVotesDataSource()
+
     private val _districtOneVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
     private val _districtTwoVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
     private val _districtThreeVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
 
     init {
         _districtOneVotes.update {
-            fetchIndividualVotesOne()
+            individualVotesDataSource.fetchIndividualVotesOne()
         }
         _districtTwoVotes.update {
-            fetchIndividualVotesTwo()
+            individualVotesDataSource.fetchIndividualVotesTwo()
         }
         _districtThreeVotes.update {
-            fetchAggregatedVotesThree()
+            aggregatedVotesDataSource.fetchAggregatedVotesThree()
         }
     }
 
