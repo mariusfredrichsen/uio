@@ -30,14 +30,15 @@ import coil.compose.AsyncImage
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun PartyScreen(partyViewModel: PartyViewModel = viewModel(), partyId: String, navController: NavController) {
-    val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
-    partyViewModel.getPartyInfo(partyId)
-    Column {
+        Column {
         PartyTopAppBar(navController)
+        val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
+
+        partyViewModel.getPartyInfo(partyId)
+
         LazyColumn {
             items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
 

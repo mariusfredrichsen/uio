@@ -22,13 +22,13 @@ class AlpacaPartiesRepository {
     fun loadPartiesInfo(): StateFlow<List<PartyInfo>> = _partiesInfo.asStateFlow()
     fun loadPartiesVotes(): StateFlow<List<PartyVote>> = _partiesVotes.asStateFlow()
 
-    suspend fun getPartyInfo(id: String) {
+    fun getPartyInfo(id: String) {
         _partiesInfo.update { it ->
             it.filter { it.id == id }
         }
     }
 
-    suspend fun getPartyVotes(district: District) {
+    fun getPartyVotes(district: District) {
         _partiesVotes.update {
             votesRepository.getDistrictVotes(district)
                 .map { districtVote ->
@@ -40,9 +40,13 @@ class AlpacaPartiesRepository {
     }
 
     suspend fun getPartiesInfo() {
-
         _partiesInfo.update {
             alpacaPartiesDataSource.fetchAlpacaData()
         }
     }
+
+    fun getPartiesVotes() {
+        votesRepository.getPartiesVotes()
+    }
+
 }

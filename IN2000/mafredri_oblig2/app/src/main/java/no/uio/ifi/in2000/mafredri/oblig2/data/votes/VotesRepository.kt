@@ -17,7 +17,7 @@ class VotesRepository {
     private val _districtTwoVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
     private val _districtThreeVotes = MutableStateFlow<List<DistrictVotes>>(listOf())
 
-    init {
+    fun getPartiesVotes() {
         _districtOneVotes.update {
             individualVotesDataSource.fetchIndividualVotesOne()
         }

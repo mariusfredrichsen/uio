@@ -31,18 +31,16 @@ class HomeScreenViewModel: ViewModel() {
             initialValue = AlpacaPartiesUIState()
         )
 
+    init {
+        viewModelScope.launch {
+            alpacaPartiesRepository.getPartiesVotes()
+            alpacaPartiesRepository.getPartiesInfo()
+        }
+    }
+
     fun getPartyVotes(district: District) {
         viewModelScope.launch {
             alpacaPartiesRepository.getPartyVotes(district)
         }
     }
-
-
-
-    init {
-        viewModelScope.launch {
-            alpacaPartiesRepository.getPartiesInfo()
-        }
-    }
-
 }

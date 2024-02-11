@@ -84,13 +84,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                         actionLabel = "Refresh",
                     )
                 when (result) {
-<<<<<<< HEAD
-                    SnackbarResult.ActionPerformed -> {
-                        HomeScreen(navController = navController)
-                    }
-=======
                     SnackbarResult.ActionPerformed -> {navController.navigate("homescreen")}
->>>>>>> 6f5103bb2e4a9d1c2f0b20339dc21630c37a7598
                     SnackbarResult.Dismissed -> {}
                 }
             }

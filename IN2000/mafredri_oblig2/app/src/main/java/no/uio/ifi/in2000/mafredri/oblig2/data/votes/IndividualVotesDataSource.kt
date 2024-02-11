@@ -10,6 +10,7 @@ import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.DistrictVotes
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.IndividualVote
+import java.net.UnknownHostException
 
 class IndividualVotesDataSource {
     private val url1 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district1.json"
@@ -18,10 +19,10 @@ class IndividualVotesDataSource {
     fun fetchIndividualVotesOne(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
         runBlocking {
-            individualVotes = if (isConnected(url1)) {
+            individualVotes = try {
                 val httpResponse: HttpResponse = AlpacaClient.client.get(url1)
                 httpResponse.body()
-            } else {
+            } catch (e: UnknownHostException ){
                 listOf()
             }
         }
@@ -34,10 +35,10 @@ class IndividualVotesDataSource {
     fun fetchIndividualVotesTwo(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
         runBlocking {
-            individualVotes = if (isConnected(url2)) {
+            individualVotes = try {
                 val httpResponse: HttpResponse = AlpacaClient.client.get(url2)
                 httpResponse.body()
-            } else {
+            } catch (e: UnknownHostException) {
                 listOf()
             }
         }
@@ -45,15 +46,5 @@ class IndividualVotesDataSource {
             DistrictVotes(District.TWO, id, individualVotes.count { it.id == id })
         }
 
-    }
-
-    suspend fun isConnected(url: String): Boolean {
-        return try {
-
-            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
-            httpResponse.status.value in 200..299
-        } catch (e: Exception) {
-            false
-        }
     }
 }

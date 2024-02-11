@@ -9,19 +9,21 @@ import kotlinx.coroutines.runBlocking
 import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.Parties
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
+import java.net.UnknownHostException
 
 
 class AlpacaPartiesDataSource {
     private val url: String = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/alpacaparties.json"
 
-    fun fetchAlpacaData(): List<PartyInfo> {
+    suspend fun fetchAlpacaData(): List<PartyInfo> {
         val parties: Parties
 
         runBlocking {
-            parties = if (isConnected(url)) {
+            parties = try {
                 val httpResponse: HttpResponse = AlpacaClient.client.get(url)
                 httpResponse.body()
-            } else {
+            } catch (e: UnknownHostException) {
+                println(e)
                 Parties(listOf())
             }
         }
@@ -29,13 +31,4 @@ class AlpacaPartiesDataSource {
 
     }
 
-    suspend fun isConnected(url: String): Boolean {
-        return try {
-
-            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
-            httpResponse.status.value in 200..299
-        } catch (e: Exception) {
-            false
-        }
-    }
 }

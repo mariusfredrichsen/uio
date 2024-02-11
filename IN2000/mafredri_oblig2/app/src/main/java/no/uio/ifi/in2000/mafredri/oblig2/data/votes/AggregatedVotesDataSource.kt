@@ -9,7 +9,7 @@ import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.DistrictVotes
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.PartiesVote
-
+import java.net.UnknownHostException
 
 
 class AggregatedVotesDataSource {
@@ -18,25 +18,15 @@ class AggregatedVotesDataSource {
     fun fetchAggregatedVotesThree(): List<DistrictVotes> {
         val partiesVote: PartiesVote
         runBlocking {
-            partiesVote = if (isConnected(url3)) {
+            partiesVote = try {
                 val httpResponse: HttpResponse = AlpacaClient.client.get(url3)
                 httpResponse.body()
-            } else {
+            } catch (e: UnknownHostException) {
                 PartiesVote(listOf())
             }
         }
         return partiesVote.parties.map {
             DistrictVotes(District.THREE, it.partyId, it.votes)
-        }
-    }
-
-    suspend fun isConnected(url: String): Boolean {
-        return try {
-
-            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
-            httpResponse.status.value in 200..299
-        } catch (e: Exception) {
-            false
         }
     }
 }
