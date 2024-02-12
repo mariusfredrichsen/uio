@@ -72,6 +72,8 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     val districts: List<String> = listOf("District One", "District Two", "District Three", "All Districts")
     var selectedDistrict by remember { mutableStateOf("") }
 
+    val context = LocalContext.current
+
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
@@ -99,7 +101,9 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                 Text(text = "Partier", fontSize = 32.sp)
                 ExposedDropdownMenuBox(
                     expanded = isExpanded,
-                    onExpandedChange = { isExpanded = it && alpacaPartiesUIState.partiesInfo.isNotEmpty() },
+                    onExpandedChange = { isExpanded = it &&
+                            alpacaPartiesUIState.partiesInfo.isNotEmpty() &&
+                            AlpacaClient.isInternetAvailable(context)},
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     OutlinedTextField(
