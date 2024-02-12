@@ -16,7 +16,7 @@ class IndividualVotesDataSource {
     private val url1 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district1.json"
     private val url2 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district2.json"
 
-    fun fetchIndividualVotesOne(): List<DistrictVotes> {
+    suspend fun fetchIndividualVotesOne(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
         runBlocking {
             individualVotes = try {
@@ -32,7 +32,7 @@ class IndividualVotesDataSource {
 
     }
 
-    fun fetchIndividualVotesTwo(): List<DistrictVotes> {
+    suspend fun fetchIndividualVotesTwo(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
         runBlocking {
             individualVotes = try {

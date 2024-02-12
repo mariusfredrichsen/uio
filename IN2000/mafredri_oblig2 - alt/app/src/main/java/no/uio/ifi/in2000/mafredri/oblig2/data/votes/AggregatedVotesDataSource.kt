@@ -15,7 +15,7 @@ import java.net.UnknownHostException
 class AggregatedVotesDataSource {
 
     private val url3 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district3.json"
-    fun fetchAggregatedVotesThree(): List<DistrictVotes> {
+    suspend fun fetchAggregatedVotesThree(): List<DistrictVotes> {
         val partiesVote: PartiesVote
         runBlocking {
             partiesVote = try {

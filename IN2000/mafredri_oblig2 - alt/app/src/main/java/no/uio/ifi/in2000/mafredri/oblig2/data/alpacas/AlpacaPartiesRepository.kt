@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaCache
 import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.data.votes.VotesRepository
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
@@ -28,7 +29,12 @@ class AlpacaPartiesRepository {
         }
     }
 
-    fun getPartyVotes(district: District) {
+    suspend fun fetchPartyVotes(district: District) {
+        votesRepository.getPartyVotes(district)
+    }
+
+    suspend fun getPartyVotes(district: District) {
+        fetchPartyVotes(district)
         _partiesVotes.update {
             votesRepository.getDistrictVotes(district)
                 .map { districtVote ->
@@ -40,13 +46,17 @@ class AlpacaPartiesRepository {
     }
 
     suspend fun getPartiesInfo() {
-        _partiesInfo.update {
-            alpacaPartiesDataSource.fetchAlpacaData()
+        val cachedParties = AlpacaCache.alpacaParties.value
+        if (cachedParties.isNotEmpty()) {
+            _partiesInfo.update { cachedParties }
+        } else {
+            val fetchedAlpacaData = alpacaPartiesDataSource.fetchAlpacaData()
+            _partiesInfo.update {
+                fetchedAlpacaData
+            }
+            AlpacaCache.alpacaParties.update {
+                fetchedAlpacaData
+            }
         }
     }
-
-    fun getPartiesVotes() {
-        votesRepository.getPartiesVotes()
-    }
-
 }

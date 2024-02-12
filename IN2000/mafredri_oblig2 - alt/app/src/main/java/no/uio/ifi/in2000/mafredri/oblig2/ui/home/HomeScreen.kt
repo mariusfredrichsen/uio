@@ -69,7 +69,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     val snackbarHostState = remember { SnackbarHostState() }
 
     var isExpanded by remember { mutableStateOf(false) }
-    val districts: List<String> = listOf("District One", "District Two", "District Three")
+    val districts: List<String> = listOf("District One", "District Two", "District Three", "All Districts")
     var selectedDistrict by remember { mutableStateOf("") }
 
     Scaffold(
@@ -129,6 +129,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                                         0 -> homeScreenViewModel.getPartyVotes(District.ONE)
                                         1 -> homeScreenViewModel.getPartyVotes(District.TWO)
                                         2 -> homeScreenViewModel.getPartyVotes(District.THREE)
+                                        3 -> homeScreenViewModel.getPartyVotes(District.ALL)
                                     }
                                 },
                                 modifier = Modifier.fillMaxWidth()

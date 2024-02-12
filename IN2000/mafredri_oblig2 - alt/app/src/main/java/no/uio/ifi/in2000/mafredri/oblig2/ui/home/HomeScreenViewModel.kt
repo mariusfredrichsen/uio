@@ -33,7 +33,6 @@ class HomeScreenViewModel: ViewModel() {
 
     init {
         viewModelScope.launch {
-            alpacaPartiesRepository.getPartiesVotes()
             alpacaPartiesRepository.getPartiesInfo()
         }
     }
