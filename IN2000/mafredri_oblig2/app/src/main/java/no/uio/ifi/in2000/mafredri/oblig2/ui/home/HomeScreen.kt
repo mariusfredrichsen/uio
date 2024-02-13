@@ -1,13 +1,6 @@
 package no.uio.ifi.in2000.mafredri.oblig2.ui.home
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.ContextParams
-import android.os.Build
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -43,16 +36,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
-import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 
 

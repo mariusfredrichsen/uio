@@ -1,8 +1,6 @@
 package no.uio.ifi.in2000.mafredri.oblig2.data.alpacas
 
-import android.util.Log
 import io.ktor.client.call.body
-import io.ktor.client.plugins.onDownload
 import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 import kotlinx.coroutines.runBlocking

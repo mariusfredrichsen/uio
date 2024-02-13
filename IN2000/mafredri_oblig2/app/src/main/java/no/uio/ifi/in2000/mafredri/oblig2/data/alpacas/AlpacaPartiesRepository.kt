@@ -1,12 +1,9 @@
 package no.uio.ifi.in2000.mafredri.oblig2.data.alpacas
 
-import android.util.Log
-import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient
 import no.uio.ifi.in2000.mafredri.oblig2.data.votes.VotesRepository
 import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District

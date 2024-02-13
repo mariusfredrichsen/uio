@@ -1,10 +1,7 @@
 package no.uio.ifi.in2000.mafredri.oblig2.data.votes
 
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import no.uio.ifi.in2000.mafredri.oblig2.model.alpacas.PartyInfo
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.DistrictVotes
 
