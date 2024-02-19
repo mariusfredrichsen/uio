@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -64,6 +65,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
+
         if (alpacaPartiesUIState.partiesInfo.isEmpty()) {
             scope.launch {
                 val result = snackbarHostState
@@ -79,7 +81,6 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
             }
         } else {
             snackbarHostState.currentSnackbarData?.dismiss()
-        }
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -103,10 +104,10 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                             .fillMaxWidth()
                             .padding(top = 16.dp)
                     )
-                    ExposedDropdownMenu(
+                    DropdownMenu(
                         expanded = isExpanded,
                         onDismissRequest = { isExpanded = false },
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier.exposedDropdownSize()
                     ) {
                         districts.filter { it != selectedDistrict }.forEach { district ->
                             DropdownMenuItem(
@@ -120,8 +121,8 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                                         2 -> homeScreenViewModel.getPartyVotes(District.THREE)
                                     }
                                 },
-                                modifier = Modifier.fillMaxWidth()
-                            )
+
+                                )
                         }
                     }
                 }
@@ -171,5 +172,6 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                 }
             }
         }
+    }
 
 }
