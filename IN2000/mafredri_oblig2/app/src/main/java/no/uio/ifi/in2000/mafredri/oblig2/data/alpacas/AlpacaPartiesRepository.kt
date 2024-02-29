@@ -16,8 +16,10 @@ class AlpacaPartiesRepository {
 
     private val _partiesInfo = MutableStateFlow<List<PartyInfo>>(listOf())
     private val _partiesVotes = MutableStateFlow<List<PartyVote>>(listOf())
+    private val _selectedDistrict = MutableStateFlow<String>("")
     fun loadPartiesInfo(): StateFlow<List<PartyInfo>> = _partiesInfo.asStateFlow()
     fun loadPartiesVotes(): StateFlow<List<PartyVote>> = _partiesVotes.asStateFlow()
+    fun loadSelectedDistrict(): StateFlow<String> = _selectedDistrict.asStateFlow()
 
     fun getPartyInfo(id: String) {
         _partiesInfo.update { it ->
@@ -42,8 +44,14 @@ class AlpacaPartiesRepository {
         }
     }
 
-    fun getPartiesVotes() {
+    suspend fun getPartiesVotes() {
         votesRepository.getPartiesVotes()
+    }
+
+    fun selectDistrict(district: String) {
+        _selectedDistrict.update {
+            district
+        }
     }
 
 }

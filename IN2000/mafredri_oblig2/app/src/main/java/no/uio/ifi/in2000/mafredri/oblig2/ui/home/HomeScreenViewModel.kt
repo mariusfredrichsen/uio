@@ -16,10 +16,12 @@ class HomeScreenViewModel: ViewModel() {
 
     val alpacaPartiesUIState: StateFlow<AlpacaPartiesUIState> = combine(
         alpacaPartiesRepository.loadPartiesInfo(),
-        alpacaPartiesRepository.loadPartiesVotes()
-    ) {partiesInfo, partiesVotes -> AlpacaPartiesUIState(
+        alpacaPartiesRepository.loadPartiesVotes(),
+        alpacaPartiesRepository.loadSelectedDistrict()
+    ) {partiesInfo, partiesVotes, selectedDistrict -> AlpacaPartiesUIState(
         partiesInfo = partiesInfo,
-        partiesVotes = partiesVotes
+        partiesVotes = partiesVotes,
+        selectedDistrict = selectedDistrict
     ) }
         .stateIn(
             viewModelScope,
@@ -37,6 +39,12 @@ class HomeScreenViewModel: ViewModel() {
     fun getPartyVotes(district: District) {
         viewModelScope.launch {
             alpacaPartiesRepository.getPartyVotes(district)
+        }
+    }
+
+    fun selectDistrict(district: String) {
+        viewModelScope.launch {
+            alpacaPartiesRepository.selectDistrict(district)
         }
     }
 }

@@ -13,34 +13,29 @@ import java.net.UnknownHostException
 class IndividualVotesDataSource {
     private val url1 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district1.json"
     private val url2 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district2.json"
+    private fun getPartyIds() = listOf("1", "2", "3", "4")
 
-    fun fetchIndividualVotesOne(): List<DistrictVotes> {
-        val individualVotes: List<IndividualVote>
-        runBlocking {
-            individualVotes = try {
-                val httpResponse: HttpResponse = AlpacaClient.client.get(url1)
-                httpResponse.body()
-            } catch (e: UnknownHostException ){
-                listOf()
-            }
+    suspend fun fetchIndividualVotesOne(): List<DistrictVotes> {
+        val individualVotes: List<IndividualVote> = try {
+            val httpResponse: HttpResponse = AlpacaClient.client.get(url1)
+            httpResponse.body()
+        } catch (e: UnknownHostException ){
+            listOf()
         }
-        return listOf("1", "2", "3", "4").map {id ->
+        return getPartyIds().map {id ->
             DistrictVotes(District.ONE, id, individualVotes.count { it.id == id })
         }
 
     }
 
-    fun fetchIndividualVotesTwo(): List<DistrictVotes> {
-        val individualVotes: List<IndividualVote>
-        runBlocking {
-            individualVotes = try {
+    suspend fun fetchIndividualVotesTwo(): List<DistrictVotes> {
+        val individualVotes: List<IndividualVote> = try {
                 val httpResponse: HttpResponse = AlpacaClient.client.get(url2)
                 httpResponse.body()
-            } catch (e: UnknownHostException) {
+        } catch (e: UnknownHostException) {
                 listOf()
-            }
         }
-        return listOf("1", "2", "3", "4").map {id ->
+        return getPartyIds().map {id ->
             DistrictVotes(District.TWO, id, individualVotes.count { it.id == id })
         }
 

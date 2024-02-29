@@ -44,6 +44,7 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
+import java.lang.Thread.sleep
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,13 +61,13 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
 
     var isExpanded by remember { mutableStateOf(false) }
     val districts: List<String> = listOf("District One", "District Two", "District Three")
-    var selectedDistrict by remember { mutableStateOf("") }
 
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
 
         if (alpacaPartiesUIState.partiesInfo.isEmpty()) {
+            sleep(1000)
             scope.launch {
                 val result = snackbarHostState
                     .showSnackbar(
@@ -93,7 +94,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     OutlinedTextField(
-                        value = selectedDistrict,
+                        value = alpacaPartiesUIState.selectedDistrict,
                         onValueChange = {},
                         placeholder = { Text(text = "Choose a district") },
                         readOnly = true,
@@ -109,22 +110,22 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                         onDismissRequest = { isExpanded = false },
                         modifier = Modifier.exposedDropdownSize()
                     ) {
-                        districts.filter { it != selectedDistrict }.forEach { district ->
+                        districts.filter { it != alpacaPartiesUIState.selectedDistrict }.forEach { district ->
                             DropdownMenuItem(
                                 text = { Text(text = district, modifier = Modifier.fillMaxWidth()) },
                                 onClick = {
-                                    selectedDistrict = district
+                                    homeScreenViewModel.selectDistrict(district)
                                     isExpanded = false
-                                    when (districts.indexOf(selectedDistrict)) {
-                                        0 -> homeScreenViewModel.getPartyVotes(District.ONE)
-                                        1 -> homeScreenViewModel.getPartyVotes(District.TWO)
-                                        2 -> homeScreenViewModel.getPartyVotes(District.THREE)
-                                    }
                                 },
 
                                 )
                         }
                     }
+                }
+                when (alpacaPartiesUIState.selectedDistrict) {
+                    "District One" -> homeScreenViewModel.getPartyVotes(District.ONE)
+                    "District Two" -> homeScreenViewModel.getPartyVotes(District.TWO)
+                    "District Three" -> homeScreenViewModel.getPartyVotes(District.THREE)
                 }
                 VoteList(homeScreenViewModel)
                 LazyColumn {

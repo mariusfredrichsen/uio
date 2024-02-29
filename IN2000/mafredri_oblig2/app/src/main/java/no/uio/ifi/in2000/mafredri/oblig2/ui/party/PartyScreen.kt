@@ -30,46 +30,50 @@ import coil.compose.AsyncImage
 @Composable
 fun PartyScreen(partyViewModel: PartyViewModel = viewModel(), partyId: String, navController: NavController) {
         Column {
-        PartyTopAppBar(navController)
-        val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
+            PartyTopAppBar(navController)
+            val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
 
-        partyViewModel.getPartyInfo(partyId)
+            partyViewModel.getPartyInfo(partyId)
 
-        LazyColumn {
-            items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
+            if (alpacaPartiesUIState.partiesInfo.size == 1) {
 
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(Color(android.graphics.Color.parseColor(partyInfo.color)))
-                ) {
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                    ) {
-                        Text(text = partyInfo.name)
+                LazyColumn {
 
-                        AsyncImage(
-                            model = partyInfo.img,
-                            contentDescription = null,
+                    items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
+
+                        Box(
                             modifier = Modifier
-                                .clip(shape = RoundedCornerShape(50))
-                                .size(200.dp),
-                            contentScale = ContentScale.Crop
+                                .fillMaxWidth()
+                                .background(Color(android.graphics.Color.parseColor(partyInfo.color)))
+                        ) {
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                            ) {
+                                Text(text = partyInfo.name)
+
+                                AsyncImage(
+                                    model = partyInfo.img,
+                                    contentDescription = null,
+                                    modifier = Modifier
+                                        .clip(shape = RoundedCornerShape(50))
+                                        .size(200.dp),
+                                    contentScale = ContentScale.Crop
+                                )
+
+                                Text(text = "Leder: " + partyInfo.leader)
+
+                            }
+                        }
+                        Text(
+                            text = partyInfo.description,
+                            modifier = Modifier
+                                .padding(4.dp)
                         )
-
-                        Text(text = "Leder: " + partyInfo.leader)
-
                     }
                 }
-                Text(
-                    text = partyInfo.description,
-                    modifier = Modifier
-                        .padding(4.dp)
-                )
             }
         }
-    }
 }

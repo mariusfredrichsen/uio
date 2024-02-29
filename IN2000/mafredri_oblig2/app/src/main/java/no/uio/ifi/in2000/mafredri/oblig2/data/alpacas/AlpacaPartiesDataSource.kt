@@ -14,16 +14,12 @@ class AlpacaPartiesDataSource {
     private val url: String = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/alpacaparties.json"
 
     suspend fun fetchAlpacaData(): List<PartyInfo> {
-        val parties: Parties
-
-        runBlocking {
-            parties = try {
-                val httpResponse: HttpResponse = AlpacaClient.client.get(url)
-                httpResponse.body()
-            } catch (e: UnknownHostException) {
-                println(e)
-                Parties(listOf())
-            }
+        val parties: Parties = try {
+            val httpResponse: HttpResponse = AlpacaClient.client.get(url)
+            httpResponse.body()
+        } catch (e: UnknownHostException) {
+            println(e)
+            Parties(listOf())
         }
         return parties.parties
 

@@ -14,15 +14,12 @@ import java.net.UnknownHostException
 class AggregatedVotesDataSource {
 
     private val url3 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district3.json"
-    fun fetchAggregatedVotesThree(): List<DistrictVotes> {
-        val partiesVote: PartiesVote
-        runBlocking {
-            partiesVote = try {
-                val httpResponse: HttpResponse = AlpacaClient.client.get(url3)
-                httpResponse.body()
-            } catch (e: UnknownHostException) {
-                PartiesVote(listOf())
-            }
+    suspend fun fetchAggregatedVotesThree(): List<DistrictVotes> {
+        val partiesVote: PartiesVote = try {
+            val httpResponse: HttpResponse = AlpacaClient.client.get(url3)
+            httpResponse.body()
+        } catch (e: UnknownHostException) {
+            PartiesVote(listOf())
         }
         return partiesVote.parties.map {
             DistrictVotes(District.THREE, it.partyId, it.votes)

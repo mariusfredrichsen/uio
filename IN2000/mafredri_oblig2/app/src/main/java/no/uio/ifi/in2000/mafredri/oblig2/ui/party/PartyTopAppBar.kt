@@ -20,7 +20,7 @@ fun PartyTopAppBar(navController: NavController) {
         },
         navigationIcon = {
             IconButton(
-                onClick = { navController.navigate("homescreen") }
+                onClick = { navController.popBackStack() }
             ) {
                 Icon(
                     imageVector = Icons.Filled.ArrowBack,
