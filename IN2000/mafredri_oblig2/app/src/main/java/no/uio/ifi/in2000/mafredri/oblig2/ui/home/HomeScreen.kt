@@ -37,12 +37,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
+import no.uio.ifi.in2000.mafredri.oblig2.data.AlpacaClient.isInternetAvailable
 import no.uio.ifi.in2000.mafredri.oblig2.model.votes.District
 import java.lang.Thread.sleep
 
@@ -66,7 +68,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) {
 
-        if (alpacaPartiesUIState.partiesInfo.isEmpty()) {
+        if (!isInternetAvailable(LocalContext.current)) {
             sleep(1000)
             scope.launch {
                 val result = snackbarHostState

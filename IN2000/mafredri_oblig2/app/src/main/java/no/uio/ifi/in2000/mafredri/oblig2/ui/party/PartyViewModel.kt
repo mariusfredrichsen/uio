@@ -1,5 +1,6 @@
 package no.uio.ifi.in2000.mafredri.oblig2.ui.party
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.SharingStarted
@@ -26,6 +27,7 @@ class PartyViewModel(): ViewModel() {
         viewModelScope.launch {
             alpacaPartiesRepository.getPartiesInfo()
         }
+        Log.i("TEST", "ASDASD")
     }
 
     fun getPartyInfo(id: String) {
