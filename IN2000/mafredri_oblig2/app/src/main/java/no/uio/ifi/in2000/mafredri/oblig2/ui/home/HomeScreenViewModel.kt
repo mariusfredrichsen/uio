@@ -1,5 +1,6 @@
 package no.uio.ifi.in2000.mafredri.oblig2.ui.home
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.SharingStarted

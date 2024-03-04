@@ -1,5 +1,6 @@
 package no.uio.ifi.in2000.mafredri.oblig2.data.alpacas
 
+import android.util.Log
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -41,10 +42,12 @@ class AlpacaPartiesRepository {
     suspend fun getPartiesInfo() {
         _partiesInfo.update {
             alpacaPartiesDataSource.fetchAlpacaData()
+
         }
     }
 
     suspend fun getPartiesVotes() {
+        Log.i("YYYY", "marius er kjempe snill")
         votesRepository.getPartiesVotes()
     }
 

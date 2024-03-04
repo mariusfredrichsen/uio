@@ -1,6 +1,7 @@
 package no.uio.ifi.in2000.mafredri.oblig2.ui.party
 
 import android.util.Log
+import androidx.annotation.MainThread
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.SharingStarted
@@ -23,14 +24,21 @@ class PartyViewModel(): ViewModel() {
             initialValue = AlpacaPartiesUIState()
         )
 
-    init {
+    private var initialized = false
+
+    // This function is idempotent provided it is only called from the UI thread.
+    @MainThread
+    fun initialize(partyId: String) {
+        if(initialized) return
+        initialized = true
+
         viewModelScope.launch {
             alpacaPartiesRepository.getPartiesInfo()
+            getPartyInfo(partyId)
         }
-        Log.i("TEST", "ASDASD")
     }
 
-    fun getPartyInfo(id: String) {
+    private fun getPartyInfo(id: String) {
         viewModelScope.launch {
             alpacaPartiesRepository.getPartyInfo(id)
         }

@@ -33,7 +33,7 @@ fun PartyScreen(partyViewModel: PartyViewModel = viewModel(), partyId: String, n
             PartyTopAppBar(navController)
             val alpacaPartiesUIState by partyViewModel.alpacaPartiesUIState.collectAsState()
 
-            partyViewModel.getPartyInfo(partyId)
+            partyViewModel.initialize(partyId)
 
             if (alpacaPartiesUIState.partiesInfo.size == 1) {
 
