@@ -1,20 +1,28 @@
 ```mermaid
-    flowchart LR
-        Start((Start))
+    flowchart TB
+        landingpage --> landingpage
+        landingpage --> openapi
+        landingpage --> conformance
+        landingpage --> collections
 
-        PartiesScreen
-        PartyScreen
+        collections --> collection/1
+        collections --> collection/2
+        collections --> collection/3
 
-        End((End))
+        collection/2 --> position
+        collection/2 --> area
+        collection/2 --> locations
+        collection/2 --> items
 
-        Start --> PartiesScreen
+        collection/3 --> instances
+        instances --> instance/1
+        instances --> instance/2
+        instances --> instance/3
 
-        PartiesScreen --> PartyScreen
-
-        PartyScreen --> PartiesScreen
-
-        PartiesScreen --> End
-        PartyScreen --> End
+        instance/2 --> position'
+        instance/2 --> area'
+        instance/2 --> locations'
+        instance/2 --> items'
 
 
 
