@@ -17,7 +17,13 @@ Datamodellen finnes [her](https://docs.api.met.no/doc/oceanforecast/datamodel).
 
 ### Målinger (Propterties)
 Målingene i en instans vil bestå av en meta som sier noe om hva slags type måleenheter som blir brukt.
-(sett inn tabell)
+| NAVN | MÅLEENHET | BESKRIVELSE |
+|--------|--------|-------|
+| sea_surface_wave_height | meter (m) | Significant wave height defined as the average of the highest one-third (33%) of waves (measured from trough to crest) |
+| sea_surface_wave_from_direction | vinkel (degree) | Wave direction follows meteorological convention. It is given as the direction the waves are coming from (0° is north, 90° east, etc.) |
+| sea_water_speed | fart (m/s) | Speed of sea water (current) |
+| sea_water_to_direction | vinkel (degree) | Sea water (current) direction follows oceanographic convention. It is given as the direction the sea water is moving towards (0° is north, 90° east, etc.) |
+| sea_water_temperature | temperatur (celcius) | Surface temperature of sea water |
 
 
 
@@ -27,7 +33,7 @@ Målingene i en instans vil bestå av en meta som sier noe om hva slags type må
 title: OceanForecast API
 ---
 flowchart TB
-    API(API-endpoint)
+    API((API-endpoint))
 
 
     API -->|String|type1[type]
