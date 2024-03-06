@@ -16,7 +16,7 @@ Det er også påkrevd å ha med lat og lon i api-kallet. Hvor denne grensen er, 
 Datamodellen finnes [her](https://docs.api.met.no/doc/oceanforecast/datamodel).
 
 ### Målinger (Propterties)
-Målingene i en instans vil bestå av en meta som sier noe om hva slags type måleenheter som blir brukt. asd
+Målingene i en instans vil bestå av en meta som sier noe om hva slags type måleenheter som blir brukt.
 | NAVN | MÅLEENHET | BESKRIVELSE |
 |--------|--------|-------|
 | sea_surface_wave_height | meter (m) | Significant wave height defined as the average of the highest one-third (33%) of waves (measured from trough to crest) |
