@@ -18,3 +18,5 @@ tom_mengde.add("3")
 print(tom_mengde)
 
 print("ASDASDASD")
+
+print("ASDASDASD")
