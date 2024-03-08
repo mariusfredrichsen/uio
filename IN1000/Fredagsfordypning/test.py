@@ -19,7 +19,7 @@ print(tom_mengde)
 
 print("ASDASDASD")
 
-print("ASDASDASD")
+print("ASD")
 
 print("ASDASD")
 
