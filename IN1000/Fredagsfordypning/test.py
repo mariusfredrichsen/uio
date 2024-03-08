@@ -23,4 +23,4 @@ print("ASDASDASD")
 
 print("ASDASD")
 
-print("ASDASDASD")
+print("ASD")
