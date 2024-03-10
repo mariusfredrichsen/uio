@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,6 +67,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 
     val ktor_version = "2.3.8"
     implementation("io.ktor:ktor-client-core:$ktor_version")
@@ -76,5 +78,11 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.5.0")
 
-    implementation("co.yml:ycharts:2.1.0")
+    // For Jetpack Compose.
+    implementation("com.patrykandpatrick.vico:compose:2.0.0-alpha.11")
+
+    implementation("com.patrykandpatrick.vico:compose-m2:2.0.0-alpha.11")
+    implementation("com.patrykandpatrick.vico:compose-m3:2.0.0-alpha.11")
+    implementation("com.patrykandpatrick.vico:core:2.0.0-alpha.11")
+    implementation("com.patrykandpatrick.vico:views:2.0.0-alpha.11")
 }
