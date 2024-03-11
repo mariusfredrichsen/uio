@@ -8,9 +8,9 @@ import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.request.get
 import io.ktor.serialization.gson.gson
 import io.ktor.util.appendIfNameAbsent
-import no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast.OceanForecastAPI
-import no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast.OceanForecastData
-import no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast.TimeLocationData
+import no.uio.ifi.in2000.mafredri.in2000apitest.model.oceanforecast.OceanForecastAPI
+import no.uio.ifi.in2000.mafredri.in2000apitest.model.oceanforecast.OceanForecastData
+import no.uio.ifi.in2000.mafredri.in2000apitest.model.oceanforecast.TimeLocationData
 import java.net.UnknownHostException
 
 class OceanForecastDataSource(

@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast
+package no.uio.ifi.in2000.mafredri.in2000apitest.model.oceanforecast
 
 data class OceanForecastData(
     val coordinates: List<Double>,

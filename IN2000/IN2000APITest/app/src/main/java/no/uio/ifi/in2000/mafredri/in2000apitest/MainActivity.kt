@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import no.uio.ifi.in2000.mafredri.in2000apitest.ui.LineChart.LineChartScreen
+import no.uio.ifi.in2000.mafredri.in2000apitest.ui.linechart.LineChartScreen
 import no.uio.ifi.in2000.mafredri.in2000apitest.ui.theme.IN2000APITestTheme
 
 class MainActivity : ComponentActivity() {

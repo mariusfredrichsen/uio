@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.in2000apitest.ui.LineChart
+package no.uio.ifi.in2000.mafredri.in2000apitest.ui.linechart
 
 import android.util.Log
 import androidx.annotation.MainThread
@@ -11,8 +11,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import no.uio.ifi.in2000.mafredri.in2000apitest.data.OceanForecastRepository
-import no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast.OceanForecastData
-import no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast.TimeLocationData
+import no.uio.ifi.in2000.mafredri.in2000apitest.model.oceanforecast.OceanForecastData
+import no.uio.ifi.in2000.mafredri.in2000apitest.model.oceanforecast.TimeLocationData
 
 data class OceanForecastUIState(
     val oceanForecastData: OceanForecastData =
