@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.in2000apitest.model.Oceanforecast
+package no.uio.ifi.in2000.team7.boatbuddy.model.oceanforecast
 
 data class Properties(
     val meta: Meta,
