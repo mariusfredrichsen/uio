@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.in2000apitest.ui.linechart
+package no.uio.ifi.in2000.mafredri.in2000apitest.ui.wavechart
 
 import android.util.Log
 import androidx.compose.foundation.layout.Column
@@ -38,7 +38,7 @@ import java.time.format.DateTimeFormatter
 
 
 @Composable
-fun LineChartScreen(
+fun OceanForecastScreen(
     oceanForecastViewModel: OceanForecastViewModel = viewModel()
 ) {
     oceanForecastViewModel.initialize("59", "10")

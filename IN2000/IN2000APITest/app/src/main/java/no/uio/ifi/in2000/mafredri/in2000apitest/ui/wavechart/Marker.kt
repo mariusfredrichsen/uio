@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.in2000apitest.ui.linechart
+package no.uio.ifi.in2000.mafredri.in2000apitest.ui.wavechart
 
 import android.annotation.SuppressLint
 import android.graphics.Typeface
