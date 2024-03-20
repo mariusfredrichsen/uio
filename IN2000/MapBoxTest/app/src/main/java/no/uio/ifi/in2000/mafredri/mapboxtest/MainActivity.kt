@@ -1,6 +1,7 @@
 package no.uio.ifi.in2000.mafredri.mapboxtest
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -36,7 +37,30 @@ import no.uio.ifi.in2000.mafredri.mapboxtest.ui.theme.MapBoxTestTheme
 import java.lang.ref.WeakReference
 
 class MainActivity : ComponentActivity() {
-    private lateinit var permissionsManager: PermissionsManager
+
+
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+
+        setContent {
+            Surface(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                MapScreen()
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+/*    private lateinit var permissionsManager: PermissionsManager
 
     private val onIndicatorBearingChangedListener = OnIndicatorBearingChangedListener {
         mapView.mapboxMap.setCamera(CameraOptions.Builder().bearing(it).build())
@@ -158,4 +182,5 @@ class MainActivity : ComponentActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
+    */
 }
