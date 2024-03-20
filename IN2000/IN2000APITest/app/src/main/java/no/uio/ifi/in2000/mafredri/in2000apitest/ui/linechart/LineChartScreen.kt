@@ -62,8 +62,8 @@ fun LineChartScreen(
                 }
             }
         }
-
     }
+
     val dateTimeFormatter =
         DateTimeFormatter.ofPattern("HH")
     val bottomAxis = AxisValueFormatter<AxisPosition.Horizontal.Bottom> { x, chartValues, _ ->
