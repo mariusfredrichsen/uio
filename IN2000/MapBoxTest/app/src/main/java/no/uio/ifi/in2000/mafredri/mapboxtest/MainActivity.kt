@@ -1,69 +1,37 @@
 package no.uio.ifi.in2000.mafredri.mapboxtest
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
 import com.mapbox.geojson.Point
+import com.mapbox.maps.CameraOptions
 import com.mapbox.maps.MapView
-import com.mapbox.maps.extension.compose.MapboxMap
+import com.mapbox.maps.MapboxExperimental
+import com.mapbox.maps.Style
 import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
+import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
+import com.mapbox.maps.plugin.PuckBearing
+import com.mapbox.maps.plugin.animation.flyTo
+import com.mapbox.maps.plugin.locationcomponent.createDefault2DPuck
+import com.mapbox.maps.plugin.locationcomponent.location
+import com.mapbox.maps.plugin.viewport.viewport
 import no.uio.ifi.in2000.mafredri.mapboxtest.ui.map.MapScreen
 import no.uio.ifi.in2000.mafredri.mapboxtest.ui.theme.MapBoxTestTheme
 
 class MainActivity : ComponentActivity() {
 
-    lateinit var permissionsManager: PermissionsManager
-    lateinit var mapView: MapView
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
 
-    var permissionsListener: PermissionsListener = object : PermissionsListener {
-        override fun onExplanationNeeded(permissionsToExplain: List<String>) {
-
-        }
-
-        override fun onPermissionResult(granted: Boolean) {
-            if (granted) {
-                // Permission sensitive logic called here, such as activating the Maps SDK's LocationComponent to show the device's location
-            } else {
-                // User denied the permission
-            }
-        }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        mapView = MapView(this)
-        setContentView(mapView)
-
-        if (PermissionsManager.areLocationPermissionsGranted(this)) {
-            // Permission sensitive logic called here, such as activating the Maps SDK's LocationComponent to show the device's location
-        } else {
-            permissionsManager = PermissionsManager(permissionsListener)
-            permissionsManager.requestLocationPermissions(this)
-        }
-
-        setContent {
-            MapBoxTestTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    MapScreen(mapView = mapView)
-                }
-            }
-        }
 
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    }
 }

@@ -13,21 +13,34 @@ import com.mapbox.maps.MapboxExperimental
 import com.mapbox.maps.extension.compose.MapboxMap
 import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
 import androidx.activity.ComponentActivity.*
+import androidx.compose.foundation.layout.Box
+import com.mapbox.maps.MapInitOptions
+import com.mapbox.maps.Style
+import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
 
 @OptIn(MapboxExperimental::class)
 @Composable
-fun MapScreen(mapView: MapView) {
+fun MapScreen(viewportState: MapViewportState) {
 
     val context = LocalContext.current
 
+
+
     Column {
-        mapView.mapboxMap.setCamera(
-            CameraOptions.Builder()
-                .center(Point.fromLngLat(10.7, 59.9))
-                .pitch(0.0)
-                .zoom(10.0)
-                .bearing(0.0)
-                .build()
-        )
+        Box(modifier = Modifier) {
+            MapboxMap(
+                mapViewportState = viewportState,
+                mapInitOptionsFactory = { ctx ->
+                    MapInitOptions(
+                        context = ctx,
+                        styleUri = Style.DARK,
+                        cameraOptions = CameraOptions.Builder()
+                            .center(Point.fromLngLat(0.0, 0.0))
+                            .zoom(0.0)
+                            .build()
+                    )
+                }
+            )
+        }
     }
 }
