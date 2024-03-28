@@ -10,16 +10,19 @@ import androidx.compose.ui.Modifier
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
 import com.mapbox.geojson.Point
+import com.mapbox.maps.CameraOptions
 import com.mapbox.maps.MapView
+import com.mapbox.maps.MapboxExperimental
 import com.mapbox.maps.extension.compose.MapboxMap
 import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
+import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
 import no.uio.ifi.in2000.mafredri.mapboxtest.ui.map.MapScreen
 import no.uio.ifi.in2000.mafredri.mapboxtest.ui.theme.MapBoxTestTheme
 
 class MainActivity : ComponentActivity() {
 
     lateinit var permissionsManager: PermissionsManager
-    lateinit var mapView: MapView
+
 
     var permissionsListener: PermissionsListener = object : PermissionsListener {
         override fun onExplanationNeeded(permissionsToExplain: List<String>) {
@@ -38,9 +41,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mapView = MapView(this)
-        setContentView(mapView)
-
         if (PermissionsManager.areLocationPermissionsGranted(this)) {
             // Permission sensitive logic called here, such as activating the Maps SDK's LocationComponent to show the device's location
         } else {
@@ -55,13 +55,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MapScreen(mapView = mapView)
+                    MapScreen()
                 }
             }
         }
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
