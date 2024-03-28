@@ -43,6 +43,7 @@ import com.mapbox.maps.ViewAnnotationAnchor
 import com.mapbox.maps.dsl.cameraOptions
 import com.mapbox.maps.extension.compose.MapEffect
 import com.mapbox.maps.extension.compose.MapboxMap
+<<<<<<< HEAD
 import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
 import com.mapbox.maps.extension.compose.annotation.ViewAnnotation
 import com.mapbox.maps.extension.compose.annotation.generated.CircleAnnotation
@@ -191,6 +192,39 @@ fun MapScreen() {
             },
             animationOptions = MapAnimationOptions.mapAnimationOptions { duration(2500) },
         )
+=======
+import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
+import androidx.activity.ComponentActivity.*
+import androidx.compose.foundation.layout.Box
+import com.mapbox.maps.MapInitOptions
+import com.mapbox.maps.Style
+import com.mapbox.maps.extension.compose.animation.viewport.rememberMapViewportState
+
+@OptIn(MapboxExperimental::class)
+@Composable
+fun MapScreen(viewportState: MapViewportState) {
+
+    val context = LocalContext.current
+
+
+
+    Column {
+        Box(modifier = Modifier) {
+            MapboxMap(
+                mapViewportState = viewportState,
+                mapInitOptionsFactory = { ctx ->
+                    MapInitOptions(
+                        context = ctx,
+                        styleUri = Style.DARK,
+                        cameraOptions = CameraOptions.Builder()
+                            .center(Point.fromLngLat(0.0, 0.0))
+                            .zoom(0.0)
+                            .build()
+                    )
+                }
+            )
+        }
+>>>>>>> bee45a9ad47668183f329120515279a0ddc572b1
     }
 }
 
