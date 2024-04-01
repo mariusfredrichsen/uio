@@ -1,15 +1,15 @@
 import numpy as np
 from netCDF4 import Dataset
 import matplotlib.pyplot as plt
+import matplotlib.colors
+from time import time
 
 import sys
-print(sys.getrecursionlimit())
-
 sys.setrecursionlimit(10000000)
 
-print(sys.getrecursionlimit())
 
-
+start = time()
+print("fetching data from .nc file at:", time() - start)
 ncfile = Dataset('norway_oceandata.nc', 'r')
 
 lats = ncfile.variables['lat'][:]
@@ -18,10 +18,11 @@ longs = ncfile.variables['lon'][:]
 elevation = ncfile.variables['elevation'][:, :]
 
 class Node:
-    def __init__(self, lat, lon, elevation):
+    def __init__(self, lat, lon, elevation, color):
         self.lat = lat
         self.lon = lon
         self.elevation = elevation
+        self.color = color
         self.neighbours = []
     
     def __str__(self):
@@ -36,22 +37,28 @@ class Node:
     def __hash__(self):
         return hash((self.lat, self.lon)) 
 
-downfactor = 2 
+downfactor = 5
     
 new_lats = lats[::downfactor]
 new_longs = longs[::downfactor]
 
 matrix = []
 land = set()
+# elevation above ground 0 to 3000 -> 50 to 255
+# elevation under ground 0 to -1000 -> 255 to 50
+cp1 = time()
+print("done! segment took: ", cp1 - start, "s")
+print("creating graph at:", time() - start, "s")
+def map_value(v, A, B, a, b):
+    return a + (v - A) * (b - a) / (B - A)
 
 for i in range(0, len(lats), downfactor):
     row = []
     for j in range(0, len(longs), downfactor):
-        color = 'blue'
+        color = [0, 0, map_value(elevation[i][j], 0, -9000, 1, 0.2)]
         if elevation[i][j] > 0:
-            
-            color = 'green'
-        row.append(Node(lats[i], longs[j], color))
+            color = [0, map_value(elevation[i][j], 0, 3000, 0.2, 1), 0]
+        row.append(Node(lats[i], longs[j], elevation[i][j], color))
     matrix.append(row)
 
 for i in range(len(matrix)):
@@ -61,6 +68,8 @@ for i in range(len(matrix)):
                 if (abs(x) + abs(y) != 0 and (i + x >= 0 and i + x < len(matrix) and j + y >= 0 and j + y < len(matrix[i]))):
                     matrix[i][j].neighbours.append(matrix[i+x][j+y])
 
+cp2 = time()
+print("done! segment took: ", cp2 - cp1, "s")
 # print(" | ".join([str(node) for node in matrix[1][1].neighbours]))
 
 #from (tip of the oslo fjord) 59.888526, 10.676412
@@ -76,14 +85,21 @@ lon_index = np.abs(new_longs - 10.250544).argmin()
 end_node_one = matrix[lat_index][lon_index]
 
 #to (right besides bergen) 60.404079, 5.282634
-lat_index = np.abs(new_lats - 60.404079).argmin()
-lon_index = np.abs(new_longs - 5.282634).argmin()
+# lat_index = np.abs(new_lats - 60.404079).argmin()
+# lon_index = np.abs(new_longs - 5.282634).argmin()
 
-end_node_one = matrix[lat_index][lon_index]
+# end_node_one = matrix[lat_index][lon_index]
+
+#to (alta) 69.952094, 23.184178
+# lat_index = np.abs(new_lats - 69.952094).argmin()
+# lon_index = np.abs(new_longs - 23.184178).argmin()
+
+# end_node_one = matrix[lat_index][lon_index]
+
 
 flat_matrix = [x for y in matrix for x in y]
 for node in flat_matrix:
-    if node.elevation == "green" and node != end_node_one:
+    if node.elevation > -5 and node != end_node_one: # 5 meters below sea level
         land.add(node)
 
 # start av bredde først
@@ -103,8 +119,18 @@ def bfs_rec(s, parents: dict, queue: list) -> list:
 import heapq
 
 def heuristic(current, goal):
-    "Manhattan distance heuristic for A*."
     return abs(current.lat - goal.lat) + abs(current.lon - goal.lon)
+
+def calculate_priority(current, other):
+    value = 2
+    if current.lat == other.lat or current.lon == other.lon:
+        value = 1
+    
+    # adjust to stay near areas with 20m deep waters
+    if other.elevation < -30 or other.elevation > -10:
+        value += 1
+    
+    return value
 
 def a_star(start, goal):
     open_set = []
@@ -120,8 +146,9 @@ def a_star(start, goal):
             return parents
 
         for neighbor in current_node.neighbours:
-            if neighbor not in land:  # Assuming 'land' is a global set of blocked nodes
-                tentative_g_cost = g_costs[current_node] + 1  # Replace with the actual movement cost if required
+            if neighbor not in land:
+                tentative_g_cost = g_costs[current_node] + calculate_priority(current_node, neighbor)
+                
                 if neighbor not in g_costs or tentative_g_cost < g_costs[neighbor]:
                     parents[neighbor] = current_node
                     g_costs[neighbor] = tentative_g_cost
@@ -129,7 +156,9 @@ def a_star(start, goal):
                     if all(n != neighbor for _, n in open_set):
                         heapq.heappush(open_set, (f_costs[neighbor], neighbor))
 
-
+cp3 = time()
+print("segment took: ", cp3 - cp2, "s")
+print("creating path at:", time() - start, "s")
 parents = a_star(start_node, end_node_one)
 
 # for node in parents:
@@ -142,7 +171,14 @@ while t:
     t = parents[t]
 
 path = path[::-1]
-    
+
+cp4 = time()
+print("segment took: ", cp4 - cp3, "s")
+print("done! path created at:", time() - start)
+
+file = open("path.txt", "w")
+for node in path:
+    file.write(f"Point.fromLngLat({node.lon}, {node.lat}),\n")
 # def braeth_first_search(s: Node):
 #     visited = set([s])
 #     queue = [s]
@@ -161,15 +197,17 @@ path = path[::-1]
 # print(matrix)
 
 
-for node in flat_matrix:
-    if node in path:
-        node.elevation = "white"
+# for node in flat_matrix:
+#     if node in path:
+#         node.color = [1,1,1]
         
-x = [n.lon for n in flat_matrix]
-y = [n.lat for n in flat_matrix]
-colors = [n.elevation for n in flat_matrix]
+# x = [n.lon for n in flat_matrix]
+# y = [n.lat for n in flat_matrix]
+# colors = [n.color for n in flat_matrix]
 
+# for color in colors:
+#     if any([0 < i > 1 for i in color]):
+#         print(color)
+# plt.scatter(x, y, c=colors)
 
-plt.scatter(x, y, c=colors)
-
-plt.show()
+# plt.show()
