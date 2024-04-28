@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.mafredri.oblig_1
+package no.uio.ifi.in2000.mafredri.oblig1
 
 import no.uio.ifi.in2000.mafredri.oblig1.ui.unitconverter.ConverterUnits
 import no.uio.ifi.in2000.mafredri.oblig1.ui.unitconverter.converter
