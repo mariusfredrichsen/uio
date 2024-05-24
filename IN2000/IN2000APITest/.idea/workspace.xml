@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01d6fed3-3fd3-4914-ab4d-66fd1c7da144" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Bil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Bil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Bilkollektiv.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Bilkollektiv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Dialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Dialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/ElPersonbil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/ElPersonbil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/ElVarebil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/ElVarebil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Elektrisk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Elektrisk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/GUIDialog$1JaKnapp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/GUIDialog$1JaKnapp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/GUIDialog$1NeiKnapp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/GUIDialog$1NeiKnapp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/GUIDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/GUIDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Personbil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Personbil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/TastaturDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/TastaturDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Varebil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/Varebil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/1/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/Hund.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/Kull.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/KullListe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/MøkkaEksamen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IN1010/Eksamenstrening/Tidspunkt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/androidTest/java/no/uio/ifi/in2000/mafredri/a2forelesning/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/java/no/uio/ifi/in2000/mafredri/a2forelesning/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/java/no/uio/ifi/in2000/mafredri/a2forelesning/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/java/no/uio/ifi/in2000/mafredri/a2forelesning/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/java/no/uio/ifi/in2000/mafredri/a2forelesning/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/app/src/test/java/no/uio/ifi/in2000/mafredri/a2forelesning/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2Forelesning/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/no/uio/ifi/in2000/mafredri/in2000apitest/ui/linechart/LineChartScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/no/uio/ifi/in2000/mafredri/in2000apitest/ui/linechart/LineChartScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/androidTest/java/no/uio/ifi/in2000/mafredri/jokes/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/data/JokesClient.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/data/JokesDatasource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/data/JokesRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/model/Joke.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/model/Jokes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/ui/home/HomeScreen.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/ui/home/HomeViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/ui/home/JokesUIState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/java/no/uio/ifi/in2000/mafredri/jokes/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/app/src/test/java/no/uio/ifi/in2000/mafredri/jokes/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jokes/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MapBoxTest/app/src/main/java/no/uio/ifi/in2000/mafredri/mapboxtest/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MapBoxTest/app/src/main/java/no/uio/ifi/in2000/mafredri/mapboxtest/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OceanForecast.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/8.2/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/apk/debug/app-debug.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/apk/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/apk_ide_redirect_file/debug/redirect.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/app_metadata/debug/app-metadata.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_4/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_5/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_6/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_7/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_0/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_1/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_2/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_3/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_4/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_5/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_6/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_840d0ca75e5668b6735ce26ebcb635f05f91de8add80a4ac54689e3deddd7d13_bucket_7/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/dex_number_of_buckets_file/debug/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+5N0ZML7oSZp87Qs+219_vwOGKI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+p_ZwvaaRBbBix1wakXduMrvC8M=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0yL3xYO_v+DrtcWc5n65CQIPCRI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1L9IoPoeyK+FDs6hSwRNtzOncno=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/24SJaydpbuwUDYKv1v6dqfnhG68=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2dQ7ObBecs9gxOC9mcC_DEsXNEg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3dN7jNwvLG8UG+KjPzO+e16FXqA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3jk11SKPbMx+ZIssNvqqDkM3iik=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6jDmetbhFOP6mGvVPdNT9LForaQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6lASybuv6pbCibmJISpegQxFDsI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/7zAFwsGOFvNmlmmexzBDcg3N9xI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BoJRycAK5u_IhYJAf8WZMFJ_OHc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CBexhejaLuLvzWu7sHzcOVSLK6I=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CqmskisSaUtWpAWXOdUpCq4lqCE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EGy9FTePgNP_1T8MdgBEL18OJY4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FTPoFa8OG9Bsut5M6j6P5QjEgGU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FhpS1_GLMLi_PsiLgqzPe_tlf4Q=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HRayYBR1c+Tz8xOIj4DAundEfIc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/J6HUE71TJljPF08pvlUA1yiJj8U=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/JQl53hnyvBzSTFWfTUQlNxAuHek=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/JjchQyduNfyVeA_GOtXfoNOUjuY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/L8lq5B5EtSJf1hLBBDURC5DDhE8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/L9YgxqdXfnDpJuVTNJTNIlPP_Rw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/MFVXzCoiZCFTtzxUutf0hwUVTDY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/MsxSS9jrtexeCGhIbBfl7C5BFAM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/N2fSX8dkV2AYyyhOpbYBED5eB2U=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NfmQ0M5xzZy1RxHF0r6eCkK_ImQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RlkbO1J2sF8dZwhGYrI8i+Bo5eA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/SIcehXD3M6XOm+o0_13TwoGz1mg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Ta5EPAfossgAtc4FnqnmpcTZcKo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Tn0c9XkGd6K40Mi49mI5SCZctoI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/U8bHGdDgrS7N9DbE_f_KzEmeo4A=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/V+j4bbdGOs9nK6a+UpHmwFoKjQ4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/W6JR3AegwjcYNGrLMKHCA2GO3KI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WlbkcZRXbSorHdjAQnHq7wf0yy4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/X9t9WudOAkZMwZpoLLUEbqii8Ps=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Y5EcaNPbw0CnSRHdoVZN172uJb8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YY9sQi_QOFOQCxfPGR49u6uvELY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_+qbYm_pVSW8F1Kx41QzrUhcDDw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/arnNMGQ0jVFhxssCRKGuF72YL50=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/btlxXcvslNWcYtt8JHwxzAVc2Qc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cB1FqGPL293AUihRUunAlWrgrzg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cJnJIIG19cNXuS1pJqO+A1_dWWI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cb+J7Dricen5lEfW_gOv1eM_b+0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/dLNiQA1oPMHGDoAkJW5JOTbjY1Q=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fBHGbFZUt0SUh9aVBItcpvc1UCw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/iNcrvnDkJqmsD6EbuNF9KrAaB3I=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ixt6+hsi0rpSWjZd8fGPyRZYmx0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/j3iXgucAwgWLKLRvCCxHljX+zJ8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/jbW5u6u_CGGEw+cWNCSdfi5Q9Xw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/k7AiSUT9yJAsyrVUxX8GCygcDXw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/kgchaUGqo4Ns8P4gZr++qAaAmr0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/lHW6n6ciIlIWGvynzwFj2G1paPY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/lTV7GUHn5zDvsZdo9zl3IhCSWBo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/lk2r4rLV_1Nk8lovGW2N9x2RY8k=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/llhezuI1eRfAe6ZR6LirvjBQp_s=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/mVnzJL+eoi0Xqj3Ec6e7DnUl2UY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/pG_6TLdoeDBrCOkyv_oEhb_LaRw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/prDKNsB7qeSRfc1mwStMc8fc7eE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/r9vKu1Y0Kg6dXjRdyzSv59AZvaI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/rCQUDbiGb2Y44NRvR4v9Y13odvI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/s3h7dKJZGTa6F8GvvR2zbFUbK4Q=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/sA6ioxpNwDe00NnCGVSP5JB0_00=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/sT+DXnYvY4qbk68oG3GosjMQuqM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/t2dUKe3C1G2iDiIcp0HXa6hncCU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/u32rdLqN0Ot64vwX8+HA5hO4Pj0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/u8vbpe8r6DbGfm1sgcP42mO0lM4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uOExr7fw+TPjKwqIHXt22qbGjF4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uRPVy0Q352cOIYeNI3Tyevm9J4E=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ukEwa_6ZCzsd_9jy1ATxCLpcrrE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/v+gjgaDeqddIFdR3KA05hHpr7B4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vXlN7xIl5obxSLkuWkMQJcn3uRE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vheZsnvA2RcqZW3l3uewJeDQ3x8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/wE+IxVQS+MqA_rPcL4GLtZaWCUA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/x8_3fGMRzOU3YIVZQp4uEH8SBqo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/xitlJKvCfHbSa0zdXl9oJfr0wwQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yPGLcANqbJ5TWFIZwbTYH89idRA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-af/values-af.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-am/values-am.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-as/values-as.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-az/values-az.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-be/values-be.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-da/values-da.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-de/values-de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-el/values-el.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es/values-es.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-et/values-et.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-in/values-in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-is/values-is.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-it/values-it.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-km/values-km.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-my/values-my.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-or/values-or.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-si/values-si.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-te/values-te.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-th/values-th.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/java_res/debug/out/META-INF/app_debug.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/local_only_symbol_list/debug/R-def.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_java_res/debug/base.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_manifests/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/drawable_ic_launcher_foreground.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-am_values-am.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-as_values-as.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-az_values-az.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-be_values-be.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-bg_values-bg.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-bs_values-bs.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ca_values-ca.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-en-rAU_values-en-rAU.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-en-rCA_values-en-rCA.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-en-rIN_values-en-rIN.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-en-rXC_values-en-rXC.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-es-rUS_values-es-rUS.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-et_values-et.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-eu_values-eu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-fa_values-fa.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-gl_values-gl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-hy_values-hy.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-is_values-is.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ka_values-ka.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-kk_values-kk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-km_values-km.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ky_values-ky.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-lo_values-lo.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-lt_values-lt.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-lv_values-lv.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-mk_values-mk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-mn_values-mn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-my_values-my.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ne_values-ne.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-or_values-or.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-pt-rBR_values-pt-rBR.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-si_values-si.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-sl_values-sl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-sq_values-sq.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-sr_values-sr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-sw_values-sw.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-uk_values-uk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-ur_values-ur.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-uz_values-uz.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-v16_values-v16.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values-zu_values-zu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/values_values.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/xml_backup_rules.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res/debug/xml_data_extraction_rules.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rCA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rXC.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/navigation_json/debug/navigation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_manifests/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-hdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-mdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-mdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-xxhdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-xxhdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/mipmap-xxxhdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/packaged_res/debug/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/processed_res/debug/out/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/a7ce7b58768cf529f045198693451a40a1e3bb35576b52b1c5995b56aeb214ab_7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem$CreateWorkout.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem$Home.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem$Workouts.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-2$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-3$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-4$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/CreateWorkoutScreenKt$CreateWorkoutScreen$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/CreateWorkoutScreenKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/HomeScreenKt$HomeScreen$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/HomeScreenKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1$2$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1$2$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1$2$3.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1$3.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/WorkoutsScreenKt$WorkoutsScreen$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/WorkoutsScreenKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ColorKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ThemeKt$SixpackComposeTheme$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ThemeKt$SixpackComposeTheme$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ThemeKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/project_dex_archive/debug/out/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/TypeKt.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/source_set_path_map/debug/file-map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/intermediates/variant_model/debug/variant_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem$CreateWorkout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem$Home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem$Workouts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/BottomBarItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt$lambda-4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ComposableSingletons$MainActivityKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/CreateWorkoutScreenKt$CreateWorkoutScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/CreateWorkoutScreenKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/HomeScreenKt$HomeScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/HomeScreenKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1$2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1$2$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$BottomBar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt$NavigationHost$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/MainActivityKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/WorkoutsScreenKt$WorkoutsScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/WorkoutsScreenKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ColorKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ThemeKt$SixpackComposeTheme$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ThemeKt$SixpackComposeTheme$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/ThemeKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/app/build/tmp/kotlin-classes/debug/no/uio/ifi/in2000/mafredri/sixpackcompose/ui/theme/TypeKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SixpackCompose/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/androidTest/java/no/uio/ifi/in2000/mafredri/truefalsequiz/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/java/no/uio/ifi/in2000/mafredri/truefalsequiz/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/java/no/uio/ifi/in2000/mafredri/truefalsequiz/Quiz.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/java/no/uio/ifi/in2000/mafredri/truefalsequiz/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/java/no/uio/ifi/in2000/mafredri/truefalsequiz/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/java/no/uio/ifi/in2000/mafredri/truefalsequiz/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/app/src/test/java/no/uio/ifi/in2000/mafredri/truefalsequiz/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrueFalseQuiz/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/androidTest/java/no/uio/in2000/duppeditt/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/java/no/uio/in2000/duppeditt/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/java/no/uio/in2000/duppeditt/model/github/GithubAPI.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/java/no/uio/in2000/duppeditt/model/github/GithubAPIItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/java/no/uio/in2000/duppeditt/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/java/no/uio/in2000/duppeditt/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/java/no/uio/in2000/duppeditt/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/app/src/test/java/no/uio/in2000/duppeditt/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../duppeditt/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pant-diagram.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\mariu\.android\avd\Medium_Phone_API_33.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dE6CWiadFa8L0WHgyvKhUBrDrk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ResourceManagerPrefKey.ModuleName": "IN2000APITest.app.main",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/mariu/Documents/git/uio/IN2000/IN2000APITest",
+    "settings.editor.selected.configurable": "actions.on.save"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mariu\Documents\git\uio\IN2000\IN2000APITest\app\src\main\java\no\uio\ifi\in2000\mafredri\in2000apitest\model\oceanforecast" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="no.uio.ifi.in2000.mafredri.in2000apitest.model.Oceanforecast" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="IN2000APITest.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01d6fed3-3fd3-4914-ab4d-66fd1c7da144" name="Changes" comment="" />
+      <created>1709560763168</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709560763168</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

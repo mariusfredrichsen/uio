@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "no.uio.ifi.in2000.mafredri.in2000apitest.app-mergeDebugResources-51:/values-v28/values-v28.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\mariu\\.gradle\\caches\\transforms-3\\0105d90cec5de5c58983367a4526fcb1\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,397",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,392,584"
+                    }
+                }
+            ]
+        }
+    ]
+}
