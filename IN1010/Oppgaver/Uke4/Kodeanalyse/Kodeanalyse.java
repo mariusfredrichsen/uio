@@ -9,11 +9,17 @@ class Kodeanalyse {
         // Z z2 = (Z) new X();
 
 
-        S s = new B();
+        S s = new Q();
 
         B b = (B) s;
 
+        Q q = (Q) s;
+
         System.out.println(s instanceof S);
+        System.out.println(s instanceof B);
+
+        System.out.println(b instanceof S);
+        System.out.println(b instanceof B);
         
         // System.out.println(q instanceof B); // false
         // System.out.println(q instanceof G); // true
