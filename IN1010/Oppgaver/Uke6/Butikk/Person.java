@@ -20,4 +20,9 @@ public class Person {
     }
 
 
+    public String toString() {
+        return String.format("%s kjøper %s.", navn, gjenstand);
+    }
+
+
 }

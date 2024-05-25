@@ -1,10 +1,10 @@
-public class KvadratStabel {
+public class GeneriskStabel <E> {
     Node hode;
 
 
 
-    public void leggPaa(Kvadrat k) {
-        Node newNode = new Node(k);
+    public void leggPaa(E element) {
+        Node newNode = new Node(element);
         if (hode == null) {
             hode = newNode;
         } else {
@@ -13,10 +13,10 @@ public class KvadratStabel {
         }
     }
 
-    public Kvadrat taAv() {
-        Node tmp = hode;
+    public E taAv() {
+        E out = hode.element;
         hode = hode.neste;
-        return tmp.element;
+        return out;
     }
 
     public Boolean erTom() {
@@ -24,11 +24,13 @@ public class KvadratStabel {
     }
 
     private class Node{
-        private Kvadrat element;
+        private E element;
         private Node neste;
 
-        private Node(Kvadrat element) {
+        private Node(E element) {
             this.element = element;
         }
     }
+
+
 }
