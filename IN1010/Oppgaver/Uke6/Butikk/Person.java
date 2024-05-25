@@ -1,7 +1,7 @@
 public class Person {
-    private String navn;
-    private String gjenstand;
-    private Person neste;
+    public String navn;
+    public String gjenstand;
+    public Person neste;
 
     public Person(String navn, String gjenstand) {
         this.navn = navn;
@@ -15,7 +15,7 @@ public class Person {
 
     public Person hent() {
         Person tmp = this.neste;
-        this.neste = null
+        this.neste = null;
         return tmp;
     }
 

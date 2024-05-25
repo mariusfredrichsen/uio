@@ -8,7 +8,11 @@ public class TestBokhylle {
         String[] titler = {"De doedes tjern", "Doppler", "Doppler", "Misery", "Gone with the Wind"};
 
         for (int i = 0; i < titler.length; i++) {
-            bokhylle.settInn(new Bok(titler[i]));
+            try {
+                bokhylle.settInn(new Bok(titler[i]));
+            } catch (IkkeMerPlassException | DuplikatException e) {
+                System.out.println(e);
+            }
         }
 
         System.out.println("\nSkriver ut boeker:");
