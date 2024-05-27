@@ -3,7 +3,7 @@ import java.io.File;
 import java.util.Scanner;
 
 
-public class Oblig2Del1 {
+public class Oblig2Del2 {
     
 
     public static void main(String[] args) {
