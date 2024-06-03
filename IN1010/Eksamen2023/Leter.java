@@ -13,15 +13,13 @@ public class Leter implements Runnable {
 
     @Override
     public void run() {
-        try {
-            for (Skinnegående s : tog) {
-                if (s.hentId().startsWith(startID)) {
-                    monitor.leggTil(s);
-                }
+        
+        for (Skinnegående s : tog) {
+            if (s.hentId().startsWith(startID)) {
+                monitor.leggTil(s);
             }
-            monitor.ferdigLeting();
-        } catch (InterruptedException e) {
-
         }
+        monitor.ferdigLeting();
+        
     }
 }

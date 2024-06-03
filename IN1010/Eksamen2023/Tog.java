@@ -21,7 +21,7 @@ public class Tog implements Iterable<Skinnegående> {
             s.forrige = siste;
             siste = s;
         }
-        størrelse++;
+        this.størrelse++;
     }
 
     // 3c
@@ -48,6 +48,7 @@ public class Tog implements Iterable<Skinnegående> {
             peker.neste = null;
         }
 
+        this.størrelse--;
         // er garantert til å være i listen
         return s;
     }
@@ -72,6 +73,7 @@ public class Tog implements Iterable<Skinnegående> {
             s.neste = første;
             første = s;
         }
+        this.størrelse++;
     }
 
     public int antPassasjervogner() {
@@ -89,7 +91,7 @@ public class Tog implements Iterable<Skinnegående> {
 
         for (Skinnegående s : this) {
             if (s instanceof Passasjervogn) {
-                vogner[teller++] = s;
+                vogner[teller++] = (Passasjervogn) s;
             }
         }
         
@@ -100,7 +102,7 @@ public class Tog implements Iterable<Skinnegående> {
         if (første == null || første == siste) return;
         Skinnegående peker = første;
         while (peker.neste != null) {
-            if (peker.hentId() != peker.neste.hentId()) throw new FeilSporvidde();
+            if (peker.hentId() != peker.neste.hentId()) throw new FeilSporvidde(peker.neste.hentId(), peker.neste.hentSporvidde());
             peker = peker.neste;
         }
     }
@@ -109,7 +111,7 @@ public class Tog implements Iterable<Skinnegående> {
         if (første == null) this.leggTil(s);
         else {
             this.sjekkSporvidde();
-            if (s.hentSporvidde() != første.hentSporvidde()) throw new FeilSporvidde();
+            if (s.hentSporvidde() != første.hentSporvidde()) throw new FeilSporvidde(s.hentId(), s.hentSporvidde());
             this.leggTil(s);
         }
     }

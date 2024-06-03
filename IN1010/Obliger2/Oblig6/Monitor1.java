@@ -6,4 +6,9 @@ public class Monitor1 {
     public Monitor1() {
         register = new SubsekvensRegister();
     }
+
+    register.
+
+
+
 }

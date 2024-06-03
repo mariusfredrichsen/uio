@@ -1,7 +1,5 @@
 public abstract class Vogn extends Skinnegående {
-    String id;
-    int sporvidde;
-    int lengde;
+    final int lengde;
 
     public Vogn(String id, int sporvidde, int lengde) {
         super(id, sporvidde);

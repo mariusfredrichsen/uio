@@ -23,7 +23,7 @@ public abstract class Skinnegående {
 
     public void sjekkSporvidde() throws FeilSporvidde {
         if (this.neste != null) {
-            if (this.hentSporvidde() != this.neste.hentSporvidde()) throw new FeilSporvidde();
+            if (this.hentSporvidde() != this.neste.hentSporvidde()) throw new FeilSporvidde(this.neste.hentId(), this.neste.hentSporvidde());
             neste.sjekkSporvidde();
         }
     }

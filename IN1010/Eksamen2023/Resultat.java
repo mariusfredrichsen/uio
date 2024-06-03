@@ -8,6 +8,14 @@ public class Resultat implements Runnable {
 
 
     public void run() {
-        
+        try {
+            while (true) {
+                Skinnegående s = monitor.hentNeste();
+                if (s == null) {
+                    return;
+                }
+                System.out.println(s.hentId());
+            }
+        } catch (InterruptedException e) {}
     }
 }
