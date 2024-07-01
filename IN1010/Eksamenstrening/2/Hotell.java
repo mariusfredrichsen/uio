@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 
 class Hotell implements Iterable<Rom> {
@@ -81,6 +82,8 @@ class Hotell implements Iterable<Rom> {
             }
             peker = peker.nesteR;
         }
+        String liste = new "ASD";
+        liste.
     }
 
     public class HotellIterator implements Iterator<Rom> {
