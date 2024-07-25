@@ -9,7 +9,7 @@ public class Monitor {
 
     public Monitor(int antTråder) {
         this.antTråder = antTråder;
-        
+
         lås = new ReentrantLock();
         sListe = new ArrayList<>();
         ikkeTomt = lås.newCondition();
@@ -25,9 +25,9 @@ public class Monitor {
         }
     }
 
-    // feil
+    // feil (fiksa)
     public void ferdigLeting() {
-        lås.lock(); 
+        lås.lock();
         try {
             antTråder--;
             ikkeTomt.signal();
@@ -36,14 +36,15 @@ public class Monitor {
         }
     }
 
-    // feil
+    // feil (fiksa)
     public Skinnegående hentNeste() throws InterruptedException {
         lås.lock();
         try {
             while (sListe.size() == 0 && antTråder > 0) {
                 ikkeTomt.await();
             }
-            if (sListe.size() != 0) return sListe.remove(0);
+            if (sListe.size() != 0)
+                return sListe.remove(0);
             return null;
         } finally {
             lås.unlock();

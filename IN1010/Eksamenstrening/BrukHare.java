@@ -4,22 +4,35 @@
 interface Egglegger {
 
     int antallEgg();
-} 
+}
 
 class Hare {
     final String navn;
-    Hare (String n) { navn = n; }
+
+    Hare(String n) {
+        navn = n;
+    }
 }
 
 class Påskehare extends Hare implements Egglegger {
     int antall;
-    Påskehare (String n, int ant) { super(n); antall = ant; }
 
-    @Override public int antallEgg() { return antall; }
+    Påskehare(String n, int ant) {
+        super(n);
+        antall = ant;
+    }
+
+    @Override
+    public int antallEgg() {
+        return antall;
+    }
 }
 
 class Høne implements Egglegger {
-    @Override public int antallEgg() { return 1; }
+    @Override
+    public int antallEgg() {
+        return 1;
+    }
 }
 
 class BrukHare {
@@ -28,15 +41,15 @@ class BrukHare {
         Hare sesonghare = new Påskehare("Påsen", 999);
         Høne burhøne = new Høne();
 
-        Påskehare h1 = sesonghare;
-        Egglegger h2 = sesonghare;
+        // Påskehare h1 = sesonghare;
+        // Egglegger h2 = sesonghare;
         Egglegger h3 = burhøne;
-        Egglegger h4 = (Egglegger)skogshare;
-        Påskehare h5 = (Påskehare)sesonghare;
-        Egglegger h6 = (Hare)sesonghare;
+        Egglegger h4 = (Egglegger) skogshare;
+        Påskehare h5 = (Påskehare) sesonghare;
+        // Egglegger h6 = (Hare) sesonghare;
         Hare h7 = sesonghare;
-        Egglegger h8 = (Egglegger)sesonghare;
-        Egglegger h9 = skogshare;
-        Påskehare h10 = (Påskehare)skogshare;
+        Egglegger h8 = (Egglegger) sesonghare;
+        // Egglegger h9 = skogshare;
+        Påskehare h10 = (Påskehare) skogshare;
     }
 }

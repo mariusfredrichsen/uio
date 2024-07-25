@@ -1,5 +1,5 @@
 public class Lastebil extends Bil {
-    const int MAKS_LASTEVEKT;
+    final int MAKS_LASTEVEKT;
 
     public Lastebil(int maksFart, int maksLastevekt) {
         super(maksFart);

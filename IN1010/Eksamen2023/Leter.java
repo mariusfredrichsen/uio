@@ -9,17 +9,15 @@ public class Leter implements Runnable {
         this.monitor = monitor;
     }
 
-
-
     @Override
     public void run() {
-        
+
         for (Skinnegående s : tog) {
             if (s.hentId().startsWith(startID)) {
                 monitor.leggTil(s);
             }
         }
         monitor.ferdigLeting();
-        
+
     }
 }

@@ -55,7 +55,7 @@ public class Kolonne implements Iterable<LederBil> {
     }
 
     public Iterator<LederBil> iterator() {
-        return new KolonneIterator();s
+        return new KolonneIterator();
     }
 
     private class KolonneIterator extends Iterator<LederBil> {

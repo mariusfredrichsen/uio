@@ -1,11 +1,10 @@
 public class Resultat implements Runnable {
-    
+
     Monitor monitor;
 
     public Resultat(Monitor monitor) {
         this.monitor = monitor;
     }
-
 
     public void run() {
         try {
@@ -16,6 +15,7 @@ public class Resultat implements Runnable {
                 }
                 System.out.println(s.hentId());
             }
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
     }
 }
