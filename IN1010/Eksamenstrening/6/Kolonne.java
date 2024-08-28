@@ -55,7 +55,7 @@ public class Kolonne implements Iterable<LederBil> {
     }
 
     public Iterator<LederBil> iterator() {
-        return new KolonneIterator();
+        return new KolonneIterator();s
     }
 
     private class KolonneIterator extends Iterator<LederBil> {
@@ -81,5 +81,7 @@ public class Kolonne implements Iterable<LederBil> {
         if (this.første != null) return this.første.finnMaksFartR();
         return null;
     }
+
+    
 
 }

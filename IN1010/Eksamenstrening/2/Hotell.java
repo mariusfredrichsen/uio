@@ -82,8 +82,8 @@ class Hotell implements Iterable<Rom> {
             }
             peker = peker.nesteR;
         }
-        String liste = new "ASD";
-        liste.
+        String liste = "ASD";
+        liste.char
     }
 
     public class HotellIterator implements Iterator<Rom> {
