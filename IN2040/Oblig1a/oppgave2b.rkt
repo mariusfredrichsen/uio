@@ -84,9 +84,11 @@
 ; Oppgave 3
 ; a)
 ( define ( add1 x )
+    (write x)
    ( + x 1 ) )
 
 ( define ( sub1 x )
+    (write x)
    ( - x 1 ) )
 
 ; b)
@@ -94,3 +96,61 @@
    (if (zero? y)
        x
        (plus (add1 x) (sub1 y))))
+
+; c)
+(define (plus x y)
+    (define (iter x y)
+        (if (zero? y)
+            x
+            (iter (add1 x) (sub1 y))))
+    (iter x y))
+; Det jeg definerte i oppgave b er en rekursiv funksjon som gjør rekursive kall.
+; Den kaller på seg selv og lager en call-stack som venter på at alle de andre
+; kallene er ferdige.
+; Derimot den i oppgave c vil være iterativ fordi den kaller på en hjelpe funksjon
+; som også som kaller på seg selv, men ikke venter på noe resultat
+; og heller bare returnerer resulutatet direkte til det første kallet på grunn av
+; call-tail-elimination som scheme klarer å gjøre.
+
+; d)
+(define (power-close-to b n)
+    (power-iter b n 1))
+(define (power-iter b n e)
+    (if (> (expt b e) n)
+        e
+        (power-iter b n (+ 1 e))))
+
+; =>
+
+(define (power-close-to b n)
+    (define (power-iter e)
+        (if (> (expt b e) n)
+            e
+            (power-iter (+ 1 e))))
+    (power-iter 1))
+; her har jeg satt inn power-iter prosedyren inn i power-close-to som
+; danner en blokk struktur. Jeg har også forkortet det slik at power-iter
+; tar bare et argument inn. Dette lar seg gjøre fordi den er definert
+; inne i power-close-to som holder på de lokale parameterne b og n
+
+; e
+(define (fib n)
+    (fib-iter 1 0 n))
+
+(define (fib-iter a b count)
+    (if (= count 0)
+        b
+        (fib-iter (+ a b) a (- count 1))))
+
+; =>
+
+(define (fib n)
+    (define (fib-iter a b count)
+        (if (= count 0)
+            b
+            (fib-iter (+ a b) a (- count 1))))
+    (fib-iter 1 0 n))
+; Jeg tror ikke det er mulig å forkorte det ettersom man er avhengig av å endre
+; n fra fib inne i fib-iter (count). Dersom man kunne ha endret n verdien til å være
+; en mindre i hver iterasjon så hadde det nok godt, men tviler på at det er
+; mulig her. Konkluderer med at den er så forkorta som mulig.
