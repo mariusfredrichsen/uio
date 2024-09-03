@@ -92,7 +92,7 @@
    ( - x 1 ) )
 
 ; b)
-( define ( plus x y)
+(define ( plus x y)
    (if (zero? y)
        x
        (plus (add1 x) (sub1 y))))
