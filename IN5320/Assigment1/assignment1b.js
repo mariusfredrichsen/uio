@@ -1,9 +1,10 @@
-var listElements = []
+var listElementsString = []
+var listElementsItem = []
 const uListElement = document.getElementById("cl")
 
 function addCountryButton() {
     const inputElement = document.getElementById('ci')
-    listElements.push(inputElement.value)
+    listElementsString.push(inputElement.value)
     inputElement.value = ""
     updateList()
 }
@@ -22,7 +23,7 @@ function addCountry(country) {
         textNode.remove()
         button.remove()
         listNode.remove()
-        listElements.map((listElement) => listElement === listNode)
+        listElementsString.splice(listElementsItem.indexOf(listNode), 1)
     }
     button.onmouseenter = () => {
         button.style = "background: red;"
@@ -34,10 +35,11 @@ function addCountry(country) {
     listNode.appendChild(button)
 
     uListElement.appendChild(listNode)
+    listElementsItem.push(listNode)
 }
 
 function checkStartOfCountry(country, searchWord) {
-    return country.startsWith(searchWord)
+    return country.toLowerCase().startsWith(searchWord.toLowerCase())
 }
 
 function filterList(list, searchWord) {
@@ -46,8 +48,18 @@ function filterList(list, searchWord) {
 
 function updateList() {
     uListElement.innerHTML = ""
+    listElementsItem = []
 
-    for (listElement of listElements) {
-        addCountry(listElement)
+    const inputText = document.getElementById("cf").value
+    const filteredListElement = filterList(listElementsString, inputText)
+
+    for (listElement of listElementsString) {
+        if (filteredListElement.includes(listElement)) {
+            addCountry(listElement)
+        } else {
+            listElementsItem.push(null)
+        }
     }
+    console.log(listElementsItem)
+    console.log(listElementsString)
 }
