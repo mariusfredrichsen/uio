@@ -1,0 +1,16 @@
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    margin: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 10px;
+}

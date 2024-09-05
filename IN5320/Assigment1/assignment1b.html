@@ -7,10 +7,15 @@
     </head>
 
     <body>
-        <div>
-            <input id="inputCountry" placeholder="Country">
-            <button onclick="add_country(get_input())">Add</button>
-            <ul id="countries"></ul>
+        <div class="column">
+            <div class="row">
+                <input id="ci" placeholder="Country">
+                <button onclick="addCountryButton()">Add</button>
+            </div>
+            <div class="row">
+                <input id="cf" placeholder="Search" oninput="">
+            </div>
+            <ul id="cl"></ul>
         </div>
         <script src="assignment1b.js"></script>
     </body>
