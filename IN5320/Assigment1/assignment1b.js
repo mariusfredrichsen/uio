@@ -1,12 +1,58 @@
 var listElementsString = []
 var listElementsItem = []
 const uListElement = document.getElementById("cl")
+var countries = []
+
+const countriesURL = "https://d6wn6bmjj722w.population.io/1.0/countries/"
+async function getCountries() {
+    try {
+        const response = await fetch(countriesURL)
+        if (!response.ok) {
+            throw new Error("Countries fetch error")
+        }
+        const data = await response.json()
+        return data.countries
+    } catch (error) {
+        console.error("There was an error: ", error)
+        return null
+    }
+}
+(async () => {
+    countries = await getCountries()
+})();
+
+console.log(countries)
 
 function addCountryButton() {
     const inputElement = document.getElementById('ci')
-    listElementsString.push(inputElement.value)
-    inputElement.value = ""
-    updateList()
+    if (countries.includes(inputElement.value)) {
+        fetch("https://d6wn6bmjj722w.population.io/1.0/population/" + inputElement.value + "/today-and-tomorrow/")
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("failed to fetch country population")
+            }
+            return response.json()
+        })
+        .then((data) => {
+            listElementsString.push(inputElement.value + " - " + data.total_population[0].population + " ")
+            inputElement.value = ""
+            updateList()
+        })
+        hideModalBox()
+    } else {
+        showModalBox(inputElement.value)
+    }
+}
+
+function showModalBox(inputError) {
+    const modalBox = document.getElementById("mb")
+    modalBox.style = "display: block;"
+    modalBox.textContent = inputError + " is not a valid input"
+}
+
+function hideModalBox() {
+    const modalBox = document.getElementById("mb")
+    modalBox.style = "display: none;"
 }
 
 function addCountry(country) {
@@ -47,13 +93,14 @@ function filterList(list, searchWord) {
 }
 
 function updateList() {
+    
     uListElement.innerHTML = ""
     listElementsItem = []
 
     const inputText = document.getElementById("cf").value
     const filteredListElement = filterList(listElementsString, inputText)
 
-    for (listElement of listElementsString) {
+    for (const listElement of listElementsString) {
         if (filteredListElement.includes(listElement)) {
             addCountry(listElement)
         } else {
