@@ -1,20 +1,11 @@
+
+
+
 a = [1,3,6,2,7,8,5]
 n = len(a)
-
-# for i in range(1, n):
-#     l = i
-#     print(a)
-#     while l > 0 and a[l-1] > a[l]:
-#         a[l-1], a[l] = a[l], a[l-1]
-#         print(a)
-#         l -= 1
-#     print()
-
-# print(a)
-
-
 for i in range(1, n):
     while i > 0 and a[i-1] > a[i]:
+        # her skjer byttet
         a[i-1], a[i] = a[i], a[i-1]
         i -= 1
 print(a)
