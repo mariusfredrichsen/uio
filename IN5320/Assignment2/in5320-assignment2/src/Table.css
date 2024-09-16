@@ -32,8 +32,7 @@ th a:active {
 	text-decoration: none;
 }
 
-th a,
-td a { 
-	display: block;
-	width: 100%;
-}
+/* th a {
+	pointer-events: none;
+	cursor: default;
+  } */

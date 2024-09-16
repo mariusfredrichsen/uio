@@ -13,7 +13,8 @@ function App() {
   const [searchQuery, setSearchQuery] = useState(); // Default = No search query
   const [pageNumber, setPageNumber] = useState(1); //Default = Page 1
   const [pageSize, setPageSize] = useState("10");
-  const [continent, setContinent] = useState("");
+  const [continents, setContinents] = useState([]);
+  const [orderBy, setOrderBy] = useState("Country:ASC");
 
   useEffect(() => {
     // All parameters are appended to this URL.
@@ -29,8 +30,10 @@ function App() {
 
     apiQuery = apiQuery + "&pageSize=" + pageSize;
 
-    if (continent) {
-      apiQuery = apiQuery + "&Continent=" + continent 
+    apiQuery = apiQuery + "&order=" + orderBy;
+
+    if (continents.length > 0) {
+      apiQuery = apiQuery + "&Continent=" + [...continents].join(",")
     }
 
     // Query data from API.
@@ -42,7 +45,7 @@ function App() {
         setApiData(data);
         console.log(data);
       });
-  }, [searchQuery, pageNumber, pageSize, continent]); // Array containing which state changes that should re-reun useEffect()
+  }, [searchQuery, pageNumber, pageSize, continents, orderBy]); // Array containing which state changes that should re-reun useEffect()
 
   const [value, setValue] = useState("");
 
@@ -60,14 +63,31 @@ function App() {
     setPageNumber(1);
   }
 
+  const filterContinents = (continent) => {
+    if (continents.includes(continent)) {
+      setContinents(continents.filter((c) => c !== continent));
+    } else {
+      setContinents([...continents, continent]);
+    }
+  }
+
+  const handleOrderBy = (order) => {
+    if (orderBy.includes(order) && (orderBy.includes("ASC"))) {
+      setOrderBy(order + ":DESC");
+    } else {
+      setOrderBy(order + ":ASC")
+    }
+  }
+
   return (
     <div className="App">
       <h1>Country lookup</h1>
       <input value={value} onChange={onChange} /><button onClick={onSearch} >Search</button>
 
-      <Table 
-        apiData={apiData} 
-        filterCountry={(x) => {console.log(x)}}
+      <Table
+        apiData={apiData}
+        filterContinent={(x) => { filterContinents(x) }}
+        orderBy={(x) => { handleOrderBy(x) }}
       />
 
       <Pager
@@ -94,9 +114,9 @@ function Pager(props) {
     return null;
   } else {
     return (
-      <div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <button disabled={(props.apiData.pager.page === 1)} onClick={props.decreasePage}>prev</button>
-        <p>Page {props.apiData.pager.page} of {props.apiData.pager.pageCount}</p>
+        <p style={{ margin: '5px' }}>Page {props.apiData.pager.page} of {props.apiData.pager.pageCount}</p>
         <button disabled={(props.apiData.pager.page === props.apiData.pager.pageCount)} onClick={props.increasePage}>next</button>
       </div>
     )

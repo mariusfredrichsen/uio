@@ -2,35 +2,49 @@ import React from 'react';
 import "./Table.css";
 
 
-function Table(props) {
-  console.log(props);
+function Table({ apiData, filterContinent, orderBy }) {
 
-  if (!props.apiData.results) {
+  if (!apiData.results) {
     // If the API request isn't completed return "loading...""
     return <p>Loading...</p>;
   } else {
     // Write your code here:
     return <>
-    <button onClick={props.filterCountry("ASD")}>ASD</button>
-    <table>
-      <tr>
-        <th>Country</th>
-        <th>Continent</th>
-        <th>Population</th>
-        <th>Population Growth</th>
-      </tr>
+      <div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          {
+            ["Asia", "Africa", "Europe", "North America", "South America", "Oceania"].map((continent) => (
+              <div key={continent} style={{ margin: '5px', display: 'flex', alignItems: 'center' }}>
+                <input type="checkbox" onClick={() => filterContinent(continent)} />
+                <label htmlFor={continent} >{continent}</label>
+              </div>
+            ))
+          }
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th onClick={() => orderBy("Country")} style={{ cursor: 'pointer' }}>Country</th>
+              <th onClick={() => orderBy("Continent")} style={{ cursor: 'pointer' }}>Continent</th>
+              <th onClick={() => orderBy("Population")} style={{ cursor: 'pointer' }}>Population</th>
+              <th onClick={() => orderBy("PopulationGrowth")} style={{ cursor: 'pointer' }}>Population Growth</th>
+            </tr>
+          </thead>
 
-      {props.apiData.results.map((result) => (
-        <tr>
-          <td>{result.Country}</td>
-          <td>{result.Continent}</td>
-          <td>{result.Population}</td>
-          <td>{result.PopulationGrowth}</td>
-        </tr>
-      ))}
+          <tbody>
+            {apiData.results.map((result) => (
+              <tr key={result.Country}>
+                <td>{result.Country}</td>
+                <td>{result.Continent}</td>
+                <td>{result.Population}</td>
+                <td>{result.PopulationGrowth}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>;
 
-
-    </table></>;
   }
 }
 
