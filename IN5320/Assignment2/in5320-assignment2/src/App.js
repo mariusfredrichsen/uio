@@ -13,6 +13,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState(); // Default = No search query
   const [pageNumber, setPageNumber] = useState(1); //Default = Page 1
   const [pageSize, setPageSize] = useState("10");
+  const [continent, setContinent] = useState("");
 
   useEffect(() => {
     // All parameters are appended to this URL.
@@ -28,6 +29,10 @@ function App() {
 
     apiQuery = apiQuery + "&pageSize=" + pageSize;
 
+    if (continent) {
+      apiQuery = apiQuery + "&Continent=" + continent 
+    }
+
     // Query data from API.
     console.log("Querying: " + apiQuery);
     fetch(apiQuery)
@@ -37,7 +42,7 @@ function App() {
         setApiData(data);
         console.log(data);
       });
-  }, [searchQuery, pageNumber, pageSize]); // Array containing which state changes that should re-reun useEffect()
+  }, [searchQuery, pageNumber, pageSize, continent]); // Array containing which state changes that should re-reun useEffect()
 
   const [value, setValue] = useState("");
 
@@ -60,7 +65,10 @@ function App() {
       <h1>Country lookup</h1>
       <input value={value} onChange={onChange} /><button onClick={onSearch} >Search</button>
 
-      <Table apiData={apiData} />
+      <Table 
+        apiData={apiData} 
+        filterCountry={(x) => {console.log(x)}}
+      />
 
       <Pager
         apiData={apiData}

@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Table.css";
 
 
@@ -9,7 +10,9 @@ function Table(props) {
     return <p>Loading...</p>;
   } else {
     // Write your code here:
-    return <table>
+    return <>
+    <button onClick={props.filterCountry("ASD")}>ASD</button>
+    <table>
       <tr>
         <th>Country</th>
         <th>Continent</th>
@@ -27,7 +30,7 @@ function Table(props) {
       ))}
 
 
-    </table>;
+    </table></>;
   }
 }
 

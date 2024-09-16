@@ -16,3 +16,24 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+th { 
+	padding: 4px; 
+	border: 1px solid #CCC;
+	overflow: hidden;
+	text-align: left;
+	vertical-align: middle;
+}
+
+th a:link,
+th a:visited,
+th a:hover,
+th a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+th a,
+td a { 
+	display: block;
+	width: 100%;
+}
