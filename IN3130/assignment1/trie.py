@@ -32,7 +32,7 @@ class Trie:
         """
         Initialize the Trie data structure here.
         """
-        self.root = Node("") # root node i empty
+        self.root = Node("") # root node is empty
         pass
 
     def insert(self, word: str) -> None:
@@ -64,7 +64,7 @@ class Trie:
             else: # letter isnt in the branch
                 new_node = Node(letter)
                 next_letters.append(new_node)
-                next_letters.sort(reverse=True)
+                next_letters.sort(reverse=True) # keep it in alphabetic order
                 self._insert_rec(word[1:], new_node)
 
 
@@ -92,6 +92,7 @@ class Trie:
         for _, next_node in enumerate(next_letters):
             if next_node.get_letter() == letter:
                 return self._look_up_rec(word[1:], next_node)
+        
         return len(word) == 0 and node.get_is_last_letter()
         
         

@@ -29,3 +29,15 @@ def main():
 
 
 main()
+
+
+
+def TOPsort(G):
+    V, E = G
+    
+    stack = []
+    output = []
+    
+    for v in V:
+        if v not in E.keys():
+            print(v)

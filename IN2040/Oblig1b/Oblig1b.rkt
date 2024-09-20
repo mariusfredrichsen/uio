@@ -34,13 +34,13 @@
 (define (take n items)
     (define (take-iter n in out)
         (if (or (zero? n) (null? in))
-            out
+            (reverse out) ; kaller på reverse, kunne ha laget en ny en
             (take-iter (- n 1) (cdr in) (cons (car in) out))
         )
     )
     ; vet ikke om det var nødvendig å ha det i rekkefølge så jeg bare kalte på
     ; funksjonen en ekstra gang
-    (take-iter n (take-iter n items '()) '())
+    (take-iter n items '())
 )
 
 ; c)

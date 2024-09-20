@@ -1,6 +1,6 @@
 # Mandatory Assignment 1, IN3130
 
-## Student Name:
+## Student Name: Marius Fredrichsen (mafredri)
 
 The code for this assignment is located in `src/main/java/assignment`, and the test files can be found in `src/test/java/assignment`.
 
@@ -90,7 +90,13 @@ To verify if we can achieve K, we can inspect table\[last position][K] to see if
 3. Detail how to populate the table using top-down dynamic programming, starting at table\[last position][K]. This should be a recursive, memoized algorithm 
 
 ### Answer 2A
-"fill in"
+1. If the first elements t_1 to t_i has a selection of elements from t that sums up to i in the matrix then it becomes true, else its false. If a cell above a cell is already true then there is already a selection that can be made. Therefor doesn't need to be calculated again, copy value above if it's true.
+
+2. To construct such a table ([n+1] x [T+1]) you have to fill in the base case values where the list is empty or the target value in the table is equal to zero. In this case the sum of a empty list is zero and therefor true in the first column. But in the first row, all the values will be false (except for the first element in that row) since sum of a empty list will always be zero and can never be i in any other cases. 
+
+After filling in the first row and the first column we can fill in the rows from left to right, starting from the top most empty row. First check if the above value is true, if true then set cell to true. Else check if there is a selection of the first i elements that makes up the target value in the column_j. This can be done by checking earlier values and see if the target value minus the new element in the sequence is true from before.
+
+3. Filling the table using a top-down approach requires a call to a recursive function that takes inn the whole list of elements as a argument and the target K. Fill inn the values in the table while the recursive function is running. The only places where the function is actually checking is getting filled. Everything else is None.
 
 ## 2B
 Implement the bottom-up algorithm that solves SOS. Assume K is never greater than S and never less than 1. The Class BottomUpSos precomputes 
@@ -118,6 +124,8 @@ L2 = {< M > | Turing machine M decides L1}
 L3 = {< M > | Turing machine M decides L2} 
 
 ## Answer L1
+sant, men hvordan skal man forklare?
+en sekvens av 0 ELLER 1 så vil det være en sekvens som består 1 eller flere 1 fordi den tar for seg alle mulige kombinasjoner av 1 eller 0 og ikke 1 og 0. Dermed finnes det for eksempel 111111111^_
 "fill in"
 
 ## Answer L2
