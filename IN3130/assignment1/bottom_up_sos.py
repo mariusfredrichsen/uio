@@ -50,9 +50,6 @@ class BottomUpSos:
                     output.append(self.sequence[i-1])
                     j -= self.sequence[i-1]
                     
-                    # if j < 1:
-                    #     return output
-                    
                     # find the first row with True value
                     while self.table[i-1][j] and i > 0:
                         i -= 1

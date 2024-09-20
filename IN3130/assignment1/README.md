@@ -96,7 +96,7 @@ To verify if we can achieve K, we can inspect table\[last position][K] to see if
 
 After filling in the first row and the first column we can fill in the rows from left to right, starting from the top most empty row. First check if the above value is true, if true then set cell to true. Else check if there is a selection of the first i elements that makes up the target value in the column_j. This can be done by checking earlier values and see if the target value minus the new element in the sequence is true from before.
 
-3. Filling the table using a top-down approach requires a call to a recursive function that takes inn the whole list of elements as a argument and the target K. Fill inn the values in the table while the recursive function is running. The only places where the function is actually checking is getting filled. Everything else is None.
+3. Filling the table using a top-down approach requires a call to a recursive function that takes in the index i and j as arguments and checks if the values at index i-1 and j-seq[i-1] is calculated. If not then go further up or further back in the table to calculate.
 
 ## 2B
 Implement the bottom-up algorithm that solves SOS. Assume K is never greater than S and never less than 1. The Class BottomUpSos precomputes 
