@@ -18,7 +18,7 @@ class TopDownSos:
         total_sum = sum(self.sequence)
         
         # creates table with first col as True and rest of 1 row as False, else None
-        table = [[True if j == 0 else (False if i == 0 else None) for j in range(total_sum)] for i in range(len(self.sequence)+1)]
+        table = [[True if j == 0 else (False if i == 0 else None) for j in range(total_sum+1)] for i in range(len(self.sequence)+1)]
         self.table = table
         
     def check_sum(self, k: int) -> Optional[List[int]]:
@@ -31,38 +31,40 @@ class TopDownSos:
         Returns:
             Optional[List[int]]: Returns a list of integers that make up the subsequence that can achieve the target sum k. Returns None if it can't be made.
         """
-        print(" ".join(["{:<5}".format(num) for num in range(sum(self.sequence))]))
-        for row in self.table:
-            print(" ".join(["False" if r == False else ("None " if r == None else "True ") for r in row]))
-        print("\n\n\n")
         self.check_sum_rec(len(self.sequence), k)
-        print(" ".join(["{:<5}".format(num) for num in range(-1, sum(self.sequence))]))
 
-        asd = iter([0] + self.sequence)
-        for row in self.table:
-            print("{:<5}".format(next(asd)), end="")
-            print(" ".join(["False" if r == False else ("None " if r == None else "True ") for r in row]))
+        for i in range(1, len(self.sequence)+1):
+            if self.table[i][k]:
+                # start finding the elements
+                output = []
+                i = i
+                j = k
+                while j > 0:
+                    output.append(self.sequence[i-1])
+                    j -= self.sequence[i-1]
+                    
+                    # find the first row with True value
+                    while self.table[i-1][j] and i > 0:
+                        i -= 1
+                        
+                return output
+        # for loop successfully ran and no valid selection exists
+        else:
+            return None
+
 
 
     def check_sum_rec(self, i: int, j: int):
-        print(i, j)
-        if j < 0:
-            return False
-
+        # calculated, return bool
         if self.table[i][j] != None:
-            print(i, j, self.table[i][j])
             return self.table[i][j]
         
         # not calculated
         else:
+            # fill the cells based on other cells
             if self.sequence[i-1] <= j:
                 self.table[i][j] = self.check_sum_rec(i - 1, j - self.sequence[i-1]) or self.check_sum_rec(i - 1, j)
                 return self.table[i][j]
             else:
                 self.table[i][j] = self.check_sum_rec(i - 1, j)
                 return self.table[i][j]
-
-
-asd = TopDownSos([1,5,6,3,10])
-
-asd.check_sum(11)
