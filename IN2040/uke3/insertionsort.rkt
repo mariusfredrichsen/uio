@@ -1,0 +1,21 @@
+(define (filter pred items)
+  (cond ((null? items) '())
+        ((pred (car items))
+         (cons (car items)
+               (filter pred (cdr items))))
+        (else (filter pred (cdr items)))))
+
+(define (insertionsort items)
+  (define (sort-iter in out)
+    (if (null? in)
+        out
+        (sort-iter (cdr in)
+                   (append (filter (lambda (x) (< x (car in))) out)
+                           (list (car in))
+                           (filter (lambda (x) (>= x (car in))) out))
+        )
+    ))
+  (sort-iter (cdr items) (list (car items))
+))
+
+(insertionsort '(5 2 1 3 4))

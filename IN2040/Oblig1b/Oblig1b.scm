@@ -1,5 +1,3 @@
-#lang racket
-
 ; Oppgave 1
 ; f)
 (define oppgave1f '(0 42 #t bar))
