@@ -1,13 +1,13 @@
 graph {
-	C -- A [label=6]
 	B -- A [label=13]
+	C -- A [label=6]
 	H -- C [label=20]
 	D -- B [label=1]
 	E -- C [label=8]
 	F -- E [label=2]
 	J -- E [label=18]
 	G -- H [label=15]
-	L -- J [label=4]
 	K -- J [label=16]
+	L -- J [label=4]
 	I -- G [label=5]
 }

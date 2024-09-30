@@ -94,7 +94,7 @@ def prim(G):
     parents = dict()
     
     while queue:
-        c, v, p = queue.pop(0)
+        _, v, p = queue.pop(0)
         if v not in parents:
             parents[v] = p
             for u in E[v]:

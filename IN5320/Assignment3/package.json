@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@dhis2/ui": "^9.11.5"
+  }
+}

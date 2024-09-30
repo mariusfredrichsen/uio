@@ -24,7 +24,6 @@ def build_graph(lines):
 
 def dijkstras(G, s):
     _, E, w = G
-    print(E)
     dist = defaultdict(lambda: float('inf'))
     dist[s] = 0
     queue = [(0, s)]
@@ -40,7 +39,6 @@ def dijkstras(G, s):
                 dist[u] = c
                 heappush(queue, (c, u))
                 parents[u] = v
-    print(dist)
     return parents
 
 def draw_dist_graph(G, parents, name):
