@@ -39,6 +39,8 @@ lines = [
 ]
 
 
+
+
 def buildgraph(lines):
     V = set()
     E = defaultdict(set)
@@ -271,7 +273,7 @@ def removenode(G, v):
 
     return newV, newE, w
 
-def isbiconnected_naive(G):
+def is_biconnected(G):
     V, E, w = G
     i = 0
     for v in V:
@@ -288,6 +290,9 @@ G = buildgraph(lines)
 print(isbiconnected_naive(removenode(G, 'C')))
 
 
+# Select Flight, Airline, To, Time, Information
+# FROM arrivals
+# WHERE 
 
 
 # draw_parents_graph(G, prim(G), "Spenntree")
