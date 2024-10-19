@@ -14,6 +14,7 @@ def build_graph(edges):
     return V, E
 
 
+<<<<<<< HEAD
 def dfsvisit(G, v, visited, stack):
     _, E = G
     visited.add(v)
@@ -22,40 +23,57 @@ def dfsvisit(G, v, visited, stack):
         if u not in visited:
             dfsvisit(G, u, visited, stack)
     stack.append(v)
+=======
+def dfsvisit(G, u, visited, stack):
+    V, E = G
+    visited.add(u)
+    for v in E[u]:
+        if v not in visited:
+            dfsvisit(G, v, visited, stack)
+    stack.append(u)
+>>>>>>> b5a5cf6f325df43b4280df4b19ab37661718ae69
 
 def dfstopsort(G):
     V, E = G
     visited = set()
     stack = []
-    for v in V:
-        if v not in visited:
-            dfsvisit(G, v, visited, stack)
+    for u in V:
+        if u not in visited:
+            dfsvisit(G, u, visited, stack)
     return stack
 
-def reverse_graph(G):
+def reversegraph(G):
     V, E = G
+<<<<<<< HEAD
     reE = defaultdict(set)
     for v in V:
         for u in E[v]:
             reE[u].add(v)
     return V, reE
         
+=======
+    rE = defaultdict(set)
+
+    for u in V:
+        for v in E[u]:
+            rE[v].add(u)
+    return V, rE
+>>>>>>> b5a5cf6f325df43b4280df4b19ab37661718ae69
 
 
-def strongly_connected_components(G):
+def stronglyconnectedcomponents(G):
     V, E = G
-    
+
     stack = dfstopsort(G)
-    
-    Gr = reverse_graph(G)
+
+    Gr = reversegraph(G)
     visited = set()
     components = []
-    
     while stack:
-        v = stack.pop()
-        if v not in visited:
+        u = stack.pop()
+        if u not in visited:
             component = []
-            dfsvisit(Gr, v, visited, component)
+            dfsvisit(Gr, u, visited, component)
             components.append(component)
 
     return components
@@ -63,24 +81,18 @@ def strongly_connected_components(G):
 def main():
     edges = [
         "A B",
-        "B C",
+        "B A",
+        "A E",
         "B E",
-        "B F",
-        "C D",
-        "C G",
+        "D E",
         "D C",
-        "D H",
-        "E A",
-        "E F",
-        "F G",
-        "G F",
-        "H D",
-        "H G"
+        "C D",
+        "B C"
     ]
 
     G = build_graph(edges)
     
-    print(strongly_connected_components(G))
+    print(stronglyconnectedcomponents(G))
 
 
 

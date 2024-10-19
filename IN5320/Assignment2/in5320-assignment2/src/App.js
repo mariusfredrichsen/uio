@@ -53,7 +53,7 @@ function App() {
     setValue(event.target.value);
   };
 
-  const onSearch = (event) => {
+  const onSearch = () => {
     setSearchQuery(value);
     setPageNumber(1);
   }
