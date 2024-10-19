@@ -273,13 +273,12 @@ def removenode(G, v):
 
 def isbiconnected_naive(G):
     V, E, w = G
-    i = 0
+
     for v in V:
         newV, newE, newW = newG = removenode(G, v)
         nodelist = depth_first_search(newG, next(iter(newV)))
-        i += 1
+
         if set(nodelist) != newV:
-            print(set(nodelist))
             return False
     return True
 

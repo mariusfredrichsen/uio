@@ -4,7 +4,7 @@ def build_graph(edges):
     V, E = set(), defaultdict(set)
     
     for edge in edges:
-        v, u, w = edge.strip().split()
+        v, u = edge.strip().split()
         
         V.add(v)
         V.add(u)
@@ -27,8 +27,8 @@ def seperationnodes_rec(E, v, d, depth, low, parents, seps):
         seperationnodes_rec(E, u, d + 1, depth, low, parents, seps)
         low[v] = min(low[u], low[v])
         
-        if low[v] >= d:
-            seps.add(u)
+        if low[u] >= d:
+            seps.add(v)
     
     
 def seperationnodes(G):
@@ -53,26 +53,20 @@ def seperationnodes(G):
 
 def main():
     lines = [
-        "A B 13",
-        "A C 6",
-        "B C 7",
-        "B D 1",
-        "C D 14",
-        "C E 8",
-        # "C H 20",
-        "D E 9",
-        "D F 3",
-        "E F 2",
-        "E J 18",
-        "G H 15",
-        "G I 5",
-        "G J 19",
-        "G K 10",
-        "H J 17",
-        "I K 11",
-        "J K 16",
-        "J L 4",
-        "K L 12",
+        "A B",
+        "A F",
+        "B A",
+        "B C",
+        "C B",
+        "C F",
+        "C D",
+        "C E",
+        "D C",
+        "D E",
+        "E D",
+        "E C",
+        "F A",
+        "F C"
     ]
     
     G = build_graph(lines)

@@ -21,7 +21,7 @@ def dfsvisit(G, v, visited, stack):
     for u in E[v]:
         if u not in visited:
             dfsvisit(G, u, visited, stack)
-    stack.insert(0, v)
+    stack.append(v)
 
 def dfstopsort(G):
     V, E = G
@@ -37,7 +37,7 @@ def reverse_graph(G):
     reE = defaultdict(set)
     for v in V:
         for u in E[v]:
-            reE[v].add(u)
+            reE[u].add(v)
     return V, reE
         
 
