@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "Oblig2"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
