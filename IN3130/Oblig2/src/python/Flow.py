@@ -67,6 +67,7 @@ class Flow:
         
         self.cut = self.bfs(0)
         self.cut.sort()
+        # only works if the self.solve function has already been called once
 
         return self.cut
     
