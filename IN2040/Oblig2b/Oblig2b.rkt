@@ -3,16 +3,16 @@
 ; Oppgave 1a
 
 (define make-counter
-    (lambda ()
+    (lambda (n)
         (let ((counter 0))
             (lambda ()
-                (set! counter (+ counter 1)) counter))))
+                (set! counter (+ counter n)) counter))))
 
 (define count 42)
 (define c1 (make-counter))
 (define c2 (make-counter))
 
-(c1) ; > 1
+(c1 34) ; > 1
 (c1) ; > 2
 (c1) ; > 3
 count  ; > 42
@@ -20,7 +20,6 @@ count  ; > 42
 
 ; Oppgave 1b
 ; tegning
-
 
 ; Oppgave 2a
 
