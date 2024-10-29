@@ -83,6 +83,48 @@
 (fib 4)
 
 
+; forsøk 2
+
+(define (memoize proc)
+  (let ((table (make-table)))
+    (lambda (n)
+      (or (lookup n table)
+          (let ((result (proc n)))
+            (insert! n result table)
+            result)))))
+
+(define (mem mode proc)
+  (let ((table (make-table)))
+    (define (memoized proc)
+      (let ((result (memoize proc)))
+             (insert! result proc table)
+             result))
+    (define (unmemoized proc)
+      (let ((first-proc (lookup proc table)))
+             (or first-proc
+                 proc)))
+    (define (dispatch mode)
+      (cond ((eq? mode 'memoize)
+           (memoized proc))
+          ((eq? mode 'unmemoize)
+           (unmemoized proc))))
+    (dispatch mode)))
+  
+
+
+
+(set! fib (mem 'unmemoize fib))
+(fib 3)
+(set! fib (mem 'unmemoize fib))
+(fib 3)
+(set! fib (mem 'memoize fib))
+(fib 3)
+(fib 5)
+(fib 8)
+(set! fib (mem 'unmemoize fib))
+(fib 4)
+
+
 
 ;; Under definerer vi et grensesnitt som lar oss jobbe med strømmer på
 ;; samme måte som i seksjon 3.4 i SICP.
@@ -188,3 +230,44 @@
   (cond ((null? list) #f)
         ((pred (car list)) #t)    ;; stopp så fort vi får #t
         (else (any? pred (cdr list)))))
+
+
+
+; Oppgave 2
+
+; a)
+(define (list-to-stream list)
+  (if (null? list)
+      the-empty-stream
+      (cons-stream (car list) (list-to-stream (cdr list)))))
+
+(define (stream-to-list stream . n)
+  (define (rec stream i)
+    (cond ((= i 0) '())
+          ((stream-null? stream) '())
+          (else (cons (stream-car stream)
+                      (rec (stream-cdr stream) (- i 1))))))
+  (rec stream (if (null? n) 15 (car n))))
+
+
+; b)
+(define (stream-take n stream)
+  (if (or (zero? n) (stream-null? stream))
+      the-empty-stream
+      (cons-stream (stream-car stream)
+                   (stream-take (- n 1)
+                                (stream-cdr stream)))))
+
+; c)
+; diskuter
+
+; d)
+(define (remove-duplicates stream)
+  (if (stream-null? stream)
+      the-empty-stream
+      (cons-stream (stream-car stream)
+                   (remove-duplicates
+                    (stream-filter
+                     (lambda (element)
+                       (not (eq? (stream-car stream) element)))
+                    (stream-cdr stream))))))
