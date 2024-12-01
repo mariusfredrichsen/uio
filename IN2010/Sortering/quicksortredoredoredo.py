@@ -21,19 +21,19 @@ def partition(A, low, high):
 
 def quicksort(A, low, high):
     if low >= high:
-        return A
+        return
     p = partition(A, low, high)
     quicksort(A, low, p - 1)
     quicksort(A, p + 1, high)
     return A
 
 def main():
-    A = [randint(0, 99) for _ in range(100)]
+    A = [(3, 'a'), (2, 'a'), (2, 'b'), (3, 'b')]
+
     
     quicksort(A, 0, len(A)-1)
     
     print(A)
     
 main()
-    
     

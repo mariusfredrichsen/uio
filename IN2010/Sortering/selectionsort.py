@@ -2,6 +2,8 @@
 
 
 a = [0,2,3,8,7,1,5,4]
+
+
 n = len(a)
 for i in range(n):
     k = i
@@ -9,7 +11,6 @@ for i in range(n):
         if a[l] < a[k]:
             k = l
     if i != k:
-        # her skjer byttet
         a[i], a[k] = a[k], a[i]
 
 print(a)
