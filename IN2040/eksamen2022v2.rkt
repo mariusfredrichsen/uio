@@ -72,3 +72,40 @@
                (stream-diff-1 (stream-cdr s))))
 
 ; Oppgave 6b
+(define (stream-diff n s)
+  (if (zero? n)
+      s
+      (stream-diff (- n 1) (stream-diff-1 s))))
+
+; Oppgave 6c
+(define (stream-deriv n proc)
+  (define (deriv-help counter)
+    (cons-stream (proc counter) (deriv-help (+ counter 1))))
+  (stream-diff n (deriv-help 0)))
+
+; Oppgave 6d
+(define (stream-of-list items)
+  (define (stream-help rest)
+    (if (null? rest)
+        (stream-help items)
+        (cons-stream (car rest) (stream-help (cdr rest)))))
+  (if (null? items)
+      empty-stream
+      (stream-help items)))
+
+
+
+; Oppgave 7
+(define (make-monitor proc)
+  (let ((count 0))
+    (define (dispatch message)
+      (cond ((eq? message 'how-often) count)
+            ((eq? message 'reset!) (set! count 0))
+            ((begin (set! count (+ count 1))
+                    (proc message)))))
+    dispatch))
+; måtte teste
+
+
+
+; Oppgave 8
