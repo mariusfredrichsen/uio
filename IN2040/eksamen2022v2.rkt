@@ -90,7 +90,7 @@
         (stream-help items)
         (cons-stream (car rest) (stream-help (cdr rest)))))
   (if (null? items)
-      empty-stream
+      the-empty-stream
       (stream-help items)))
 
 
@@ -109,3 +109,36 @@
 
 
 ; Oppgave 8
+(define (make-account balance password)
+  (let ((bal balance)
+        (pass password)
+        (tries 0))
+
+    (define (reset)
+      (set! tries 0))
+
+    (define (deposit amount)
+      (set! bal (+ bal amount))
+      (reset)
+      bal)
+
+    (define (withdraw amount)
+      (if (> amount bal)
+          "error: insufficient"
+          (begin (set! bal (- bal amount)) (reset) bal)))
+
+    (define (dispatch message amount p)
+      (cond ((> tries 2) "error: account blocked")
+            ((not (eq? pass p))
+             (set! tries (+ tries 1))
+             "error: wrong password")
+            ((eq? message 'deposit) (deposit amount))
+            ((eq? message 'withdraw) (withdraw amount))
+            ("Invalid command")))
+  dispatch))
+
+(define (deposit account amount password)
+  (account 'deposit amount password))
+
+(define (withdraw account amount password)
+  (account 'withdraw amount password))
