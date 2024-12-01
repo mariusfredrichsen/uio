@@ -1,0 +1,40 @@
+
+
+(define null 'null)
+
+(define (is-empty node)
+  (eq? node 'null))
+
+(sssfine (create-node . message)
+  (cond ((eq? (car message) 'insert)
+         (lambda (node)
+           'asd))
+        ((eq? (car message) 'create)
+         (lambda (x)
+           (let ((left null)
+                 (rigth null)
+                 (value x))
+             (lambda ()
+               'imANode))))
+        (else 'asd)))
+
+(define (create-tree)
+  (let ((root null))
+    (define (dispatch . message)
+      (cond ((null? message) root)
+            ((eq? (car message) 'insert)
+             (lambda (x)
+               (if (is-empty root)
+                   (begin (set! root (create-node 'create))
+                          'root-created)
+                   (begin (set! root (create-node 'insert))
+                          'node-inserted))))
+            (else "not a valid message")))
+    dispatch))
+
+
+(define t (create-tree))
+((t 'insert) 2)
+((t) 2)
+((t 'insert) 3)
+(t)

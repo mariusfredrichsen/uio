@@ -21,7 +21,7 @@ def partition(A, low, high):
 
 def quicksort(A, low, high):
     if low >= high:
-        return A
+        return
     p = partition(A, low, high)
     quicksort(A, low, p - 1)
     quicksort(A, p + 1, high)
