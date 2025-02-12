@@ -5,12 +5,17 @@
       <set>
         <option value="com.intellij.execution.junit.AbstractAllInDirectoryConfigurationProducer" />
         <option value="com.intellij.execution.junit.AllInPackageConfigurationProducer" />
+<<<<<<< HEAD
         <option value="com.intellij.execution.junit.PatternConfigurationProducer" />
         <option value="com.intellij.execution.junit.TestInClassConfigurationProducer" />
         <option value="com.intellij.execution.junit.UniqueIdConfigurationProducer" />
         <option value="com.intellij.execution.junit.testDiscovery.JUnitTestDiscoveryConfigurationProducer" />
         <option value="org.jetbrains.kotlin.idea.junit.KotlinJUnitRunConfigurationProducer" />
         <option value="org.jetbrains.kotlin.idea.junit.KotlinPatternConfigurationProducer" />
+=======
+        <option value="com.intellij.execution.junit.TestInClassConfigurationProducer" />
+        <option value="com.intellij.execution.junit.UniqueIdConfigurationProducer" />
+>>>>>>> ef0dbde357cfc93144f6e311b94a3c9131606c48
       </set>
     </option>
   </component>
