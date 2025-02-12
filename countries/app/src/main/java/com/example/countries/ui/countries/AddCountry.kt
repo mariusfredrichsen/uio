@@ -27,9 +27,8 @@ fun AddCountry(countriesScreenViewModel: CountriesScreenViewModel) {
     val countriesUIState by countriesScreenViewModel.countriesUIState.collectAsState()
     Row(
         modifier = Modifier
+            .fillMaxWidth()
             .imePadding()
-            .fillMaxSize(),
-        verticalAlignment = Alignment.Bottom
     ) {
         OutlinedTextField(
             value = countriesUIState.countryText,

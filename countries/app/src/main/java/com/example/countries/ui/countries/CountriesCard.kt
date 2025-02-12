@@ -1,7 +1,6 @@
 package com.example.countries.ui.countries
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -10,16 +9,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.countries.model.Country
-import com.example.countries.model.CountryInfo
 
 @Composable
-fun CountriesCard(country: Country) {
-
-
+fun CountriesCard(country: Country, navController: NavController) {
     Card(
         modifier = Modifier
-            .padding(8.dp)
+            .padding(8.dp),
+        onClick = {
+            navController.navigate("country/${country.name}")
+        }
     ) {
         Row(
             modifier = Modifier

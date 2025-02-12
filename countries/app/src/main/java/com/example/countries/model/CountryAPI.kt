@@ -1,5 +1,5 @@
 package com.example.countries.model
 
-data class CountryInfo(
+data class CountryAPI(
     val total_population: List<TotalPopulation>
 )

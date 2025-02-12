@@ -1,7 +1,7 @@
 package com.example.countries.data
 
 import com.example.countries.model.Country
-import com.example.countries.model.CountryInfo
+import com.example.countries.model.CountryAPI
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
@@ -12,7 +12,7 @@ class CountriesDataSource {
     private val url: String = "https://d6wn6bmjj722w.population.io/1.0/population/%s/today-and-tomorrow/"
 
     suspend fun fetchCountriesData(countryName: String): Country? {
-        val countryInfo: CountryInfo? = try {
+        val countryInfo: CountryAPI? = try {
             val response: HttpResponse = APIClient.client.get(String.format(url, countryName))
 
             if (response.status.value != 200) {

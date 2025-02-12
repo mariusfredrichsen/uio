@@ -2,8 +2,10 @@ package com.example.countries.ui.countries
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -14,32 +16,37 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 
 @Composable
-fun CountriesScreen(countriesScreenViewModel: CountriesScreenViewModel = viewModel(), modifier: Modifier) {
+fun CountriesScreen(
+    countriesScreenViewModel: CountriesScreenViewModel = viewModel(),
+    navController: NavController,
+    modifier: Modifier
+) {
     val countriesUIState by countriesScreenViewModel.countriesUIState.collectAsState()
     Column(
-        verticalArrangement = Arrangement.SpaceBetween,
         modifier = modifier
-            .fillMaxHeight()
+            .fillMaxSize(),
     ) {
-
-        Column {
+        Column(
+            modifier =
+                Modifier.weight(1f)
+        ) {
             CountriesTopBar(modifier = modifier)
-            LazyColumn(
-                modifier = Modifier,
-                verticalArrangement = Arrangement.Top
-            ) {
+            LazyColumn {
                 items(countriesUIState.countries) { c ->
-                    CountriesCard(c)
+                    CountriesCard(
+                        country = c,
+                        navController = navController
+                    )
                 }
             }
         }
-
+        AddCountry(
+            countriesScreenViewModel = countriesScreenViewModel
+        )
 
 
     }
-    AddCountry(
-        countriesScreenViewModel = countriesScreenViewModel
-    )
 }

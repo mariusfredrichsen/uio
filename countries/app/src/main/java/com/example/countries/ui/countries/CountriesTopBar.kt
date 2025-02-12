@@ -20,7 +20,7 @@ fun CountriesTopBar(modifier: Modifier) {
             .padding(horizontal = 32.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Text(text = "Countries")
+        Text(text = "Name")
         Text(text = "Population")
     }
 
