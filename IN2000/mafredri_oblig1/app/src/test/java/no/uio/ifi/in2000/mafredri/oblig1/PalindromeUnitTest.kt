@@ -1,6 +1,5 @@
 package no.uio.ifi.in2000.mafredri.oblig1
 
-import no.uio.ifi.in2000.mafredri.oblig1.ui.palindrome.isPalindrome
 import org.junit.Test
 import org.junit.Assert.*
 
