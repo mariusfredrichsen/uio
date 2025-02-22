@@ -4,22 +4,19 @@ import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		int seed = 42;
-		int[] sizes = {100, 200, 500, 1000};
+		int[] sizes = { 100, 200, 500, 1000 };
 
-
-		for (int n : sizes) {
+		double[][] times = new double[6][7];
+		for (int q = 0; q < 7; q++) {
 			// Process these from the command line
 
-			double[][] times = new double[6][7];
-			System.out.println("\nSize of matrix: " + n + " x " + n);
-			
-			for (int q = 0; q < 7; q++) {
+			for (int n : sizes) {
+				System.out.println("\nSize of matrix: " + n + " x " + n);
 
-				
 				MatrixGenerator mg = new MatrixGenerator();
-				
+
 				// Get the matrices
 				double[][] a = mg.generateMatrixA(seed, n);
 				double[][] b = mg.generateMatrixB(seed, n);
@@ -39,11 +36,9 @@ public class Main {
 				end = System.nanoTime();
 				time = ((end - start) / 1000000.0);
 				times[0][q] = time;
-				// System.out.println("Time for seqA: " + time +  "ms");
-				
+				// System.out.println("Time for seqA: " + time + "ms");
+
 				mg.saveResult(seed, MatrixGenerator.Mode.SEQ_NOT_TRANSPOSED, seq);
-
-
 
 				start = System.nanoTime();
 				double[][] seqA = s.seqA(a, b);
@@ -51,11 +46,9 @@ public class Main {
 				end = System.nanoTime();
 				time = ((end - start) / 1000000.0);
 				times[1][q] = time;
-				// System.out.println("Time for seqA: " + time +  "ms");
-				
+				// System.out.println("Time for seqA: " + time + "ms");
+
 				mg.saveResult(seed, MatrixGenerator.Mode.SEQ_A_TRANSPOSED, seqA);
-
-
 
 				start = System.nanoTime();
 				double[][] seqB = s.seqB(a, b);
@@ -63,11 +56,9 @@ public class Main {
 				end = System.nanoTime();
 				time = ((end - start) / 1000000.0);
 				times[2][q] = time;
-				// System.out.println("Time for seqA: " + time +  "ms");
+				// System.out.println("Time for seqA: " + time + "ms");
 
 				mg.saveResult(seed, MatrixGenerator.Mode.SEQ_B_TRANSPOSED, seqB);
-
-
 
 				start = System.nanoTime();
 				double[][] par = p.par(a, b);
@@ -75,11 +66,9 @@ public class Main {
 				end = System.nanoTime();
 				time = ((end - start) / 1000000.0);
 				times[3][q] = time;
-				// System.out.println("Time for seqA: " + time +  "ms");
+				// System.out.println("Time for seqA: " + time + "ms");
 
 				mg.saveResult(seed, MatrixGenerator.Mode.PARA_NOT_TRANSPOSED, par);
-
-
 
 				start = System.nanoTime();
 				double[][] parA = p.parA(a, b);
@@ -87,30 +76,31 @@ public class Main {
 				end = System.nanoTime();
 				time = ((end - start) / 1000000.0);
 				times[4][q] = time;
-				// System.out.println("Time for seqA: " + time +  "ms");
+				// System.out.println("Time for seqA: " + time + "ms");
 
 				mg.saveResult(seed, MatrixGenerator.Mode.PARA_A_TRANSPOSED, parA);
 
-
-
 				start = System.nanoTime();
-				double[][] parB  = p.parB(a, b);
+				double[][] parB = p.parB(a, b);
 				checkCorrectness(ans, parB);
 				end = System.nanoTime();
 				time = ((end - start) / 1000000.0);
 				times[5][q] = time;
-				// System.out.println("Time for seqA: " + time +  "ms");
+				// System.out.println("Time for seqA: " + time + "ms");
 
 				mg.saveResult(seed, MatrixGenerator.Mode.PARA_B_TRANSPOSED, parB);
 			}
 
-			// get the median of results
-			for (double[] results : times) {
-				Arrays.sort(results);
-			}
-			System.out.println(String.format("Seq time: %sms\nSeqA time: %sms\nSeqB time: %sms\nPar time: %sms\nParA time: %sms\nParB time: %sms", times[0][3], times[1][3], times[2][3], times[3][3], times[4][3], times[5][3]));
-			System.out.println(String.format("%s\n%s\n%s\n%s\n%s\n%s\n", times[0][3], times[1][3], times[2][3], times[3][3], times[4][3], times[5][3]));
 		}
+		// get the median of results
+		for (double[] results : times) {
+			Arrays.sort(results);
+		}
+		System.out.println(String.format(
+				"Seq time: %sms\nSeqA time: %sms\nSeqB time: %sms\nPar time: %sms\nParA time: %sms\nParB time: %sms",
+				times[0][3], times[1][3], times[2][3], times[3][3], times[4][3], times[5][3]));
+		System.out.println(String.format("%s\n%s\n%s\n%s\n%s\n%s\n", times[0][3], times[1][3], times[2][3],
+				times[3][3], times[4][3], times[5][3]));
 	}
 
 	public static void checkCorrectness(double[][] ans, double[][] out) {
