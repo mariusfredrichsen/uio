@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -32,13 +33,13 @@ class HomeScreenViewModel: ViewModel() {
         )
 
     init {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             alpacaPartiesRepository.getPartiesInfo()
         }
     }
 
     fun getPartyVotes(district: District) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             alpacaPartiesRepository.getPartyVotes(district)
         }
     }

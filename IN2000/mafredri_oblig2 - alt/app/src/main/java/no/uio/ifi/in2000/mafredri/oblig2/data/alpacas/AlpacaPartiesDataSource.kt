@@ -13,7 +13,7 @@ import java.net.UnknownHostException
 
 
 class AlpacaPartiesDataSource {
-    private val url: String = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/alpacaparties.json"
+    private val url: String = "https://in2000-proxy.ifi.uio.no/alpacaapi/v2/alpacaparties"
 
     suspend fun fetchAlpacaData(): List<PartyInfo> {
         val parties: Parties

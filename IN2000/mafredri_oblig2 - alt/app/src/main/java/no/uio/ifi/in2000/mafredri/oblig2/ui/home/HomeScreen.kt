@@ -16,6 +16,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -31,6 +34,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -75,8 +79,15 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
     val context = LocalContext.current
 
     Scaffold(
-        snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
-    ) {
+        snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = "PARTIER")
+                },
+            )
+        }
+    ) { innerPadding ->
         if (alpacaPartiesUIState.partiesInfo.isEmpty()) {
             scope.launch {
                 val result = snackbarHostState
@@ -97,8 +108,8 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(8.dp)
+                    .padding(innerPadding)
             ) {
-                Text(text = "Partier", fontSize = 32.sp)
                 ExposedDropdownMenuBox(
                     expanded = isExpanded,
                     onExpandedChange = { isExpanded = it &&
@@ -142,7 +153,9 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                     }
                 }
                 VoteList(homeScreenViewModel)
-                LazyColumn {
+                LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                ) {
                     items(alpacaPartiesUIState.partiesInfo) { partyInfo ->
 
                         Card(
@@ -156,7 +169,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .align(Alignment.CenterHorizontally)
-                                .padding(top = 8.dp)
+                                .padding(8.dp)
                                 .clickable {
                                     navController.navigate("partyscreen/${partyInfo.id}")
                                 }
@@ -166,6 +179,7 @@ fun HomeScreen(homeScreenViewModel: HomeScreenViewModel = viewModel(), navContro
                                 verticalArrangement = Arrangement.Center,
                                 modifier = Modifier
                                     .fillMaxWidth()
+                                    .padding(4.dp)
                             ) {
                                 Text(text = partyInfo.name)
 

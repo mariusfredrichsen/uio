@@ -13,8 +13,8 @@ import no.uio.ifi.in2000.mafredri.oblig2.model.votes.IndividualVote
 import java.net.UnknownHostException
 
 class IndividualVotesDataSource {
-    private val url1 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district1.json"
-    private val url2 = "https://www.uio.no/studier/emner/matnat/ifi/IN2000/v24/obligatoriske-oppgaver/district2.json"
+    private val url1 = "https://in2000-proxy.ifi.uio.no/alpacaapi/v2/district1"
+    private val url2 = "https://in2000-proxy.ifi.uio.no/alpacaapi/v2/district2"
 
     suspend fun fetchIndividualVotesOne(): List<DistrictVotes> {
         val individualVotes: List<IndividualVote>
