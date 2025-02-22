@@ -15,7 +15,11 @@ class MatrixGenerator {
 		SEQ_B_TRANSPOSED,
 		PARA_NOT_TRANSPOSED,
 		PARA_A_TRANSPOSED,
-		PARA_B_TRANSPOSED
+		PARA_B_TRANSPOSED,
+		A,
+		B,
+		AT,
+		BT,
 	}
 
 	/**
@@ -50,7 +54,7 @@ class MatrixGenerator {
 
 		for (int i = 0; i < n; i++)
 			for (int j = 0; j < n; j++)
-				m[i][j] = rnd.nextDouble();
+				m[i][j] = rnd.nextInt(3);
 
 		return m;
 	}
