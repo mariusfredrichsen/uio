@@ -118,7 +118,7 @@ public class Par {
 
     }
 
-    public synchronized void parTimes(double[][] C, double sum, int i, int j) {
+    public void parTimes(double[][] C, double sum, int i, int j) {
         C[i][j] = sum;
     }
     

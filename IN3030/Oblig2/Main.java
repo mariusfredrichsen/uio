@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		int seed = 42;
-		int[] sizes = {100, 200, 500, 1000, 2500};
+		int[] sizes = {100, 200, 500, 1000};
 
 
 		for (int n : sizes) {
@@ -108,7 +108,7 @@ public class Main {
 			for (double[] results : times) {
 				Arrays.sort(results);
 			}
-			System.out.println(String.format("Seq time: %s\nSeqA time: %s\nSeqB time: %s\nPar time: %s\nParA time: %s\nParB time: %s", times[0][3], times[1][3], times[2][3], times[3][3], times[4][3], times[5][3]));
+			System.out.println(String.format("Seq time: %sms\nSeqA time: %sms\nSeqB time: %sms\nPar time: %sms\nParA time: %sms\nParB time: %sms", times[0][3], times[1][3], times[2][3], times[3][3], times[4][3], times[5][3]));
 			System.out.println(String.format("%s\n%s\n%s\n%s\n%s\n%s\n", times[0][3], times[1][3], times[2][3], times[3][3], times[4][3], times[5][3]));
 		}
 	}
