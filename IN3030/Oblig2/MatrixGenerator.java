@@ -16,10 +16,6 @@ class MatrixGenerator {
 		PARA_NOT_TRANSPOSED,
 		PARA_A_TRANSPOSED,
 		PARA_B_TRANSPOSED,
-		A,
-		B,
-		AT,
-		BT,
 	}
 
 	/**
