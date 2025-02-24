@@ -17,9 +17,9 @@ public class AStarTest {
     @Test
     public void testCase1() {
         int[][] input = {
-                {1, 2, 0},
-                {4, 6, 3},
-                {7, 5, 8}
+                { 1, 2, 0 },
+                { 4, 6, 3 },
+                { 7, 5, 8 }
         };
         String solution = astar.solve(input);
         String suggestedSolution = "DLDR";
@@ -30,9 +30,9 @@ public class AStarTest {
     @Test
     public void testCase2() {
         int[][] input = {
-                {1, 0, 5},
-                {4, 3, 2},
-                {7, 8, 6}
+                { 1, 0, 5 },
+                { 4, 3, 2 },
+                { 7, 8, 6 }
         };
         String solution = astar.solve(input);
         String suggestedSolution = "DRULDRD";
@@ -43,9 +43,9 @@ public class AStarTest {
     @Test
     public void testCase3() {
         int[][] input = {
-                {0, 1, 7},
-                {5, 2, 6},
-                {4, 8, 3}
+                { 0, 1, 7 },
+                { 5, 2, 6 },
+                { 4, 8, 3 }
         };
         String solution = astar.solve(input);
         String suggestedSolution = "RRDLURDDLUURDLLDRR";
@@ -56,10 +56,10 @@ public class AStarTest {
     @Test
     public void testCase4() {
         int[][] input = {
-                {0, 1, 3, 4},
-                {5, 2, 6, 7},
-                {9, 10, 11, 8},
-                {13, 14, 15, 12}
+                { 0, 1, 3, 4 },
+                { 5, 2, 6, 7 },
+                { 9, 10, 11, 8 },
+                { 13, 14, 15, 12 }
         };
         String solution = astar.solve(input);
         String suggestedSolution = "RDRRDD";
@@ -85,8 +85,7 @@ public class AStarTest {
     private void applyMoves(int[][] board, String moves) {
         int n = board.length;
         int x = 0, y = 0;
-        search:
-        for (int i = 0; i < n; i++) {
+        search: for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] == 0) {
                     x = i;
@@ -98,29 +97,33 @@ public class AStarTest {
 
         for (char move : moves.toCharArray()) {
             switch (move) {
-                case 'L' -> {
+                case 'L': {
                     if (y > 0) {
                         swap(board, x, y, x, y - 1);
                         y--;
                     }
+                    break;
                 }
-                case 'R' -> {
+                case 'R': {
                     if (y < n - 1) {
                         swap(board, x, y, x, y + 1);
                         y++;
                     }
+                    break;
                 }
-                case 'U' -> {
+                case 'U': {
                     if (x > 0) {
                         swap(board, x, y, x - 1, y);
                         x--;
                     }
+                    break;
                 }
-                case 'D' -> {
+                case 'D': {
                     if (x < n - 1) {
                         swap(board, x, y, x + 1, y);
                         x++;
                     }
+                    break;
                 }
             }
         }
@@ -134,9 +137,11 @@ public class AStarTest {
             for (int j = 0; j < n; j++) {
                 if (i == n - 1 && j == n - 1) {
                     // The last cell should be 0
-                    if (board[i][j] != 0) return false;
+                    if (board[i][j] != 0)
+                        return false;
                 } else {
-                    if (board[i][j] != expectedValue) return false;
+                    if (board[i][j] != expectedValue)
+                        return false;
                     expectedValue++;
                 }
             }
