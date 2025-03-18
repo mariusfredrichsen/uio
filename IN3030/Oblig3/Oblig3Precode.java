@@ -55,7 +55,7 @@ import java.util.TreeMap;
 
 public class Oblig3Precode {
 
-    int n;
+    long n;
 
     TreeMap<Long, LinkedList<Long>> factors = new TreeMap<Long, LinkedList<Long>>();
 
@@ -66,7 +66,7 @@ public class Oblig3Precode {
      * @param n The n given at startup
      */
 
-    public Oblig3Precode(int n) {
+    public Oblig3Precode(long n) {
         this.n = n;
     }
 

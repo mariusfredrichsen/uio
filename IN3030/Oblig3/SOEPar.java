@@ -1,4 +1,7 @@
 
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * A possible sequential algorithm for Sieve Of Eratosthenes.
  *
@@ -8,7 +11,7 @@
  *
  * @author Shiela Kristoffersen.
  *
- *         Recreated from idea by:
+ * Recreated from idea by:
  * @author Magnus Espeland
  *
  * His code can be found here:
@@ -43,15 +46,17 @@
  * mark them according to the rules of the sieve. Then we run through the byte
  * array to collect all the unmarked numbers.
  */
-
 public class SOEPar {
 
     /**
      * Declaring all the global variables
      *
      */
-    int n, root, numOfPrimes, k;
+    int n, root, numOfPrimes, k, prime;
     byte[] oddNumbers;
+
+    ReentrantLock lock = new ReentrantLock();
+    Condition hasNextPrime = lock.newCondition();
 
     /**
      * Constructor that initializes the global variables
@@ -75,7 +80,7 @@ public class SOEPar {
             return new int[0];
         }
 
-        sievePar();
+        sieve();
 
         return collectPrimes();
     }
@@ -114,31 +119,11 @@ public class SOEPar {
     /**
      * Performs the Sieve Of Eratosthenes
      */
-    private void sievePar() {
+    private void sieve() {
         mark(1);
         numOfPrimes = 1;
         int prime = nextPrime(1);
 
-        Thread[] threads = new Thread[k];
-        for (int i = 0; i < k; i++) {
-            threads[i] = new Thread(new Helper(this));
-        }
-
-        for (Thread thread : threads) {
-            thread.start();
-        }
-
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-
-    }
-
-    public void sieveHelper() {
         while (prime != -1) {
             traverse(prime);
             prime = nextPrime(prime);
