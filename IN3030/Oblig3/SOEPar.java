@@ -1,6 +1,5 @@
 
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 /**
  * A possible sequential algorithm for Sieve Of Eratosthenes.
@@ -46,27 +45,25 @@ import java.util.concurrent.locks.ReentrantLock;
  * mark them according to the rules of the sieve. Then we run through the byte
  * array to collect all the unmarked numbers.
  */
-public class SOEPar {
+class SOEPar {
 
     /**
      * Declaring all the global variables
      *
      */
-    int n, root, numOfPrimes, k, prime;
+    int n, root, rootOfRoot, k, numOfPrimes;
     byte[] oddNumbers;
-
-    ReentrantLock lock = new ReentrantLock();
-    Condition hasNextPrime = lock.newCondition();
 
     /**
      * Constructor that initializes the global variables
      *
      * @param n Prime numbers up until (and including if prime) 'n' is found
      */
-    public SOEPar(int n, int k) {
+    SOEPar(int n, int k) {
         this.n = n;
         this.k = k;
         root = (int) Math.sqrt(n);
+        rootOfRoot = (int) Math.sqrt(Math.sqrt(n));
         oddNumbers = new byte[(n / 16) + 1];
     }
 
@@ -101,6 +98,8 @@ public class SOEPar {
             }
         }
 
+        System.out.println("ASDASD: " + numOfPrimes);
+
         int[] primes = new int[numOfPrimes];
 
         primes[0] = 2;
@@ -108,6 +107,34 @@ public class SOEPar {
         int j = 1;
 
         for (int i = 3; i <= n; i += 2) {
+            if (isPrime(i)) {
+                primes[j++] = i;
+            }
+        }
+        //System.out.println(Arrays.toString(primes));
+
+        return primes;
+    }
+
+    private int[] collectPrimesPar() {
+
+        int start = (rootOfRoot % 2 == 0) ? rootOfRoot + 1 : rootOfRoot + 2;
+
+        for (int i = start; i <= root; i += 2) {
+            if (isPrime(i)) {
+                numOfPrimes++;
+            }
+        }
+
+        System.out.println("ASDASD 2: " + numOfPrimes);
+
+        int[] primes = new int[numOfPrimes];
+
+        primes[0] = 2;
+
+        int j = 1;
+
+        for (int i = 3; i <= root; i += 2) {
             if (isPrime(i)) {
                 primes[j++] = i;
             }
@@ -120,15 +147,44 @@ public class SOEPar {
      * Performs the Sieve Of Eratosthenes
      */
     private void sieve() {
+        // Preprocess data
         mark(1);
         numOfPrimes = 1;
-        int prime = nextPrime(1);
+        int prime = nextPrimePar(1);
 
         while (prime != -1) {
-            traverse(prime);
-            prime = nextPrime(prime);
+            traversePar(prime);
+            prime = nextPrimePar(prime);
             numOfPrimes++;
         }
+
+        // Distribute
+        int[] primes = this.collectPrimesPar();
+        for (int p : primes) {
+            this.traverse(p);
+            numOfPrimes++;
+        }
+        /*System.out.println(Arrays.toString(primes));
+        int chunk = primes.length / k;
+
+        Thread[] threads = new Thread[k];
+        for (int i = 0; i < k-1; i++) {
+            threads[i] = new Thread(new Helper(this, i * chunk, (i + 1) * chunk, primes));
+            System.out.println("Start: " + (i) * chunk + " End: " + (i +1) * chunk);
+        }
+        System.out.println("Start: " + (k-1) * chunk + " End: " + primes.length);
+        threads[k-1] = new Thread(new Helper(this, k-1 * chunk, primes.length, primes));
+
+        for (Thread t : threads) {
+            t.start();
+        }
+
+        for (Thread t : threads) {
+            try {
+                t.join();
+            } catch (InterruptedException ex) {
+            }
+        }*/
     }
 
     /**
@@ -136,8 +192,14 @@ public class SOEPar {
      *
      * @param prime The prime used to mark the composite numbers.
      */
-    private void traverse(int prime) {
+    public void traverse(int prime) {
         for (int i = prime * prime; i <= n; i += prime * 2) {
+            mark(i);
+        }
+    }
+
+    private void traversePar(int prime) {
+        for (int i = prime * prime; i <= root; i += prime * 2) {
             mark(i);
         }
     }
@@ -151,6 +213,16 @@ public class SOEPar {
      */
     private int nextPrime(int prev) {
         for (int i = prev + 2; i <= root; i += 2) {
+            if (isPrime(i)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    private int nextPrimePar(int prev) {
+        for (int i = prev + 2; i <= rootOfRoot; i += 2) {
             if (isPrime(i)) {
                 return i;
             }
@@ -182,50 +254,5 @@ public class SOEPar {
         int bitIndex = (num % 16) / 2;
         int byteIndex = num / 16;
         oddNumbers[byteIndex] |= (1 << bitIndex);
-    }
-
-    /**
-     * Prints the primes found.
-     *
-     * @param primes The array containing all the primes.
-     */
-    static void printPrimes(int[] primes) {
-        for (int prime : primes) {
-            System.out.println(prime);
-        }
-    }
-
-    /**
-     * Expects a positive integer as an argument.
-     *
-     * @param args Contains the number up to which we want to find prime
-     * numbers.
-     */
-    public static void main(String[] args) {
-
-        int n;
-
-        try {
-            n = Integer.parseInt(args[0]);
-            if (n <= 0) {
-                throw new Exception();
-            }
-        } catch (Exception e) {
-            System.out.println("Correct use of program is: "
-                    + "java SieveOfEratosthenes <n> where <n> is a positive integer.");
-            return;
-        }
-
-        SieveOfEratosthenes soe = new SieveOfEratosthenes(n);
-
-        /**
-         * Getting all the primes equal to and below 'n'
-         */
-        int[] primes = soe.getPrimes();
-
-        /**
-         * Printing the primes collected
-         */
-        printPrimes(primes);
     }
 }
