@@ -32,7 +32,7 @@ public class Main {
         double[][] times = new double[2][runs];
 
         for (int i = 0; i < runs; i++) {
-            Factors f = new Factors();
+            Factors f = new Factors(k);
 
             System.out.println("Seq");
             // Seq
