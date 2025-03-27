@@ -1,5 +1,4 @@
 
-
 /**
  * A possible sequential algorithm for Sieve Of Eratosthenes.
  *
@@ -9,40 +8,49 @@
  *
  * @author Shiela Kristoffersen.
  *
- * Recreated from idea by:
+ *         Recreated from idea by:
  * @author Magnus Espeland
  *
- * His code can be found here:
- * https://github.uio.no/magnuesp/IN3030-v19/blob/master/magnuesp/Sieve/Sieve.java
+ *         His code can be found here:
+ *         https://github.uio.no/magnuesp/IN3030-v19/blob/master/magnuesp/Sieve/Sieve.java
  *
- * And recreated from implementation by:
+ *         And recreated from implementation by:
  * @author Kim Hilton
  *
- * His code can be found here:
- * https://github.uio.no/kimsh/IN3030_V20/blob/master/Sample_Code/Oblig3/SequentialSieve.java
+ *         His code can be found here:
+ *         https://github.uio.no/kimsh/IN3030_V20/blob/master/Sample_Code/Oblig3/SequentialSieve.java
  *
- * Idea: In the spirit of writing cache friendly code, we want to decrease the
- * size of our data set.
+ *         Idea: In the spirit of writing cache friendly code, we want to
+ *         decrease the
+ *         size of our data set.
  *
- * Therefore, instead of representing the numbers by integers, we are
- * representing each number as a bit in an array of bytes. Non-primes will have
- * a bit value of 1, and primes will have the bit value 0.
+ *         Therefore, instead of representing the numbers by integers, we are
+ *         representing each number as a bit in an array of bytes. Non-primes
+ *         will have
+ *         a bit value of 1, and primes will have the bit value 0.
  *
- * We also observe that all even numbers, except 2, are never primes (since they
- * can be divided by 2), and so we only include the odd numbers in our data set.
+ *         We also observe that all even numbers, except 2, are never primes
+ *         (since they
+ *         can be divided by 2), and so we only include the odd numbers in our
+ *         data set.
  *
- * We have now in a single byte, managed to squeeze in a set of 16 numbers; each
- * byte represents an odd number and in between are the even numbers.
+ *         We have now in a single byte, managed to squeeze in a set of 16
+ *         numbers; each
+ *         byte represents an odd number and in between are the even numbers.
  *
- * You can think of the first byte in the array (i.e. byte at index 0) like
- * this:
+ *         You can think of the first byte in the array (i.e. byte at index 0)
+ *         like
+ *         this:
  *
- * 16_____14_____12_____10_____8_____6_____4_____2_____ <-- Not represented | 15
- * | 13 | 11 | 9 | 7 | 5 | 3 | 1 | <-- The first byte
+ *         16_____14_____12_____10_____8_____6_____4_____2_____ <-- Not
+ *         represented | 15
+ *         | 13 | 11 | 9 | 7 | 5 | 3 | 1 | <-- The first byte
  *
- * Implementation: We map each number to a specific bit in the byte array, and
- * mark them according to the rules of the sieve. Then we run through the byte
- * array to collect all the unmarked numbers.
+ *         Implementation: We map each number to a specific bit in the byte
+ *         array, and
+ *         mark them according to the rules of the sieve. Then we run through
+ *         the byte
+ *         array to collect all the unmarked numbers.
  */
 class SieveOfEratosthenes {
 
@@ -95,7 +103,7 @@ class SieveOfEratosthenes {
             }
         }
 
-        System.out.println("ASDASD seq: " + numOfPrimes);
+        System.out.println("SEQ" + numOfPrimes);
 
         int[] primes = new int[numOfPrimes];
 
@@ -195,7 +203,7 @@ class SieveOfEratosthenes {
      * Expects a positive integer as an argument.
      *
      * @param args Contains the number up to which we want to find prime
-     * numbers.
+     *             numbers.
      */
     public static void main(String[] args) {
 
