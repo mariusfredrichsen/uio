@@ -27,7 +27,7 @@ public class ConvexHull {
         final int n = 10;
         final int seed = 42;
         NPunkter17 nPunkter17 = new NPunkter17(n, seed);
-        ConvexHull ch = new ConvexHull(n, seed, new NPunkter17(n, seed));
+        ConvexHull ch = new ConvexHull(n, seed, nPunkter17);
         IntList coHull = nPunkter17.lagIntList();
         Oblig4Precode precode = new Oblig4Precode(ch, coHull);
         precode.drawGraph();
