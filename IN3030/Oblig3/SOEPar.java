@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 /**
  * A possible sequential algorithm for Sieve Of Eratosthenes.
@@ -10,49 +9,40 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author Shiela Kristoffersen.
  *
- *         Recreated from idea by:
+ * Recreated from idea by:
  * @author Magnus Espeland
  *
- *         His code can be found here:
- *         https://github.uio.no/magnuesp/IN3030-v19/blob/master/magnuesp/Sieve/Sieve.java
+ * His code can be found here:
+ * https://github.uio.no/magnuesp/IN3030-v19/blob/master/magnuesp/Sieve/Sieve.java
  *
- *         And recreated from implementation by:
+ * And recreated from implementation by:
  * @author Kim Hilton
  *
- *         His code can be found here:
- *         https://github.uio.no/kimsh/IN3030_V20/blob/master/Sample_Code/Oblig3/SequentialSieve.java
+ * His code can be found here:
+ * https://github.uio.no/kimsh/IN3030_V20/blob/master/Sample_Code/Oblig3/SequentialSieve.java
  *
- *         Idea: In the spirit of writing cache friendly code, we want to
- *         decrease the
- *         size of our data set.
+ * Idea: In the spirit of writing cache friendly code, we want to decrease the
+ * size of our data set.
  *
- *         Therefore, instead of representing the numbers by integers, we are
- *         representing each number as a bit in an array of bytes. Non-primes
- *         will have
- *         a bit value of 1, and primes will have the bit value 0.
+ * Therefore, instead of representing the numbers by integers, we are
+ * representing each number as a bit in an array of bytes. Non-primes will have
+ * a bit value of 1, and primes will have the bit value 0.
  *
- *         We also observe that all even numbers, except 2, are never primes
- *         (since they
- *         can be divided by 2), and so we only include the odd numbers in our
- *         data set.
+ * We also observe that all even numbers, except 2, are never primes (since they
+ * can be divided by 2), and so we only include the odd numbers in our data set.
  *
- *         We have now in a single byte, managed to squeeze in a set of 16
- *         numbers; each
- *         byte represents an odd number and in between are the even numbers.
+ * We have now in a single byte, managed to squeeze in a set of 16 numbers; each
+ * byte represents an odd number and in between are the even numbers.
  *
- *         You can think of the first byte in the array (i.e. byte at index 0)
- *         like
- *         this:
+ * You can think of the first byte in the array (i.e. byte at index 0) like
+ * this:
  *
- *         16_____14_____12_____10_____8_____6_____4_____2_____ <-- Not
- *         represented | 15
- *         | 13 | 11 | 9 | 7 | 5 | 3 | 1 | <-- The first byte
+ * 16_____14_____12_____10_____8_____6_____4_____2_____ <-- Not represented | 15
+ * | 13 | 11 | 9 | 7 | 5 | 3 | 1 | <-- The first byte
  *
- *         Implementation: We map each number to a specific bit in the byte
- *         array, and
- *         mark them according to the rules of the sieve. Then we run through
- *         the byte
- *         array to collect all the unmarked numbers.
+ * Implementation: We map each number to a specific bit in the byte array, and
+ * mark them according to the rules of the sieve. Then we run through the byte
+ * array to collect all the unmarked numbers.
  */
 class SOEPar {
 
@@ -60,7 +50,7 @@ class SOEPar {
      * Declaring all the global variables
      *
      */
-    int n, root, rootOfRoot, k, numOfPrimes;
+    int n, root, numOfPrimes, rootOfRoot, k;
     byte[] oddNumbers;
 
     /**
@@ -72,7 +62,7 @@ class SOEPar {
         this.n = n;
         this.k = k;
         root = (int) Math.sqrt(n);
-        rootOfRoot = (int) Math.sqrt(Math.sqrt(n));
+        rootOfRoot = (int) Math.sqrt(root);
         oddNumbers = new byte[(n / 16) + 1];
     }
 
@@ -107,8 +97,6 @@ class SOEPar {
             }
         }
 
-        // System.out.println("PAR 2: " + numOfPrimes);
-
         int[] primes = new int[numOfPrimes];
 
         primes[0] = 2;
@@ -120,12 +108,12 @@ class SOEPar {
                 primes[j++] = i;
             }
         }
-        // System.out.println(Arrays.toString(primes));
 
         return primes;
     }
 
     private int[] collectPrimesPar() {
+
         int start = (rootOfRoot % 2 == 0) ? rootOfRoot + 1 : rootOfRoot + 2;
 
         for (int i = start; i <= root; i += 2) {
@@ -134,13 +122,11 @@ class SOEPar {
             }
         }
 
-        // System.out.println("PAR 1: " + numOfPrimes);
+        int[] primes = new int[numOfPrimes];
 
-        int[] primes = new int[numOfPrimes - 1];
+        primes[0] = 2;
 
-        // primes[0] = 2;
-
-        int j = 0;
+        int j = 1;
 
         for (int i = 3; i <= root; i += 2) {
             if (isPrime(i)) {
@@ -168,22 +154,20 @@ class SOEPar {
 
         // Distribute
         int[] primes = this.collectPrimesPar();
-
-        int chunk = n / k;
+        System.out.println(Arrays.toString(primes));
+        int chunk = primes.length / k;
+        System.out.
 
         Thread[] threads = new Thread[k];
-        for (int i = 0; i < k - 1; i++) {
-            threads[i] = new Thread(new SieveHelper(this, primes, i * chunk, (i + 1) * chunk));
-            threads[i].start();
+        for (int i = 0; i < k-1; i++) {
+            threads[i] = new Thread(new Helper(this, i * chunk, (i + 1) * chunk, primes));
+            System.out.println("Start: " + (i) * chunk + " End: " + (i +1) * chunk);
         }
-        threads[k - 1] = new Thread(new SieveHelper(this, primes, (k - 1) * chunk, n));
-        threads[k - 1].start();
+        System.out.println("Start: " + (k-1) * chunk + " End: " + primes.length);
+        threads[k-1] = new Thread(new Helper(this, k-1 * chunk, primes.length, primes));
 
         for (Thread t : threads) {
-            try {
-                t.join();
-            } catch (InterruptedException ex) {
-            }
+            t.start();
         }
     }
 
@@ -192,11 +176,8 @@ class SOEPar {
      *
      * @param prime The prime used to mark the composite numbers.
      */
-    public void traverse(int prime, int start, int end) {
-        // den indeks greia her gadd jeg ikke å gjøre matten på sjæl. Copilot vv
-        int first = (prime * prime < start) ? start + (prime - (start - prime * prime) % prime)
-                + ((start + (prime - (start - prime * prime) % prime)) % 2 == 0 ? prime : 0) : prime * prime;
-        for (int i = first; i <= end; i += prime * 2) {
+    public void traverse(int prime) {
+        for (int i = prime * prime; i <= n; i += prime * 2) {
             mark(i);
         }
     }
