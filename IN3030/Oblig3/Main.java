@@ -1,4 +1,7 @@
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -29,7 +32,8 @@ public class Main {
         double start;
         double end;
         int runs = 9;
-        double[][] times = new double[2][runs];
+        double[][] timesSieve = new double[2][runs];
+        double[][] timesFactor = new double[2][runs];
 
         for (int i = 0; i < runs; i++) {
             Factors f = new Factors(k);
@@ -39,11 +43,17 @@ public class Main {
             start = System.nanoTime();
             SieveOfEratosthenes soe = new SieveOfEratosthenes(n);
             int[] primesA = soe.getPrimes();
+            // System.out.println(Arrays.toString(primesA));
             end = System.nanoTime();
             double time = ((end - start) / 1000000.0);
-            times[0][i] = time;
-            // System.out.println(Arrays.toString(primesA));
+            timesSieve[0][i] = time;
+
+            start = System.nanoTime();
             HashMap<Long, ArrayList<Long>> allFactorsA = f.findFactors(m, N, primesA);
+            end = System.nanoTime();
+            time = ((end - start) / 1000000.0);
+            timesFactor[0][i] = time;
+
             System.out.println(String.format("Time for Seq iteration %s: %sms", i, time));
 
             System.out.println("Par");
@@ -51,11 +61,16 @@ public class Main {
             start = System.nanoTime();
             SOEPar soeP = new SOEPar(n, k);
             int[] primesB = soeP.getPrimes();
+            // System.out.println(Arrays.toString(primesB));
             end = System.nanoTime();
             time = ((end - start) / 1000000.0);
-            times[1][i] = time;
-            // System.out.println(Arrays.toString(primesB));
+            timesSieve[1][i] = time;
+
+            start = System.nanoTime();
             HashMap<Long, ArrayList<Long>> allFactorsB = f.findFactorsPar(m, N, primesB);
+            end = System.nanoTime();
+            time = ((end - start) / 1000000.0);
+            timesFactor[1][i] = time;
             System.out.println(String.format("Time for Par iteration %s: %sms", i, time));
 
             for (long base : allFactorsA.keySet()) {
@@ -76,12 +91,35 @@ public class Main {
             precode.writeFactors();
         }
 
-        for (double[] t : times) {
+        for (double[] t : timesSieve) {
             Arrays.sort(t);
         }
 
-        System.out.println(String.format("Median time for Seq: %sms", times[0][runs / 2]));
-        System.out.println(String.format("Median time for Par: %sms", times[1][runs / 2]));
+        for (double[] t : timesFactor) {
+            Arrays.sort(t);
+        }
+
+        System.out.println(String.format("Median time for Sieve Seq: %sms", timesSieve[0][runs / 2]));
+        System.out.println(String.format("Median time for Sieve Par: %sms", timesSieve[1][runs / 2]));
+        System.out.println(String.format("Median time for Factor Seq: %sms", timesFactor[0][runs / 2]));
+        System.out.println(String.format("Median time for Factor Par: %sms", timesFactor[1][runs / 2]));
+
+        // Laget med Copilot
+        try (PrintWriter writer = new PrintWriter(new File("times" + N + ".csv"))) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Run, Sieve Seq, Sieve Par, Factor Seq, Factor Par\n");
+            for (int i = 0; i < runs; i++) {
+                sb.append(i).append(", ")
+                        .append(timesSieve[0][i]).append(", ")
+                        .append(timesSieve[1][i]).append(", ")
+                        .append(timesFactor[0][i]).append(", ")
+                        .append(timesFactor[1][i]).append("\n");
+            }
+            writer.write(sb.toString());
+            System.out.println("Times written to times.csv");
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 
@@ -94,7 +132,8 @@ public class Main {
     }
 
     public static void compareFactors(Long p, ArrayList<Long> a, ArrayList<Long> b) {
-        assert a.size() == b.size() : String.format("different size a: %s and b: %s", a.size(), b.size());
+        assert a.size() == b.size()
+                : String.format("different size a: %s and b: %s with prime: %s", a.size(), b.size(), p);
         for (int i = 0; i < a.size(); i++) {
             assert Objects.equals(a.get(i), b.get(i))
                     : String.format("different values a: %s and b: %s, on prime: %s", a.get(i), b.get(i), p);

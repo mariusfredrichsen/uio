@@ -1,26 +1,19 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Factors {
     int k;
-    long newBase, lowestPrime;
-    ReentrantLock lock = new ReentrantLock();
 
     public Factors(int k) {
         this.k = k;
     }
 
-    public HashMap<Long, ArrayList<Long>> findFactors(int n, long base, int[] primes) {
+    public HashMap<Long, ArrayList<Long>> findFactors(int m, long base, int[] primes) {
         HashMap<Long, ArrayList<Long>> allFactors = new HashMap<>();
 
         long newBase;
 
-        int test = 0;
-        for (long b = base - 1; b > base - n - 1; b--) {
-            System.out.println(++test);
+        for (long b = base - 1; b > base - m - 1; b--) {
             newBase = b;
 
             ArrayList<Long> factors = new ArrayList<>();
@@ -48,46 +41,25 @@ public class Factors {
     public HashMap<Long, ArrayList<Long>> findFactorsPar(int m, long base, int[] primes) {
         HashMap<Long, ArrayList<Long>> allFactors = new HashMap<>();
 
-        CyclicBarrier barrier = new CyclicBarrier(k, new Runnable() {
-            @Override
-            public void run() {
-                while (newBase % lowestPrime == 0) {
-                    newBase /= lowestPrime;
-                }
-            }
-        });
-
-        int test = 0;
         for (long b = base - 1; b > base - m - 1; b--) {
-            System.out.println(++test);
-            newBase = b;
-
             ArrayList<Long> factors = new ArrayList<>();
             allFactors.put(b, factors);
+        }
 
-            Thread[] threads = new Thread[k];
-            int n = primes.length;
-            int chunk = n / k;
-            for (int i = 0; i < k - 1; i++) {
-                threads[i] = new Thread(new FactorHelper(i * chunk, (i + 1) * chunk, primes, barrier));
-                threads[i].start();
-            }
-            threads[k - 1] = new Thread(new FactorHelper(k - 1 * chunk, n, primes, barrier));
-            threads[k - 1].start();
+        long chunk = m / k;
+        Thread[] threads = new Thread[k];
+        for (int i = 0; i < k; i++) {
+            long start = (base - m) + i * chunk;
+            long end = (i == k - 1) ? base : start + chunk;
+            threads[i] = new Thread(new FactorHelper(start, end, allFactors, primes));
+            threads[i].start();
+        }
 
-            for (int prime : primes) {
-                if (prime == newBase) {
-                    factors.add((long) prime);
-                    newBase = 1;
-                    break;
-                }
-                while (newBase % prime == 0) {
-                    factors.add((long) prime);
-                    newBase /= prime;
-                }
-            }
-            if (newBase != 1) {
-                factors.add((long) newBase);
+        for (Thread t : threads) {
+            try {
+                t.join();
+            } catch (InterruptedException e) {
+
             }
         }
 
@@ -95,40 +67,37 @@ public class Factors {
     }
 
     public class FactorHelper implements Runnable {
-        int start, end;
+        long start, end;
+        HashMap<Long, ArrayList<Long>> allFactors;
         int[] primes;
-        CyclicBarrier barrier;
 
-        public FactorHelper(int start, int end, int[] primes, CyclicBarrier barrier) {
+        public FactorHelper(long start, long end, HashMap<Long, ArrayList<Long>> allFactors, int[] primes) {
             this.start = start;
             this.end = end;
+            this.allFactors = allFactors;
             this.primes = primes;
-            this.barrier = barrier;
         }
 
         public void run() {
-            try {
-                System.out.println("Computing...");
-                for (int i = start; i < end; i++) {
-                    if (newBase % primes[i] == 0) {
-                        updateLowestPrime((long) newBase);
+            for (long b = start; b < end; b++) {
+                ArrayList<Long> factors = allFactors.get(b);
+                long newBase = b;
+
+                for (int prime : primes) {
+                    if (prime == newBase) {
+                        factors.add((long) prime);
+                        newBase = 1;
                         break;
                     }
+                    while (newBase % prime == 0) {
+                        factors.add((long) prime);
+                        newBase /= prime;
+                    }
                 }
-                barrier.await();
-            } catch (InterruptedException | BrokenBarrierException e) {
-                e.printStackTrace();
+                if (newBase != 1) {
+                    factors.add((long) newBase);
+                }
             }
         }
     }
-
-    public void updateLowestPrime(long prime) {
-        lock.lock();
-        try {
-            lowestPrime = Math.min(lowestPrime, prime);
-        } finally {
-            lock.unlock();
-        }
-    }
-
 }

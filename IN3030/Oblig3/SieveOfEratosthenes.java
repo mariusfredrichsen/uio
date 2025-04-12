@@ -103,8 +103,6 @@ class SieveOfEratosthenes {
             }
         }
 
-        System.out.println("SEQ" + numOfPrimes);
-
         int[] primes = new int[numOfPrimes];
 
         primes[0] = 2;
