@@ -1,20 +1,28 @@
-dancefloor = 3
-a, b = 1, 2
-c, d = 1, 2
 
-def dance(x, y, a, b, c, d, dancefloor, visited):
-    queue = [(x, y)]
-    while queue:
-        x, y = queue.pop(0)
-        if (x, y) not in visited:
-            visited.add((x, y)) 
-            print((x, y))
-            visited.add((x, y))
-            next_positions = [(x+a, y+b), (x+a, y-b), (x-a, y+b), (x-a, y-b), (x+c, y+d), (x+c, y-d), (x-c, y+d), (x-c, y-d)]
-            for new_x, new_y in next_positions:
-                if new_x >= 0 and new_x < dancefloor and new_y >= 0 and new_y < dancefloor:
-                    queue.append((new_x, new_y))
 
-visited = set()
-dance(0, 0, a, b, c, d, dancefloor, visited)
-print(len(visited))
+
+def findMax(l):
+    max_value = float('-inf')
+    other_max = float('-inf')
+
+    for e in l:
+        if type(e) == list:
+            other_max = max(findMax(e), other_max)
+        else:
+            max_value = max(max_value, e)
+    return max(other_max, max_value)
+
+a = findMax([[2,1,5], [4,21, [40]],[3,5,6,-1],[0], 100])
+print(a)
+
+def crack(code, key):
+    out = ""
+    char_map = {k: i for i, k in enumerate(key)}
+    n = len(key)
+    print(n)
+    for c in code:
+        out += key[(char_map[c]-1)%n]
+    return out
+
+a = crack("ROFFXPZAOZPXKFÆRZNÆPPÆFEZPZP", "OSYÅKQGEZHØBLVRPXUCJMAÆWDTNFI")
+print(a)
