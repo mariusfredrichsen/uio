@@ -78,6 +78,25 @@ class Oblig4Precode extends JFrame {
 		}
 	}
 
+	public void writeHullPointsPar() {
+		String filename = "CONVEX-HULL-POINTS_PAR_" + n + ".txt";
+
+		try (PrintWriter writer = new PrintWriter(filename)) {
+			writer.printf(
+					"Found %d number of convex hull points in a graph with n = %d:\n______________________________________________________\n\n",
+					this.theCoHull.size(), n);
+
+			for (int i = 0; i < this.theCoHull.size(); i++) {
+				writer.print("(" + x[this.theCoHull.get(i)] + "," + y[this.theCoHull.get(i)] + ")");
+			}
+
+			writer.flush();
+			writer.close();
+		} catch (Exception e) {
+			System.out.printf("Got exception when trying to write file %s : ", filename, e.getMessage());
+		}
+	}
+
 	class Graph extends JPanel {
 		void drawPoint(int p, Graphics g) {
 			int SIZE = 7;
