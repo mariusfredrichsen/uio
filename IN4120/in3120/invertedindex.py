@@ -108,6 +108,12 @@ class InMemoryInvertedIndex(InvertedIndex):
         ranking. See https://nlp.stanford.edu/IR-book/html/htmledition/positional-indexes-1.html for
         further details.
         """
+        
+        for document in self._corpus:
+            print(document)
+        
+        print(self._corpus)
+        
         raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _add_to_dictionary(self, term: str) -> int:
