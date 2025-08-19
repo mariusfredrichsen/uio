@@ -110,11 +110,32 @@ class InMemoryInvertedIndex(InvertedIndex):
         """
         
         for document in self._corpus:
-            print(document)
-        
-        print(self._corpus)
-        
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+            for field in fields:
+                content = document[field]
+                term_span_pairs = self._analyzer.terms(buffer=content)
+                
+                for term, _ in term_span_pairs:
+                    term_id = self._dictionary.get_term_id(term)
+
+                    if term_id:
+                        posting_list = self._posting_lists[term_id]
+                        for posting in posting_list:
+                            if posting.document_id == document.document_id:
+                                posting.term_frequency = posting.term_frequency + 1
+                                break
+                        else:
+                            new_posting = Posting(document.document_id, 1)
+                            posting_list.append_posting(new_posting)
+                    else:
+                        term_id = self._dictionary.add_if_absent(term)
+                        
+                        new_posting_list = InMemoryPostingList()
+                        new_posting = Posting(document.document_id, 1)
+                        new_posting_list.append_posting(new_posting)
+                        
+                        self._posting_lists.append(new_posting_list)
+
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _add_to_dictionary(self, term: str) -> int:
         """
@@ -152,9 +173,17 @@ class InMemoryInvertedIndex(InvertedIndex):
         return (s for s, _ in self._dictionary)
 
     def get_postings_iterator(self, term: str) -> Iterator[Posting]:
+        term_id = self._dictionary.get_term_id(term)
+        if not term_id:
+            return []
+        return self._posting_lists[term_id].get_iterator()
         raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def get_document_frequency(self, term: str) -> int:
+        term_id = self._dictionary.get_term_id(term)
+        if not term_id:
+            return 0
+        return len(self._posting_lists[term_id])
         raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
 
