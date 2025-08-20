@@ -61,7 +61,23 @@ class PostingsMerger:
         All posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        if iter1 is None or iter2 is None:
+            yield None
+        
+        a = next(iter1, None)
+        b = next(iter2, None)
+        
+        while a and b:
+            if a.document_id > b.document_id:
+                b = next(iter2, None)
+            elif a.document_id < b.document_id:
+                a = next(iter1, None)
+            else:
+                yield Posting(a.document_id, a.term_frequency + b.term_frequency)
+                a = next(iter1, None)
+                b = next(iter2, None)
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     @staticmethod
     def union(iter1: Iterator[Posting], iter2: Iterator[Posting]) -> Iterator[Posting]:
@@ -78,7 +94,37 @@ class PostingsMerger:
         All posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        if iter1 is None:
+            yield from iter2
+            return
+        if iter2 is None:
+            yield from iter1
+            return
+
+        a = next(iter1, None)
+        b = next(iter2, None)
+        
+        while a and b:
+            if a.document_id > b.document_id:
+                yield b
+                b = next(iter2, None)
+            elif a.document_id < b.document_id:
+                yield a
+                a = next(iter1, None)
+            else:
+                yield Posting(a.document_id, a.term_frequency + b.term_frequency)
+                a = next(iter1, None)
+                b = next(iter2, None)
+        
+        if a:
+            yield a
+            yield from iter1
+            
+        if b:
+            yield b
+            yield from iter2
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     @staticmethod
     def difference(iter1: Iterator[Posting], iter2: Iterator[Posting]) -> Iterator[Posting]:
@@ -95,4 +141,30 @@ class PostingsMerger:
         All posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        
+        if iter1 is None:
+            yield from iter2
+            return
+        if iter2 is None:
+            yield from iter1
+            return
+        
+        a = next(iter1, None)
+        b = next(iter2, None)
+        
+        while a and b:
+            if a.document_id > b.document_id:
+                b = next(iter2, None)
+            elif a.document_id < b.document_id:
+                yield a
+                a = next(iter1, None)
+            else:
+                a = next(iter1, None)
+                b = next(iter2, None)
+        
+        if a:
+            yield a
+            yield from iter1
+            
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
