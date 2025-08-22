@@ -1,0 +1,24 @@
+.row {
+	display: flex;
+	flex-direction: row;
+	size: 100%;
+	margin: 8px;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	size: 100%;
+	margin: 8px;
+}
+
+body {
+	display: flex;
+	size: 100%;
+	justify-content: center;
+}
+
+.card {
+	margin: 16px;
+	padding: 8px;
+}
