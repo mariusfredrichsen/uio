@@ -127,7 +127,7 @@ class InMemoryInvertedIndex(InvertedIndex):
                             new_posting = Posting(document.document_id, 1)
                             posting_list.append_posting(new_posting)
                     else:
-                        term_id = self._dictionary.add_if_absent(term)
+                        term_id = self._add_to_dictionary(term)
                         
                         new_posting_list = InMemoryPostingList()
                         new_posting = Posting(document.document_id, 1)
