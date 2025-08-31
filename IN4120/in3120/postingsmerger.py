@@ -61,8 +61,6 @@ class PostingsMerger:
         All posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-        if iter1 is None or iter2 is None:
-            yield None
         
         a = next(iter1, None)
         b = next(iter2, None)
@@ -94,13 +92,7 @@ class PostingsMerger:
         All posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-        if iter1 is None:
-            yield from iter2
-            return
-        if iter2 is None:
-            yield from iter1
-            return
-
+        iter1, iter2 = iter(iter1), iter(iter2)
         a = next(iter1, None)
         b = next(iter2, None)
         
@@ -141,14 +133,6 @@ class PostingsMerger:
         All posting lists are assumed sorted in increasing order according
         to the document identifiers.
         """
-        
-        if iter1 is None:
-            yield from iter2
-            return
-        if iter2 is None:
-            yield from iter1
-            return
-        
         a = next(iter1, None)
         b = next(iter2, None)
         

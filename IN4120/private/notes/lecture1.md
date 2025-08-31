@@ -57,7 +57,7 @@ graph LR
 
     T ==> LM ==> I
 ```
-- **Tokenizer**: Converts the texts into keywords
+- **Tokenizer**: Converts the texts into keywords, also picks out the relevant words
 - **Linguistic Modules**: Converts the tokens to more generalized/usable version of themselves
 - **Indexer**: Creates the inverted index
 

@@ -112,28 +112,17 @@ class InMemoryInvertedIndex(InvertedIndex):
         for document in self._corpus:
             for field in fields:
                 content = document[field]
-                term_span_pairs = self._analyzer.terms(buffer=content)
+                terms = self.get_terms(buffer=content)
                 
-                for term, _ in term_span_pairs:
-                    term_id = self._dictionary.get_term_id(term)
-
-                    if term_id:
-                        posting_list = self._posting_lists[term_id]
-                        for posting in posting_list:
-                            if posting.document_id == document.document_id:
-                                posting.term_frequency = posting.term_frequency + 1
-                                break
-                        else:
-                            new_posting = Posting(document.document_id, 1)
-                            posting_list.append_posting(new_posting)
-                    else:
-                        term_id = self._add_to_dictionary(term)
-                        
-                        new_posting_list = InMemoryPostingList()
-                        new_posting = Posting(document.document_id, 1)
-                        new_posting_list.append_posting(new_posting)
-                        
-                        self._posting_lists.append(new_posting_list)
+                cnt = Counter(terms)
+                for term, freq in cnt.items():
+                    term_id = self._add_to_dictionary(term)
+                    document_id = document.document_id
+                    self._append_to_posting_list(term_id, document_id, freq, compressed)
+        
+        self._finalize_index()
+                    
+                    
 
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
@@ -151,15 +140,31 @@ class InMemoryInvertedIndex(InvertedIndex):
         must be kept sorted so that we can efficiently traverse and
         merge them when querying the inverted index.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        n = len(self._posting_lists)
+        if term_id < n:
+            posting_list = self._posting_lists[term_id]
+            for posting in posting_list:
+                if posting.document_id == document_id:
+                    posting.term_frequency += term_frequency
+                    return
+        else:
+            posting_list = InMemoryPostingList()
+            self._posting_lists.append(posting_list)
+        
+        posting = Posting(document_id, term_frequency)
+        posting_list.append_posting(posting)
+            
+            
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
-    def _finalize_index(self):
+    def _finalize_index(self) -> None:
         """
         Invoked at the very end after all documents have been processed. Provides
         implementations that need it with the chance to tie up any loose ends,
         if needed.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        pass # I dont need this method. My code i perfect (passes all tests)
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def get_terms(self, buffer: str) -> Iterator[str]:
         # In a serious large-scale application there could be field- and language-specific
@@ -177,14 +182,14 @@ class InMemoryInvertedIndex(InvertedIndex):
         if not term_id:
             return []
         return self._posting_lists[term_id].get_iterator()
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def get_document_frequency(self, term: str) -> int:
         term_id = self._dictionary.get_term_id(term)
         if not term_id:
             return 0
-        return len(self._posting_lists[term_id])
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        return self._posting_lists[term_id].get_length()
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
 
 class DummyInMemoryInvertedIndex(InMemoryInvertedIndex):
