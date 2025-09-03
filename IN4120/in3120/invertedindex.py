@@ -163,7 +163,7 @@ class InMemoryInvertedIndex(InvertedIndex):
         implementations that need it with the chance to tie up any loose ends,
         if needed.
         """
-        pass # I dont need this method. My code i perfect (passes all tests)
+        pass # I dont need this method. My code is perfect (passes all tests)
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def get_terms(self, buffer: str) -> Iterator[str]:

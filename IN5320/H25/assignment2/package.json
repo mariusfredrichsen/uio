@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@dhis2/cli-app-scripts": "^12.7.2"
+  }
+}

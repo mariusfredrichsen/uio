@@ -22,3 +22,8 @@ body {
 	margin: 16px;
 	padding: 8px;
 }
+
+li {
+	display: flex;
+	flex-direction: row;
+}

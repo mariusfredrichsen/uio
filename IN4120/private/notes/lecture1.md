@@ -91,6 +91,8 @@ Start merging the terms with the smallest sets to keep the result list as small 
 ## Phrase queries
 Able to answer queries like "stanford university" - as a phrase.
 
+A phrase query contains "" in the search - " "a phrase search"
+
 More understood or easier to use by the user.
 
 No longer suffices to store in `<term : docs>` format
@@ -119,6 +121,9 @@ Storing the positions requires a lot more space.
 - A positional index is 2-4 times as large as a non-positional index.
 - Positional index size 35-50% of volume of original text
 - Holds for "English-like" languages
+
+### Combination schemes
+- Can combine the biword index with positional indexes to easily find small phrases in documents
 
 ### Proximity queries
 Queries that contains arguments with within of so and so many words. LIMIT! /3 STATUE /3 FEDERAL /2 TORT
