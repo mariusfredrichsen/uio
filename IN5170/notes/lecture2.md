@@ -66,7 +66,7 @@ CSentry
 
 #### Weak fairness
 - uncondinitinally fair, and
-- every conditional atomic action will eventually be chosen, assumign that the condition becomes true and **remains true** until the action is executed
+- every conditional atomic action will eventually be chosen, assuming that the condition becomes true and **remains true** until the action is executed
 - might run infinitely
 
 - **Tie-Breaker algorithm**
@@ -96,3 +96,8 @@ CSentry
 ### Barriers
 - shared counter, uses atomic operations which is slow(?)
     - also slow due to many read and write to a "count" variable
+- divide into multiple variables with a global coordinator process
+    - waiting for a flag
+    - the flag is a list containing the status of the workers
+    - the workers wait for each of their flags (start of with 0 when the coordinator sets it to 1, then the workers wait for it to turn to 1)
+
