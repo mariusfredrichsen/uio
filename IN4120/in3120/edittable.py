@@ -66,6 +66,8 @@ class EditTable:
         if compute:
             for j in range(1, len(self._candidate) + 1):
                 self.update(j)
+        
+        print(self.stringify())
 
     def _extend(self, extra: int) -> None:
         """
@@ -99,8 +101,22 @@ class EditTable:
         the minimal value of edit-distance(query[0:i], candidate[0:j]) found by varying over
         all the row indices i, i.e., the minimal edit distance between candidate[0:j] and some
         prefix of the query string.
-        """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        """        
+        def next_value(i: int,j: int)-> int:
+            if min(i,j) == 0:
+                return max(i,j)
+            min_value = min(
+                self._table[i-1][j] + 1,
+                self._table[i][j-1] + 1,
+                self._table[i-1][j-1] + (0 if self._candidate[j-1] == self._query[i-1] else 1)
+            )
+            if i > 1 and j > 1 and self._candidate[j-1] == self._query[i-2] and self._candidate[j-2] == self._query[i-1]:
+                min_value = min(min_value, self._table[i-2][j-2] + 1)
+            return min_value
+                
+        for i in range(1, len(self._query) + 1):
+            self._table[i][j] = next_value(i,j)
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def update2(self, j: int, symbol: str) -> int:
         """
@@ -127,11 +143,13 @@ class EditTable:
         Only a prefix of the candidate string can be considered, if specified. That is,
         the caller is allowed to supply a column index and that way vary the W-E axis.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        return self._table[-1][-1]
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def prefix(self, j: int) -> str:
         """
         Returns the prefix of the candidate string, up to the given index. I.e.,
         returns candidate[0:j].
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        return "".join(self._candidate[0:j])
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
