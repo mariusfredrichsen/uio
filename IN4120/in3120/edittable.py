@@ -66,8 +66,6 @@ class EditTable:
         if compute:
             for j in range(1, len(self._candidate) + 1):
                 self.update(j)
-        
-        print(self.stringify())
 
     def _extend(self, extra: int) -> None:
         """
@@ -116,6 +114,7 @@ class EditTable:
                 
         for i in range(1, len(self._query) + 1):
             self._table[i][j] = next_value(i,j)
+        return min([self._table[i][j] for i in range(len(self._query) + 1)])
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def update2(self, j: int, symbol: str) -> int:

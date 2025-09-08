@@ -56,6 +56,7 @@ class TestEditSearchEngine(unittest.TestCase):
         for requested, received in expected:
             options = in3120.EditSearchEngine.Options(upper_bound=10, hit_count=requested)
             results = list(self._engine.evaluate("aleksander", options))
+            print(requested, received)
             self.assertEqual(received, len(results))
 
     def test_candidate_count(self):
