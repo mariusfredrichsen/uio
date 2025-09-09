@@ -81,15 +81,19 @@ class EditSearchEngine:
                 case _:
                     return 1.0 - (distance / max(len(candidate), 1))
         
-        candidates = []
+        candidates = Sieve(max(1, options.hit_count))
         def callback(distance: int, candidate: str, meta: Any) -> bool:
             if distance <= options.upper_bound and len(candidates) < options.candidate_count:
-                candidates.append(EditSearchEngine.Result(
-                    match = candidate,
-                    meta = meta,
-                    score = calculate_score(options.scoring, distance, candidate),
-                    distance = distance,
-                ))
+                score = calculate_score(options.scoring, distance, candidate)
+                candidates.sift(
+                    score = score, 
+                    item = (candidates.sifted(), EditSearchEngine.Result(
+                        match = candidate,
+                        meta = meta,
+                        score = score,
+                        distance = distance,
+                    ))
+                )
             return len(candidates) < options.hit_count
         
         terms = self._analyzer.terms(query)
@@ -109,9 +113,9 @@ class EditSearchEngine:
                 upper_bound = options.upper_bound,
                 callback = callback
             )
-        
-        candidates.sort(key = lambda x: x.score, reverse=True)
-        return candidates
+
+        # map to results
+        return map(lambda item: item[1][1], candidates.winners())
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _dfs(self, node: Trie, level: int, table: EditTable, upper_bound: int, callback: Callable[[int, str, Any], bool]) -> bool:
