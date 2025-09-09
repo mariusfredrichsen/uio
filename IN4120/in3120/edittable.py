@@ -142,7 +142,7 @@ class EditTable:
         Only a prefix of the candidate string can be considered, if specified. That is,
         the caller is allowed to supply a column index and that way vary the W-E axis.
         """
-        return self._table[-1][-1]
+        return self._table[-1][j]
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def prefix(self, j: int) -> str:
