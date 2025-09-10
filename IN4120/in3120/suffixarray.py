@@ -48,7 +48,16 @@ class SuffixArray:
         Builds a simple suffix array from the set of named fields in the document collection.
         The suffix array allows us to search across all named fields in one go.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+
+        for i, document in enumerate(self._corpus):
+            for field in fields:
+                content = document[field]
+                self._haystack.append((i, content))
+                haystack_index = len(self._haystack) - 1
+                for offset in range(len(content)):
+                    self._suffixes.append((haystack_index, offset))
+        
+        self._suffixes.sort(key=lambda pair: self._get_suffix(pair))
 
     def _get_suffix(self, pair: Tuple[int, int]) -> str:
         """
@@ -67,4 +76,10 @@ class SuffixArray:
         The matching documents are ranked according to how many times the query substring occurs in the document,
         and only the "best" matches are yielded back to the client. Ties are resolved arbitrarily.
         """
+        
+        if not options:
+            options = SuffixArray.Options()
+        
+        
+        
         raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
