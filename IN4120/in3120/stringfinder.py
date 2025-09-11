@@ -55,4 +55,33 @@ class StringFinder:
         In a serious application we'd add more lookup/evaluation features, e.g., support for prefix matching,
         support for leftmost-longest matching (instead of reporting all matches), and more.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        print(buffer)
+        
+        
+        terms_spans = self._analyzer.terms(buffer)
+        terms = list(map(lambda x: x[0], terms_spans))
+        
+        def get_char_child(trie: Trie):
+            return [char, trie.child(char) for char in trie.transitions()]
+            
+        
+        queue = get_char_child(self._trie)
+        fail = {child: self._trie for child in queue}
+        output = {}
+        
+        while queue:
+            char, current = queue.pop(0)
+            
+            for char, child in get_char_child(current):
+                f = fail[child]
+                
+                while f != self._trie and not f[char]:
+                    f = fail[f]
+                fail[child] = f[char] if f[char] else self._trie
+                
+                output[child].extend(output[fail[child]])
+                
+                queue.append((char, child))
+            
+            
+        #raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
