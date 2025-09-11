@@ -51,11 +51,14 @@ class SuffixArray:
 
         for i, document in enumerate(self._corpus):
             for field in fields:
-                content = document[field]
-                self._haystack.append((i, content))
+                raw_content = document[field]
+                standardized_content = self._analyzer.join(raw_content)
+                
+                self._haystack.append((i, standardized_content))
                 haystack_index = len(self._haystack) - 1
-                for offset in range(len(content)):
-                    self._suffixes.append((haystack_index, offset))
+                
+                for _, span in self._analyzer.terms(raw_content):
+                    self._suffixes.append((haystack_index, span[0]))
         
         self._suffixes.sort(key=lambda pair: self._get_suffix(pair))
 
@@ -79,7 +82,35 @@ class SuffixArray:
         
         if not options:
             options = SuffixArray.Options()
+            
+        if not query:
+            return
+        query = self._analyzer.join(query)
         
+        n = len(query)
         
+        # binary search
         
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        i = bisect_left(
+            a=self._suffixes,
+            x=query,
+            key=lambda x: self._get_suffix(x)[:n]
+        )
+        if i >= len(self._suffixes) or self._get_suffix(self._suffixes[i])[:n] != query:
+            return
+
+        matches = list(takewhile(
+            lambda x: self._get_suffix(x).startswith(query),
+            self._suffixes[i:]
+        ))
+
+        counter = Counter()
+        for hid in set((hid for hid, _ in matches)):
+            doc_id, content = self._haystack[hid]
+            counter[doc_id] += self._analyzer.join(content).count(query)
+
+        results = [SuffixArray.Result(self._corpus[doc_id], score) for doc_id, score in counter.items()]
+        results.sort(key=lambda x: x.score, reverse=True)
+        yield from results[:options.hit_count]
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
