@@ -1,3 +1,4 @@
+package assignement1;
 
 public abstract class Reducer<T> {
     protected int current = 0;

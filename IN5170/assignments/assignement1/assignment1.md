@@ -57,7 +57,7 @@ W_C disjoint V_A = {head}
 W_A disjoint V_C = Ø
 {head} union Ø = **{head}**
 
-find in combination with insert or delfront has interference based on the results from task 2.a. In addition they do not follow the AMO-property for routines since the find process might return an item that should have been deleted or should have been added.
+find() in combination with insert() or delfront() has interference based on the results from task 2.a. In addition they do not follow the AMO-property for routines since the find process might return an item that should have been deleted or should have been added.
 
 As for the combination of insert and delfront. There is two shared write and read variables. This might destroy the structure of the linked list and change the processes totally. 
 

@@ -1,3 +1,5 @@
+package assignement1;
+
 import java.util.Map;
 
 public abstract class Mapper<T, R> {
