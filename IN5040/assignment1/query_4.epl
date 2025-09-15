@@ -1,0 +1,3 @@
+SELECT min(timestamp) as start_date, max(timestamp) as end_date, avg(averageWindSpeed) as avg_wind, sum(precipitation) as avg_precipitation
+FROM san_francisco#length(3)
+HAVING sum(precipitation) > 0 AND avg(averageWindSpeed) > 19

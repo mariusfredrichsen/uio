@@ -55,7 +55,7 @@ public class Main {
             final int idx = i;
             distribute.submit(() -> {
                 Integer number = null;
-                while (number == null) {
+                while (number == null && (mapper2.count + mapper2.count) < n) {
                     number = inputQueue.delfront();
                     if (number != null)
                         if (idx % 2 == 0) {
@@ -97,7 +97,7 @@ public class Main {
             final int idx = i;
             reduce.submit(() -> {
                 Integer number = null;
-                while (number == null) {
+                while (number == null && (reducer1.count + reducer2.count) < n) {
                     number = layer.get(idx % 2 == 0).delfront();
                     if (number != null) {
                         if (number % 2 == 0) {
