@@ -1,0 +1,1 @@
+SELECT min(timestamp) as start_date, max(timestamp) as stop_date, min_average

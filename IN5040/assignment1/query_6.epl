@@ -1,0 +1,3 @@
+SELECT min(timestamp) as first_date, max(timestamp) as second_date, min(averageTemperature) as temp1, max(averageTemperature) as temp2
+FROM jfk#length(8)
+HAVING (max(averageTemperature) - min(averageTemperature)) >= 40

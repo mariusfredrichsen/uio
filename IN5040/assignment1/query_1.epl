@@ -1,0 +1,3 @@
+SELECT timestamp.toDate() as timestampDate, averageTemperature, minimumTemperature, maximumTemperature
+FROM jfk
+WHERE averageTemperature > 85
