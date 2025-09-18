@@ -31,8 +31,8 @@ delfront() {
 ```
 
 ### (A)
-- V(find(d)) = {i, head, i.val, i.next}
-- W(find(d)) = {i}
+- V(find(d)) = {head}
+- W(find(d)) = Ø
 
 ### (B)
 - V(insert(new)) = {tail, head, new, tail.next}

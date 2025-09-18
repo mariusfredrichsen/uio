@@ -28,7 +28,7 @@ public class Main {
 
         Mapper<Integer, Boolean> mapper1 = new Mapper<Integer, Boolean>(layer) {
             @Override
-            synchronized void transform(Integer input) {
+            void transform(Integer input) {
                 /* TODO: take number and put it into the right queue */
                 this.layer.get(input % 2 == 0).insert(input * input);
                 this.count++;
@@ -36,7 +36,7 @@ public class Main {
         };
         Mapper<Integer, Boolean> mapper2 = new Mapper<Integer, Boolean>(layer) {
             @Override
-            synchronized void transform(Integer input) {
+            void transform(Integer input) {
                 this.layer.get(input % 2 == 0).insert(input * input);
                 this.count++;
                 /* TODO: take number and put it into the right queue */
@@ -111,6 +111,11 @@ public class Main {
         }
 
         Thread.sleep(2000);
+
+        inputExc.shutdown();
+        distribute.shutdown();
+        reduce.shutdown();
+
         System.out.println("Sum even: " + reducer1.current);
         System.out.println("Sum odd: " + reducer2.current);
 

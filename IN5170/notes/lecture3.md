@@ -56,7 +56,7 @@
     - using a split binary semaphore
     - easy to adapt to different cases
 
-### Condition Synchronization: Converting to SPlit Binary Semaphores
+### Condition Synchronization: Converting to Split Binary Semaphores
 - add two semaphores, one counter and one delay-sempahore
 - add signaling, SIGNAL
     - SIGNAL is crafted in a smart way based on the counters and delays to be fair

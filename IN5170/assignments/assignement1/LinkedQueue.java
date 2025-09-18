@@ -6,22 +6,17 @@ import java.util.concurrent.locks.ReentrantLock;
 public class LinkedQueue<T> {
     private Node<T> head;
     private Node<T> tail;
-    private ReentrantLock lock = new ReentrantLock(true); // make the lock fair
+    private ReentrantLock lock = new ReentrantLock(true);
 
     synchronized public T find(T t) {
-        // lock.lock();
-        // l try {
         Node<T> tmp = head;
         while (tmp != null) {
             if (t == tmp.content) {
-                return t; /* return true??? */
+                return t;
             }
             tmp = tmp.next;
         }
         return null; /* didnt find :( */
-        // } finally {
-        // lock.unlock();
-        // }
     }
 
     public void insert(T t) {
@@ -40,8 +35,6 @@ public class LinkedQueue<T> {
     }
 
     synchronized public T delfront() {
-        // lock.lock();
-        // try {
         if (head != null) {
             if (head == tail) {
                 tail = null;
@@ -51,8 +44,5 @@ public class LinkedQueue<T> {
             return temp.content;
         }
         return null;
-        // } finally {
-        // lock.unlock();
-        // }
     }
 }
