@@ -1,1 +1,16 @@
-SELECT min(timestamp) as start_date, max(timestamp) as stop_date, min_average
+SELECT  start_date, stop_date, wind_1, wind_2, wind_3
+FROM    jfk#ext_timed(timestamp, 3 days)
+match_recognize (
+    measures
+        A.timestamp as start_date,
+        C.timestamp as stop_date,
+        A.averageWindSpeed as wind_1,
+        B.averageWindSpeed as wind_2,
+        C.averageWindSpeed as wind_3
+    pattern (A B C)
+    define 
+        B as B.averageWindSpeed - A.averageWindSpeed >= 5
+            AND B.precipitation - A.precipitation > 0,
+        C as C.averageWindSpeed - B.averageWindSpeed >= 5
+            AND C.precipitation - B.precipitation > 0
+)

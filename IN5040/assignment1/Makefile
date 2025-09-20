@@ -1,7 +1,14 @@
 # Windows Makefile for Assignment1 (made by gpt)
 
 # Classpath (use ; as separator for Windows)
-CP = .;.\lib\esper-common-8.2.0.jar;.\lib\esper-runtime-8.2.0.jar;.\lib\esper-compiler-8.2.0.jar;.\lib\slf4j-api-1.7.25.jar;.\lib\slf4j-jdk14-1.7.25.jar;.\lib\antlr4-runtime-4.7.1.jar;.\lib\janino-3.0.10.jar;.\lib\commons-compiler-3.0.10.jar
+# Classpath for Windows (use ; as separator)
+CP_WIN = .;.\lib\esper-common-8.2.0.jar;.\lib\esper-runtime-8.2.0.jar;.\lib\esper-compiler-8.2.0.jar;.\lib\slf4j-api-1.7.25.jar;.\lib\slf4j-jdk14-1.7.25.jar;.\lib\antlr4-runtime-4.7.1.jar;.\lib\janino-3.0.10.jar;.\lib\commons-compiler-3.0.10.jar
+
+# Classpath for Linux (use : as separator)
+CP_LINUX = .:./lib/esper-common-8.2.0.jar:./lib/esper-runtime-8.2.0.jar:./lib/esper-compiler-8.2.0.jar:./lib/slf4j-api-1.7.25.jar:./lib/slf4j-jdk14-1.7.25.jar:./lib/antlr4-runtime-4.7.1.jar:./lib/janino-3.0.10.jar:./lib/commons-compiler-3.0.10.jar
+
+# Default to Windows classpath
+CP = $(CP_LINUX)
 
 # Compile all Java files
 all:

@@ -1,3 +1,3 @@
 SELECT sum(precipitation) as total_precipitation, min(timestamp) as week_start, max(timestamp) as week_end
-FROM san_francisco#length_batch(7)
+FROM san_francisco#ext_timed_batch(timestamp, 7 days)
 HAVING sum(precipitation) >= 3

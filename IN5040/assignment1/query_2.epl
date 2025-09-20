@@ -1,3 +1,7 @@
 SELECT 'sliding' as win_type, avg(averageTemperature) as temp, min(timestamp) as start_date, max(timestamp) as end_date
-FROM jfk#length (7)
+FROM jfk#ext_timed(timestamp, 7 days)
+HAVING avg(averageTemperature) > 82
+
+SELECT 'tumbling' as win_type, avg(averageTemperature) as temp, min(timestamp) as start_date, max(timestamp) as end_date
+FROM jfk#ext_timed_batch(timestamp, 7 days)
 HAVING avg(averageTemperature) > 82

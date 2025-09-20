@@ -1,3 +1,12 @@
-SELECT min(timestamp) as first_date, max(timestamp) as second_date, min(averageTemperature) as temp1, max(averageTemperature) as temp2
-FROM jfk#length(8)
-HAVING (max(averageTemperature) - min(averageTemperature)) >= 40
+SELECT 
+  A.timestamp as first_date,
+  B.timestamp as second_date,
+  A.averageTemperature as temp1,
+  B.averageTemperature as temp2,
+  B.averageTemperature - A.averageTemperature as temp_difference
+FROM pattern [
+  A=jfk -> 
+  B=jfk(
+    B.averageTemperature - A.averageTemperature >= 40 
+  )
+]#win:ext_timed(A.timestamp, 7 days)
