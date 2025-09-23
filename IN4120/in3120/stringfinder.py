@@ -55,33 +55,39 @@ class StringFinder:
         In a serious application we'd add more lookup/evaluation features, e.g., support for prefix matching,
         support for leftmost-longest matching (instead of reporting all matches), and more.
         """
-        print(buffer)
+        normalized_buffer = list(self._analyzer.terms(buffer))
         
-        
-        terms_spans = self._analyzer.terms(buffer)
-        terms = list(map(lambda x: x[0], terms_spans))
-        
-        def get_char_child(trie: Trie):
-            return [char, trie.child(char) for char in trie.transitions()]
-            
-        
-        queue = get_char_child(self._trie)
-        fail = {child: self._trie for child in queue}
-        output = {}
+        queue = [(StringFinder.State(node, span[0], word), i) for i, (word, span) in enumerate(normalized_buffer) if (node := self._trie.consume(word)) != None]
         
         while queue:
-            char, current = queue.pop(0)
+            state, i = queue.pop(0)
+            _, span = normalized_buffer[i]
             
-            for char, child in get_char_child(current):
-                f = fail[child]
+            if state.node.is_final():
+                yield  StringFinder.Result(
+                    match=state.match,
+                    meta=state.node.get_meta(),
+                    surface=buffer[state.begin:span[1]],
+                    begin=state.begin,
+                    end=span[1]
+                )
                 
-                while f != self._trie and not f[char]:
-                    f = fail[f]
-                fail[child] = f[char] if f[char] else self._trie
-                
-                output[child].extend(output[fail[child]])
-                
-                queue.append((char, child))
+            if (i + 1) >= len(normalized_buffer):
+                continue
+            
+            next_word, next_span = normalized_buffer[i + 1]
+            
+            spacer = " "
+            if span[1] == next_span[0]:
+                spacer = ""
+            
+            next_node = state.node.consume(spacer + next_word)
+
+            if next_node == None:
+                continue
+            queue.append((StringFinder.State(next_node, state.begin, state.match + spacer + next_word), i + 1))
+        
+        
             
             
         #raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
