@@ -55,33 +55,47 @@ class StringFinder:
         In a serious application we'd add more lookup/evaluation features, e.g., support for prefix matching,
         support for leftmost-longest matching (instead of reporting all matches), and more.
         """
-        print(buffer)
+        terms = list(self._analyzer.terms(buffer)) 
+        results = [] 
         
-        
-        terms_spans = self._analyzer.terms(buffer)
-        terms = list(map(lambda x: x[0], terms_spans))
-        
-        def get_char_child(trie: Trie):
-            return [char, trie.child(char) for char in trie.transitions()]
+        for i in range(len(terms)): 
+            match_symbols = [] 
+            state = self.State( 
+                node = self._trie, 
+                begin = terms[i][1][0], 
+                match = "" 
+            ) 
             
-        
-        queue = get_char_child(self._trie)
-        fail = {child: self._trie for child in queue}
-        output = {}
-        
-        while queue:
-            char, current = queue.pop(0)
-            
-            for char, child in get_char_child(current):
-                f = fail[child]
+            for j in range(i, len(terms)): 
+                symbol, span = terms[j] 
+                match_symbols.append(symbol)
+
+                if j + 1 < len(terms):
+                    next_span = terms[j + 1][1]
+                    separator = "" if span[1] == next_span[0] else " "
+                else:
+                    separator = " "
+
+                normalized_string = separator.join(match_symbols) 
+                node = self._trie.consume(normalized_string) 
                 
-                while f != self._trie and not f[char]:
-                    f = fail[f]
-                fail[child] = f[char] if f[char] else self._trie
+                if node is None: 
+                    break 
                 
-                output[child].extend(output[fail[child]])
+                state.node = node
+                state.match = normalized_string
                 
-                queue.append((char, child))
+                if state.node.is_final(): 
+                    surface = " ".join(buffer[state.begin:span[1]].split()) 
+                    result = self.Result( 
+                        match = state.match, 
+                        meta = state.node.get_meta(), 
+                        surface = surface, 
+                        begin = state.begin, 
+                        end = span[1] 
+                    )
+                    
+                    results.append(result)
             
-            
-        #raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        for res in sorted(results, key = lambda r: (r.end, r.begin)): 
+            yield res
