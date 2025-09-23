@@ -1,0 +1,10 @@
+SELECT 
+    min(jfk_week.timestamp).toDate() as week_start,
+    max(jfk_week.timestamp).toDate() as week_end,
+    avg(sf_week.averageTemperature) - avg(jfk_week.averageTemperature) as temp_diff
+FROM jfk#ext_timed_batch(timestamp, 7 days) as jfk_week
+JOIN san_francisco#ext_timed_batch(timestamp, 7 days)as sf_week
+WHERE (jfk_week.timestamp = sf_week.timestamp)
+HAVING avg(sf_week.averageTemperature) - avg(jfk_week.averageTemperature) > 35
+AND sum(jfk_week.precipitation) > 0
+AND sum(sf_week.precipitation) = 0
