@@ -68,13 +68,16 @@ class SimpleSearchEngine:
         Returns the subset of cursors (or, rather, their indices) that are still "alive",
         i.e., the subset of cursors having posting lists that have not yet been exhausted.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        return [index for index, cursor in enumerate(cursors) if cursor.current]
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _advance(self, cursors: List[Cursor], subset: List[int]) -> None:
-        """"
+        """
         Advances the given subset of cursors.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        for i in subset:
+            cursors[i].current = next(cursors[i].postings)
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _frontier(self, cursors: List[Cursor], subset: List[int]) -> Tuple[int, List[int]]:
         """
@@ -85,7 +88,12 @@ class SimpleSearchEngine:
         the smallest document identifier. Since posting lists are sorted in ascending order,
         the frontier represents the "leftmost" cursors when scanning from left to right.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        min_doc_id = min(map(lambda i: cursors[i].current.document_id, subset))
+        frontier_indices = filter(lambda i: cursors[i].current.document_id == min_doc_id, subset)
+        return min_doc_id, frontier_indices
+        
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def evaluate(self, query: str, ranker: Ranker, options: Options | None = None) -> Iterator[Result]:
         """
@@ -95,4 +103,33 @@ class SimpleSearchEngine:
         The matching documents, if any, are ranked by the supplied ranker, and only the "best" matches are yielded
         back to the client.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        
+        terms = Counter(list(self._inverted_index.get_terms(query)))
+        
+        cursors = []
+        for term, multiplicity in terms.items():
+            postings = self._inverted_index.get_postings_iterator(term)
+            print(list(postings))
+            try:
+                posting = next(postings)
+                print(posting)
+                cursor = SimpleSearchEngine.Cursor(
+                    term=term, 
+                    multiplicity=multiplicity, 
+                    current=posting,
+                    postings=iter(postings)
+                ) 
+                
+                cursors.append(cursor)
+            except StopIteration:
+                print("ASFUIEWRUGHEWUIG", term)
+                continue
+            
+        print(cursors)
+        print(terms)
+        print(query)
+        print(self._inverted_index._dictionary)
+        
+        
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
