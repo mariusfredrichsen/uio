@@ -185,9 +185,9 @@ class InMemoryInvertedIndex(InvertedIndex):
 
     def get_document_frequency(self, term: str) -> int:
         term_id = self._dictionary.get_term_id(term)
-        if not term_id:
-            return 0
-        return self._posting_lists[term_id].get_length()
+        if term_id is not None:
+            return self._posting_lists[term_id].get_length()
+        return 0
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
 

@@ -76,7 +76,7 @@ class SimpleSearchEngine:
         Advances the given subset of cursors.
         """
         for i in subset:
-            cursors[i].current = next(cursors[i].postings)
+            cursors[i].current = next(cursors[i].postings, None)
         # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _frontier(self, cursors: List[Cursor], subset: List[int]) -> Tuple[int, List[int]]:
@@ -89,7 +89,7 @@ class SimpleSearchEngine:
         the frontier represents the "leftmost" cursors when scanning from left to right.
         """
         min_doc_id = min(map(lambda i: cursors[i].current.document_id, subset))
-        frontier_indices = filter(lambda i: cursors[i].current.document_id == min_doc_id, subset)
+        frontier_indices = list(filter(lambda i: cursors[i].current.document_id == min_doc_id, subset))
         return min_doc_id, frontier_indices
         
         
@@ -103,32 +103,51 @@ class SimpleSearchEngine:
         The matching documents, if any, are ranked by the supplied ranker, and only the "best" matches are yielded
         back to the client.
         """
+        if not options:
+            options = SimpleSearchEngine.Options()
         
         terms = Counter(list(self._inverted_index.get_terms(query)))
         
-        cursors = []
-        for term, multiplicity in terms.items():
-            postings = self._inverted_index.get_postings_iterator(term)
-            print(list(postings))
-            try:
-                posting = next(postings)
-                print(posting)
-                cursor = SimpleSearchEngine.Cursor(
-                    term=term, 
-                    multiplicity=multiplicity, 
-                    current=posting,
-                    postings=iter(postings)
-                ) 
-                
-                cursors.append(cursor)
-            except StopIteration:
-                print("ASFUIEWRUGHEWUIG", term)
-                continue
+        m = len(terms)
+        t = options.match_threshold
+        n = max(1, min(m, int(t * m)))
+        
+        cursors = [
+            SimpleSearchEngine.Cursor(
+                term=term, 
+                multiplicity=multiplicity, 
+                current=posting,
+                postings=iter(postings)
+            ) for term, multiplicity in terms.items() if (postings:= self._inverted_index.get_postings_iterator(term)) and (posting:=next(postings, None)) is not None
+        ]
+        
+        subset = [i for i in range(len(cursors))]
+        sieve = Sieve(options.hit_count)
+        i = 0
+        while len(subset) != 0:
+            doc_id, frontiers = self._frontier(cursors, subset)
+            if len(frontiers) >= n:
+                ranker.reset(doc_id)
+                for c in [cursors[i] for i in frontiers]:
+                    ranker.update(c.term, c.multiplicity, c.current)
+                score = ranker.evaluate()
+                sieve.sift(
+                    score=score,
+                    item=(i, doc_id)
+                )
+                i += 1
+            self._advance(cursors, frontiers)
+            subset = self._alive(cursors)
             
-        print(cursors)
-        print(terms)
-        print(query)
-        print(self._inverted_index._dictionary)
+        yield from [SimpleSearchEngine.Result(
+                score=score,
+                document=self._corpus.get_document(doc_id)
+            ) for score, (_, doc_id) in sieve.winners()]
+            
+                
+        
+        
+        
         
         
         

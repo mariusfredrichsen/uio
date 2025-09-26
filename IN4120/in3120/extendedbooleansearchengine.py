@@ -45,7 +45,14 @@ class ExtendedBooleanSearchEngine(BooleanSearchEngine):
         assert all(terms1[canary] == terms2[canary] for canary in canaries), "Unsupported normalization detected."
 
         # Initialize operator-specific helpers.
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        self._wildcards = WildcardExpander(inverted_index.get_indexed_terms())
+        
+        self._synonyms = synonyms or SimpleTrie()
+        
+        self._edit = EditSearchEngine(SimpleTrie(), inverted_index._analyzer)
+        
+        self._soundex = SoundexNormalizer()
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _unhandled(self, tree: ast.Call) -> None:
         """
@@ -75,6 +82,7 @@ class ExtendedBooleanSearchEngine(BooleanSearchEngine):
             "LOOKSLIKE":  lambda a: a.terms,
             "SOUNDSLIKE": lambda a: a.terms,
         }
+        
 
         # At this point we actually know the structure except for details about the operator name,
         # due to how this method is invoked from the base class during initial AST validation.
@@ -110,7 +118,10 @@ class ExtendedBooleanSearchEngine(BooleanSearchEngine):
         Given a wildcard query pattern, returns the list of index terms that the
         pattern gets expanded into.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        terms = self._wildcards.expand(pattern)
+        print(terms)
+        return terms
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _synonym(self, term) -> List[str]:
         """
@@ -124,7 +135,13 @@ class ExtendedBooleanSearchEngine(BooleanSearchEngine):
         and enforce an equivalence relation criterion during construction of
         the synonym dictionary, if needed.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        node = self._synonyms()
+        node = node.consume(term)
+        if node is not None:
+            meta = node.get_meta()
+            print(meta)
+        print("SYNONYM: ", term)
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _lookslike(self, term) -> List[str]:
         """
@@ -132,11 +149,16 @@ class ExtendedBooleanSearchEngine(BooleanSearchEngine):
         to it as measured by edit distance. Currently, the edit distance threshold and the
         other lookup parameters are fixed.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        print("LOOKSLIKE: ", term)
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def _soundslike(self, term) -> List[str]:
         """
         Given a query term, returns the index term(s) that are phonetically close enough
         to it as measured by the Soundex algorithm.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        
+        print("SOUNDSLIKE: ", term)
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
