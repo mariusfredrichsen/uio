@@ -7,6 +7,7 @@ from math import sqrt
 from .sieve import Sieve
 
 
+
 class SparseDocumentVector:
     """
     A simple representation of a sparse document vector. The vector space has one dimension
@@ -67,52 +68,91 @@ class SparseDocumentVector:
         """
         Returns the length (L^2 norm, also called the Euclidian norm) of the vector.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        self._length = sqrt(sum(map(lambda x: x**2, self._values.values())))
+        return self._length
+        
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def normalize(self) -> None:
         """
         Divides all weights by the length of the vector, thus rescaling it to
         have unit length.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+       
+        n = self.get_length()
+        if n:
+            self._values = {term: weight/n for term, weight in self._values.items()}
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def top(self, count: int) -> Iterable[Tuple[str, float]]:
         """
         Returns the top weighted terms, i.e., the "most important" terms and their weights.
         The top terms are returned sorted (in descending order) according to their weights.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        # assert count > 0
+        if count == 0:
+            return
+        sieve = Sieve(count)
+        for term, weight in self._values.items():
+            sieve.sift(weight, term)
+        yield from ((term, weight) for weight, term in sieve.winners())
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def truncate(self, count: int) -> None:
         """
         Truncates the vector so that it contains no more than the given number of terms,
         by removing the lowest-weighted terms.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        self._values = {term: weight for term, weight in self.top(count=count)}
+        #raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def scale(self, factor: float) -> None:
         """
         Multiplies every vector component by the given factor.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        self._values = {term: weight*factor for term, weight in self._values.items() if weight*factor != 0.0}
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def dot(self, other: SparseDocumentVector) -> float:
         """
         Returns the dot product (inner product, scalar product) between this vector
         and the other vector.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        return sum(self[term] * other[term] for term in self._values)
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
 
     def cosine(self, other: SparseDocumentVector) -> float:
         """
         Returns the cosine of the angle between this vector and the other vector.
         See also https://en.wikipedia.org/wiki/Cosine_similarity.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
-
+        len_self = self.get_length()
+        len_other = other.get_length()
+        if not len_self or not len_other:
+            return 0.0 
+        return self.dot(other) / (len_self * len_other)
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+    
     @staticmethod
     def centroid(vectors: Iterator[SparseDocumentVector]) -> SparseDocumentVector:
         """
         Computes the centroid of all the vectors, i.e., the average vector.
         """
-        raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
+        values = dict()
+        count = 0
+
+        for vector in vectors:
+            count += 1
+            for term, weight in vector:
+                if term in values:
+                    values[term] += weight
+                else:
+                    values[term] = weight
+
+        if count == 0:
+            return SparseDocumentVector({})
+
+        values = {term: weight / count for term, weight in values.items()}
+        return SparseDocumentVector(values)
+                    
+        # raise NotImplementedError("You need to implement this as part of the obligatory assignment.")
