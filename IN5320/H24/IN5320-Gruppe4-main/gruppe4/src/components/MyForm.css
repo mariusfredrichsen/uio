@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+  
+.row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title,
+.surname,
+.firstname,
+.email,
+.email-confirmation,
+.newsletters {
+    margin-bottom: 0.5rem;
+}
+  
+.button {
+    margin-top: 1rem;
+}

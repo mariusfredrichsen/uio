@@ -37,3 +37,8 @@
 - calculate the number b by rounding up the log_2 of M
 - the number of bits used for the compression depends on the rest r from the number x (gap size) and b
 
+
+
+
+
+

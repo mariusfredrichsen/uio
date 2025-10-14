@@ -1,0 +1,35 @@
+.transferOption {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px 10px 10px;
+	cursor: pointer;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.transferOption:hover {
+	background: gray;
+}
+
+.transferOption.highlighted {
+	background: green;
+	color: white;
+}
+
+.transferOption.highlighted:hover {
+	background: darkgreen;
+}
+
+.transferOption.disabled {
+	background: red;
+	cursor: not-allowed;
+} 
+
+.test {
+	background: gray;
+}
+
+.checkbox {
+	margin-bottom: 4px;
+}
