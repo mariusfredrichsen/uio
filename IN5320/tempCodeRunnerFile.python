@@ -1,0 +1,10 @@
+import re
+import Counter
+
+def term_freqency(phrase: str, n: int):
+    tokens = re.sub(r'[^\w\s]', '', phrase.lower()).split(" ")
+    counter = Counter(tokens)
+    return counter
+    
+
+print(term_freqency("To be, or not to be.", 2)) # [("be",2),("to",2)]

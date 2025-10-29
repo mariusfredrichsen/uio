@@ -68,7 +68,7 @@ func main() {
     go Reduce(inter1, output, EvenOddReducer{}, 0)
     go Reduce(inter2, output, EvenOddReducer{}, 0)
     
-    n := 10000000;
+    n := 1000;
     sum := 0;
     for i := 1; i <= n; i++ {
       input <- i;

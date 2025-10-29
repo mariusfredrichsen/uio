@@ -121,9 +121,55 @@
 - Communcation
     - ability to terminate services at any time
     - how should the query be answered?
-- Design
+- Design autonomy
+    - how to find the cost?
+    - how to optimize the query without the necessary information
 - Execution
+    - exetute queries in unpredictable ways
+    - how to adapt to unpredictable behaviour
 
+#### Query Translation
+- needs to translate the query language to the global or local to global
+- might not support the same operations
+- a way to handle this is to retrieve the data (might have more than asked for) then process the data again after retreiving it
 
+#### Query Fragmentation
+- little information on how the query is executed by the local DBS
 
-#### 
+#### Global Query Optimization
+- can use the techniques/algorithms from homogeneous distributed DBSs
+    - assumes, no data inconsistency (global schema), know the characteristics of local DBSs, can transfer partial data between local DBSs
+- post-prossessing strategies
+    - control site performs all intermediate and post-processing operations (I&PP-ops)
+        - minimal parallellism and heavy workload
+    - control site performs I&PP-ops for multi-DB results and Multi-DB managers, and HDBMS agents on the local database sites performs I&PP-ops for DBSs within one multi-DB enviroment
+        - better work load balance and more parrallellism
+        - can use "pushdown" to get local database systems to perform I&PP-ops
+            - possible if local DBMS can read intermediate results from external sources, and sort, join, etc. can be directly invoked
+- parallel execution possibilities
+- global cost function/estimation
+    - test out subqueries to get a estimated time on the operations
+    - simplify the cost, initial cost + cost to retrieve + cost to process 
+    - cost estumation function
+        - cost for executing all I&PP-ops
+        - cost for executing 
+    - difficult since we have little to no information on QP or data statistics in local DBS
+
+#### Heterogeneous Cost Modeling
+- black-box, treat each component as a block-box and determin cost by running test queries
+- customized, customize a initial cost model
+- dynamic, monitor the run-time behaviour of the components and collect cost information
+
+#### Translation
+- happens through wrappers on components
+- result format and query translation
+- wrappers can implmenet operations not supported by the component like "join"
+
+#### Wrappers
+- ready-only is easy
+- DBMS vendors has standard wrappers
+    - ODBC, JDBC, ADO, etc.
+- updating makes wrapper construction harder
+- might not be invalid due to changes in the schema
+    - use detection or mapping maintance techniques
+

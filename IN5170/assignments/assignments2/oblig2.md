@@ -15,10 +15,11 @@ Code:
 ```
 int C;
 
-monitor Coaster_Monitor {
-    cond car_available;
-    cond car_filled;
-    cond car_left;
+monitor Coaster_Monitor { 
+    # Invariant: ( is_filling = 1 and available_seats > 0) or ( is_filling = 0 and available_seats = 0 )
+    cond car_available;     # signaled when is_filling = 0
+    cond car_filled;        # signaled when available_seats = 0
+    cond car_left;          # signaled when available_seats = 0
 
     available_seats := C;
     is_filling := 1;
@@ -29,6 +30,7 @@ monitor Coaster_Monitor {
         if (available_seats = 0) {
             signal car_filled;
         }
+        wait(car_available); # waiting for the ride to finish
     }
 
     procedure start_ride() {
@@ -57,7 +59,7 @@ process Car {
     Coaster_Monitor monitor;
     while (true) {
         monitor.start_ride();
-        delay(1000)
+        # ride is happening here
         monitor.finish_ride();
     } 
 }

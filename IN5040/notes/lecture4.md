@@ -132,7 +132,7 @@ R-W, dirty reading, not consistent in the transaction <br>
 Locking rows instead of whole table
 
 ### CC Apporeaches
-- **pessimistic**, calidate -> read -> compute -> write
+- **pessimistic**, validate -> read -> compute -> write
 - **optimistic**, read -> compute -> validate -> write
 - 
 
