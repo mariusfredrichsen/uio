@@ -47,7 +47,7 @@
     - Need to understand the data
 - Cloud services
     - Too much data, we cannot escape cloud solutions
-    - laaS - PaaS - SaaS 
+    - IaaS - PaaS - SaaS 
     - Elasticity (SLA), you get what you pay for
     - Harder to controll the dataflow of the data you're storing
     - Data sharing is important and useful, but also important keep private data private

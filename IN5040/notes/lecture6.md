@@ -55,4 +55,38 @@
 - similar syntax as HTML
 - was the web standard before, but HTML took over
 - structured like a tree
-- 
+- **Transport**
+    - publishing, database -- JDBC (Java Database Connectivity) --> web service -- XML --> Client
+    - storing, client -- XML --> application -- JDBC --> database
+
+### XML-Enabled DBS
+- for XML documents
+- store by shredding and publish by composing
+- stores just the data
+- no XML "visible" in the DB
+- integrated mapping software
+- lossy modelling
+    - discarded after shredding
+
+- difference between XML eneabled and Native XML
+    - native stores directly in a hierarchical tree structure
+    - enabled stores in a normal database with extended features for XML
+        - lossy moddelling, store the data but not everything, loses data
+
+- use XML for semistructured data when all data formats cannot be predicted in advance + large volumes of data
+- XML Document Archiving when retaining XML douments
+- use Native XML DB when we need to be able to retain XML documents as-is
+    - semistructured data
+
+
+### RDF: Resource Descriptive Framework
+- A data model on top of XML
+- set of triples, subject, property, object
+    - subject, the enitity that is described
+    - property, a feature of the entity
+    - object, value of the feature
+
+- for the semantic web
+- HTML describes structure but not meaning
+- has a graph representation of the features of the document
+-
