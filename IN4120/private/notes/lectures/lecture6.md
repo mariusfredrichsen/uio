@@ -7,7 +7,7 @@
 - query-document score
     - how many times the terms occurs in the document
 - jaccard coefficient
-    - use union
+    - use union, score between 0 and 1
     - doesnt say how many times the term occurs
 - bag of words model
     - no form for position, just the frequency

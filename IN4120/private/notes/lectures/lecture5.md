@@ -13,8 +13,9 @@
 
 ### Lossless vs lossy compression
 - lossy, information loss when removing words from either the dictionary or postings list (position / non-positional)
+- laws to estimate how many terms we are working with and how big the collection is
 - **Heaps' law**: M = kT^b
-    - M, size of vocabulary
+    - M, **size of vocabulary**
     - T, number of tokens in the collection
     - k, typical value between 30 and 100
     - b, roughfly 0.5, increase rate of the formula
@@ -23,8 +24,8 @@
 - **Zipf's**: cf = K/i
     - cf is collection frequency, number of occurrences of the term t in the collection
     - the most frequent word occurs cf_1 times
-        - the second most frequent word occurs cf_1/2 times
-        - the third most frequent word occurs cf_1/3 times
+        - the second most frequent word occurs cf_1 / 2 times
+        - the third most frequent word occurs cf_1 / 3 times
         - so on...
     - power law relationship, follows a kind of law
     - log-log space, take the logarithmic value of both sides of the equal sign
@@ -32,19 +33,27 @@
 ### Dictionary compression
 - fixed-width is wastefull
 - use a long string and have a table with pointers to the string (pointer to where the word starts)
-- se på blokker???
-- Front coding, share prefix
+- blocking, store the pointers and the lengths for every kth item. k = 4 saves 4 bytes
+- Front coding, share prefixes and signal with a unique symbol
+    - 8automata8automate9automatic10automation
+    - 8automat*a1→e2→ic3→ion
 
 ### Postings compression
+- the postings file is much larger than the dictionary by at least a factor of 10
 - where you save the most
 - goal: use less than 20 bits (recommended) per docID
+- two conflicting forces
+    - terms that appear in very few documents vs terms that appear in every document
 - gap encoding, look at the difference between the next docID, works since the list is sorted
+    - average gap for a term is G
+    - want to use log_2(G) bits/gap entry
 
 #### Variable length encoding (VB-encoding)
-- uses base 127
-    - times 128 for each byte required
-- in addition to a continuation bit, 1-done, 0-more bytes coming
-- stored in a byte concatenation
+- for a gap value G we want to store fewest bytes needed to hold log_2(G) bits
+- start with one byte to store G and dedicate 1 but in it to be a continuation bit c
+- every byte *b* is valued N % 128^b where b starts at 1
+
+- different variant could be using different byte size for different words, 32, 16 and 4 bits
 
 #### Unary code
 - represent n as n 1s with a final 0
@@ -52,11 +61,9 @@
 - 40 is 40x1 + 0
 
 #### Gamma codes
-- reduce to bit-level
-- the first bit is always 1 so cut it off
-- length is the length of offset
-- its represented in unary
-
+- split the number into two parts
+    - unary code length of the binary representation (minus 1)
+    - the binary representation with its leading 1
 
 #### Simple9 (S9) Coding
 - blocks of 32 bits
