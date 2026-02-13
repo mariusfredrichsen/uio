@@ -289,3 +289,32 @@ cant be bothered
 73. eventual consistency is when the replicated data is used then it should be consistent, not necesseraly all the time
 
 74. strong consistency is when we at all time nodes points to the same data
+
+
+
+# Lecture 4: Database Integration & Multi-Database Systems (MDBS)
+## Interoptebility problem
+1. It means the level of cooperating and working together seamlessly in a system
+
+2. heterogeneous systems has a lot of different datas stored, different schemas, different hardware and softwares which makes it harder to make it work together
+
+3. schema mismatch is when two schemas dont match together by either having different names but represent the same, or have the same name but represented in different units
+
+4. if the datatype mismatch then we need to translate it some way which takes more time and careful handling so it isnt done wrong
+
+5. because each database has different purposes and different goals so they may have different functions
+
+## Integration Alternatives
+6. thight coupling is when systems are so coupled that data can passe between the systems
+
+7. loose coupling is when data is not transfered between systems
+
+8. loosely coupled is easier since we dont need to match the schemas
+
+9. loosely coupled gives more autonomy since they dont need to be able to receive or send data to other systems
+
+## Multi-DBS Architecture
+### Fedration, Partially Autonomous
+10. federated database systems is database systems that are in silo format, the database systems inside of the multi database system is working more independently and dont share anything with the other systems
+
+11. the integration layer has 

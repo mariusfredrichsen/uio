@@ -258,13 +258,15 @@
 
 #### Bottom-up/Top-down
 
-### Summary Tables
+### Global Schema Design
 
-### Data Extraction
+#### Summary Tables
 
-### User Queries
+### Data Extraction and Load
 
-#### Query Processing
+### Query Processing
+
+#### User Queries
 
 ### Data Update
 
