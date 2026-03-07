@@ -193,7 +193,13 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 /Datasets/MNIST
-/Datasets/Housing
-/Datasets/cifar-10-batches-py
-/Datasets/oxford-iiit-pet
 /00/models
+/Datasets/Datasets
+/Datasets/cifar-10-batches-py
+Datasets/cifar-10-python.tar.gz
+/Datasets/Housing
+/Datasets/oxford-iiit-pet
+/01/models
+/.venv311
+/03/models
+/Datasets/quadrant_dots_rgb

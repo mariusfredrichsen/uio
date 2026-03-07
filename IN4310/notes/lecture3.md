@@ -22,7 +22,8 @@
     - l_n(w) = -log(^p_w(y_n|x_n))
 
 ## Structure of dense feedforward neural network
-
+- go deeper rather than wider
+- 
 
 
 ## Forward pass for dense feedforward neural networks
