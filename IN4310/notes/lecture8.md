@@ -1,0 +1,32 @@
+# Data Augmentation
+love you mooooooooooooooooooooooooooooooooo
+## Methods
+- Geomtrics image augmentations
+    - vertical / horizontal
+    - rotation
+    - affine transformations, shifting, scaling, rotating, shearing
+- photmetric image augmentations
+    - color jitter, hie, saturation or value (HSV)
+    - solarization, inverting pixel colors if reaching a threshold
+    - gaussian blur
+- advanced / mixed augmentations
+    - randAugment, randomly combining up to 14 different geomatric and photometric transforms
+    - mixup, blend two different images and their labels
+    - cutmix, cut one image and insert it into another where it matches ish
+    - label smoothing, taking a hard label (100% cat) and distributing a small amount of porbability to all other classes to prevent the model from becoming overconfident
+- Non-Image augmentations (NLP & Audio)
+    - Audio, pitch shifting, resampling, modulation, equalization or adding noise
+    - NLP masking, replacing random words with a blank token and forcing the model to guess it
+    - NLP N-preserving & synonyms, randomly inserting, swapping or deletings words or replacing words with synonyms using embeddings
+    - back translation, translating a sentence into another language and then abck to original to get a varied phrasing
+- Weight initialization methods
+    - Identity, weights start off by having the same output as input
+    - Orthogonal, samlping an orthogonal matric to preserve gradient norms
+    - Random
+    - Xavier & Kaiming, ?
+    - Pre-trained weights
+    - Weight normalization & standardization, ?
+- Alternative training methods
+    - student-teacher learning, training small student network to mimic the pre-trained teacher network
+    - contrastive learning, pulling together alike images (augmented versions of the same image) and pushing apart from other images that arent related
+        - must be careful not to do this with different images but of the same object
