@@ -1,4 +1,4 @@
-# Test design techniques - Part 1
+# Test design techniques
 - **dynamic testing**, executing tests on running code
 
 ## 4.1 Identifying test conditions and designing test cases
